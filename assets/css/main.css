@@ -1,4 +1,10 @@
 @import url("fontawesome-all.min.css");
+@import url("../webfonst/fa-solid-900.woff2");
+@import url("../webfonst/fa-brands-400.woff2"); 
+@import url("../webfonst/fa-regular-400.woff2");
+@import url("../webfonst/fa-solid-900.woff");
+@import url("../webfonst/fa-brands-400.woff");  
+@import url("../webfonst/fa-regular-400.woff"); 
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
 
 /*
