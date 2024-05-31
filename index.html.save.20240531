@@ -9,9 +9,8 @@
 		<title>Map Portfolio</title>
 		<meta charset="utf-8" >
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
-		<script src="https://kit.fontawesome.com/414d1445a9.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="assets/css/main.css" >
-		<!-- <link rel="stylesheet" href="assets/css/fontawesome-all.min" > -->
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min" >
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" ></noscript>
 	</head>
 	<body class="is-preload">
@@ -705,42 +704,42 @@
 						<div class="items style1 medium onscroll-fade-in">
 							<section>
 								<a href="https://storymaps.arcgis.com/stories/5a73c55563b3462c9d63864c6b4ba1dd" target="_blank" rel="noopener">
-									<span class="icon style2 major fa-solid fa-shoe-prints"></span>
+									<span class="icon style2 major fa-shoe-prints"></span>
 								</a>
 								<h3>Access to open space</h3>
 								<p>Analysis of the accessibility of open space in Santa Clara County, California.</p>
 							</section>
 							<section>
 								<a href="https://storymaps.arcgis.com/stories/bbb3cb3c31764259b57a05bbcede88f7" target="_blank" rel="noopener">
-									<span class="icon style2 major fa-solid fa-image"></span>
+									<span class="icon style2 major fa-image"></span>
 								</a>
 								<h3>Open space access maps</h3>
 								<p>Static maps of open space accessibility in Santa Clara County, California.</p>
 							</section>
 							<section>
 								<a href="https://foothillgist.maps.arcgis.com/apps/MapSeries/index.html?appid=abf884525a3549468d66c6b4fc601ae7" target="_blank" rel="noopener">
-									<span class="icon style2 major fa-solid fa-bed"></span>
+									<span class="icon style2 major fa-bed"></span>
 								</a>
 								<h3>Homelessness in Silicon Valley</h3>
 								<p>Analysis of homelessness in Santa Clara County, California.</p>
 							</section>
 							<section>
 								<a href="https://storymaps.arcgis.com/stories/c5c1b7a0e5d44e699545a7c253cbf047" target="_blank" rel="noopener">
-									<span class="icon style2 major fa-solid fa-leaf"></span>
+									<span class="icon style2 major fa-leaf"></span>
 								</a>
 								<h3>California ecology</h3>
 								<p>Record of visits to local open spaces and parks for California ecology class at Foothill College, Los Altos, California.</p>
 							</section>
 							<section>
 								<a href="https://storymaps.arcgis.com/stories/eeb514c80a404526bb867b947b32f96b" target="_blank" rel="noopener">
-									<span class="icon style2 major fa-solid fa-seedling"></span>
+									<span class="icon style2 major fa-seedling"></span>
 								</a>
 								<h3>Farmers market site selection</h3>
 								<p>Analysis of suitable sites for a new farmers market within the San Francisco Bay Area, California.</p>
 							</section>
 							<section>
 								<a href="https://storymaps.arcgis.com/stories/6f8dc3407dd141199815c3d5a8f4e5cc" target="_blank" rel="noopener">
-									<span class="icon style2 major fa-solid fa-gem"></span>
+									<span class="icon style2 major fa-gem"></span>
 								</a>
 								<h3>Market analysis</h3>
 								<p>Hot spot analysis conducted for the fictious Zap! Video Games Corporation and BigBucks Malls Inc. to identify target markets within the San Francisco Bay Area for new product releases.</p>
@@ -759,7 +758,7 @@
 
 							<section>
 								<a href="https://foothillgist.maps.arcgis.com/apps/MapSeries/index.html?appid=abf884525a3549468d66c6b4fc601ae7" target="_blank" rel="noopener">
-									<span class="icon style2 major fa-solid fa-bed"></span>
+									<span class="icon style2 major fa-bed"></span>
 								</a>
 								<h3>Homelessness in Silicon Valley, California</h3>
 								<p>A look at the connection between homelessness and median household income by census tract across Santa Clara County, California in 2015. Data from Santa Clara County Homeless Census and Survey 2015, and US Census (2015).
@@ -768,7 +767,7 @@
 
 							<section>
 								<a href="https://foothillgist.maps.arcgis.com/apps/webappviewer/index.html?id=588e6104f92a47d9be30b28ac0b362d6" target="_blank" rel="noopener">
-									<span class="icon style2 major fa-solid fa-map"></span>
+									<span class="icon style2 major fa-map"></span>
 								</a>
 								<h3>Land use change in Samut Songkhram, Thailand </h3>
 								<p>This application shows the patterns of land-use change in Samut Songkhram, Thailand, over the last 40 years. Uncontrolled growth of shrimp farms in the 1980s resulted in the decimation of valuable mangrove ecosystems.
@@ -777,7 +776,7 @@
 
 <!-- 							<section>
 								<a href="https://foothillgist.maps.arcgis.com/apps/instant/media/index.html?appid=38dfe91fe9bb4b43b7a22cb43eb707cf" target="_blank" rel="noopener">
-									<span class="icon style2 major fa-solid fa-shoe-prints"></span>
+									<span class="icon style2 major fa-shoe-prints"></span>
 								</a>
 								<h3>Hiking trails, Midpeninsula Regional Open Space District, California</h3>
 								<p>This Instant App shows hiking trails in preserves manage by the Midpeninsula Regional Open Space District. It can be used to check distances and create elevation profiles to help with planning hikes in MROSD preserves.
@@ -786,7 +785,7 @@
 
 							<section>
 								<a href="https://foothillgist.maps.arcgis.com/apps/Profile/index.html?appid=9352af51068e4be39ea177c640e9f550" target="_blank" rel="noopener">
-									<span class="icon style2 major fa-solid fa-shoe-prints"></span>
+									<span class="icon style2 major fa-shoe-prints"></span>
 								</a>
 								<h3>Hiking trails Red Rock Canyon, Nevada</h3>
 								<p>This application shows the trails located in the Red Rock Canyon National Conservation Area. The goal of the app is to help hikers appropriately plan their day according to abilities.
@@ -795,7 +794,7 @@
 
 							<section>
 								<a href="https://foothillgist.maps.arcgis.com/apps/View/index.html?appid=8aa19b76c9c04d16917ba43e22a0786d" target="_blank" rel="noopener">
-									<span class="icon style2 major fa-solid fa-fire"></span>
+									<span class="icon style2 major fa-fire"></span>
 								</a>
 								<h3>Volcanic hazards, Island of Hawaii</h3>
 								<p>This application shows Lava flow hazard zones for the island of Hawaii as defined by the U.S. Geological Survey. Volcanoes, emergency shelters, and major highways are also shown.
@@ -815,14 +814,14 @@
 						<div class="items style1 medium onscroll-fade-in">
 							<section>
 								<a href="portfolio/calero_county_park/calero_geodatabase_design.pdf" target="_blank" rel="noopener">
-									<span class="icon style2 major fa-solid fa-database"></span>
+									<span class="icon style2 major fa-database"></span>
 								</a>
 								<h3>Design report</h3>
 								<p>ArcGIS geodatabase design project report for Calero County Park, Santa Clara County, California.</p>
 							</section>
 							<section>
 								<a href="portfolio/calero_county_park/calero_map.pdf" target="_blank" rel="noopener">
-									<span class="icon style2 major fa-solid fa-map"></span>
+									<span class="icon style2 major fa-map"></span>
 								</a>
 								<h3>Map</h3>
 								<p>Map of Calero County Park, Santa Clara County, California.</p>
@@ -840,7 +839,7 @@
 
 							<section>
 								<a href="portfolio/UrbanHeatIslands/urban_heat_islands_summary.pdf" target="_blank" rel="noopener">
-									<span class="icon style2 major fa-solid fa-chart-bar"></span>
+									<span class="icon style2 major fa-chart-bar"></span>
 								</a>
 								<h3>Urban heat island analysis</h3>
 								<p>Analysis of the urban heat island effect, Santa Clara County, California.</p>
@@ -848,7 +847,7 @@
 
 							<section>
 								<a href="portfolio/tree_cover_and_heat/project_report_v02.pdf" target="_blank" rel="noopener">
-									<span class="icon style2 major fa-solid fa-chart-bar"></span>
+									<span class="icon style2 major fa-chart-bar"></span>
 								</a>
 								<h3>Tree cover and urban heat island analysis report</h3>
 								<p>Analysis of the impact of tree cover on the urban heat island effect in the City of San Jose, Santa Clara County, California.</p>
@@ -856,7 +855,7 @@
 
 							<section>
 								<a href="portfolio/tree_cover_and_heat/final_project_presentation_v04.pdf" target="_blank" rel="noopener">
-									<span class="icon style2 major fa-solid fa-chart-bar"></span>
+									<span class="icon style2 major fa-chart-bar"></span>
 								</a>
 								<h3>Tree cover and urban heat island presentation</h3>
 								<p>Presentation of analysis of the impact of tree cover on the urban heat island effect in the City of San Jose, Santa Clara County, California.</p>
@@ -2132,11 +2131,11 @@
 				<footer class="wrapper style1 align-center">
 					<div class="inner">
 						<ul class="icons">
-							<li><a href="#" class="icon brands style2 fa-brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands style2 fa-brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands style2 fa-brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://www.linkedin.com/in/christopher-prendergast-862aa8190" class="icon brands style2 fa-brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							<li><a href="#" class="icon style2 fa-brands fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.linkedin.com/in/christopher-prendergast-862aa8190" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
 						<p>&copy; Christopher Prendergast, 2024. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</div>
