@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <link href="/theme/css/elegant.prod.9e9d5ce754.css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="/theme/css/custom.css" media="screen" rel="stylesheet" type="text/css"/>
+
+        <link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+        <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+
+        <link href="/theme/css/colorbox.css" rel="stylesheet"/>
+
+
+        <meta content="Christopher Prendergast" name="author">
+
+        <meta content="article" property="og:type">
+        <meta content="summary" name="twitter:card"/>
+
+<meta content="ArcGIS, ArcPy, Cartography, Python, ArcPy, " name="keywords">
+
+<meta content="Sanitation Drawing Index Map, Santa Cruz County " property="og:title">
+<meta content="/santa_cruz_sanitation.html" property="og:url"/>
+<meta content="A Sanitation Drawing Index feature class has an attribute which holds the name of a pdf file containing the as-built construction drawings for the corresponding sewer line. However, over the years, this folder has not been maintained or updated. A Python script iterates through each record in the feature class and checks whether the corresponding pdf file exists in the folder. If it does then the file is copied to a new folder and deleted from the original folder. The end result is two folders. The original folder that contains all the old maps which have no corresponding feature in the feature class, and a new folder that only contains those maps that do have a corresponding feature in the feature class." property="og:description"/>
+<meta content="portfolio" property="og:site_name"/>
+<meta content="Christopher Prendergast" property="og:article:author"/>
+<meta content="2024-05-04T00:00:00-07:00" property="og:article:published_time"/>
+<meta content="2025-06-07T00:00:00-07:00" property="og:article:modified_time"/>
+<meta content="Sanitation Drawing Index Map, Santa Cruz County " name="twitter:title"/>
+<meta content="A Sanitation Drawing Index feature class has an attribute which holds the name of a pdf file containing the as-built construction drawings for the corresponding sewer line. However, over the years, this folder has not been maintained or updated. A Python script iterates through each record in the feature class and checks whether the corresponding pdf file exists in the folder. If it does then the file is copied to a new folder and deleted from the original folder. The end result is two folders. The original folder that contains all the old maps which have no corresponding feature in the feature class, and a new folder that only contains those maps that do have a corresponding feature in the feature class." name="twitter:description"/>
+
+        <title>Sanitation Drawing Index Map, Santa Cruz County  · portfolio
+</title>
+
+
+
+    </meta></meta></meta></meta></head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/"><span class="site-name">portfolio</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li>
+                                    <a href="/">Home</a>
+                                </li>
+                                <li><a href="/categories.html">Categories</a></li>
+                                <li><a href="/tags.html">Tags</a></li>
+                                <li><a href="/archives.html">Archives</a></li>
+                                <li><form action="/search.html" class="navbar-search" onsubmit="return validateForm(this.elements['q'].value);"> <input class="search-query" id="tipue_search_input" name="q" placeholder="Search" type="text"/></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope="">
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="/santa_cruz_sanitation.html">
+                Sanitation Drawing Index Map, Santa Cruz County
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <p><img alt="Thumb" class="image-process-thumb" src="/images/santa_cruz_sanitation/png/derivatives/thumb/santa_cruz_sanitation_noborder.png"/></p>
+<p>A Sanitation Drawing Index feature class has an attribute which holds the name of a pdf file containing the as-built construction drawings for the corresponding sewer line. However, over the years, this folder has not been maintained or updated. A Python script iterates through each record in the feature class and checks whether the corresponding pdf file exists in the folder. If it does then the file is copied to a new folder and deleted from the original folder. The end result is two folders. The original folder that contains all the old maps which have no corresponding feature in the feature class, and a new folder that only contains those maps that do have a corresponding feature in the feature class.</p>
+<h1 id="sanitation-drawing-index">Sanitation Drawing Index</h1>
+<p><a class="mybox" href="/images/santa_cruz_sanitation/png/santa_cruz_sanitation_noborder.png"><img alt="Sanitation Drawing Index" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="/images/santa_cruz_sanitation/png/derivatives/large-photo/800w/santa_cruz_sanitation_noborder.png" srcset="/images/santa_cruz_sanitation/png/derivatives/large-photo/600w/santa_cruz_sanitation_noborder.png 600w, /images/santa_cruz_sanitation/png/derivatives/large-photo/800w/santa_cruz_sanitation_noborder.png 800w, /images/santa_cruz_sanitation/png/derivatives/large-photo/1600w/santa_cruz_sanitation_noborder.png 1600w"/></a></p>
+<p><a href="/images/santa_cruz_sanitation/pdf/santa_cruz_sanitation.pdf">PDF file</a></p>
+<h1 id="python-code">Python Code</h1>
+<div class="highlight"><pre><span></span><code><span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
+<span class="c1"># santa_cruz_sanitation.py</span>
+<span class="c1"># Christopher Prendergast</span>
+<span class="c1"># 2024/05/04</span>
+<span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
+<span class="kn">import</span> <span class="nn">arcpy</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">shutil</span> <span class="kn">import</span> <span class="n">copytree</span>
+
+<span class="c1"># Set project directory, geodatabase, feature class, field, and old/new pdf subdirectory names.</span>
+<span class="n">my_proj_dir</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"C:\ArcGIS_local_projects\Sanitation"</span>
+<span class="n">my_gdb</span> <span class="o">=</span> <span class="s2">"SanitationData.gdb"</span>
+<span class="n">my_fc</span> <span class="o">=</span> <span class="s2">"SanitationMapIndex"</span>
+<span class="n">my_field</span> <span class="o">=</span> <span class="s2">"FileName"</span>
+<span class="n">my_old_pdf_subdir</span> <span class="o">=</span> <span class="s2">"SanitationMaps"</span>
+<span class="n">my_new_pdf_subdir</span> <span class="o">=</span> <span class="s2">"NewSanitationMaps"</span>
+<span class="n">my_save_pdf_subdir</span> <span class="o">=</span> <span class="s2">"SanitationMapsSave"</span>
+<span class="n">line</span> <span class="o">=</span> <span class="s2">"-"</span> <span class="o">*</span> <span class="mi">80</span>
+
+<span class="c1"># Establish the old directory and check it exists.</span>
+<span class="n">old_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">my_proj_dir</span><span class="p">,</span> <span class="n">my_old_pdf_subdir</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">old_dir</span><span class="o">.</span><span class="n">is_dir</span><span class="p">(),</span> <span class="s2">"old_dir: </span><span class="si">{0}</span><span class="s2"> is not a directory or does not exist."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">old_dir</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"...old_dir"</span><span class="p">,</span> <span class="n">old_dir</span><span class="p">)</span>
+
+<span class="c1"># Establish the save directory and create it if it doesn't already exist.</span>
+<span class="c1"># Make a backup copy just in case!</span>
+<span class="n">save_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">my_proj_dir</span><span class="p">,</span> <span class="n">my_save_pdf_subdir</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">save_dir</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+    <span class="n">copytree</span><span class="p">(</span><span class="n">old_dir</span><span class="p">,</span> <span class="n">save_dir</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">save_dir</span><span class="o">.</span><span class="n">is_dir</span><span class="p">(),</span> <span class="s2">"save_dir: </span><span class="si">{0}</span><span class="s2"> is not a directory or does not exist."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">save_dir</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"...save_dir:"</span><span class="p">,</span> <span class="n">save_dir</span><span class="p">)</span>
+
+<span class="c1"># Establish the new directory and create it if it doesn't already exist.</span>
+<span class="n">new_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">my_proj_dir</span><span class="p">,</span> <span class="n">my_new_pdf_subdir</span><span class="p">)</span>
+<span class="n">new_dir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">new_dir</span><span class="o">.</span><span class="n">is_dir</span><span class="p">(),</span> <span class="s2">"new_dir: </span><span class="si">{0}</span><span class="s2"> is not a directory or does not exist."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">new_dir</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"...new_dir:"</span><span class="p">,</span> <span class="n">new_dir</span><span class="p">)</span>
+
+<span class="c1"># Establish the geodatabase and check it exists.</span>
+<span class="n">sanitation_gdb</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">my_proj_dir</span><span class="p">,</span> <span class="n">my_gdb</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">sanitation_gdb</span><span class="o">.</span><span class="n">is_dir</span><span class="p">(),</span> <span class="s2">"sanitation_gdb: </span><span class="si">{0}</span><span class="s2"> is not a directory or does not exist."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sanitation_gdb</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"...sanitation_gdb"</span><span class="p">,</span> <span class="n">sanitation_gdb</span><span class="p">)</span>
+
+<span class="c1"># Establish the feature class.</span>
+<span class="n">fc</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">sanitation_gdb</span><span class="p">,</span> <span class="n">my_fc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"...fc:"</span><span class="p">,</span> <span class="n">fc</span><span class="p">)</span>
+
+<span class="c1"># Check that the feature class exists.</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">workspace</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">sanitation_gdb</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">fc</span><span class="p">)),</span> <span class="s2">"fc: feature class </span><span class="si">{0}</span><span class="s2"> does not exists"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fc</span><span class="p">)</span>
+
+<span class="c1"># Check that field exists.</span>
+<span class="n">fields</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ListFields</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">fc</span><span class="p">),</span> <span class="n">my_field</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">fields</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">my_field</span><span class="p">,</span> <span class="s2">"my_fields: field </span><span class="si">{0}</span><span class="s2"> not found"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">my_field</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"...my_field:"</span><span class="p">,</span> <span class="n">my_field</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+<span class="c1"># Establish empty lists to hold any files that are not found in the old directory or are duplicate references.</span>
+<span class="n">files_not_found</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">duplicate_file_refs</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Establish a search cursor.</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">da</span><span class="o">.</span><span class="n">SearchCursor</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">fc</span><span class="p">),</span> <span class="p">[</span><span class="s2">"OID@"</span><span class="p">,</span> <span class="n">my_field</span><span class="p">])</span>
+<span class="c1"># Iterate through records in cursor.</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+    <span class="c1"># Get the file name from the current record.</span>
+    <span class="n">curr_id</span><span class="p">,</span> <span class="n">curr_file</span> <span class="o">=</span> <span class="n">row</span>
+    <span class="n">old_pdf_file</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">old_dir</span><span class="p">,</span> <span class="n">curr_file</span><span class="p">)</span>
+    <span class="n">new_pdf_file</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">new_dir</span><span class="p">,</span> <span class="n">curr_file</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">old_pdf_file</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">new_pdf_file</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+        <span class="c1"># If the file exists then move it to the new directory.</span>
+        <span class="n">old_pdf_file</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">new_pdf_file</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"--&gt;"</span><span class="p">,</span> <span class="s2">"</span><span class="si">{0}</span><span class="s2">: File </span><span class="si">{1}</span><span class="s2"> moved to </span><span class="si">{2}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">curr_id</span><span class="p">,</span> <span class="n">curr_file</span><span class="p">,</span> <span class="n">new_pdf_file</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">new_pdf_file</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+        <span class="c1"># If thee file already exists in the target directory then add it to a list of duplicate references.</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"***"</span><span class="p">,</span> <span class="s2">"</span><span class="si">{0}</span><span class="s2">: Duplicate reference. File </span><span class="si">{1}</span><span class="s2"> already exists in </span><span class="si">{2}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">curr_id</span><span class="p">,</span> <span class="n">curr_file</span><span class="p">,</span> <span class="n">new_dir</span><span class="p">))</span>
+        <span class="n">duplicate_file_refs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">curr_file</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Otherwise, if the file is not found, add it to the list of missing files.</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"***"</span><span class="p">,</span> <span class="s2">"</span><span class="si">{0}</span><span class="s2">: file </span><span class="si">{1}</span><span class="s2"> not found."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">curr_id</span><span class="p">,</span> <span class="n">old_pdf_file</span><span class="p">))</span>
+        <span class="n">files_not_found</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">old_pdf_file</span><span class="p">)</span>
+
+<span class="c1"># Print list files in the save directory.</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Files in the save directory </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">save_dir</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">save_dir</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Total number of files in the save directory: </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+
+<span class="c1"># Print list of file references where the file was not found in the original directory.</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Files not found in original directory </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">old_dir</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files_not_found</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Total number of file references not found in original directory: </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+
+<span class="c1"># Print list of duplicate file references.</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Duplicate file reference where the same file has already been moved."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">duplicate_file_refs</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Total number of duplicate file references: </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+
+<span class="c1"># Print list of files that remain in the original directory.</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Files remaining in the original directory after move </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">old_dir</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">old_dir</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Total number of files remaining in the original directory after move: </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+
+<span class="c1"># Print list of files found in the new directory.</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Files found in new directory after move </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">new_dir</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">new_dir</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Total number of files found in new directory after move: </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+
+
+<span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
+<span class="c1"># Output</span>
+<span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
+<span class="c1"># "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\python.exe" C:\PythonPro\Ex11\sanitation.py</span>
+<span class="c1"># ...old_dir C:\ArcGIS_local_projects\Sanitation\SanitationMaps</span>
+<span class="c1"># ...save_dir: C:\ArcGIS_local_projects\Sanitation\SanitationMapsSave</span>
+<span class="c1"># ...new_dir: C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps</span>
+<span class="c1"># ...sanitation_gdb C:\ArcGIS_local_projects\Sanitation\SanitationData.gdb</span>
+<span class="c1"># ...fc: C:\ArcGIS_local_projects\Sanitation\SanitationData.gdb\SanitationMapIndex</span>
+<span class="c1"># ...my_field: FileName</span>
+<span class="c1"># --------------------------------------------------------------------------------</span>
+<span class="c1"># --&gt; 1: File A-082_COMPLETE.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-082_COMPLETE.pdf</span>
+<span class="c1"># --&gt; 2: File A-200.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-200.pdf</span>
+<span class="c1"># --&gt; 4: File A-018a.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-018a.pdf</span>
+<span class="c1"># --&gt; 7: File C-055.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\C-055.pdf</span>
+<span class="c1"># --&gt; 9: File A-216.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-216.pdf</span>
+<span class="c1"># --&gt; 11: File A-030.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-030.pdf</span>
+<span class="c1"># *** 12: Duplicate reference. File A-082_COMPLETE.pdf already exists in C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps</span>
+<span class="c1"># --&gt; 14: File A-077.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-077.pdf</span>
+<span class="c1"># --&gt; 15: File C-128.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\C-128.pdf</span>
+<span class="c1"># --&gt; 16: File A-021.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-021.pdf</span>
+<span class="c1"># --&gt; 18: File A-031.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-031.pdf</span>
+<span class="c1"># --&gt; 19: File A-027.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-027.pdf</span>
+<span class="c1"># --&gt; 21: File A-018.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-018.pdf</span>
+<span class="c1"># --&gt; 22: File C-125.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\C-125.pdf</span>
+<span class="c1"># --&gt; 23: File A-191.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-191.pdf</span>
+<span class="c1"># --&gt; 25: File A-029.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-029.pdf</span>
+<span class="c1"># *** 26: Duplicate reference. File A-082_COMPLETE.pdf already exists in C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps</span>
+<span class="c1"># --&gt; 28: File C-120.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\C-120.pdf</span>
+<span class="c1"># --&gt; 29: File C-021.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\C-021.pdf</span>
+<span class="c1"># *** 31: Duplicate reference. File A-082_COMPLETE.pdf already exists in C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps</span>
+<span class="c1"># --&gt; 32: File C-116.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\C-116.pdf</span>
+<span class="c1"># --&gt; 34: File C-008.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\C-008.pdf</span>
+<span class="c1"># --&gt; 35: File C-109.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\C-109.pdf</span>
+<span class="c1"># --&gt; 36: File A-020.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-020.pdf</span>
+<span class="c1"># --&gt; 37: File A-149.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-149.pdf</span>
+<span class="c1"># --&gt; 38: File A-022.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-022.pdf</span>
+<span class="c1"># --&gt; 39: File A-196.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-196.pdf</span>
+<span class="c1"># --&gt; 40: File A-019.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-019.pdf</span>
+<span class="c1"># --&gt; 42: File C-129.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\C-129.pdf</span>
+<span class="c1"># --&gt; 43: File A-017.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-017.pdf</span>
+<span class="c1"># --&gt; 44: File A-032.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\A-032.pdf</span>
+<span class="c1"># --&gt; 45: File C-123.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\C-123.pdf</span>
+<span class="c1"># --&gt; 46: File C-050.pdf moved to C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps\C-050.pdf</span>
+<span class="c1">#</span>
+<span class="c1"># --------------------------------------------------------------------------------</span>
+<span class="c1"># Files in the save directory C:\ArcGIS_local_projects\Sanitation\SanitationMapsSave</span>
+<span class="c1"># --------------------------------------------------------------------------------</span>
+<span class="c1">#   A-017.pdf</span>
+<span class="c1">#   A-018.pdf</span>
+<span class="c1">#   A-018a.pdf</span>
+<span class="c1">#   A-019.pdf</span>
+<span class="c1">#   A-020.pdf</span>
+<span class="c1">#   A-021.pdf</span>
+<span class="c1">#   A-022.pdf</span>
+<span class="c1">#   A-024.pdf</span>
+<span class="c1">#   A-025.pdf</span>
+<span class="c1">#   A-026.pdf</span>
+<span class="c1">#   A-027.pdf</span>
+<span class="c1">#   A-029.pdf</span>
+<span class="c1">#   A-030.pdf</span>
+<span class="c1">#   A-031.pdf</span>
+<span class="c1">#   A-032.pdf</span>
+<span class="c1">#   A-034.pdf</span>
+<span class="c1">#   A-036.pdf</span>
+<span class="c1">#   A-037.pdf</span>
+<span class="c1">#   A-039.pdf</span>
+<span class="c1">#   A-040..pdf</span>
+<span class="c1">#   A-043.pdf</span>
+<span class="c1">#   A-044.pdf</span>
+<span class="c1">#   A-048.pdf</span>
+<span class="c1">#   A-050.pdf</span>
+<span class="c1">#   A-051.pdf</span>
+<span class="c1">#   A-053.pdf</span>
+<span class="c1">#   A-054.pdf</span>
+<span class="c1">#   A-056.pdf</span>
+<span class="c1">#   A-059.pdf</span>
+<span class="c1">#   A-061.pdf</span>
+<span class="c1">#   A-062.pdf</span>
+<span class="c1">#   A-063.pdf</span>
+<span class="c1">#   A-064.pdf</span>
+<span class="c1">#   A-065.pdf</span>
+<span class="c1">#   A-067.pdf</span>
+<span class="c1">#   A-068.pdf</span>
+<span class="c1">#   A-069.pdf</span>
+<span class="c1">#   A-070.pdf</span>
+<span class="c1">#   A-072.pdf</span>
+<span class="c1">#   A-073.pdf</span>
+<span class="c1">#   A-074.pdf</span>
+<span class="c1">#   A-075.pdf</span>
+<span class="c1">#   A-076.pdf</span>
+<span class="c1">#   A-077.pdf</span>
+<span class="c1">#   A-078.pdf</span>
+<span class="c1">#   A-082_COMPLETE.pdf</span>
+<span class="c1">#   A-149.pdf</span>
+<span class="c1">#   A-150.pdf</span>
+<span class="c1">#   A-151.pdf</span>
+<span class="c1">#   A-186.pdf</span>
+<span class="c1">#   A-187.pdf</span>
+<span class="c1">#   A-188.pdf</span>
+<span class="c1">#   A-189.pdf</span>
+<span class="c1">#   A-190.pdf</span>
+<span class="c1">#   A-191.pdf</span>
+<span class="c1">#   A-194.pdf</span>
+<span class="c1">#   A-195.pdf</span>
+<span class="c1">#   A-196.pdf</span>
+<span class="c1">#   A-197.pdf</span>
+<span class="c1">#   A-198.pdf</span>
+<span class="c1">#   A-200.pdf</span>
+<span class="c1">#   A-202.pdf</span>
+<span class="c1">#   A-209.pdf</span>
+<span class="c1">#   A-210.pdf</span>
+<span class="c1">#   A-211.pdf</span>
+<span class="c1">#   A-212.pdf</span>
+<span class="c1">#   A-212B.pdf</span>
+<span class="c1">#   A-213.pdf</span>
+<span class="c1">#   A-213B.pdf</span>
+<span class="c1">#   A-214.pdf</span>
+<span class="c1">#   A-215.pdf</span>
+<span class="c1">#   A-216.pdf</span>
+<span class="c1">#   A-217.pdf</span>
+<span class="c1">#   A-218.pdf</span>
+<span class="c1">#   A-219.pdf</span>
+<span class="c1">#   A-220.pdf</span>
+<span class="c1">#   A-78.pdf</span>
+<span class="c1">#   C-001A.pdf</span>
+<span class="c1">#   C-008.pdf</span>
+<span class="c1">#   C-021.pdf</span>
+<span class="c1">#   C-050.pdf</span>
+<span class="c1">#   C-055.pdf</span>
+<span class="c1">#   C-108A.pdf</span>
+<span class="c1">#   C-109.pdf</span>
+<span class="c1">#   C-110.pdf</span>
+<span class="c1">#   C-110A.pdf</span>
+<span class="c1">#   C-111.pdf</span>
+<span class="c1">#   C-112.pdf</span>
+<span class="c1">#   C-113.pdf</span>
+<span class="c1">#   C-114.pdf</span>
+<span class="c1">#   C-115.pdf</span>
+<span class="c1">#   C-116.pdf</span>
+<span class="c1">#   C-117.pdf</span>
+<span class="c1">#   C-118.pdf</span>
+<span class="c1">#   C-119.pdf</span>
+<span class="c1">#   C-120.pdf</span>
+<span class="c1">#   C-121.pdf</span>
+<span class="c1">#   C-122.pdf</span>
+<span class="c1">#   C-123.pdf</span>
+<span class="c1">#   C-124.pdf</span>
+<span class="c1">#   C-125.pdf</span>
+<span class="c1">#   C-126.pdf</span>
+<span class="c1">#   C-127.pdf</span>
+<span class="c1">#   C-128.pdf</span>
+<span class="c1">#   C-129.pdf</span>
+<span class="c1">#   C-130.pdf</span>
+<span class="c1"># Total number of files in the save directory: 106</span>
+<span class="c1">#</span>
+<span class="c1"># --------------------------------------------------------------------------------</span>
+<span class="c1"># Files not found in original directory C:\ArcGIS_local_projects\Sanitation\SanitationMaps</span>
+<span class="c1"># --------------------------------------------------------------------------------</span>
+<span class="c1"># Total number of file references not found in original directory: 0</span>
+<span class="c1">#</span>
+<span class="c1"># --------------------------------------------------------------------------------</span>
+<span class="c1"># Duplicate file reference where the same file has already been moved.</span>
+<span class="c1"># --------------------------------------------------------------------------------</span>
+<span class="c1">#   A-082_COMPLETE.pdf</span>
+<span class="c1">#   A-082_COMPLETE.pdf</span>
+<span class="c1">#   A-082_COMPLETE.pdf</span>
+<span class="c1"># Total number of duplicate file references: 3</span>
+<span class="c1">#</span>
+<span class="c1"># --------------------------------------------------------------------------------</span>
+<span class="c1"># Files remaining in the original directory after move C:\ArcGIS_local_projects\Sanitation\SanitationMaps</span>
+<span class="c1"># --------------------------------------------------------------------------------</span>
+<span class="c1">#   A-024.pdf</span>
+<span class="c1">#   A-025.pdf</span>
+<span class="c1">#   A-026.pdf</span>
+<span class="c1">#   A-034.pdf</span>
+<span class="c1">#   A-036.pdf</span>
+<span class="c1">#   A-037.pdf</span>
+<span class="c1">#   A-039.pdf</span>
+<span class="c1">#   A-040..pdf</span>
+<span class="c1">#   A-043.pdf</span>
+<span class="c1">#   A-044.pdf</span>
+<span class="c1">#   A-048.pdf</span>
+<span class="c1">#   A-050.pdf</span>
+<span class="c1">#   A-051.pdf</span>
+<span class="c1">#   A-053.pdf</span>
+<span class="c1">#   A-054.pdf</span>
+<span class="c1">#   A-056.pdf</span>
+<span class="c1">#   A-059.pdf</span>
+<span class="c1">#   A-061.pdf</span>
+<span class="c1">#   A-062.pdf</span>
+<span class="c1">#   A-063.pdf</span>
+<span class="c1">#   A-064.pdf</span>
+<span class="c1">#   A-065.pdf</span>
+<span class="c1">#   A-067.pdf</span>
+<span class="c1">#   A-068.pdf</span>
+<span class="c1">#   A-069.pdf</span>
+<span class="c1">#   A-070.pdf</span>
+<span class="c1">#   A-072.pdf</span>
+<span class="c1">#   A-073.pdf</span>
+<span class="c1">#   A-074.pdf</span>
+<span class="c1">#   A-075.pdf</span>
+<span class="c1">#   A-076.pdf</span>
+<span class="c1">#   A-078.pdf</span>
+<span class="c1">#   A-150.pdf</span>
+<span class="c1">#   A-151.pdf</span>
+<span class="c1">#   A-186.pdf</span>
+<span class="c1">#   A-187.pdf</span>
+<span class="c1">#   A-188.pdf</span>
+<span class="c1">#   A-189.pdf</span>
+<span class="c1">#   A-190.pdf</span>
+<span class="c1">#   A-194.pdf</span>
+<span class="c1">#   A-195.pdf</span>
+<span class="c1">#   A-197.pdf</span>
+<span class="c1">#   A-198.pdf</span>
+<span class="c1">#   A-202.pdf</span>
+<span class="c1">#   A-209.pdf</span>
+<span class="c1">#   A-210.pdf</span>
+<span class="c1">#   A-211.pdf</span>
+<span class="c1">#   A-212.pdf</span>
+<span class="c1">#   A-212B.pdf</span>
+<span class="c1">#   A-213.pdf</span>
+<span class="c1">#   A-213B.pdf</span>
+<span class="c1">#   A-214.pdf</span>
+<span class="c1">#   A-215.pdf</span>
+<span class="c1">#   A-217.pdf</span>
+<span class="c1">#   A-218.pdf</span>
+<span class="c1">#   A-219.pdf</span>
+<span class="c1">#   A-220.pdf</span>
+<span class="c1">#   A-78.pdf</span>
+<span class="c1">#   C-001A.pdf</span>
+<span class="c1">#   C-108A.pdf</span>
+<span class="c1">#   C-110.pdf</span>
+<span class="c1">#   C-110A.pdf</span>
+<span class="c1">#   C-111.pdf</span>
+<span class="c1">#   C-112.pdf</span>
+<span class="c1">#   C-113.pdf</span>
+<span class="c1">#   C-114.pdf</span>
+<span class="c1">#   C-115.pdf</span>
+<span class="c1">#   C-117.pdf</span>
+<span class="c1">#   C-118.pdf</span>
+<span class="c1">#   C-119.pdf</span>
+<span class="c1">#   C-121.pdf</span>
+<span class="c1">#   C-122.pdf</span>
+<span class="c1">#   C-124.pdf</span>
+<span class="c1">#   C-126.pdf</span>
+<span class="c1">#   C-127.pdf</span>
+<span class="c1">#   C-130.pdf</span>
+<span class="c1"># Total number of files remaining in the original directory after move: 76</span>
+<span class="c1">#</span>
+<span class="c1"># --------------------------------------------------------------------------------</span>
+<span class="c1"># Files found in new directory after move C:\ArcGIS_local_projects\Sanitation\NewSanitationMaps</span>
+<span class="c1"># --------------------------------------------------------------------------------</span>
+<span class="c1">#   A-017.pdf</span>
+<span class="c1">#   A-018.pdf</span>
+<span class="c1">#   A-018a.pdf</span>
+<span class="c1">#   A-019.pdf</span>
+<span class="c1">#   A-020.pdf</span>
+<span class="c1">#   A-021.pdf</span>
+<span class="c1">#   A-022.pdf</span>
+<span class="c1">#   A-027.pdf</span>
+<span class="c1">#   A-029.pdf</span>
+<span class="c1">#   A-030.pdf</span>
+<span class="c1">#   A-031.pdf</span>
+<span class="c1">#   A-032.pdf</span>
+<span class="c1">#   A-077.pdf</span>
+<span class="c1">#   A-082_COMPLETE.pdf</span>
+<span class="c1">#   A-149.pdf</span>
+<span class="c1">#   A-191.pdf</span>
+<span class="c1">#   A-196.pdf</span>
+<span class="c1">#   A-200.pdf</span>
+<span class="c1">#   A-216.pdf</span>
+<span class="c1">#   C-008.pdf</span>
+<span class="c1">#   C-021.pdf</span>
+<span class="c1">#   C-050.pdf</span>
+<span class="c1">#   C-055.pdf</span>
+<span class="c1">#   C-109.pdf</span>
+<span class="c1">#   C-116.pdf</span>
+<span class="c1">#   C-120.pdf</span>
+<span class="c1">#   C-123.pdf</span>
+<span class="c1">#   C-125.pdf</span>
+<span class="c1">#   C-128.pdf</span>
+<span class="c1">#   C-129.pdf</span>
+<span class="c1"># Total number of files found in new directory after move: 30</span>
+<span class="c1">#</span>
+<span class="c1"># Process finished with exit code 0</span>
+<span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
+</code></pre></div>
+
+<p><a href="/images/santa_cruz_sanitation/py/santa_cruz_sanitation.py">Download .py file</a></p>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+        </div>
+        <section class="span2" id="article-sidebar">
+            <h4>Published</h4>
+            <time datetime="2024-05-04T00:00:00-07:00" itemprop="dateCreated">Sat 04 May 2024</time>
+<h4>Last Updated</h4>
+<time datetime="2025-06-07T00:00:00-07:00">Sat 07 June 2025</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#arcpy-ref">ArcPy</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="/tags.html#arcgis-ref">ArcGIS
+                    <span class="superscript">10</span>
+</a></li>
+                <li><a href="/tags.html#arcpy-ref">ArcPy
+                    <span class="superscript">3</span>
+</a></li>
+                <li><a href="/tags.html#cartography-ref">Cartography
+                    <span class="superscript">13</span>
+</a></li>
+                <li><a href="/tags.html#python-ref">Python
+                    <span class="superscript">3</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" rel="nofollow noopener noreferrer" target="_blank" title="Pelican Home Page">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" rel="nofollow noopener noreferrer" target="_blank" title="Theme Elegant Home Page">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+
+        <script src="/theme/js/jquery.min.js"></script>
+        <!-- Make sure jquery is loaded first, then load colorbox -->
+        <script src="/theme/js/jquery.colorbox-min.js"></script>
+        <script src="/theme/js/load-colorbox.js"></script>
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

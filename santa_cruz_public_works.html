@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <link href="/theme/css/elegant.prod.9e9d5ce754.css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="/theme/css/custom.css" media="screen" rel="stylesheet" type="text/css"/>
+
+        <link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+        <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+
+        <link href="/theme/css/colorbox.css" rel="stylesheet"/>
+
+
+        <meta content="Christopher Prendergast" name="author">
+
+        <meta content="article" property="og:type">
+        <meta content="summary" name="twitter:card"/>
+
+<meta content="ArcGIS, ArcPy, Cartography, Python, ArcPy, " name="keywords">
+
+<meta content="Public Works Department Assets, City of Santa Cruz " property="og:title">
+<meta content="/santa_cruz_public_works.html" property="og:url"/>
+<meta content="The City of Santa Cruz Public Works Department requested to have road names transferred to the assets in the existing Street Signs, Street Sign Poles, and Street Lights layers in a file geodatabase. This is accomplished with a Python script." property="og:description"/>
+<meta content="portfolio" property="og:site_name"/>
+<meta content="Christopher Prendergast" property="og:article:author"/>
+<meta content="2024-06-01T00:00:00-07:00" property="og:article:published_time"/>
+<meta content="2025-06-07T00:00:00-07:00" property="og:article:modified_time"/>
+<meta content="Public Works Department Assets, City of Santa Cruz " name="twitter:title"/>
+<meta content="The City of Santa Cruz Public Works Department requested to have road names transferred to the assets in the existing Street Signs, Street Sign Poles, and Street Lights layers in a file geodatabase. This is accomplished with a Python script." name="twitter:description"/>
+
+        <title>Public Works Department Assets, City of Santa Cruz  · portfolio
+</title>
+
+
+
+    </meta></meta></meta></meta></head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/"><span class="site-name">portfolio</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li>
+                                    <a href="/">Home</a>
+                                </li>
+                                <li><a href="/categories.html">Categories</a></li>
+                                <li><a href="/tags.html">Tags</a></li>
+                                <li><a href="/archives.html">Archives</a></li>
+                                <li><form action="/search.html" class="navbar-search" onsubmit="return validateForm(this.elements['q'].value);"> <input class="search-query" id="tipue_search_input" name="q" placeholder="Search" type="text"/></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope="">
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="/santa_cruz_public_works.html">
+                Public Works Department Assets, City of Santa Cruz
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <p><img alt="Thumb" class="image-process-thumb" src="/images/santa_cruz_public_works/png/derivatives/thumb/santa_cruz_public_works_noborder.png"/></p>
+<p>The City of Santa Cruz Public Works Department requested to have road names transferred to the assets in the existing Street Signs, Street Sign Poles, and Street Lights layers in a file geodatabase. This is accomplished with a Python script.</p>
+<h1 id="street-signs-street-sign-poles-and-street-lights">Street Signs, Street Sign Poles, and Street Lights</h1>
+<p>Map showing Street Signs, Street Sign Poles, and Street Lights layers.</p>
+<p><a class="mybox" href="/images/santa_cruz_public_works/png/santa_cruz_public_works_noborder.png"><img alt="Regular Precincts" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="/images/santa_cruz_public_works/png/derivatives/large-photo/800w/santa_cruz_public_works_noborder.png" srcset="/images/santa_cruz_public_works/png/derivatives/large-photo/600w/santa_cruz_public_works_noborder.png 600w, /images/santa_cruz_public_works/png/derivatives/large-photo/800w/santa_cruz_public_works_noborder.png 800w, /images/santa_cruz_public_works/png/derivatives/large-photo/1600w/santa_cruz_public_works_noborder.png 1600w"/></a></p>
+<p><a href="/images/santa_cruz_public_works/pdf/santa_cruz_public_works_noborder.pdf">PDF file</a></p>
+<h1 id="python-code">Python Code</h1>
+<div class="highlight"><pre><span></span><code><span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
+<span class="c1"># santa_cruz_public_works.py</span>
+<span class="c1"># Christopher Prendergast</span>
+<span class="c1"># 2024/05/12</span>
+<span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
+<span class="c1">#</span>
+<span class="kn">import</span> <span class="nn">arcpy</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="k">global</span> <span class="n">g_in_gdb</span>
+<span class="k">global</span> <span class="n">g_out_gdb</span>
+
+
+<span class="k">def</span> <span class="nf">full_path</span><span class="p">(</span><span class="n">root_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">basename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Convert basename to a full path given the root directory or geo-database path.</span>
+
+<span class="sd">    :param str root_dir:    The root directory or file geo-database path.</span>
+<span class="sd">    :param str basename:    The basename of a geo-database or feature class.</span>
+<span class="sd">    :return str:            The root and basename joined as a path.</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span> <span class="n">basename</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">setup_env</span><span class="p">(</span><span class="n">proj_dir_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">in_gdb_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">out_gdb_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Set up the geo-database environment. Assign values to global</span>
+<span class="sd">    variables g_in_gdb and g_out_gdb.</span>
+
+<span class="sd">    :param str proj_dir_str:    The project directory.</span>
+<span class="sd">    :param str in_gdb_str:      The basename of the input geo-database within the project directory.</span>
+<span class="sd">    :param str out_gdb_str:     The basename of the output geo-database within the project directory.</span>
+<span class="sd">    :return NoneType:           None</span>
+<span class="sd">    """</span>
+    <span class="c1">#</span>
+    <span class="c1"># Allow overwriting outputs.</span>
+    <span class="c1"># Note: overwriting doesn't work if the layer is open in ArcGIS Pro due</span>
+    <span class="c1"># to lock. Closing ArgGIS Pro releases the lock and the outputs can be</span>
+    <span class="c1"># overwritten. See:</span>
+    <span class="c1"># https://community.esri.com/t5/python-questions/arcpy-env-overwriteoutput-true-fails/m-p/411113#M32410</span>
+    <span class="c1">#</span>
+    <span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">overwriteOutput</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="c1">#</span>
+    <span class="c1"># Check the project directory exists.</span>
+    <span class="c1">#</span>
+    <span class="n">proj_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">proj_dir_str</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">proj_dir</span><span class="o">.</span><span class="n">is_dir</span><span class="p">(),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find the project directory </span><span class="si">{</span><span class="n">proj_dir</span><span class="si">}</span><span class="s2">"</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...project directory:"</span><span class="p">,</span> <span class="n">proj_dir</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Assign global variables for the input and output geo-databases.</span>
+    <span class="c1">#</span>
+    <span class="k">global</span> <span class="n">g_in_gdb</span>
+    <span class="n">g_in_gdb</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">proj_dir_str</span><span class="p">,</span> <span class="n">in_gdb_str</span><span class="p">)</span>
+    <span class="k">global</span> <span class="n">g_out_gdb</span>
+    <span class="n">g_out_gdb</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">proj_dir_str</span><span class="p">,</span> <span class="n">out_gdb_str</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Check the input and output geo-databases exist.</span>
+    <span class="c1">#</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">g_in_gdb</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find input geo-database: </span><span class="si">{</span><span class="n">g_in_gdb</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">g_out_gdb</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find output geo-database: </span><span class="si">{</span><span class="n">g_out_gdb</span><span class="si">}</span><span class="s2">"</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...input geo-database:"</span><span class="p">,</span> <span class="n">g_in_gdb</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...output geo_database:"</span><span class="p">,</span> <span class="n">g_out_gdb</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">buffer</span><span class="p">(</span><span class="n">in_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">buffer_dist</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">out_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">     Run the Pairwise Buffer geo-processing tool.</span>
+
+<span class="sd">    :param str in_fc:       The input feature class to buffer.</span>
+<span class="sd">    :param str buffer_dist: The buffer distance in the string format expected by the tool e.g. "100 feet".</span>
+<span class="sd">    :param str out_fc:      The feature class to output containing the buffered features.</span>
+<span class="sd">    :return str:            The output feature class.</span>
+<span class="sd">    """</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...buffer, input feature class:"</span><span class="p">,</span> <span class="n">in_fc</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...buffer, output feature class:"</span><span class="p">,</span> <span class="n">out_fc</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...buffer, distance:"</span><span class="p">,</span> <span class="n">buffer_dist</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">in_fc</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find input feature class: </span><span class="si">{</span><span class="n">in_fc</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">g_out_gdb</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find output geo-database: </span><span class="si">{</span><span class="n">g_out_gdb</span><span class="si">}</span><span class="s2">"</span>
+    <span class="c1">#</span>
+    <span class="c1"># Create the buffer feature class.</span>
+    <span class="c1">#</span>
+    <span class="n">arcpy</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">PairwiseBuffer</span><span class="p">(</span>
+        <span class="n">in_features</span><span class="o">=</span><span class="n">in_fc</span><span class="p">,</span>
+        <span class="n">out_feature_class</span><span class="o">=</span><span class="n">out_fc</span><span class="p">,</span>
+        <span class="n">buffer_distance_or_field</span><span class="o">=</span><span class="n">buffer_dist</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">out_fc</span>
+
+
+<span class="k">def</span> <span class="nf">join</span><span class="p">(</span><span class="n">target_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">join_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">out_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Run the Spatial Join geo-processing tool.</span>
+
+<span class="sd">    :param str target_fc:   The target feature class.</span>
+<span class="sd">    :param str join_fc:     The join feature class.</span>
+<span class="sd">    :param str out_fc:      The feature class to output containing the joined features.</span>
+<span class="sd">    :return str:            The output feature class.</span>
+<span class="sd">    """</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...join, target feature class:"</span><span class="p">,</span> <span class="n">target_fc</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...join, join feature class:"</span><span class="p">,</span> <span class="n">join_fc</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...join, output feature class:"</span><span class="p">,</span> <span class="n">out_fc</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">target_fc</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find target feature class: </span><span class="si">{</span><span class="n">target_fc</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">join_fc</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find join feature class: </span><span class="si">{</span><span class="n">join_fc</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">g_out_gdb</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find output geo-database: </span><span class="si">{</span><span class="n">g_out_gdb</span><span class="si">}</span><span class="s2">"</span>
+    <span class="c1">#</span>
+    <span class="c1"># Configure the field mapping.</span>
+    <span class="c1">#</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="n">map_fields</span><span class="p">(</span><span class="n">target_fc</span><span class="p">,</span> <span class="n">join_fc</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Spatially join the target feature class to the join feature class.</span>
+    <span class="c1"># Counterintuitively, a 1:1 join aggregates rows when there are </span>
+    <span class="c1"># multiple spatial matches!</span>
+    <span class="c1">#</span>
+    <span class="n">arcpy</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">SpatialJoin</span><span class="p">(</span>
+        <span class="n">target_features</span><span class="o">=</span><span class="n">target_fc</span><span class="p">,</span>
+        <span class="n">join_features</span><span class="o">=</span><span class="n">join_fc</span><span class="p">,</span>
+        <span class="n">out_feature_class</span><span class="o">=</span><span class="n">out_fc</span><span class="p">,</span>
+        <span class="n">field_mapping</span><span class="o">=</span><span class="n">mapping</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">out_fc</span>
+
+
+<span class="k">def</span> <span class="nf">map_fields</span><span class="p">(</span><span class="n">target_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">join_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">FieldMappings</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Create a field mappings object which can be passed as parameter </span>
+<span class="sd">    passed to the Spatial Join geo-processing tool. Since a single</span>
+<span class="sd">    feature can be within 100 feet of more than one road, mappings</span>
+<span class="sd">    with both "First" and "Join" merge rules are created. This will</span>
+<span class="sd">    add two new fields in the output, namely, "first_road_name" and</span>
+<span class="sd">    "concat_road_names" respectively.</span>
+
+<span class="sd">    :param target_fc:               The target feature class.</span>
+<span class="sd">    :param join_fc:                 The join feature class.</span>
+<span class="sd">    :return arcpy.FieldMappings:    The field mappings object.</span>
+<span class="sd">    """</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...map fields, target feature class:"</span><span class="p">,</span> <span class="n">target_fc</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...map fields, join feature class:"</span><span class="p">,</span> <span class="n">join_fc</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">target_fc</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find target feature class: </span><span class="si">{</span><span class="n">target_fc</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">join_fc</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find join feature class: </span><span class="si">{</span><span class="n">join_fc</span><span class="si">}</span><span class="s2">"</span>
+
+    <span class="k">def</span> <span class="nf">add_output_field</span><span class="p">(</span><span class="n">fm</span><span class="p">:</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">FieldMap</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Helper function to configure an output field.</span>
+
+<span class="sd">        :param arcpy.FieldMap fm:   The field map to add the output field to.</span>
+<span class="sd">        :param str name:            The name to give to the new output field.</span>
+<span class="sd">        :return NoneType:           None</span>
+<span class="sd">        """</span>
+        <span class="n">fld</span> <span class="o">=</span> <span class="n">fm</span><span class="o">.</span><span class="n">outputField</span>
+        <span class="n">fld</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="s2">"TEXT"</span>
+        <span class="n">fld</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="n">fld</span><span class="o">.</span><span class="n">aliasName</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="n">fm</span><span class="o">.</span><span class="n">outputField</span> <span class="o">=</span> <span class="n">fld</span>
+
+    <span class="c1">#</span>
+    <span class="c1"># Create a field mappings object and add the fields from the</span>
+    <span class="c1"># target feature class.</span>
+    <span class="c1">#</span>
+    <span class="n">fms</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">FieldMappings</span><span class="p">()</span>
+    <span class="n">fms</span><span class="o">.</span><span class="n">addTable</span><span class="p">(</span><span class="n">target_fc</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Remove the RHG_NAME field from the target field mapping because </span>
+    <span class="c1"># we are adding the road name from the join feature class below.</span>
+    <span class="c1">#</span>
+    <span class="n">fms</span><span class="o">.</span><span class="n">removeFieldMap</span><span class="p">(</span><span class="n">fms</span><span class="o">.</span><span class="n">findFieldMapIndex</span><span class="p">(</span><span class="s2">"RHG_NAME"</span><span class="p">))</span>
+    <span class="c1">#</span>
+    <span class="c1"># Add "first_road_name" field which will contain the first matching</span>
+    <span class="c1"># road name.</span>
+    <span class="c1">#</span>
+    <span class="c1"># Create a new field map object and add the RHG_NAME field from the</span>
+    <span class="c1"># join feature class.</span>
+    <span class="c1">#</span>
+    <span class="n">first_fm</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">FieldMap</span><span class="p">()</span>
+    <span class="n">first_fm</span><span class="o">.</span><span class="n">addInputField</span><span class="p">(</span><span class="n">join_fc</span><span class="p">,</span> <span class="s2">"RHG_NAME"</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Specify the merge rule -- take the first matching value when </span>
+    <span class="c1"># there are multiple matches.</span>
+    <span class="c1">#</span>
+    <span class="n">first_fm</span><span class="o">.</span><span class="n">mergeRule</span> <span class="o">=</span> <span class="s2">"First"</span>
+    <span class="c1">#</span>
+    <span class="c1"># Configure the output field.</span>
+    <span class="c1">#</span>
+    <span class="n">add_output_field</span><span class="p">(</span><span class="n">first_fm</span><span class="p">,</span> <span class="s2">"first_road_name"</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Add this field mapping to the field mappings.</span>
+    <span class="c1">#</span>
+    <span class="n">fms</span><span class="o">.</span><span class="n">addFieldMap</span><span class="p">(</span><span class="n">first_fm</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Add "concat_road_names" field which will contain all the matching</span>
+    <span class="c1"># road name concatenated and separated with a comma.</span>
+    <span class="c1">#</span>
+    <span class="c1"># Create a new field map object and add the RHG_NAME field from the</span>
+    <span class="c1"># join feature class.</span>
+    <span class="c1">#</span>
+    <span class="n">concat_fm</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">FieldMap</span><span class="p">()</span>
+    <span class="n">concat_fm</span><span class="o">.</span><span class="n">addInputField</span><span class="p">(</span><span class="n">join_fc</span><span class="p">,</span> <span class="s2">"RHG_NAME"</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Specify the merge rule -- Concatenate matching value when there </span>
+    <span class="c1"># are multiple matches.</span>
+    <span class="c1">#</span>
+    <span class="n">concat_fm</span><span class="o">.</span><span class="n">mergeRule</span> <span class="o">=</span> <span class="s2">"Join"</span>
+    <span class="n">concat_fm</span><span class="o">.</span><span class="n">joinDelimiter</span> <span class="o">=</span> <span class="s2">","</span>
+    <span class="c1">#</span>
+    <span class="c1"># Configure the output field.</span>
+    <span class="c1">#</span>
+    <span class="n">add_output_field</span><span class="p">(</span><span class="n">concat_fm</span><span class="p">,</span> <span class="s2">"concat_road_names"</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Add this field mapping to the field mappings.</span>
+    <span class="c1">#</span>
+    <span class="n">fms</span><span class="o">.</span><span class="n">addFieldMap</span><span class="p">(</span><span class="n">concat_fm</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">fms</span>
+
+
+<span class="k">def</span> <span class="nf">copy_field</span><span class="p">(</span><span class="n">from_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">from_key_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">from_field_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+               <span class="n">to_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">to_key_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">to_field_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Copy the value of a field from one feature class to another where the specified keys match.</span>
+
+<span class="sd">    :param str from_fc:             The source feature class to copy from.</span>
+<span class="sd">    :param str from_key_name:       The name of the key field in the source feature class.</span>
+<span class="sd">    :param str from_field_name:     The name of the field containing the value to copy in the source feature class.</span>
+<span class="sd">    :param str to_fc:               The target feature class to copy to.</span>
+<span class="sd">    :param str to_key_name:         The name of the key field in the target feature class.</span>
+<span class="sd">    :param str to_field_name:       The name of the field that will contain the new value in the target feature class.</span>
+<span class="sd">    :return NoneType:               None</span>
+<span class="sd">    """</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...copy field, from feature class:"</span><span class="p">,</span> <span class="n">from_fc</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...copy field, to feature class:"</span><span class="p">,</span> <span class="n">to_fc</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">from_fc</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find from feature class: </span><span class="si">{</span><span class="n">from_fc</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">to_fc</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find to feature class: </span><span class="si">{</span><span class="n">to_fc</span><span class="si">}</span><span class="s2">"</span>
+    <span class="c1">#</span>
+    <span class="c1"># Check the fields exist.</span>
+    <span class="c1">#</span>
+    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="p">[</span><span class="n">from_key_name</span><span class="p">,</span> <span class="n">from_field_name</span><span class="p">]:</span>
+        <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ListFields</span><span class="p">(</span><span class="n">from_fc</span><span class="p">,</span> <span class="n">field</span><span class="p">),</span> \
+            <span class="sa">f</span><span class="s2">"The field </span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s2"> does not exist in </span><span class="si">{</span><span class="n">from_fc</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="p">[</span><span class="n">to_key_name</span><span class="p">,</span> <span class="n">to_field_name</span><span class="p">]:</span>
+        <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ListFields</span><span class="p">(</span><span class="n">to_fc</span><span class="p">,</span> <span class="n">field</span><span class="p">),</span> \
+            <span class="sa">f</span><span class="s2">"The field </span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s2"> does not exist in </span><span class="si">{</span><span class="n">to_fc</span><span class="si">}</span><span class="s2">"</span>
+    <span class="c1">#</span>
+    <span class="c1"># Create a dictionary to hold keys and field values from the</span>
+    <span class="c1"># source feature class.</span>
+    <span class="c1">#</span>
+    <span class="n">from_values_dict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="c1">#</span>
+    <span class="c1"># Iterate through the rows in the source feature class and add</span>
+    <span class="c1"># field values to the dictionary.</span>
+    <span class="c1">#</span>
+    <span class="k">with</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">da</span><span class="o">.</span><span class="n">SearchCursor</span><span class="p">(</span><span class="n">from_fc</span><span class="p">,</span> <span class="p">[</span><span class="n">from_key_name</span><span class="p">,</span> <span class="n">from_field_name</span><span class="p">])</span> <span class="k">as</span> <span class="n">search_cur</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">search_cur</span><span class="p">:</span>
+            <span class="n">from_values_dict</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+    <span class="c1">#</span>
+    <span class="c1"># Iterate through the target feature class and update the field</span>
+    <span class="c1"># values where they keys match.</span>
+    <span class="c1">#</span>
+    <span class="k">with</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">da</span><span class="o">.</span><span class="n">UpdateCursor</span><span class="p">(</span><span class="n">to_fc</span><span class="p">,</span> <span class="p">[</span><span class="n">to_key_name</span><span class="p">,</span> <span class="n">to_field_name</span><span class="p">])</span> <span class="k">as</span> <span class="n">upd_cur</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">to_row</span> <span class="ow">in</span> <span class="n">upd_cur</span><span class="p">:</span>
+            <span class="n">this_key</span> <span class="o">=</span> <span class="n">to_row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="c1">#</span>
+            <span class="c1"># Update the field using the value from the dictionary.</span>
+            <span class="c1">#</span>
+            <span class="k">if</span> <span class="n">this_key</span> <span class="ow">in</span> <span class="n">from_values_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="n">to_row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">from_values_dict</span><span class="p">[</span><span class="n">this_key</span><span class="p">]</span>
+            <span class="n">upd_cur</span><span class="o">.</span><span class="n">updateRow</span><span class="p">(</span><span class="n">to_row</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">run_tools</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Run the geo-processing tools to buffer and join the various feature</span>
+<span class="sd">    classes.</span>
+
+<span class="sd">    :return NoneType: None</span>
+<span class="sd">    """</span>
+    <span class="c1">#</span>
+    <span class="c1"># Specify the input feature classes.</span>
+    <span class="c1">#</span>
+    <span class="n">roads</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_in_gdb</span><span class="p">,</span> <span class="s2">"PublicWorks_Roads"</span><span class="p">)</span>
+    <span class="n">signs</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_in_gdb</span><span class="p">,</span> <span class="s2">"StreetSigns"</span><span class="p">)</span>
+    <span class="n">poles</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_in_gdb</span><span class="p">,</span> <span class="s2">"StreetSignPoles"</span><span class="p">)</span>
+    <span class="n">lights</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_in_gdb</span><span class="p">,</span> <span class="s2">"StreetLights"</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Specify the output feature classes.</span>
+    <span class="c1">#</span>
+    <span class="n">roads_buff</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_out_gdb</span><span class="p">,</span> <span class="s2">"roads_buffer_100ft"</span><span class="p">)</span>
+    <span class="n">signs_join</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_out_gdb</span><span class="p">,</span> <span class="s2">"signs_join"</span><span class="p">)</span>
+    <span class="n">poles_join</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_out_gdb</span><span class="p">,</span> <span class="s2">"poles_join"</span><span class="p">)</span>
+    <span class="n">lights_join</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_out_gdb</span><span class="p">,</span> <span class="s2">"lights_join"</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Run the geo-processing tools.</span>
+    <span class="c1">#</span>
+    <span class="n">buffer</span><span class="p">(</span><span class="n">roads</span><span class="p">,</span> <span class="s2">"100 feet"</span><span class="p">,</span> <span class="n">roads_buff</span><span class="p">)</span>
+    <span class="n">join</span><span class="p">(</span><span class="n">signs</span><span class="p">,</span> <span class="n">roads_buff</span><span class="p">,</span> <span class="n">signs_join</span><span class="p">)</span>
+    <span class="n">join</span><span class="p">(</span><span class="n">poles</span><span class="p">,</span> <span class="n">roads_buff</span><span class="p">,</span> <span class="n">poles_join</span><span class="p">)</span>
+    <span class="n">join</span><span class="p">(</span><span class="n">lights</span><span class="p">,</span> <span class="n">roads_buff</span><span class="p">,</span> <span class="n">lights_join</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Update the original feature classes with the road names.</span>
+    <span class="c1"># Note: There can be multiple roads within 100 ft of a feature.</span>
+    <span class="c1"># Choose either:</span>
+    <span class="c1">#   first_road_name to get the first matching name, or</span>
+    <span class="c1">#   concat_road_names to concatenate all matching names.</span>
+    <span class="c1">#</span>
+    <span class="c1"># from_field = "first_road_name"</span>
+    <span class="n">from_field</span> <span class="o">=</span> <span class="s2">"concat_road_names"</span>
+    <span class="c1">#</span>
+    <span class="c1"># Note: must use the field names not their aliases for the key fields!</span>
+    <span class="c1">#</span>
+    <span class="n">copy_field</span><span class="p">(</span><span class="n">signs_join</span><span class="p">,</span> <span class="s2">"SVG_NUM"</span><span class="p">,</span>
+               <span class="n">from_field</span><span class="p">,</span> <span class="n">signs</span><span class="p">,</span> <span class="s2">"SVG_NUM"</span><span class="p">,</span> <span class="s2">"RHG_NAME"</span><span class="p">)</span>
+    <span class="n">copy_field</span><span class="p">(</span><span class="n">poles_join</span><span class="p">,</span> <span class="s2">"PLG_NUM"</span><span class="p">,</span>
+               <span class="n">from_field</span><span class="p">,</span> <span class="n">poles</span><span class="p">,</span> <span class="s2">"PLG_NUM"</span><span class="p">,</span> <span class="s2">"RHG_NAME"</span><span class="p">)</span>
+    <span class="n">copy_field</span><span class="p">(</span><span class="n">lights_join</span><span class="p">,</span> <span class="s2">"POLE_NUM"</span><span class="p">,</span>
+               <span class="n">from_field</span><span class="p">,</span> <span class="n">lights</span><span class="p">,</span> <span class="s2">"POLE_NUM"</span><span class="p">,</span> <span class="s2">"RHG_NAME"</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+    <span class="c1">#</span>
+    <span class="c1"># Define locations of geodatabases.</span>
+    <span class="c1">#</span>
+    <span class="n">my_proj_dir</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"C:\ArcGIS_local_projects\SantaCruzPublicWorks"</span>
+    <span class="n">my_in_gdb</span> <span class="o">=</span> <span class="s2">"PublicWorks_RoadNames.gdb"</span>
+    <span class="n">my_out_gdb</span> <span class="o">=</span> <span class="s2">"PythonOutput.gdb"</span>
+    <span class="n">setup_env</span><span class="p">(</span><span class="n">my_proj_dir</span><span class="p">,</span> <span class="n">my_in_gdb</span><span class="p">,</span> <span class="n">my_out_gdb</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Run the main process.</span>
+    <span class="c1">#</span>
+    <span class="n">run_tools</span><span class="p">()</span>
+
+<span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
+<span class="c1"># Sample Output</span>
+<span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
+<span class="c1"># "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\python.exe" C:\ArcGIS_local_projects\SantaCruzPublicWorks\santa_cruz_public_works.py</span>
+<span class="c1"># ...project directory: C:\ArcGIS_local_projects\SantaCruzPublicWorks</span>
+<span class="c1"># ...input geo-database: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb</span>
+<span class="c1"># ...output geo_database: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb</span>
+<span class="c1"># ...buffer, input feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\PublicWorks_Roads</span>
+<span class="c1"># ...buffer, output feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\roads_buffer_100ft</span>
+<span class="c1"># ...buffer, distance: 100 feet</span>
+<span class="c1"># ...join, target feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetSigns</span>
+<span class="c1"># ...join, join feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\roads_buffer_100ft</span>
+<span class="c1"># ...join, output feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\signs_join</span>
+<span class="c1"># ...map fields, target feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetSigns</span>
+<span class="c1"># ...map fields, join feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\roads_buffer_100ft</span>
+<span class="c1"># ...join, target feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetSignPoles</span>
+<span class="c1"># ...join, join feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\roads_buffer_100ft</span>
+<span class="c1"># ...join, output feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\poles_join</span>
+<span class="c1"># ...map fields, target feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetSignPoles</span>
+<span class="c1"># ...map fields, join feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\roads_buffer_100ft</span>
+<span class="c1"># ...join, target feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetLights</span>
+<span class="c1"># ...join, join feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\roads_buffer_100ft</span>
+<span class="c1"># ...join, output feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\lights_join</span>
+<span class="c1"># ...map fields, target feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetLights</span>
+<span class="c1"># ...map fields, join feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\roads_buffer_100ft</span>
+<span class="c1"># ...copy field, from feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\signs_join</span>
+<span class="c1"># ...copy field, to feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetSigns</span>
+<span class="c1"># ...copy field, from feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\poles_join</span>
+<span class="c1"># ...copy field, to feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetSignPoles</span>
+<span class="c1"># ...copy field, from feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\lights_join</span>
+<span class="c1"># ...copy field, to feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetLights</span>
+<span class="c1">#</span>
+<span class="c1"># Process finished with exit code 0</span>
+<span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
+</code></pre></div>
+
+<p><a href="/images/santa_cruz_public_works/py/santa_cruz_public_works.py">Download .py file</a></p>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+        </div>
+        <section class="span2" id="article-sidebar">
+            <h4>Published</h4>
+            <time datetime="2024-06-01T00:00:00-07:00" itemprop="dateCreated">Sat 01 June 2024</time>
+<h4>Last Updated</h4>
+<time datetime="2025-06-07T00:00:00-07:00">Sat 07 June 2025</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#arcpy-ref">ArcPy</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="/tags.html#arcgis-ref">ArcGIS
+                    <span class="superscript">10</span>
+</a></li>
+                <li><a href="/tags.html#arcpy-ref">ArcPy
+                    <span class="superscript">3</span>
+</a></li>
+                <li><a href="/tags.html#cartography-ref">Cartography
+                    <span class="superscript">13</span>
+</a></li>
+                <li><a href="/tags.html#python-ref">Python
+                    <span class="superscript">3</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" rel="nofollow noopener noreferrer" target="_blank" title="Pelican Home Page">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" rel="nofollow noopener noreferrer" target="_blank" title="Theme Elegant Home Page">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+
+        <script src="/theme/js/jquery.min.js"></script>
+        <!-- Make sure jquery is loaded first, then load colorbox -->
+        <script src="/theme/js/jquery.colorbox-min.js"></script>
+        <script src="/theme/js/load-colorbox.js"></script>
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>
