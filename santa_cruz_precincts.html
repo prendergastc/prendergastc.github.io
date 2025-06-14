@@ -5,13 +5,13 @@
         <meta charset="utf-8"/>
         <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
         <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-        <link href="profile/theme/css/elegant.prod.9e9d5ce754.css" media="screen" rel="stylesheet" type="text/css"/>
-        <link href="profile/theme/css/custom.css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="/theme/css/elegant.prod.9e9d5ce754.css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="/theme/css/custom.css" media="screen" rel="stylesheet" type="text/css"/>
 
         <link href="//fonts.googleapis.com" rel="dns-prefetch"/>
         <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
 
-        <link href="profile/theme/css/colorbox.css" rel="stylesheet"/>
+        <link href="/theme/css/colorbox.css" rel="stylesheet"/>
 
 
         <meta content="Christopher Prendergast" name="author">
@@ -22,7 +22,7 @@
 <meta content="ArcGIS, ArcPy, Cartography, Python, ArcPy, " name="keywords">
 
 <meta content="Voting Precincts, Santa Cruz County " property="og:title">
-<meta content="profile/santa_cruz_precincts.html" property="og:url"/>
+<meta content="/santa_cruz_precincts.html" property="og:url"/>
 <meta content="Consolidate regular precincts into voting precincts. A layer with 720 regular precincts was provided together with a cross-reference table listing the 138 voting precincts that need to be created each with a corresponding list of their constituent regular precincts. Using Python and the arcpy api, this data was wrangled into a format where it can easily be joined to the regular precincts layer and the regular precinct features were dissolved to create 297 new voting precincts." property="og:description"/>
 <meta content="portfolio" property="og:site_name"/>
 <meta content="Christopher Prendergast" property="og:article:author"/>
@@ -47,16 +47,16 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </a>
-                        <a class="brand" href="profile/"><span class="site-name">portfolio</span></a>
+                        <a class="brand" href="/"><span class="site-name">portfolio</span></a>
                         <div class="nav-collapse collapse">
                             <ul class="nav pull-right top-menu">
                                 <li>
-                                    <a href="profile">Home</a>
+                                    <a href="/">Home</a>
                                 </li>
-                                <li><a href="profile/categories.html">Categories</a></li>
-                                <li><a href="profile/tags.html">Tags</a></li>
-                                <li><a href="profile/archives.html">Archives</a></li>
-                                <li><form action="profile/search.html" class="navbar-search" onsubmit="return validateForm(this.elements['q'].value);"> <input class="search-query" id="tipue_search_input" name="q" placeholder="Search" type="text"/></form></li>
+                                <li><a href="/categories.html">Categories</a></li>
+                                <li><a href="/tags.html">Tags</a></li>
+                                <li><a href="/archives.html">Archives</a></li>
+                                <li><form action="/search.html" class="navbar-search" onsubmit="return validateForm(this.elements['q'].value);"> <input class="search-query" id="tipue_search_input" name="q" placeholder="Search" type="text"/></form></li>
                             </ul>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="profile/santa_cruz_precincts.html">
+            <a href="/santa_cruz_precincts.html">
                 Voting Precincts, Santa Cruz County
             </a>
         </h1>
@@ -87,11 +87,11 @@
 <h1 id="regular-precincts">Regular Precincts</h1>
 <p>Map of the original 720 regular precincts.</p>
 <p><a class="mybox" href="/images/santa_cruz_precincts/png/regular_precincts_noborder.png"><img alt="Regular Precincts" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="/images/santa_cruz_precincts/png/derivatives/large-photo/800w/regular_precincts_noborder.png" srcset="/images/santa_cruz_precincts/png/derivatives/large-photo/600w/regular_precincts_noborder.png 600w, /images/santa_cruz_precincts/png/derivatives/large-photo/800w/regular_precincts_noborder.png 800w, /images/santa_cruz_precincts/png/derivatives/large-photo/1600w/regular_precincts_noborder.png 1600w"/></a></p>
-<p><a href="profile/images/santa_cruz_precincts/pdf/regular_precincts.pdf">PDF file</a></p>
+<p><a href="/images/santa_cruz_precincts/pdf/regular_precincts.pdf">PDF file</a></p>
 <h1 id="voting-precincts">Voting Precincts</h1>
 <p>Map of the 297 new consolidated voting precincts generated by the procedure.</p>
 <p><a class="mybox" href="/images/santa_cruz_precincts/png/voting_precincts_noborder.png"><img alt="Voting Precincts" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="/images/santa_cruz_precincts/png/derivatives/large-photo/800w/voting_precincts_noborder.png" srcset="/images/santa_cruz_precincts/png/derivatives/large-photo/600w/voting_precincts_noborder.png 600w, /images/santa_cruz_precincts/png/derivatives/large-photo/800w/voting_precincts_noborder.png 800w, /images/santa_cruz_precincts/png/derivatives/large-photo/1600w/voting_precincts_noborder.png 1600w"/></a></p>
-<p><a href="profile/images/santa_cruz_precincts/pdf/voting_precincts.pdf">PDF file</a></p>
+<p><a href="/images/santa_cruz_precincts/pdf/voting_precincts.pdf">PDF file</a></p>
 <h1 id="python-code">Python Code</h1>
 <div class="highlight"><pre><span></span><code><span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
 <span class="c1"># santa_cruz_precincts.py</span>
@@ -468,7 +468,7 @@
 <span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
 </code></pre></div>
 
-<p><a href="profile/images/santa_cruz_precincts/py/santa_cruz_precincts.py">Download .py file</a></p>
+<p><a href="/images/santa_cruz_precincts/py/santa_cruz_precincts.py">Download .py file</a></p>
 
 
              
@@ -492,19 +492,19 @@
 <time datetime="2025-06-07T00:00:00-07:00">Sat 07 June 2025</time>
 
             <h4>Category</h4>
-            <a class="category-link" href="profile/categories.html#arcpy-ref">ArcPy</a>
+            <a class="category-link" href="/categories.html#arcpy-ref">ArcPy</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="profile/tags.html#arcgis-ref">ArcGIS
+                <li><a href="/tags.html#arcgis-ref">ArcGIS
                     <span class="superscript">10</span>
 </a></li>
-                <li><a href="profile/tags.html#arcpy-ref">ArcPy
+                <li><a href="/tags.html#arcpy-ref">ArcPy
                     <span class="superscript">3</span>
 </a></li>
-                <li><a href="profile/tags.html#cartography-ref">Cartography
+                <li><a href="/tags.html#cartography-ref">Cartography
                     <span class="superscript">13</span>
 </a></li>
-                <li><a href="profile/tags.html#python-ref">Python
+                <li><a href="/tags.html#python-ref">Python
                     <span class="superscript">3</span>
 </a></li>
             </ul>
@@ -607,7 +607,7 @@
     </div>
 </footer>            <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-        <script src="profile/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script src="/theme/js/elegant.prod.9e9d5ce754.js"></script>
         <script>
             function validateForm(query)
             {
@@ -640,10 +640,10 @@
 </script>
 
 
-        <script src="profile/theme/js/jquery.min.js"></script>
+        <script src="/theme/js/jquery.min.js"></script>
         <!-- Make sure jquery is loaded first, then load colorbox -->
-        <script src="profile/theme/js/jquery.colorbox-min.js"></script>
-        <script src="profile/theme/js/load-colorbox.js"></script>
+        <script src="/theme/js/jquery.colorbox-min.js"></script>
+        <script src="/theme/js/load-colorbox.js"></script>
     </body>
     <!-- Theme: Elegant built for Pelican
         License : MIT -->
