@@ -49,6 +49,11 @@ url = "/portland_economic_vulnerability.html"
 title = "Portland Economic Vulnerability"
 
 [[input.files]]
+path = "puget_sound_traffic_violations.html"
+url = "/puget_sound_traffic_violations.html"
+title = "Puget Sound Traffic Violations"
+
+[[input.files]]
 path = "mountain_lion_modelbuilder.html"
 url = "/mountain_lion_modelbuilder.html"
 title = "Mountain Lion Corridors, Los Angeles, CA"
