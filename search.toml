@@ -1,0 +1,142 @@
+[input]
+url_prefix = "https://prendergastc.github.io/profile"
+html_selector = "main"
+base_directory = "output"
+
+[[input.files]]
+path = "urban_green_spaces.html"
+url = "/urban_green_spaces.html"
+title = "Urban Green Spaces in San Francisco and San Jose, California"
+
+[[input.files]]
+path = "kenya_elephants.html"
+url = "/kenya_elephants.html"
+title = "Analysis of Suitable Elephant Habitat, Narok and Kajiado Districts, Kenya"
+
+[[input.files]]
+path = "santa_cruz_public_works.html"
+url = "/santa_cruz_public_works.html"
+title = "Public Works Department Assets, City of Santa Cruz"
+
+[[input.files]]
+path = "santa_cruz_precincts.html"
+url = "/santa_cruz_precincts.html"
+title = "Voting Precincts, Santa Cruz County"
+
+[[input.files]]
+path = "local_park_amenities.html"
+url = "/local_park_amenities.html"
+title = "Local Park Amenities in the Cambrian Park neighborhood"
+
+[[input.files]]
+path = "santa_cruz_sanitation.html"
+url = "/santa_cruz_sanitation.html"
+title = "Sanitation Drawing Index Map, Santa Cruz County"
+
+[[input.files]]
+path = "marin_smoke_detector.html"
+url = "/marin_smoke_detector.html"
+title = "Marin Smoke Detectors"
+
+[[input.files]]
+path = "portland_economic_vulnerability.html"
+url = "/portland_economic_vulnerability.html"
+title = "Portland Economic Vulnerability"
+
+[[input.files]]
+path = "mountain_lion_modelbuilder.html"
+url = "/mountain_lion_modelbuilder.html"
+title = "Mountain Lion Corridors, Los Angeles, CA"
+
+[[input.files]]
+path = "tree_cover_and_heat.html"
+url = "/tree_cover_and_heat.html"
+title = "The Impact of Tree Cover on the Urban Heat Island Effect"
+
+[[input.files]]
+path = "north_dakota_housing.html"
+url = "/north_dakota_housing.html"
+title = "The impact of the housing shortage on oil workers"
+
+[[input.files]]
+path = "calero_geodatabase_design.html"
+url = "/calero_geodatabase_design.html"
+title = "Geodatabase Design, Calero County Park, Santa Clara County, California"
+
+[[input.files]]
+path = "mrosd.html"
+url = "/mrosd.html"
+title = "Midpeninsula Regional Open Space District Map Series"
+
+[[input.files]]
+path = "portland_schools.html"
+url = "/portland_schools.html"
+title = "Portland Schools"
+
+[[input.files]]
+path = "california_ecology.html"
+url = "/california_ecology.html"
+title = "California Ecology Field Trip Observations"
+
+[[input.files]]
+path = "urban_heat_islands.html"
+url = "/urban_heat_islands.html"
+title = "Analysis of the Urban Heat Island Effect, Santa Clara County"
+
+[[input.files]]
+path = "california_ozone.html"
+url = "/california_ozone.html"
+title = "California Ozone"
+
+[[input.files]]
+path = "california_proposition_37.html"
+url = "/california_proposition_37.html"
+title = "Support for California Proposition 37"
+
+[[input.files]]
+path = "santa_clara_valley_open_space.html"
+url = "/santa_clara_valley_open_space.html"
+title = "Santa Clara Valley Open Space Story Maps"
+
+[[input.files]]
+path = "massachucetts_parks.html"
+url = "/massachucetts_parks.html"
+title = "Massachucetts Parks"
+
+[[input.files]]
+path = "landuse_app.html"
+url = "/landuse_app.html"
+title = "Landuse change in Samut Songkhram, Thailand"
+
+[[input.files]]
+path = "san_bernadino_modelbuilder.html"
+url = "/san_bernadino_modelbuilder.html"
+title = "Location Analysis for New Carbonate Mine, San Bernadino National Forest"
+
+[[input.files]]
+path = "lyell_glacier.html"
+url = "/lyell_glacier.html"
+title = "Lyell Glacier, Yosemite National Park"
+
+[[input.files]]
+path = "farmers_market_site_selection.html"
+url = "/farmers_market_site_selection.html"
+title = "Farmers Market Site Selection"
+
+[[input.files]]
+path = "homeless_app.html"
+url = "/homeless_app.html"
+title = "Homelessness in Santa Clara County"
+
+[[input.files]]
+path = "red_rock_app.html"
+url = "/red_rock_app.html"
+title = "Red Rock Canyon Hiking Trails"
+
+[[input.files]]
+path = "hawaii_app.html"
+url = "/hawaii_app.html"
+title = "Volcanic hazards, Island of Hawaii"
+
+[output]
+debug = true
