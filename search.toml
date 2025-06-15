@@ -4,6 +4,11 @@ html_selector = "main"
 base_directory = "output"
 
 [[input.files]]
+path = "pages/search.html"
+url = "/pages/search.html"
+title = "Search"
+
+[[input.files]]
 path = "urban_green_spaces.html"
 url = "/urban_green_spaces.html"
 title = "Urban Green Spaces in San Francisco and San Jose, California"
