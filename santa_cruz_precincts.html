@@ -93,60 +93,75 @@
 <p><a class="mybox" href="images/santa_cruz_precincts/png/voting_precincts_noborder.png"><img alt="Voting Precincts" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/santa_cruz_precincts/png/derivatives/large-photo/800w/voting_precincts_noborder.png" srcset="images/santa_cruz_precincts/png/derivatives/large-photo/600w/voting_precincts_noborder.png 600w, images/santa_cruz_precincts/png/derivatives/large-photo/800w/voting_precincts_noborder.png 800w, images/santa_cruz_precincts/png/derivatives/large-photo/1600w/voting_precincts_noborder.png 1600w"/></a></p>
 <p><a href="https://prendergastc.github.io/profile/images/santa_cruz_precincts/pdf/voting_precincts.pdf">PDF file</a></p>
 <h1 id="python-code">Python Code</h1>
-<div class="highlight"><pre><span></span><code><span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
-<span class="c1"># santa_cruz_precincts.py</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># ----------------------------------------------------------------------</span>
+<span class="c1"># santa+cruz_precincts.py</span>
 <span class="c1"># Christopher Prendergast</span>
-<span class="c1"># 2024/05/12</span>
-<span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
+<span class="c1"># 2024/05/15</span>
+<span class="c1"># ----------------------------------------------------------------------</span>
 <span class="c1">#</span>
 <span class="kn">import</span> <span class="nn">arcpy</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
+<span class="k">global</span> <span class="n">g_proj_dir</span>
 <span class="k">global</span> <span class="n">g_in_gdb</span>
+<span class="k">global</span> <span class="n">g_temp_gdb</span>
 <span class="k">global</span> <span class="n">g_out_gdb</span>
 
 
 <span class="k">def</span> <span class="nf">full_path</span><span class="p">(</span><span class="n">root_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">basename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Convert basename to a full path given the root directory or geo-database path.</span>
+<span class="sd">    Convert basename to a full path given the root directory or</span>
+<span class="sd">    geo-database path.</span>
 
-<span class="sd">    :param str root_dir:    The root directory or file geo-database path.</span>
-<span class="sd">    :param str basename:    The basename of a geo-database or feature class.</span>
+<span class="sd">    :param str root_dir:    The root directory or file geo-database</span>
+<span class="sd">                            path.</span>
+<span class="sd">    :param str basename:    The basename of a geo-database or feature</span>
+<span class="sd">                            class.</span>
 <span class="sd">    :return str:            The root and basename joined as a path.</span>
 <span class="sd">    """</span>
     <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span> <span class="n">basename</span><span class="p">))</span>
 
 
-<span class="k">def</span> <span class="nf">setup_env</span><span class="p">(</span><span class="n">proj_dir_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">in_gdb_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">out_gdb_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">setup_env</span><span class="p">(</span><span class="n">proj_dir_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">in_gdb_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">temp_gdb_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+              <span class="n">out_gdb_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Set up the geo-database environment. Assign values to global</span>
 <span class="sd">    variables g_in_gdb and g_out_gdb.</span>
 
 <span class="sd">    :param str proj_dir_str:    The project directory.</span>
-<span class="sd">    :param str in_gdb_str:      The basename of the input geo-database within the project directory.</span>
-<span class="sd">    :param str out_gdb_str:     The basename of the output geo-database within the project directory.</span>
+<span class="sd">    :param str in_gdb_str:      The basename of the input geo-database</span>
+<span class="sd">                                within the project directory.</span>
+<span class="sd">    :param str temp_gdb_str:    The full path of the temporary</span>
+<span class="sd">                                geo-database.</span>
+<span class="sd">    :param str out_gdb_str:     The basename of the output geo-database</span>
+<span class="sd">                                within the project directory.</span>
 <span class="sd">    :return NoneType:           None</span>
 <span class="sd">    """</span>
     <span class="c1">#</span>
     <span class="c1"># Allow overwriting outputs.</span>
-    <span class="c1"># Note: overwriting doesn't work if the layer is open in ArcGIS Pro due</span>
-    <span class="c1"># to lock. Closing ArgGIS Pro releases the lock and the outputs can be</span>
-    <span class="c1"># overwritten. See:</span>
+    <span class="c1"># Note: overwriting doesn't work if the layer is open in ArcGIS Pro</span>
+    <span class="c1"># due to lock. Closing ArgGIS Pro releases the lock and the outputs</span>
+    <span class="c1"># can be overwritten. See:</span>
     <span class="c1"># https://community.esri.com/t5/python-questions/arcpy-env-overwriteoutput-true-fails/m-p/411113#M32410</span>
     <span class="c1">#</span>
     <span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">overwriteOutput</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="c1">#</span>
     <span class="c1"># Check the project directory exists.</span>
     <span class="c1">#</span>
-    <span class="n">proj_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">proj_dir_str</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">proj_dir</span><span class="o">.</span><span class="n">is_dir</span><span class="p">(),</span> \
-        <span class="sa">f</span><span class="s2">"Can't find the project directory </span><span class="si">{</span><span class="n">proj_dir</span><span class="si">}</span><span class="s2">"</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"...project directory:"</span><span class="p">,</span> <span class="n">proj_dir</span><span class="p">)</span>
+    <span class="k">global</span> <span class="n">g_proj_dir</span>
+    <span class="n">g_proj_dir</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">proj_dir_str</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">Path</span><span class="p">(</span><span class="n">g_proj_dir</span><span class="p">)</span><span class="o">.</span><span class="n">is_dir</span><span class="p">(),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find the project directory </span><span class="si">{</span><span class="n">g_proj_dir</span><span class="si">}</span><span class="s2">"</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...project directory:"</span><span class="p">,</span> <span class="n">g_proj_dir</span><span class="p">)</span>
     <span class="c1">#</span>
     <span class="c1"># Assign global variables for the input and output geo-databases.</span>
     <span class="c1">#</span>
     <span class="k">global</span> <span class="n">g_in_gdb</span>
     <span class="n">g_in_gdb</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">proj_dir_str</span><span class="p">,</span> <span class="n">in_gdb_str</span><span class="p">)</span>
+    <span class="k">global</span> <span class="n">g_temp_gdb</span>
+    <span class="n">g_temp_gdb</span> <span class="o">=</span> <span class="n">temp_gdb_str</span>
     <span class="k">global</span> <span class="n">g_out_gdb</span>
     <span class="n">g_out_gdb</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">proj_dir_str</span><span class="p">,</span> <span class="n">out_gdb_str</span><span class="p">)</span>
     <span class="c1">#</span>
@@ -154,221 +169,493 @@
     <span class="c1">#</span>
     <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">g_in_gdb</span><span class="p">),</span> \
         <span class="sa">f</span><span class="s2">"Can't find input geo-database: </span><span class="si">{</span><span class="n">g_in_gdb</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">g_temp_gdb</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find temporary geo-database: </span><span class="si">{</span><span class="n">g_temp_gdb</span><span class="si">}</span><span class="s2">"</span>
     <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">g_out_gdb</span><span class="p">),</span> \
         <span class="sa">f</span><span class="s2">"Can't find output geo-database: </span><span class="si">{</span><span class="n">g_out_gdb</span><span class="si">}</span><span class="s2">"</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"...input geo-database:"</span><span class="p">,</span> <span class="n">g_in_gdb</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...temporary geo-database:"</span><span class="p">,</span> <span class="n">g_temp_gdb</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"...output geo_database:"</span><span class="p">,</span> <span class="n">g_out_gdb</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">buffer</span><span class="p">(</span><span class="n">in_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">buffer_dist</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">out_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">load_shapefile</span><span class="p">(</span><span class="n">shape_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">out_gdb</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""</span>
-<span class="sd">     Run the Pairwise Buffer geo-processing tool.</span>
+<span class="sd">    Load a shapefile into feature class with the same name in the</span>
+<span class="sd">    specified geodatabase.</span>
 
-<span class="sd">    :param str in_fc:       The input feature class to buffer.</span>
-<span class="sd">    :param str buffer_dist: The buffer distance in the string format expected by the tool e.g. "100 feet".</span>
-<span class="sd">    :param str out_fc:      The feature class to output containing the buffered features.</span>
-<span class="sd">    :return str:            The output feature class.</span>
+<span class="sd">    :param str shape_file:  The file path to the shapefile.</span>
+<span class="sd">    :param str out_gdb:     The path to the geo-database.</span>
+<span class="sd">    :return str:            The geo-database path to the feature class</span>
+<span class="sd">                            created.</span>
 <span class="sd">    """</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"...buffer, input feature class:"</span><span class="p">,</span> <span class="n">in_fc</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"...buffer, output feature class:"</span><span class="p">,</span> <span class="n">out_fc</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"...buffer, distance:"</span><span class="p">,</span> <span class="n">buffer_dist</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">in_fc</span><span class="p">),</span> \
-        <span class="sa">f</span><span class="s2">"Can't find input feature class: </span><span class="si">{</span><span class="n">in_fc</span><span class="si">}</span><span class="s2">"</span>
-    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">g_out_gdb</span><span class="p">),</span> \
-        <span class="sa">f</span><span class="s2">"Can't find output geo-database: </span><span class="si">{</span><span class="n">g_out_gdb</span><span class="si">}</span><span class="s2">"</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...load_shapefile, shape_file"</span><span class="p">,</span> <span class="n">shape_file</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...load_shapefile, out_gdb:"</span><span class="p">,</span> <span class="n">out_gdb</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">shape_file</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find input shape_file: </span><span class="si">{</span><span class="n">shape_file</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">out_gdb</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find input out_gdb: </span><span class="si">{</span><span class="n">out_gdb</span><span class="si">}</span><span class="s2">"</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">result</span><span class="p">:</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Result</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">arcpy</span><span class="o">.</span><span class="n">conversion</span><span class="o">.</span><span class="n">FeatureClassToGeodatabase</span><span class="p">(</span>
+                <span class="n">Input_Features</span><span class="o">=</span><span class="p">[</span><span class="n">shape_file</span><span class="p">],</span>
+                <span class="n">Output_Geodatabase</span><span class="o">=</span><span class="n">out_gdb</span>
+            <span class="p">))</span>
+    <span class="k">except</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ExecuteError</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle geo-processing specific errors.</span>
+        <span class="c1">#</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"...load_shapefile, arcpy error executing "</span>
+              <span class="s2">"geo-processing tool."</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">arcpy</span><span class="o">.</span><span class="n">GetMessages</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle any other type of error.</span>
+        <span class="c1">#</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">201</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">getMessages</span><span class="p">())</span>
     <span class="c1">#</span>
-    <span class="c1"># Create the buffer feature class.</span>
+    <span class="c1"># Unpack first element of result object as return value.</span>
     <span class="c1">#</span>
-    <span class="n">arcpy</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">PairwiseBuffer</span><span class="p">(</span>
-        <span class="n">in_features</span><span class="o">=</span><span class="n">in_fc</span><span class="p">,</span>
-        <span class="n">out_feature_class</span><span class="o">=</span><span class="n">out_fc</span><span class="p">,</span>
-        <span class="n">buffer_distance_or_field</span><span class="o">=</span><span class="n">buffer_dist</span>
+    <span class="n">ret_val</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">getOutput</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># This tool ony returns the path to the gdb not the feature class.</span>
+    <span class="c1"># So, construct path to feature class here.</span>
+    <span class="c1">#</span>
+    <span class="n">ret_val</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">ret_val</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">shape_file</span><span class="p">)</span><span class="o">.</span><span class="n">stem</span><span class="p">))</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...load_shapefile,"</span><span class="p">,</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">management</span><span class="o">.</span><span class="n">GetCount</span><span class="p">(</span><span class="n">ret_val</span><span class="p">),</span>
+          <span class="s2">"precincts loaded from shapefile."</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...load_shapefile, ret_val:"</span><span class="p">,</span> <span class="n">ret_val</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">ret_val</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"Can't find feature class: </span><span class="si">{</span><span class="n">ret_val</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">return</span> <span class="n">ret_val</span>
+
+
+<span class="k">def</span> <span class="nf">load_table</span><span class="p">(</span><span class="n">dbf_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">out_gdb</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Load a dbf file into a table with the same name in the specified</span>
+<span class="sd">    geo-database.</span>
+
+<span class="sd">    :param str dbf_file:    The file path to the dbf file.</span>
+<span class="sd">    :param str out_gdb:     The path to the geo-database.</span>
+<span class="sd">    :return str:            The geo-database path to the table created.</span>
+<span class="sd">    """</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...load_table, dbf_file"</span><span class="p">,</span> <span class="n">dbf_file</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...load_table, out_gdb:"</span><span class="p">,</span> <span class="n">out_gdb</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">dbf_file</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find input dbf_file: </span><span class="si">{</span><span class="n">dbf_file</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">out_gdb</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"Can't find input out_gdb: </span><span class="si">{</span><span class="n">out_gdb</span><span class="si">}</span><span class="s2">"</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">result</span><span class="p">:</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Result</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">conversion</span><span class="o">.</span><span class="n">TableToGeodatabase</span><span class="p">(</span>
+            <span class="n">Input_Table</span><span class="o">=</span><span class="p">[</span><span class="n">dbf_file</span><span class="p">],</span>
+            <span class="n">Output_Geodatabase</span><span class="o">=</span><span class="n">out_gdb</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ExecuteError</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle geo-processing specific errors.</span>
+        <span class="c1">#</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"...load_table, arcpy error executing "</span>
+              <span class="s2">"geo-processing tool."</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">arcpy</span><span class="o">.</span><span class="n">GetMessages</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle any other type of error.</span>
+        <span class="c1">#</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">202</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">getMessages</span><span class="p">())</span>
+    <span class="c1">#</span>
+    <span class="c1"># Unpack first element of result object as return value.</span>
+    <span class="c1">#</span>
+    <span class="n">ret_val</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">getOutput</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># This tool ony returns the path to the gdb not the feature class.</span>
+    <span class="c1"># So, construct path to feature class here.</span>
+    <span class="c1">#</span>
+    <span class="n">ret_val</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">ret_val</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">dbf_file</span><span class="p">)</span><span class="o">.</span><span class="n">stem</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...load_table,"</span><span class="p">,</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">management</span><span class="o">.</span><span class="n">GetCount</span><span class="p">(</span><span class="n">ret_val</span><span class="p">),</span>
+          <span class="s2">"cross_reference records loaded from dbf file."</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...load_table, ret_val:"</span><span class="p">,</span> <span class="n">ret_val</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">ret_val</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"Can't find feature class: </span><span class="si">{</span><span class="n">ret_val</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">return</span> <span class="n">ret_val</span>
+
+
+<span class="k">def</span> <span class="nf">create_table</span><span class="p">(</span><span class="n">out_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">out_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Create a new empty table in the specified geo-database.</span>
+
+<span class="sd">    :param str out_path:    The path to the geo-database</span>
+<span class="sd">    :param str out_name:    The name of the table to create.</span>
+<span class="sd">    :return str:            The geo-database path to the table created.</span>
+<span class="sd">    """</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...create_table, out_path"</span><span class="p">,</span> <span class="n">out_path</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...create_table, out_name:"</span><span class="p">,</span> <span class="n">out_name</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">out_path</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find input out_path: </span><span class="si">{</span><span class="n">out_path</span><span class="si">}</span><span class="s2">"</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">result</span><span class="p">:</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Result</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">management</span><span class="o">.</span><span class="n">CreateTable</span><span class="p">(</span>
+            <span class="n">out_path</span><span class="o">=</span><span class="n">out_path</span><span class="p">,</span>
+            <span class="n">out_name</span><span class="o">=</span><span class="n">out_name</span>
+        <span class="p">)</span>
+    <span class="k">except</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ExecuteError</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle geo-processing specific errors.</span>
+        <span class="c1">#</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"...create_table, arcpy error executing "</span>
+              <span class="s2">"geo-processing tool."</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">arcpy</span><span class="o">.</span><span class="n">GetMessages</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">103</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle any other type of error.</span>
+        <span class="c1">#</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">203</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">getMessages</span><span class="p">())</span>
+    <span class="c1">#</span>
+    <span class="c1"># Unpack first element of result object as return value.</span>
+    <span class="c1">#</span>
+    <span class="n">ret_val</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">getOutput</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...create_table, ret_val:"</span><span class="p">,</span> <span class="n">ret_val</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">ret_val</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"Can't find feature class: </span><span class="si">{</span><span class="n">ret_val</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">return</span> <span class="n">ret_val</span>
+
+
+<span class="k">def</span> <span class="nf">add_fields</span><span class="p">(</span><span class="n">in_table</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+               <span class="n">field_description</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Add fields to a table in the geo-database.</span>
+
+<span class="sd">    :param str in_table:            The geo-database path to the table.</span>
+<span class="sd">    :param str field_description:   Specification of fields to add.</span>
+<span class="sd">    :return str:                    The geo-database path to the table.</span>
+<span class="sd">    """</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...add_fields, in_table"</span><span class="p">,</span> <span class="n">in_table</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...add_fields, field_description:"</span><span class="p">,</span> <span class="n">field_description</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">in_table</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find input in_table: </span><span class="si">{</span><span class="n">in_table</span><span class="si">}</span><span class="s2">"</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">result</span><span class="p">:</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Result</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">management</span><span class="o">.</span><span class="n">AddFields</span><span class="p">(</span>
+            <span class="n">in_table</span><span class="o">=</span><span class="n">in_table</span><span class="p">,</span>
+            <span class="n">field_description</span><span class="o">=</span><span class="n">field_description</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ExecuteError</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle geo-processing specific errors.</span>
+        <span class="c1">#</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"...add_fields, arcpy error executing "</span>
+              <span class="s2">"geo-processing tool."</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">arcpy</span><span class="o">.</span><span class="n">GetMessages</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle any other type of error.</span>
+        <span class="c1">#</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">204</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">getMessages</span><span class="p">())</span>
+    <span class="c1">#</span>
+    <span class="c1"># Unpack first element of result object as return value.</span>
+    <span class="c1">#</span>
+    <span class="n">ret_val</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">getOutput</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...add_fields, ret_val:"</span><span class="p">,</span> <span class="n">ret_val</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">ret_val</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"Can't find feature class: </span><span class="si">{</span><span class="n">ret_val</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">return</span> <span class="n">ret_val</span>
+
+
+<span class="k">def</span> <span class="nf">join_by_field</span><span class="p">(</span><span class="n">in_data</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">in_field</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">join_table</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                  <span class="n">join_field</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fields</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+                  <span class="n">index_join_fields</span><span class="o">=</span><span class="s2">"NEW_INDEXES"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Join two feature classes/tables based on a common key and transfer</span>
+<span class="sd">    the specified fields to one of the tables.</span>
+
+<span class="sd">    :param str in_data:         The geo-database path to the 1st table.</span>
+<span class="sd">    :param str in_field:        The join field in the 1st table.</span>
+<span class="sd">    :param str join_table:      The geo-database path to the 2nd table.</span>
+<span class="sd">    :param str str join_field:  The join field in the 2nd table.</span>
+<span class="sd">    :param list fields:         The list of fields to transfer.</span>
+<span class="sd">    :param str index_join_fields:   Whether to create new indexes.</span>
+<span class="sd">    :return str:                The geo-database path to the resulting</span>
+<span class="sd">                                table.</span>
+<span class="sd">    """</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...join_field, in_data"</span><span class="p">,</span> <span class="n">in_data</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...join_field, in_field:"</span><span class="p">,</span> <span class="n">in_field</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...join_field, join_table:"</span><span class="p">,</span> <span class="n">join_table</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...join_field, fields:"</span><span class="p">,</span> <span class="n">fields</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...join_field, index_join_fields:"</span><span class="p">,</span> <span class="n">index_join_fields</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">in_data</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"Can't find input in_data: </span><span class="si">{</span><span class="n">in_data</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">join_table</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find input in_table: </span><span class="si">{</span><span class="n">join_table</span><span class="si">}</span><span class="s2">"</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">result</span><span class="p">:</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Result</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">management</span><span class="o">.</span><span class="n">JoinField</span><span class="p">(</span>
+            <span class="n">in_data</span><span class="o">=</span><span class="n">in_data</span><span class="p">,</span>
+            <span class="n">in_field</span><span class="o">=</span><span class="n">in_field</span><span class="p">,</span>
+            <span class="n">join_table</span><span class="o">=</span><span class="n">join_table</span><span class="p">,</span>
+            <span class="n">join_field</span><span class="o">=</span><span class="n">join_field</span><span class="p">,</span>
+            <span class="n">fields</span><span class="o">=</span><span class="n">fields</span><span class="p">,</span>
+            <span class="n">index_join_fields</span><span class="o">=</span><span class="n">index_join_fields</span>
+        <span class="p">)</span>
+    <span class="k">except</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ExecuteError</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle geo-processing specific errors.</span>
+        <span class="c1">#</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"...join_by_field, arcpy error executing "</span>
+              <span class="s2">"geo-processing tool."</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">arcpy</span><span class="o">.</span><span class="n">GetMessages</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">105</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle any other type of error.</span>
+        <span class="c1">#</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">205</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">getMessages</span><span class="p">())</span>
+    <span class="c1">#</span>
+    <span class="c1"># Unpack first element of result object as return value.</span>
+    <span class="c1">#</span>
+    <span class="n">ret_val</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">getOutput</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...join_field,"</span><span class="p">,</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">management</span><span class="o">.</span><span class="n">GetCount</span><span class="p">(</span><span class="n">ret_val</span><span class="p">),</span>
+          <span class="s2">"records after join."</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...join_field, ret_val:"</span><span class="p">,</span> <span class="n">ret_val</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">ret_val</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"Can't find feature class: </span><span class="si">{</span><span class="n">ret_val</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">return</span> <span class="n">ret_val</span>
+
+
+<span class="k">def</span> <span class="nf">dissolve</span><span class="p">(</span><span class="n">in_features</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">out_feature_class</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+             <span class="n">dissolve_field</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Dissolve the polygons in a feature class based on a shared value in</span>
+<span class="sd">    :a field.</span>
+
+<span class="sd">    :param str in_features:       The path to the input feature class.</span>
+<span class="sd">    :param str out_feature_class: The path to the output feature class.</span>
+<span class="sd">    :param str dissolve_field:    The field to dissolve on.</span>
+<span class="sd">    :return str:                  The path to the output feature class.</span>
+<span class="sd">    """</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...dissolve, in_features"</span><span class="p">,</span> <span class="n">in_features</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...dissolve, out_feature_class:"</span><span class="p">,</span> <span class="n">out_feature_class</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...dissolve, dissolve_field:"</span><span class="p">,</span> <span class="n">dissolve_field</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">in_features</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find input in_features: </span><span class="si">{</span><span class="n">in_features</span><span class="si">}</span><span class="s2">"</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">result</span><span class="p">:</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Result</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">PairwiseDissolve</span><span class="p">(</span>
+            <span class="n">in_features</span><span class="o">=</span><span class="n">in_features</span><span class="p">,</span>
+            <span class="n">out_feature_class</span><span class="o">=</span><span class="n">out_feature_class</span><span class="p">,</span>
+            <span class="n">dissolve_field</span><span class="o">=</span><span class="p">[</span><span class="n">dissolve_field</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="k">except</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ExecuteError</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle geo-processing specific errors.</span>
+        <span class="c1">#</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"...dissolve, arcpy error executing "</span>
+              <span class="s2">"geo-processing tool."</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">arcpy</span><span class="o">.</span><span class="n">GetMessages</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">106</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle any other type of error.</span>
+        <span class="c1">#</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">206</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">getMessages</span><span class="p">())</span>
+    <span class="c1">#</span>
+    <span class="c1"># Unpack first element of result object as return value.</span>
+    <span class="c1">#</span>
+    <span class="n">ret_val</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">getOutput</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...dissolve,"</span><span class="p">,</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">management</span><span class="o">.</span><span class="n">GetCount</span><span class="p">(</span><span class="n">ret_val</span><span class="p">),</span>
+          <span class="s2">"records after dissolve."</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...dissolve, ret_val:"</span><span class="p">,</span> <span class="n">ret_val</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">ret_val</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"Can't find feature class: </span><span class="si">{</span><span class="n">ret_val</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">return</span> <span class="n">ret_val</span>
+
+
+<span class="k">def</span> <span class="nf">explode_xref</span><span class="p">(</span><span class="n">xref_table</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">xref_explode_table</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Explode any regular precincts for each voting precinct in</span>
+<span class="sd">    the cross-reference table into multiple separate rows in a new</span>
+<span class="sd">    table. Note that the key and value in the exploded results table is </span>
+<span class="sd">    swapped from the input cross-reference table. The key in the output</span>
+<span class="sd">    table is the regular precinct and there can be only one voting</span>
+<span class="sd">    precinct for each regular precinct in the output. Each voting</span>
+<span class="sd">    precinct can appear in multiple rows in the output.</span>
+
+<span class="sd">    :param str xref_table:      The path to the cross-reference table.</span>
+<span class="sd">    :param str xref_explode_table:  The path to the exploded table.</span>
+<span class="sd">    :return str:                The path to the exploded table.</span>
+<span class="sd">    """</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...explode_xref, xref_table"</span><span class="p">,</span> <span class="n">xref_table</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...explode_xref, xref_explode_table:"</span><span class="p">,</span> <span class="n">xref_explode_table</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">xref_table</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find input xref_table: </span><span class="si">{</span><span class="n">xref_table</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">xref_explode_table</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find input xref_explode_table: </span><span class="si">{</span><span class="n">xref_explode_table</span><span class="si">}</span><span class="s2">"</span>
+
+    <span class="c1">#</span>
+    <span class="c1"># Iterate over the cross-reference table and unpack multiple regular</span>
+    <span class="c1"># precincts dictionary entries. The dictionary key is the regular </span>
+    <span class="c1"># precinct and the value is the associated voting precinct.</span>
+    <span class="c1">#</span>
+    <span class="n">precincts_1to1</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="p">(</span><span class="n">arcpy</span><span class="o">.</span><span class="n">da</span><span class="o">.</span><span class="n">SearchCursor</span><span class="p">(</span>
+                <span class="n">xref_table</span><span class="p">,</span> <span class="p">[</span><span class="s2">"VotePrec"</span><span class="p">,</span> <span class="s2">"_Precincts"</span><span class="p">])</span> <span class="k">as</span> <span class="n">search_cur</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">voting_precinct</span><span class="p">,</span> <span class="n">regular_precincts_str</span> <span class="ow">in</span> <span class="n">search_cur</span><span class="p">:</span>
+                <span class="c1">#</span>
+                <span class="c1"># Unpack the regular precincts into individual items and</span>
+                <span class="c1"># add voting precinct to a dictionary with regular</span>
+                <span class="c1"># precinct as the key. Note: using a set here just in</span>
+                <span class="c1"># case there are any duplicate regular precincts in the</span>
+                <span class="c1"># same cross-reference row.</span>
+                <span class="c1">#</span>
+                <span class="n">regular_precincts_set</span> <span class="o">=</span> \
+                    <span class="nb">set</span><span class="p">(</span><span class="n">regular_precincts_str</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+                <span class="k">for</span> <span class="n">regular_precinct</span> <span class="ow">in</span> <span class="n">regular_precincts_set</span><span class="p">:</span>
+                    <span class="n">precincts_1to1</span><span class="p">[</span><span class="n">regular_precinct</span><span class="p">]</span> <span class="o">=</span> \
+                        <span class="n">voting_precinct</span>
+    <span class="k">except</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ExecuteError</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle geo-processing specific errors.</span>
+        <span class="c1">#</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"...explode_xref, arcpy error executing "</span>
+              <span class="s2">"geo-processing tool."</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"...explode_xref, error in SearchCursor"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">arcpy</span><span class="o">.</span><span class="n">GetMessages</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">107</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle any other type of error.</span>
+        <span class="c1">#</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">207</span><span class="p">)</span>
+    <span class="c1"># </span>
+    <span class="c1"># Insert the contents of the dictionary into a table so that we can</span>
+    <span class="c1"># use geo-processing tools to join to this table.</span>
+    <span class="c1">#</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="p">(</span>
+            <span class="n">arcpy</span><span class="o">.</span><span class="n">da</span><span class="o">.</span><span class="n">InsertCursor</span><span class="p">(</span>
+                <span class="n">xref_explode_table</span><span class="p">,</span>
+                <span class="p">[</span><span class="s2">"Precinct"</span><span class="p">,</span> <span class="s2">"VotePrec"</span><span class="p">])</span> <span class="k">as</span> <span class="n">insert_cur</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">regular_precinct</span><span class="p">,</span> <span class="n">voting_precinct</span> \
+                    <span class="ow">in</span> <span class="n">precincts_1to1</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">insert_cur</span><span class="o">.</span><span class="n">insertRow</span><span class="p">(</span>
+                    <span class="p">[</span><span class="n">regular_precinct</span><span class="p">,</span>
+                     <span class="n">precincts_1to1</span><span class="p">[</span><span class="n">voting_precinct</span><span class="p">]</span>
+                     <span class="p">]</span>
+                <span class="p">)</span>
+    <span class="k">except</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ExecuteError</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle geo-processing specific errors.</span>
+        <span class="c1">#</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"...explode_xref, arcpy error executing "</span>
+              <span class="s2">"geo-processing tool."</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"...explode_xref, error in InsertCursor"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">arcpy</span><span class="o">.</span><span class="n">GetMessages</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">108</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle any other type of error.</span>
+        <span class="c1">#</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">208</span><span class="p">)</span>
+    <span class="n">ret_val</span> <span class="o">=</span> <span class="n">xref_explode_table</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...explode_xref, ret_val:"</span><span class="p">,</span> <span class="n">ret_val</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...explode_xref,"</span><span class="p">,</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">management</span><span class="o">.</span><span class="n">GetCount</span><span class="p">(</span><span class="n">ret_val</span><span class="p">),</span>
+          <span class="s2">"regular precincts have a voting precinct assigned."</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">ret_val</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"Can't find feature class: </span><span class="si">{</span><span class="n">ret_val</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">return</span> <span class="n">ret_val</span>
+
+
+<span class="k">def</span> <span class="nf">update_precincts</span><span class="p">(</span><span class="n">precincts_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Update the precincts feature class so that regular precincts that</span>
+<span class="sd">    don't appear in the cross-reference table have their voting precinct</span>
+<span class="sd">    set to the same value as their regular precinct. This is necessary</span>
+<span class="sd">    to avoid all these precincts being dissolved into a single polygon</span>
+<span class="sd">    because the share the same null value for voting precinct.</span>
+
+<span class="sd">    :param str precincts_fc: The path to the precincts feature class.</span>
+<span class="sd">    :return str:             The path to the precincts feature class.</span>
+<span class="sd">    """</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...update_precincts, precincts_fc"</span><span class="p">,</span> <span class="n">precincts_fc</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">precincts_fc</span><span class="p">),</span> \
+        <span class="sa">f</span><span class="s2">"Can't find input precincts_fc: </span><span class="si">{</span><span class="n">precincts_fc</span><span class="si">}</span><span class="s2">"</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">da</span><span class="o">.</span><span class="n">UpdateCursor</span><span class="p">(</span>
+                <span class="n">precincts_fc</span><span class="p">,</span> <span class="p">[</span><span class="s2">"Precinct"</span><span class="p">,</span> <span class="s2">"VotePrec"</span><span class="p">],</span>
+                <span class="n">where_clause</span><span class="o">=</span><span class="s1">'"VotePrec" is null'</span><span class="p">)</span> <span class="k">as</span> <span class="n">update_cur</span><span class="p">:</span>
+            <span class="n">update_count</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">update_cur</span><span class="p">:</span>
+                <span class="n">precinct</span><span class="p">,</span> <span class="n">voting_precinct</span> <span class="o">=</span> <span class="n">row</span>
+                <span class="k">if</span> <span class="n">voting_precinct</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">precinct</span>
+                    <span class="n">update_cur</span><span class="o">.</span><span class="n">updateRow</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+                    <span class="n">update_count</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"...update_precincts,"</span><span class="p">,</span> <span class="n">update_count</span><span class="p">,</span> <span class="s2">"rows updated."</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ExecuteError</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle geo-processing specific errors.</span>
+        <span class="c1">#</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"...update_precincts, arcpy error executing "</span>
+              <span class="s2">"geo-processing tool."</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"...update_precincts, error in UpdateCursor"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">arcpy</span><span class="o">.</span><span class="n">GetMessages</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">109</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># Handle any other type of error.</span>
+        <span class="c1">#</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">209</span><span class="p">)</span>
+
+    <span class="n">ret_val</span> <span class="o">=</span> <span class="n">precincts_fc</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"...update_precincts, ret_val:"</span><span class="p">,</span> <span class="n">ret_val</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="s2">"...update_precincts,"</span><span class="p">,</span>
+        <span class="n">arcpy</span><span class="o">.</span><span class="n">management</span><span class="o">.</span><span class="n">GetCount</span><span class="p">(</span><span class="n">ret_val</span><span class="p">),</span>
+        <span class="s2">"regular precincts with a voting precinct assigned after update."</span>
     <span class="p">)</span>
-    <span class="k">return</span> <span class="n">out_fc</span>
-
-
-<span class="k">def</span> <span class="nf">join</span><span class="p">(</span><span class="n">target_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">join_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">out_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Run the Spatial Join geo-processing tool.</span>
-
-<span class="sd">    :param str target_fc:   The target feature class.</span>
-<span class="sd">    :param str join_fc:     The join feature class.</span>
-<span class="sd">    :param str out_fc:      The feature class to output containing the joined features.</span>
-<span class="sd">    :return str:            The output feature class.</span>
-<span class="sd">    """</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"...join, target feature class:"</span><span class="p">,</span> <span class="n">target_fc</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"...join, join feature class:"</span><span class="p">,</span> <span class="n">join_fc</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"...join, output feature class:"</span><span class="p">,</span> <span class="n">out_fc</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">target_fc</span><span class="p">),</span> \
-        <span class="sa">f</span><span class="s2">"Can't find target feature class: </span><span class="si">{</span><span class="n">target_fc</span><span class="si">}</span><span class="s2">"</span>
-    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">join_fc</span><span class="p">),</span> \
-        <span class="sa">f</span><span class="s2">"Can't find join feature class: </span><span class="si">{</span><span class="n">join_fc</span><span class="si">}</span><span class="s2">"</span>
-    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">g_out_gdb</span><span class="p">),</span> \
-        <span class="sa">f</span><span class="s2">"Can't find output geo-database: </span><span class="si">{</span><span class="n">g_out_gdb</span><span class="si">}</span><span class="s2">"</span>
-    <span class="c1">#</span>
-    <span class="c1"># Configure the field mapping.</span>
-    <span class="c1">#</span>
-    <span class="n">mapping</span> <span class="o">=</span> <span class="n">map_fields</span><span class="p">(</span><span class="n">target_fc</span><span class="p">,</span> <span class="n">join_fc</span><span class="p">)</span>
-    <span class="c1">#</span>
-    <span class="c1"># Spatially join the target feature class to the join feature class.</span>
-    <span class="c1"># Counterintuitively, a 1:1 join aggregates rows when there are </span>
-    <span class="c1"># multiple spatial matches!</span>
-    <span class="c1">#</span>
-    <span class="n">arcpy</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">SpatialJoin</span><span class="p">(</span>
-        <span class="n">target_features</span><span class="o">=</span><span class="n">target_fc</span><span class="p">,</span>
-        <span class="n">join_features</span><span class="o">=</span><span class="n">join_fc</span><span class="p">,</span>
-        <span class="n">out_feature_class</span><span class="o">=</span><span class="n">out_fc</span><span class="p">,</span>
-        <span class="n">field_mapping</span><span class="o">=</span><span class="n">mapping</span>
-    <span class="p">)</span>
-    <span class="k">return</span> <span class="n">out_fc</span>
-
-
-<span class="k">def</span> <span class="nf">map_fields</span><span class="p">(</span><span class="n">target_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">join_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">FieldMappings</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Create a field mappings object which can be passed as parameter </span>
-<span class="sd">    passed to the Spatial Join geo-processing tool. Since a single</span>
-<span class="sd">    feature can be within 100 feet of more than one road, mappings</span>
-<span class="sd">    with both "First" and "Join" merge rules are created. This will</span>
-<span class="sd">    add two new fields in the output, namely, "first_road_name" and</span>
-<span class="sd">    "concat_road_names" respectively.</span>
-
-<span class="sd">    :param target_fc:               The target feature class.</span>
-<span class="sd">    :param join_fc:                 The join feature class.</span>
-<span class="sd">    :return arcpy.FieldMappings:    The field mappings object.</span>
-<span class="sd">    """</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"...map fields, target feature class:"</span><span class="p">,</span> <span class="n">target_fc</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"...map fields, join feature class:"</span><span class="p">,</span> <span class="n">join_fc</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">target_fc</span><span class="p">),</span> \
-        <span class="sa">f</span><span class="s2">"Can't find target feature class: </span><span class="si">{</span><span class="n">target_fc</span><span class="si">}</span><span class="s2">"</span>
-    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">join_fc</span><span class="p">),</span> \
-        <span class="sa">f</span><span class="s2">"Can't find join feature class: </span><span class="si">{</span><span class="n">join_fc</span><span class="si">}</span><span class="s2">"</span>
-
-    <span class="k">def</span> <span class="nf">add_output_field</span><span class="p">(</span><span class="n">fm</span><span class="p">:</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">FieldMap</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">"""</span>
-<span class="sd">        Helper function to configure an output field.</span>
-
-<span class="sd">        :param arcpy.FieldMap fm:   The field map to add the output field to.</span>
-<span class="sd">        :param str name:            The name to give to the new output field.</span>
-<span class="sd">        :return NoneType:           None</span>
-<span class="sd">        """</span>
-        <span class="n">fld</span> <span class="o">=</span> <span class="n">fm</span><span class="o">.</span><span class="n">outputField</span>
-        <span class="n">fld</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="s2">"TEXT"</span>
-        <span class="n">fld</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="n">fld</span><span class="o">.</span><span class="n">aliasName</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="n">fm</span><span class="o">.</span><span class="n">outputField</span> <span class="o">=</span> <span class="n">fld</span>
-
-    <span class="c1">#</span>
-    <span class="c1"># Create a field mappings object and add the fields from the</span>
-    <span class="c1"># target feature class.</span>
-    <span class="c1">#</span>
-    <span class="n">fms</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">FieldMappings</span><span class="p">()</span>
-    <span class="n">fms</span><span class="o">.</span><span class="n">addTable</span><span class="p">(</span><span class="n">target_fc</span><span class="p">)</span>
-    <span class="c1">#</span>
-    <span class="c1"># Remove the RHG_NAME field from the target field mapping because </span>
-    <span class="c1"># we are adding the road name from the join feature class below.</span>
-    <span class="c1">#</span>
-    <span class="n">fms</span><span class="o">.</span><span class="n">removeFieldMap</span><span class="p">(</span><span class="n">fms</span><span class="o">.</span><span class="n">findFieldMapIndex</span><span class="p">(</span><span class="s2">"RHG_NAME"</span><span class="p">))</span>
-    <span class="c1">#</span>
-    <span class="c1"># Add "first_road_name" field which will contain the first matching</span>
-    <span class="c1"># road name.</span>
-    <span class="c1">#</span>
-    <span class="c1"># Create a new field map object and add the RHG_NAME field from the</span>
-    <span class="c1"># join feature class.</span>
-    <span class="c1">#</span>
-    <span class="n">first_fm</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">FieldMap</span><span class="p">()</span>
-    <span class="n">first_fm</span><span class="o">.</span><span class="n">addInputField</span><span class="p">(</span><span class="n">join_fc</span><span class="p">,</span> <span class="s2">"RHG_NAME"</span><span class="p">)</span>
-    <span class="c1">#</span>
-    <span class="c1"># Specify the merge rule -- take the first matching value when </span>
-    <span class="c1"># there are multiple matches.</span>
-    <span class="c1">#</span>
-    <span class="n">first_fm</span><span class="o">.</span><span class="n">mergeRule</span> <span class="o">=</span> <span class="s2">"First"</span>
-    <span class="c1">#</span>
-    <span class="c1"># Configure the output field.</span>
-    <span class="c1">#</span>
-    <span class="n">add_output_field</span><span class="p">(</span><span class="n">first_fm</span><span class="p">,</span> <span class="s2">"first_road_name"</span><span class="p">)</span>
-    <span class="c1">#</span>
-    <span class="c1"># Add this field mapping to the field mappings.</span>
-    <span class="c1">#</span>
-    <span class="n">fms</span><span class="o">.</span><span class="n">addFieldMap</span><span class="p">(</span><span class="n">first_fm</span><span class="p">)</span>
-    <span class="c1">#</span>
-    <span class="c1"># Add "concat_road_names" field which will contain all the matching</span>
-    <span class="c1"># road name concatenated and separated with a comma.</span>
-    <span class="c1">#</span>
-    <span class="c1"># Create a new field map object and add the RHG_NAME field from the</span>
-    <span class="c1"># join feature class.</span>
-    <span class="c1">#</span>
-    <span class="n">concat_fm</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">FieldMap</span><span class="p">()</span>
-    <span class="n">concat_fm</span><span class="o">.</span><span class="n">addInputField</span><span class="p">(</span><span class="n">join_fc</span><span class="p">,</span> <span class="s2">"RHG_NAME"</span><span class="p">)</span>
-    <span class="c1">#</span>
-    <span class="c1"># Specify the merge rule -- Concatenate matching value when there </span>
-    <span class="c1"># are multiple matches.</span>
-    <span class="c1">#</span>
-    <span class="n">concat_fm</span><span class="o">.</span><span class="n">mergeRule</span> <span class="o">=</span> <span class="s2">"Join"</span>
-    <span class="n">concat_fm</span><span class="o">.</span><span class="n">joinDelimiter</span> <span class="o">=</span> <span class="s2">","</span>
-    <span class="c1">#</span>
-    <span class="c1"># Configure the output field.</span>
-    <span class="c1">#</span>
-    <span class="n">add_output_field</span><span class="p">(</span><span class="n">concat_fm</span><span class="p">,</span> <span class="s2">"concat_road_names"</span><span class="p">)</span>
-    <span class="c1">#</span>
-    <span class="c1"># Add this field mapping to the field mappings.</span>
-    <span class="c1">#</span>
-    <span class="n">fms</span><span class="o">.</span><span class="n">addFieldMap</span><span class="p">(</span><span class="n">concat_fm</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">fms</span>
-
-
-<span class="k">def</span> <span class="nf">copy_field</span><span class="p">(</span><span class="n">from_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">from_key_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">from_field_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-               <span class="n">to_fc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">to_key_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">to_field_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Copy the value of a field from one feature class to another where the specified keys match.</span>
-
-<span class="sd">    :param str from_fc:             The source feature class to copy from.</span>
-<span class="sd">    :param str from_key_name:       The name of the key field in the source feature class.</span>
-<span class="sd">    :param str from_field_name:     The name of the field containing the value to copy in the source feature class.</span>
-<span class="sd">    :param str to_fc:               The target feature class to copy to.</span>
-<span class="sd">    :param str to_key_name:         The name of the key field in the target feature class.</span>
-<span class="sd">    :param str to_field_name:       The name of the field that will contain the new value in the target feature class.</span>
-<span class="sd">    :return NoneType:               None</span>
-<span class="sd">    """</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"...copy field, from feature class:"</span><span class="p">,</span> <span class="n">from_fc</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"...copy field, to feature class:"</span><span class="p">,</span> <span class="n">to_fc</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">from_fc</span><span class="p">),</span> \
-        <span class="sa">f</span><span class="s2">"Can't find from feature class: </span><span class="si">{</span><span class="n">from_fc</span><span class="si">}</span><span class="s2">"</span>
-    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">to_fc</span><span class="p">),</span> \
-        <span class="sa">f</span><span class="s2">"Can't find to feature class: </span><span class="si">{</span><span class="n">to_fc</span><span class="si">}</span><span class="s2">"</span>
-    <span class="c1">#</span>
-    <span class="c1"># Check the fields exist.</span>
-    <span class="c1">#</span>
-    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="p">[</span><span class="n">from_key_name</span><span class="p">,</span> <span class="n">from_field_name</span><span class="p">]:</span>
-        <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ListFields</span><span class="p">(</span><span class="n">from_fc</span><span class="p">,</span> <span class="n">field</span><span class="p">),</span> \
-            <span class="sa">f</span><span class="s2">"The field </span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s2"> does not exist in </span><span class="si">{</span><span class="n">from_fc</span><span class="si">}</span><span class="s2">"</span>
-    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="p">[</span><span class="n">to_key_name</span><span class="p">,</span> <span class="n">to_field_name</span><span class="p">]:</span>
-        <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ListFields</span><span class="p">(</span><span class="n">to_fc</span><span class="p">,</span> <span class="n">field</span><span class="p">),</span> \
-            <span class="sa">f</span><span class="s2">"The field </span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s2"> does not exist in </span><span class="si">{</span><span class="n">to_fc</span><span class="si">}</span><span class="s2">"</span>
-    <span class="c1">#</span>
-    <span class="c1"># Create a dictionary to hold keys and field values from the</span>
-    <span class="c1"># source feature class.</span>
-    <span class="c1">#</span>
-    <span class="n">from_values_dict</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="c1">#</span>
-    <span class="c1"># Iterate through the rows in the source feature class and add</span>
-    <span class="c1"># field values to the dictionary.</span>
-    <span class="c1">#</span>
-    <span class="k">with</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">da</span><span class="o">.</span><span class="n">SearchCursor</span><span class="p">(</span><span class="n">from_fc</span><span class="p">,</span> <span class="p">[</span><span class="n">from_key_name</span><span class="p">,</span> <span class="n">from_field_name</span><span class="p">])</span> <span class="k">as</span> <span class="n">search_cur</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">search_cur</span><span class="p">:</span>
-            <span class="n">from_values_dict</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
-    <span class="c1">#</span>
-    <span class="c1"># Iterate through the target feature class and update the field</span>
-    <span class="c1"># values where they keys match.</span>
-    <span class="c1">#</span>
-    <span class="k">with</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">da</span><span class="o">.</span><span class="n">UpdateCursor</span><span class="p">(</span><span class="n">to_fc</span><span class="p">,</span> <span class="p">[</span><span class="n">to_key_name</span><span class="p">,</span> <span class="n">to_field_name</span><span class="p">])</span> <span class="k">as</span> <span class="n">upd_cur</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">to_row</span> <span class="ow">in</span> <span class="n">upd_cur</span><span class="p">:</span>
-            <span class="n">this_key</span> <span class="o">=</span> <span class="n">to_row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-            <span class="c1">#</span>
-            <span class="c1"># Update the field using the value from the dictionary.</span>
-            <span class="c1">#</span>
-            <span class="k">if</span> <span class="n">this_key</span> <span class="ow">in</span> <span class="n">from_values_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-                <span class="n">to_row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">from_values_dict</span><span class="p">[</span><span class="n">this_key</span><span class="p">]</span>
-            <span class="n">upd_cur</span><span class="o">.</span><span class="n">updateRow</span><span class="p">(</span><span class="n">to_row</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">ret_val</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"Can't find feature class: </span><span class="si">{</span><span class="n">ret_val</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">return</span> <span class="n">ret_val</span>
 
 
 <span class="k">def</span> <span class="nf">run_tools</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -379,93 +666,150 @@
 <span class="sd">    :return NoneType: None</span>
 <span class="sd">    """</span>
     <span class="c1">#</span>
-    <span class="c1"># Specify the input feature classes.</span>
+    <span class="c1"># Load precincts from shapefile.</span>
     <span class="c1">#</span>
-    <span class="n">roads</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_in_gdb</span><span class="p">,</span> <span class="s2">"PublicWorks_Roads"</span><span class="p">)</span>
-    <span class="n">signs</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_in_gdb</span><span class="p">,</span> <span class="s2">"StreetSigns"</span><span class="p">)</span>
-    <span class="n">poles</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_in_gdb</span><span class="p">,</span> <span class="s2">"StreetSignPoles"</span><span class="p">)</span>
-    <span class="n">lights</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_in_gdb</span><span class="p">,</span> <span class="s2">"StreetLights"</span><span class="p">)</span>
+    <span class="n">precincts_shp_file</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span>
+        <span class="n">Path</span><span class="p">(</span>
+            <span class="n">g_proj_dir</span><span class="p">,</span>
+            <span class="s2">"Precincts"</span><span class="p">,</span>
+            <span class="s2">"Precincts.shp"</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">precincts</span> <span class="o">=</span> <span class="n">load_shapefile</span><span class="p">(</span><span class="n">precincts_shp_file</span><span class="p">,</span> <span class="n">g_temp_gdb</span><span class="p">)</span>
     <span class="c1">#</span>
-    <span class="c1"># Specify the output feature classes.</span>
+    <span class="c1"># Load cross-reference table from dbf file.</span>
     <span class="c1">#</span>
-    <span class="n">roads_buff</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_out_gdb</span><span class="p">,</span> <span class="s2">"roads_buffer_100ft"</span><span class="p">)</span>
-    <span class="n">signs_join</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_out_gdb</span><span class="p">,</span> <span class="s2">"signs_join"</span><span class="p">)</span>
-    <span class="n">poles_join</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_out_gdb</span><span class="p">,</span> <span class="s2">"poles_join"</span><span class="p">)</span>
-    <span class="n">lights_join</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_out_gdb</span><span class="p">,</span> <span class="s2">"lights_join"</span><span class="p">)</span>
+    <span class="n">xref_dbf_file</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span>
+        <span class="n">Path</span><span class="p">(</span>
+            <span class="n">g_proj_dir</span><span class="p">,</span>
+            <span class="s2">"Precincts"</span><span class="p">,</span>
+            <span class="s2">"Precinct_Cross_Reference.dbf"</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">xref</span> <span class="o">=</span> <span class="n">load_table</span><span class="p">(</span><span class="n">xref_dbf_file</span><span class="p">,</span> <span class="n">g_temp_gdb</span><span class="p">)</span>
     <span class="c1">#</span>
-    <span class="c1"># Run the geo-processing tools.</span>
+    <span class="c1"># Create a table to hold exploded cross-references.</span>
     <span class="c1">#</span>
-    <span class="n">buffer</span><span class="p">(</span><span class="n">roads</span><span class="p">,</span> <span class="s2">"100 feet"</span><span class="p">,</span> <span class="n">roads_buff</span><span class="p">)</span>
-    <span class="n">join</span><span class="p">(</span><span class="n">signs</span><span class="p">,</span> <span class="n">roads_buff</span><span class="p">,</span> <span class="n">signs_join</span><span class="p">)</span>
-    <span class="n">join</span><span class="p">(</span><span class="n">poles</span><span class="p">,</span> <span class="n">roads_buff</span><span class="p">,</span> <span class="n">poles_join</span><span class="p">)</span>
-    <span class="n">join</span><span class="p">(</span><span class="n">lights</span><span class="p">,</span> <span class="n">roads_buff</span><span class="p">,</span> <span class="n">lights_join</span><span class="p">)</span>
+    <span class="n">xref_explode</span> <span class="o">=</span> <span class="n">create_table</span><span class="p">(</span><span class="n">g_temp_gdb</span><span class="p">,</span> <span class="s2">"xref_explode"</span><span class="p">)</span>
+    <span class="n">fields_to_add</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s2">"Precinct"</span><span class="p">,</span> <span class="s2">"TEXT"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"255"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">"VotePrec"</span><span class="p">,</span> <span class="s2">"TEXT"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"255"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">]</span>
+    <span class="p">]</span>
+    <span class="n">xref_explode</span> <span class="o">=</span> <span class="n">add_fields</span><span class="p">(</span><span class="n">xref_explode</span><span class="p">,</span> <span class="n">fields_to_add</span><span class="p">)</span>
     <span class="c1">#</span>
-    <span class="c1"># Update the original feature classes with the road names.</span>
-    <span class="c1"># Note: There can be multiple roads within 100 ft of a feature.</span>
-    <span class="c1"># Choose either:</span>
-    <span class="c1">#   first_road_name to get the first matching name, or</span>
-    <span class="c1">#   concat_road_names to concatenate all matching names.</span>
+    <span class="c1"># Explode the cross-references.</span>
     <span class="c1">#</span>
-    <span class="c1"># from_field = "first_road_name"</span>
-    <span class="n">from_field</span> <span class="o">=</span> <span class="s2">"concat_road_names"</span>
+    <span class="n">xref_explode</span> <span class="o">=</span> <span class="n">explode_xref</span><span class="p">(</span><span class="n">xref</span><span class="p">,</span> <span class="n">xref_explode</span><span class="p">)</span>
     <span class="c1">#</span>
-    <span class="c1"># Note: must use the field names not their aliases for the key fields!</span>
+    <span class="c1"># Join the exploded cross-references to the precincts.</span>
     <span class="c1">#</span>
-    <span class="n">copy_field</span><span class="p">(</span><span class="n">signs_join</span><span class="p">,</span> <span class="s2">"SVG_NUM"</span><span class="p">,</span>
-               <span class="n">from_field</span><span class="p">,</span> <span class="n">signs</span><span class="p">,</span> <span class="s2">"SVG_NUM"</span><span class="p">,</span> <span class="s2">"RHG_NAME"</span><span class="p">)</span>
-    <span class="n">copy_field</span><span class="p">(</span><span class="n">poles_join</span><span class="p">,</span> <span class="s2">"PLG_NUM"</span><span class="p">,</span>
-               <span class="n">from_field</span><span class="p">,</span> <span class="n">poles</span><span class="p">,</span> <span class="s2">"PLG_NUM"</span><span class="p">,</span> <span class="s2">"RHG_NAME"</span><span class="p">)</span>
-    <span class="n">copy_field</span><span class="p">(</span><span class="n">lights_join</span><span class="p">,</span> <span class="s2">"POLE_NUM"</span><span class="p">,</span>
-               <span class="n">from_field</span><span class="p">,</span> <span class="n">lights</span><span class="p">,</span> <span class="s2">"POLE_NUM"</span><span class="p">,</span> <span class="s2">"RHG_NAME"</span><span class="p">)</span>
+    <span class="n">precincts</span> <span class="o">=</span> <span class="n">join_by_field</span><span class="p">(</span>
+        <span class="n">precincts</span><span class="p">,</span> <span class="s2">"Precinct"</span><span class="p">,</span> <span class="n">xref_explode</span><span class="p">,</span> <span class="s2">"Precinct"</span><span class="p">,</span>
+        <span class="p">[</span><span class="s2">"VotePrec"</span><span class="p">])</span>
+    <span class="c1">#</span>
+    <span class="c1"># Update precincts with no voting precinct.</span>
+    <span class="c1">#</span>
+    <span class="n">update_precincts</span><span class="p">(</span><span class="n">precincts</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Dissolve the precincts to get the voting precincts.</span>
+    <span class="c1">#</span>
+    <span class="n">voting_precincts</span> <span class="o">=</span> <span class="n">full_path</span><span class="p">(</span><span class="n">g_out_gdb</span><span class="p">,</span> <span class="s2">"voting_precincts"</span><span class="p">)</span>
+    <span class="n">voting_precincts</span> <span class="o">=</span> <span class="n">dissolve</span><span class="p">(</span>
+        <span class="n">precincts</span><span class="p">,</span> <span class="n">voting_precincts</span><span class="p">,</span> <span class="s2">"VotePrec"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">arcpy</span><span class="o">.</span><span class="n">management</span><span class="o">.</span><span class="n">GetCount</span><span class="p">(</span><span class="n">voting_precincts</span><span class="p">),</span>
+          <span class="s2">"voting precincts created."</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">voting_precincts</span><span class="p">)</span>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
     <span class="c1">#</span>
     <span class="c1"># Define locations of geodatabases.</span>
     <span class="c1">#</span>
-    <span class="n">my_proj_dir</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"C:\ArcGIS_local_projects\SantaCruzPublicWorks"</span>
-    <span class="n">my_in_gdb</span> <span class="o">=</span> <span class="s2">"PublicWorks_RoadNames.gdb"</span>
-    <span class="n">my_out_gdb</span> <span class="o">=</span> <span class="s2">"PythonOutput.gdb"</span>
-    <span class="n">setup_env</span><span class="p">(</span><span class="n">my_proj_dir</span><span class="p">,</span> <span class="n">my_in_gdb</span><span class="p">,</span> <span class="n">my_out_gdb</span><span class="p">)</span>
+    <span class="n">my_proj_dir</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"C:\ArcGIS_local_projects\CodeChallenge3"</span>
+    <span class="n">my_in_gdb</span> <span class="o">=</span> <span class="s2">"CodeChallenge3.gdb"</span>
+    <span class="c1">#</span>
+    <span class="c1"># Intermediate results are written to the temporary geo-database.</span>
+    <span class="c1"># To speed processing and avoid writing intermediate results to</span>
+    <span class="c1"># disk this is set to "memory".</span>
+    <span class="c1"># If you need to keep these results, change this to the full path of</span>
+    <span class="c1"># a file geodatabase as follows:</span>
+    <span class="c1"># my_temp_gdb = full_path(my_proj_dir, "CodeChallenge3.gdb")</span>
+    <span class="c1">#</span>
+    <span class="n">my_temp_gdb</span> <span class="o">=</span> <span class="s2">"memory"</span>
+    <span class="n">my_out_gdb</span> <span class="o">=</span> <span class="s2">"CodeChallenge3.gdb"</span>
+    <span class="n">setup_env</span><span class="p">(</span><span class="n">my_proj_dir</span><span class="p">,</span> <span class="n">my_in_gdb</span><span class="p">,</span> <span class="n">my_temp_gdb</span><span class="p">,</span> <span class="n">my_out_gdb</span><span class="p">)</span>
     <span class="c1">#</span>
     <span class="c1"># Run the main process.</span>
     <span class="c1">#</span>
     <span class="n">run_tools</span><span class="p">()</span>
 
-<span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
+<span class="c1"># ----------------------------------------------------------------------</span>
 <span class="c1"># Sample Output</span>
-<span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
-<span class="c1"># "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\python.exe" C:\ArcGIS_local_projects\SantaCruzPublicWorks\santa_cruz+public_works.py</span>
-<span class="c1"># ...project directory: C:\ArcGIS_local_projects\SantaCruzPublicWorks</span>
-<span class="c1"># ...input geo-database: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb</span>
-<span class="c1"># ...output geo_database: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb</span>
-<span class="c1"># ...buffer, input feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\PublicWorks_Roads</span>
-<span class="c1"># ...buffer, output feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\roads_buffer_100ft</span>
-<span class="c1"># ...buffer, distance: 100 feet</span>
-<span class="c1"># ...join, target feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetSigns</span>
-<span class="c1"># ...join, join feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\roads_buffer_100ft</span>
-<span class="c1"># ...join, output feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\signs_join</span>
-<span class="c1"># ...map fields, target feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetSigns</span>
-<span class="c1"># ...map fields, join feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\roads_buffer_100ft</span>
-<span class="c1"># ...join, target feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetSignPoles</span>
-<span class="c1"># ...join, join feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\roads_buffer_100ft</span>
-<span class="c1"># ...join, output feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\poles_join</span>
-<span class="c1"># ...map fields, target feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetSignPoles</span>
-<span class="c1"># ...map fields, join feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\roads_buffer_100ft</span>
-<span class="c1"># ...join, target feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetLights</span>
-<span class="c1"># ...join, join feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\roads_buffer_100ft</span>
-<span class="c1"># ...join, output feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\lights_join</span>
-<span class="c1"># ...map fields, target feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetLights</span>
-<span class="c1"># ...map fields, join feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\roads_buffer_100ft</span>
-<span class="c1"># ...copy field, from feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\signs_join</span>
-<span class="c1"># ...copy field, to feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetSigns</span>
-<span class="c1"># ...copy field, from feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\poles_join</span>
-<span class="c1"># ...copy field, to feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetSignPoles</span>
-<span class="c1"># ...copy field, from feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PythonOutput.gdb\lights_join</span>
-<span class="c1"># ...copy field, to feature class: C:\ArcGIS_local_projects\SantaCruzPublicWorks\PublicWorks_RoadNames.gdb\StreetLights</span>
+<span class="c1"># ----------------------------------------------------------------------</span>
+<span class="c1"># "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\python.exe" C:\PythonPro\Ex11\challenge3_v1.py</span>
+<span class="c1"># ...project directory: C:\ArcGIS_local_projects\CodeChallenge3</span>
+<span class="c1"># ...input geo-database: C:\ArcGIS_local_projects\CodeChallenge3\CodeChallenge3.gdb</span>
+<span class="c1"># ...temporary geo-database: memory</span>
+<span class="c1"># ...output geo_database: C:\ArcGIS_local_projects\CodeChallenge3\CodeChallenge3.gdb</span>
+<span class="c1"># ...load_shapefile, shape_file C:\ArcGIS_local_projects\CodeChallenge3\Precincts\Precincts.shp</span>
+<span class="c1"># ...load_shapefile, out_gdb: memory</span>
+<span class="c1"># C:\ArcGIS_local_projects\CodeChallenge3\Precincts\Precincts.shp Successfully converted:  memory\Precincts</span>
+<span class="c1"># Start Time: Wednesday, May 15, 2024 4:15:29 PM</span>
+<span class="c1"># C:\ArcGIS_local_projects\CodeChallenge3\Precincts\Precincts.shp Successfully converted:  memory\Precincts</span>
+<span class="c1"># Succeeded at Wednesday, May 15, 2024 4:15:31 PM (Elapsed Time: 1.22 seconds)</span>
+<span class="c1"># ...load_shapefile, 720 precincts loaded from shapefile.</span>
+<span class="c1"># ...load_shapefile, ret_val: memory\Precincts</span>
+<span class="c1"># ...load_table, dbf_file C:\ArcGIS_local_projects\CodeChallenge3\Precincts\Precinct_Cross_Reference.dbf</span>
+<span class="c1"># ...load_table, out_gdb: memory</span>
+<span class="c1"># Converted C:\ArcGIS_local_projects\CodeChallenge3\Precincts\Precinct_Cross_Reference.dbf to memory\Precinct_Cross_Reference successfully.</span>
+<span class="c1"># Start Time: Wednesday, May 15, 2024 4:15:31 PM</span>
+<span class="c1"># Converted C:\ArcGIS_local_projects\CodeChallenge3\Precincts\Precinct_Cross_Reference.dbf to memory\Precinct_Cross_Reference successfully.</span>
+<span class="c1"># Succeeded at Wednesday, May 15, 2024 4:15:31 PM (Elapsed Time: 0.62 seconds)</span>
+<span class="c1"># ...load_table, 138 cross_reference records loaded from dbf file.</span>
+<span class="c1"># ...load_table, ret_val: memory\Precinct_Cross_Reference</span>
+<span class="c1"># ...create_table, out_path memory</span>
+<span class="c1"># ...create_table, out_name: xref_explode</span>
+<span class="c1"># Start Time: Wednesday, May 15, 2024 4:15:31 PM</span>
+<span class="c1"># Succeeded at Wednesday, May 15, 2024 4:15:31 PM (Elapsed Time: 0.01 seconds)</span>
+<span class="c1"># ...create_table, ret_val: memory\xref_explode</span>
+<span class="c1"># ...add_fields, in_table memory\xref_explode</span>
+<span class="c1"># ...add_fields, field_description: [['Precinct', 'TEXT', '', '255', '', ''], ['VotePrec', 'TEXT', '', '255', '', '']]</span>
+<span class="c1"># Start Time: Wednesday, May 15, 2024 4:15:31 PM</span>
+<span class="c1"># Adding Precinct to xref_explode...</span>
+<span class="c1"># Adding VotePrec to xref_explode...</span>
+<span class="c1"># Succeeded at Wednesday, May 15, 2024 4:15:31 PM (Elapsed Time: 0.01 seconds)</span>
+<span class="c1"># ...add_fields, ret_val: memory\xref_explode</span>
+<span class="c1"># ...explode_xref, xref_table memory\Precinct_Cross_Reference</span>
+<span class="c1"># ...explode_xref, xref_explode_table: memory\xref_explode</span>
+<span class="c1"># ...explode_xref, ret_val: memory\xref_explode</span>
+<span class="c1"># ...explode_xref, 561 regular precincts have a voting precinct assigned.</span>
+<span class="c1"># ...join_field, in_data memory\Precincts</span>
+<span class="c1"># ...join_field, in_field: Precinct</span>
+<span class="c1"># ...join_field, join_table: memory\xref_explode</span>
+<span class="c1"># ...join_field, fields: ['VotePrec']</span>
+<span class="c1"># ...join_field, index_join_fields: NEW_INDEXES</span>
+<span class="c1"># Start Time: Wednesday, May 15, 2024 4:15:31 PM</span>
+<span class="c1"># Succeeded at Wednesday, May 15, 2024 4:15:32 PM (Elapsed Time: 0.10 seconds)</span>
+<span class="c1"># ...join_field, 720 records after join.</span>
+<span class="c1"># ...join_field, ret_val: memory\Precincts</span>
+<span class="c1"># ...update_precincts, precincts_fc memory\Precincts</span>
+<span class="c1"># ...update_precincts, 159 rows updated.</span>
+<span class="c1"># ...update_precincts, ret_val: memory\Precincts</span>
+<span class="c1"># ...update_precincts, 720 regular precincts with a voting precinct assigned after update.</span>
+<span class="c1"># ...dissolve, in_features memory\Precincts</span>
+<span class="c1"># ...dissolve, out_feature_class: C:\ArcGIS_local_projects\CodeChallenge3\CodeChallenge3.gdb\voting_precincts</span>
+<span class="c1"># ...dissolve, dissolve_field: VotePrec</span>
+<span class="c1"># Start Time: Wednesday, May 15, 2024 4:15:32 PM</span>
+<span class="c1"># Sorting Attributes...</span>
+<span class="c1"># Dissolving...</span>
+<span class="c1"># Succeeded at Wednesday, May 15, 2024 4:15:33 PM (Elapsed Time: 0.91 seconds)</span>
+<span class="c1"># ...dissolve, 297 records after dissolve.</span>
+<span class="c1"># ...dissolve, ret_val: C:\ArcGIS_local_projects\CodeChallenge3\CodeChallenge3.gdb\voting_precincts</span>
+<span class="c1"># 297 voting precincts created.</span>
+<span class="c1"># C:\ArcGIS_local_projects\CodeChallenge3\CodeChallenge3.gdb\voting_precincts</span>
 <span class="c1">#</span>
 <span class="c1"># Process finished with exit code 0</span>
-<span class="c1"># ----------------------------------------------------------------------------------------------------------------------</span>
+<span class="c1"># ----------------------------------------------------------------------</span>
 </code></pre></div>
 
 <p><a href="https://prendergastc.github.io/profile/images/santa_cruz_precincts/py/santa_cruz_precincts.py">Download .py file</a></p></main>
