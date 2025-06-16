@@ -49,6 +49,11 @@ url = "/marin_smoke_detector.html"
 title = "Marin Smoke Detectors"
 
 [[input.files]]
+path = "geodatabase_design.html"
+url = "/geodatabase_design.html"
+title = "Geodatabase Design Project"
+
+[[input.files]]
 path = "portland_economic_vulnerability.html"
 url = "/portland_economic_vulnerability.html"
 title = "Portland Economic Vulnerability"
