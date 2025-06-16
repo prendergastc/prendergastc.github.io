@@ -154,6 +154,11 @@ url = "/red_rock_app.html"
 title = "Red Rock Canyon Hiking Trails"
 
 [[input.files]]
+path = "target_market_analysis.html"
+url = "/target_market_analysis.html"
+title = "Target Market Analysis"
+
+[[input.files]]
 path = "hawaii_app.html"
 url = "/hawaii_app.html"
 title = "Volcanic hazards, Island of Hawaii"
