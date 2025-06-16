@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <link href="./theme/css/elegant.prod.9e9d5ce754.css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="./theme/css/custom.css" media="screen" rel="stylesheet" type="text/css"/>
+
+        <link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+        <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+        <link href="https://files.stork-search.net/basic.css" rel="stylesheet"/>
+        <link href="./theme/css/colorbox.css" rel="stylesheet"/>
+
+        <meta content="Christopher Prendergast" name="author">
+
+        <meta content="article" property="og:type">
+        <meta content="summary" name="twitter:card"/>
+
+<meta content="ArcGIS Utility Network, Essay, " name="keywords">
+
+<meta content="ArcGIS Network Management: Utility Network Overview " property="og:title">
+<meta content="./utility_networks.html" property="og:url"/>
+<meta content="The Esri training video, “ArcGIS Network Management: Utility Network Overview,” introduces the capabilities of Esri’s utility network solution. This video was presented in a technical workshop at the 2021 Esri user conferences. The video demonstrates the current features and functionality of this solution which is designed to meet the challenges of utility network information management. It also presents a roadmap for planned future enhancements to the solution." property="og:description"/>
+<meta content="portfolio" property="og:site_name"/>
+<meta content="Christopher Prendergast" property="og:article:author"/>
+<meta content="2023-03-12T00:00:00-08:00" property="og:article:published_time"/>
+<meta content="2025-06-07T00:00:00-07:00" property="og:article:modified_time"/>
+<meta content="ArcGIS Network Management: Utility Network Overview " name="twitter:title"/>
+<meta content="The Esri training video, “ArcGIS Network Management: Utility Network Overview,” introduces the capabilities of Esri’s utility network solution. This video was presented in a technical workshop at the 2021 Esri user conferences. The video demonstrates the current features and functionality of this solution which is designed to meet the challenges of utility network information management. It also presents a roadmap for planned future enhancements to the solution." name="twitter:description"/>
+
+        <title>ArcGIS Network Management: Utility Network Overview  · portfolio
+</title>
+
+
+
+    </meta></meta></meta></meta></head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="./"><span class="site-name">portfolio</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li>
+                                    <a href=".">Home</a>
+                                </li>
+                                <li><a href="./pages/search.html">Search</a></li>
+                                <li><a href="./categories.html">Categories</a></li>
+                                <li><a href="./tags.html">Tags</a></li>
+                                <li><a href="./archives.html">Archives</a></li>
+                                <li><form action="./search.html" class="navbar-search" onsubmit="return validateForm(this.elements['q'].value);"> <input class="search-query" id="tipue_search_input" name="q" placeholder="Search" type="text"/></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope="">
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="./utility_networks.html">
+                ArcGIS Network Management: Utility Network Overview
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <main><p>The Esri training video, “ArcGIS Network Management: Utility Network Overview,” introduces the capabilities of Esri’s utility network solution. This video was presented in a technical workshop at the 2021 Esri user conferences. The video demonstrates the current features and functionality of this solution which is designed to meet the challenges of utility network information management. It also presents a roadmap for planned future enhancements to the solution. In 2021, the solution was based on ArcGIS Enterprise 10.8.1.</p>
+<h2 id="application-domains">Application Domains</h2>
+<p>This solution can be utilized to manage any type of utility network. Typical use cases for this product include utility network information management within the electric, gas, water, and telecommunication utility industries. Thus, this solution may be applied in different application domains such as electric, gas, water, and telecommunication networks. </p>
+<h1 id="network-tiers">Network Tiers</h1>
+<p>Within each specific application domain, utility networks may be organized into specific tiers. For example, an electric utility network may include generation, transmission, and distribution tiers; a gas utility network may include gathering, pressure, and isolation zones as different tiers; a telco network might contain wireless, fiber and cable tiers; a water network may have storage, district network, and service pipe tiers. </p>
+<h2 id="schema-objects">Schema Objects</h2>
+<p>Within these application domains specific database schema objects and business rules are defined for each tier. In addition, the solution contains a structural domain which is common across all application domains. The structural domain consists of features that represent junctions, lines (edges), and boundaries. For example, junctions may be used to model poles or manholes. Lines may be used to model ducts, trenches, or mechanical cables. Boundaries can be used to model pump houses, substations, maintenance areas, and facilities. The structural domain can also model specific feature layers including devices, assemblies, subnetworks, asset groups, asset types, and non-spatial objects.</p>
+<h2 id="properties">Properties</h2>
+<p>Details of these schema objects may be accessed via the properties page which presents metadata about the network and the specific schema for each application domain. These schemas consist of feature classes and tables.</p>
+<p>The properties page provides general information about the configuration of the network, its topology, domain network definitions, rules, network attributes, terminal configurations, and network categories. </p>
+<p>All the property pages appear visually similar; essentially, they are grids of cells which represent the attributes of objects in the geodatabase. The demonstration did not show how to search for elements in the network. I assume that for a large network it would not be adequate to just scroll through long lists in property pages to find a specific item.</p>
+<p>There are other ways to look at these objects including, via arcpy, describe objects, and looking directly at the database. </p>
+<h2 id="subnetwork-management">Subnetwork Management</h2>
+<p>The next section of the presentation covered subnetwork management, tracing, and diagrams. Subnetworks can be configured as either radial or mesh. Networks can be traced either upstream or downstream. In addition, connected, shortest-path, isolation, loops, subnetwork, and barrier traces can be performed. Barriers may be configured to control the scope of a network tracing operation on an ad hoc basis. When a trace operation traverses a network, it will not proceed past a barrier. Thus, barriers can be used to isolate certain features or sections of a network. In this way barriers may be temporarily added to the network to facilitate specific tracing operations, support what-if scenarios, and react to emergent field conditions. Customers who use the trace network feature include electrical utilities.</p>
+<h2 id="roadmap">Roadmap</h2>
+<p>The final section of the presentation covered the roadmap for near term and mid-to-long term improvements to the solution. It outlined planned improvements to functionality, quality, and performance. One of the most notable mid-to-long term additions will be support for field maps.</p></main>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+        </div>
+        <section class="span2" id="article-sidebar">
+            <h4>Published</h4>
+            <time datetime="2023-03-12T00:00:00-08:00" itemprop="dateCreated">Sun 12 March 2023</time>
+<h4>Last Updated</h4>
+<time datetime="2025-06-07T00:00:00-07:00">Sat 07 June 2025</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#essay-ref">Essay</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="./tags.html#arcgis-utility-network-ref">ArcGIS Utility Network
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" rel="nofollow noopener noreferrer" target="_blank" title="Pelican Home Page">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" rel="nofollow noopener noreferrer" target="_blank" title="Theme Elegant Home Page">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="./theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+        <script src="./theme/js/jquery.colorbox.js"></script>
+        <script src="./theme/js/load-colorbox.js"></script>
+        <script src="https://files.stork-search.net/releases/v1.5.0/stork.js"></script>
+        <script>
+            stork.register("sitesearch", "./search-index.st");
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

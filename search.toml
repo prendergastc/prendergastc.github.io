@@ -79,9 +79,39 @@ url = "/calero_geodatabase_design.html"
 title = "Geodatabase Design, Calero County Park, Santa Clara County, California"
 
 [[input.files]]
+path = "analysis_3d.html"
+url = "/analysis_3d.html"
+title = "ArcGIS Pro: An Overview of 3D Analysis"
+
+[[input.files]]
+path = "deep_learning.html"
+url = "/deep_learning.html"
+title = "ArcGIS: Introduction to Deep Learning"
+
+[[input.files]]
 path = "geodatabase_design.html"
 url = "/geodatabase_design.html"
 title = "Geodatabase Design Project"
+
+[[input.files]]
+path = "autocad.html"
+url = "/autocad.html"
+title = "Working with AutoCAD data"
+
+[[input.files]]
+path = "understanding_metadata.html"
+url = "/understanding_metadata.html"
+title = "Understanding Metadata"
+
+[[input.files]]
+path = "utility_networks.html"
+url = "/utility_networks.html"
+title = "ArcGIS Network Management: Utility Network Overview"
+
+[[input.files]]
+path = "data_storage.html"
+url = "/data_storage.html"
+title = "Data Storage Strategies"
 
 [[input.files]]
 path = "san_jose_from_space.html"
