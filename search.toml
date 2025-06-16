@@ -74,6 +74,11 @@ url = "/calero_geodatabase_design.html"
 title = "Geodatabase Design, Calero County Park, Santa Clara County, California"
 
 [[input.files]]
+path = "san_jose_from_space.html"
+url = "/san_jose_from_space.html"
+title = "San Jose from Space"
+
+[[input.files]]
 path = "mrosd.html"
 url = "/mrosd.html"
 title = "Midpeninsula Regional Open Space District Map Series"
