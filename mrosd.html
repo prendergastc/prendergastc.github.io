@@ -5,23 +5,23 @@
         <meta charset="utf-8"/>
         <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
         <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-        <link href="https://prendergastc.github.io/profile/theme/css/elegant.prod.9e9d5ce754.css" media="screen" rel="stylesheet" type="text/css"/>
-        <link href="https://prendergastc.github.io/profile/theme/css/custom.css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="./theme/css/elegant.prod.9e9d5ce754.css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="./theme/css/custom.css" media="screen" rel="stylesheet" type="text/css"/>
 
         <link href="//fonts.googleapis.com" rel="dns-prefetch"/>
         <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
         <link href="https://files.stork-search.net/basic.css" rel="stylesheet"/>
-        <link href="https://prendergastc.github.io/profile/theme/css/colorbox.css" rel="stylesheet"/>
+        <link href="./theme/css/colorbox.css" rel="stylesheet"/>
 
         <meta content="Christopher Prendergast" name="author">
 
         <meta content="article" property="og:type">
         <meta content="summary" name="twitter:card"/>
 
-<meta content="ArcGIS Pro, Cartography, StoryMap, Cartography, " name="keywords">
+<meta content="ArcGIS Pro, Cartography, StoryMap, Charts, Cartography, " name="keywords">
 
 <meta content="Midpeninsula Regional Open Space District Map Series " property="og:title">
-<meta content="https://prendergastc.github.io/profile/mrosd.html" property="og:url"/>
+<meta content="./mrosd.html" property="og:url"/>
 <meta content="A series of maps for Midpeninsula Regional Open Space District." property="og:description"/>
 <meta content="portfolio" property="og:site_name"/>
 <meta content="Christopher Prendergast" property="og:article:author"/>
@@ -46,17 +46,17 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </a>
-                        <a class="brand" href="https://prendergastc.github.io/profile/"><span class="site-name">portfolio</span></a>
+                        <a class="brand" href="./"><span class="site-name">portfolio</span></a>
                         <div class="nav-collapse collapse">
                             <ul class="nav pull-right top-menu">
                                 <li>
-                                    <a href="https://prendergastc.github.io/profile">Home</a>
+                                    <a href=".">Home</a>
                                 </li>
-                                <li><a href="https://prendergastc.github.io/profile/pages/search.html">Search</a></li>
-                                <li><a href="https://prendergastc.github.io/profile/categories.html">Categories</a></li>
-                                <li><a href="https://prendergastc.github.io/profile/tags.html">Tags</a></li>
-                                <li><a href="https://prendergastc.github.io/profile/archives.html">Archives</a></li>
-                                <li><form action="https://prendergastc.github.io/profile/search.html" class="navbar-search" onsubmit="return validateForm(this.elements['q'].value);"> <input class="search-query" id="tipue_search_input" name="q" placeholder="Search" type="text"/></form></li>
+                                <li><a href="./pages/search.html">Search</a></li>
+                                <li><a href="./categories.html">Categories</a></li>
+                                <li><a href="./tags.html">Tags</a></li>
+                                <li><a href="./archives.html">Archives</a></li>
+                                <li><form action="./search.html" class="navbar-search" onsubmit="return validateForm(this.elements['q'].value);"> <input class="search-query" id="tipue_search_input" name="q" placeholder="Search" type="text"/></form></li>
                             </ul>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="https://prendergastc.github.io/profile/mrosd.html">
+            <a href="./mrosd.html">
                 Midpeninsula Regional Open Space District Map Series
             </a>
         </h1>
@@ -82,39 +82,76 @@
             
             <main><p><img alt="Thumb" class="image-process-thumb" src="images/mrosd/png/derivatives/thumb/thematic_11x17.png"/></p>
 <h1 id="overview">Overview</h1>
-<p>A series of maps for Midpeninsula Regional Open Space District, in Santa Clara and San Mateo Counties, California. This analysis examines the relationship between median household income and the distance to closest open space. This series includes the following maps. A raster imagery basemap showing MROSD boundary. A raster elevation basemap showing classified digital elevation data. A vector basemap show location of MROSD preserves and district boundary. A proportional symbol map showing population by census tract. A graduated symbol map showing median household income by census block group. A thematic map showing both population by census tract and median household income by census tract block group. A map and Chart of median household income by census block group vs distance to closest MROSD preserve.</p>
+<p>Access to open space is vital to human health, fitness, and well-being. In addition, open spaces also provide essential habitat for plants and animals. The Midpeninsula Regional Open Space District (MROSD) manages more than 70,000 acres of open space in the San Francisco Bay Area. The majority of these regional open spaces are located in the Santa Cruz mountains which lie to the west of the San Francisco Bay. Equitable access to these valuable resources is a significant issue. </p>
+<p>This study examines the accessibility of MROSD's open spaces by looking for spatial relationships between three factors, the distance to closest open space preserve, income level, and population density. A series of maps illustrate the spatial distribution of these three factors.</p>
+<p>The series includes the following maps:</p>
+<ul>
+<li>Raster imagery basemap showing MROSD boundary</li>
+<li>Raster elevation basemap showing classified digital elevation data</li>
+<li>Vector basemap show location of MROSD preserves and district boundary</li>
+<li>Proportional symbol map showing population by census tract</li>
+<li>Choropleth map showing median household income by census block group</li>
+<li>Thematic map showing both population by census tract and median household income by census tract block group</li>
+<li>Isopleth map and chart of median household income by census block group vs distance to closest MROSD preserve.</li>
+</ul>
+<h3 id="imagery-basemap">Imagery Basemap</h3>
+<p>The imagery basemap provides context overlaying MROSD's boundary on top of raster satellite imagery of the region.</p>
+<p><a class="mybox" href="images/mrosd/png/basemap_imagery_11x17_v3.png"><img alt="Imagery Basemap" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mrosd/png/derivatives/large-photo/800w/basemap_imagery_11x17_v3.png" srcset="images/mrosd/png/derivatives/large-photo/600w/basemap_imagery_11x17_v3.png 600w, images/mrosd/png/derivatives/large-photo/800w/basemap_imagery_11x17_v3.png 800w, images/mrosd/png/derivatives/large-photo/1600w/basemap_imagery_11x17_v3.png 1600w"/></a></p>
+<p><a href="./images/mrosd/pdf/basemap_imagery_11x17_v3.pdf">PDF file</a></p>
+<h3 id="elevation-basemap">Elevation Basemap</h3>
+<p>The raster elevation basemap provides further context showing classified digital elevation data for the region.</p>
+<p><a class="mybox" href="images/mrosd/png/basemap_elevation_11x17_v1.png"><img alt="Elevation Basemap" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mrosd/png/derivatives/large-photo/800w/basemap_elevation_11x17_v1.png" srcset="images/mrosd/png/derivatives/large-photo/600w/basemap_elevation_11x17_v1.png 600w, images/mrosd/png/derivatives/large-photo/800w/basemap_elevation_11x17_v1.png 800w, images/mrosd/png/derivatives/large-photo/1600w/basemap_elevation_11x17_v1.png 1600w"/></a></p>
+<p><a href="./images/mrosd/pdf/basemap_elevation_11x17_v1.pdf">PDF file</a></p>
+<h3 id="vector-basemap">Vector Basemap</h3>
+<p>The vector basemap displays the locations of MRSOD's preserves and the district's boundary.</p>
+<p><a class="mybox" href="images/mrosd/png/basemap_vector_11x17_v1.png"><img alt="Vector Basemap" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mrosd/png/derivatives/large-photo/800w/basemap_vector_11x17_v1.png" srcset="images/mrosd/png/derivatives/large-photo/600w/basemap_vector_11x17_v1.png 600w, images/mrosd/png/derivatives/large-photo/800w/basemap_vector_11x17_v1.png 800w, images/mrosd/png/derivatives/large-photo/1600w/basemap_vector_11x17_v1.png 1600w"/></a></p>
+<p><a href="./images/mrosd/pdf/basemap_vector_11x17_v1.pdf">PDF file</a></p>
+<h3 id="proportional-symbol-map">Proportional Symbol Map</h3>
+<p>The Bay Area is a densely populated area. However, the population is not evenly distributed across the region. The most densely populated areas are concentrated in the urban area which cluster around the shores of the San Francisco Bay. The Santa Cruz mountains to the west are less densely populated. The coastal areas west of the Santa Cruz mountains are much less densely populated.</p>
+<p>This map explores the spatial relationship between the location of the MROSD open space preserves and the distribution of population. Obviously, larger regional open spaces are located in less densely populated locations. The map uses proportional symbols to show the population for each census tract.</p>
+<p><a class="mybox" href="images/mrosd/png/proportional_11x17.png"><img alt="Proportional Symbol Map" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mrosd/png/derivatives/large-photo/800w/proportional_11x17.png" srcset="images/mrosd/png/derivatives/large-photo/600w/proportional_11x17.png 600w, images/mrosd/png/derivatives/large-photo/800w/proportional_11x17.png 800w, images/mrosd/png/derivatives/large-photo/1600w/proportional_11x17.png 1600w"/></a></p>
+<p><a href="./images/mrosd/pdf/proportional_11x17.pdf">PDF file</a></p>
+<h3 id="choropleth-map">Choropleth Map</h3>
+<p>This map illustrates the spatial distribution median household income. Income data was taken from from the US Census Bureau's American Community Survey (ACS).</p>
+<p>The color and transparency of each area symbolizes the median household income for that census block. The darker the color the higher the income. Note that the ACS records all incomes above $200,000 as $200,001.</p>
+<p>The choropleth map shows the spatial distribution of median household income by census block group.</p>
+<p><a class="mybox" href="images/mrosd/png/graduated_11x17.png"><img alt="Graduated Symbol Map" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mrosd/png/derivatives/large-photo/800w/graduated_11x17.png" srcset="images/mrosd/png/derivatives/large-photo/600w/graduated_11x17.png 600w, images/mrosd/png/derivatives/large-photo/800w/graduated_11x17.png 800w, images/mrosd/png/derivatives/large-photo/1600w/graduated_11x17.png 1600w"/></a></p>
+<p><a href="./images/mrosd/pdf/graduated_11x17.pdf">PDF file</a></p>
+<h3 id="thematic-map">Thematic Map</h3>
+<p>This map illustrates the spatial relationship between population density and median household income. Population and income data from the US Census Bureau's American Community Survey (ACS) was reallocated to equal sized hexagonal cells in a regular grid pattern using Esri's ArcGIS GeoEnrichment service.  </p>
+<p>The color and transparency of each circular symbol corresponds to the median household income interpolated for the corresponding grid cell. The darker the color the higher the income. The size of each symbol corresponds to the total interpolated population for the corresponding grid cell. Because the grid cells are all equal in area, the symbol size also indicates the population density for the cells. Note that the ACS records all incomes above $200,000 as $200,001.</p>
+<p>The thematic map illustrates the spatial relationship between population by census tract and median household income by census block group together with proximity to MROSD open space preserves.</p>
+<p><a class="mybox" href="images/mrosd/png/thematic_11x17.png"><img alt="Thematic Map" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mrosd/png/derivatives/large-photo/800w/thematic_11x17.png" srcset="images/mrosd/png/derivatives/large-photo/600w/thematic_11x17.png 600w, images/mrosd/png/derivatives/large-photo/800w/thematic_11x17.png 800w, images/mrosd/png/derivatives/large-photo/1600w/thematic_11x17.png 1600w"/></a></p>
+<p><a href="./images/mrosd/pdf/thematic_11x17.pdf">PDF file</a></p>
+<h3 id="isopleth-map-and-chart">Isopleth Map and Chart</h3>
+<p>The map below show the distance to the closest MROSD open space preserve for points within the four-county study area. These concentric ring buffers were used to aggregate the income data from the individual data points to generate the box plot presented below. In this study, the distance to the closest MROSD open space preserve is used as an imperfect proxy for the accessibility of open space.</p>
+<p>The chart illustrates the relationship between income level and distance to closest MROSD open space preserve. The box plot shows the distribution of median household income by distance from the closest MROSD open space preserve. </p>
+<p>The data was compiled from census block and tract data for the four counties within the study area: Alameda, Santa Clara, Santa Cruz, and San Mateo counties. Of course, MROSD is not the only open space district managing regional open space preserves within this large area. At the further distances from MROSD preserves it is likely that residents may have the option of visiting other closer open space preserves managed by various different agencies. </p>
+<p>Map and chart showing median household income by census block group and distance to closest MROSD preserve.</p>
+<p><a class="mybox" href="images/mrosd/png/charts_11x17.png"><img alt="Chart" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mrosd/png/derivatives/large-photo/800w/charts_11x17.png" srcset="images/mrosd/png/derivatives/large-photo/600w/charts_11x17.png 600w, images/mrosd/png/derivatives/large-photo/800w/charts_11x17.png 800w, images/mrosd/png/derivatives/large-photo/1600w/charts_11x17.png 1600w"/></a></p>
+<p><a href="./images/mrosd/pdf/charts_11x17.pdf">PDF file</a></p>
 <h1 id="storymap">StoryMap</h1>
+<p>The analysis is also presented as an interactive StoryMap. A login is required to access this StoryMap.</p>
 <p><a href="https://storymaps.arcgis.com/stories/d2929c7f15db4cbe848d9d57c4548f51"><img alt="StoryMap" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mrosd/png/derivatives/large-photo/800w/mrosd_storymap.png" srcset="images/mrosd/png/derivatives/large-photo/600w/mrosd_storymap.png 600w, images/mrosd/png/derivatives/large-photo/800w/mrosd_storymap.png 800w, images/mrosd/png/derivatives/large-photo/1600w/mrosd_storymap.png 1600w"/></a></p>
 <p>Click <a href="https://storymaps.arcgis.com/stories/d2929c7f15db4cbe848d9d57c4548f51">here</a> to view the StoryMap (login required).</p>
-<p>Click here <a href="https://prendergastc.github.io/profile/images/mrosd/pdf/mrosd_storymap.pdf">PDF file</a> for a PDF copy of the StoryMap.</p>
-<h2 id="imagery-basemap">Imagery Basemap</h2>
-<p>Raster imagery showing the Midpeninsular Regional Open Space District boundary.</p>
-<p><a class="mybox" href="images/mrosd/png/basemap_imagery_11x17_v3.png"><img alt="Imagery Basemap" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mrosd/png/derivatives/large-photo/800w/basemap_imagery_11x17_v3.png" srcset="images/mrosd/png/derivatives/large-photo/600w/basemap_imagery_11x17_v3.png 600w, images/mrosd/png/derivatives/large-photo/800w/basemap_imagery_11x17_v3.png 800w, images/mrosd/png/derivatives/large-photo/1600w/basemap_imagery_11x17_v3.png 1600w"/></a></p>
-<p><a href="https://prendergastc.github.io/profile/images/mrosd/pdf/basemap_imagery_11x17_v3.pdf">PDF file</a></p>
-<h2 id="elevation-basemap">Elevation Basemap</h2>
-<p>Raster elevation basemap showing classified elevation data.</p>
-<p><a class="mybox" href="images/mrosd/png/basemap_elevation_11x17_v1.png"><img alt="Elevation Basemap" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mrosd/png/derivatives/large-photo/800w/basemap_elevation_11x17_v1.png" srcset="images/mrosd/png/derivatives/large-photo/600w/basemap_elevation_11x17_v1.png 600w, images/mrosd/png/derivatives/large-photo/800w/basemap_elevation_11x17_v1.png 800w, images/mrosd/png/derivatives/large-photo/1600w/basemap_elevation_11x17_v1.png 1600w"/></a></p>
-<p><a href="https://prendergastc.github.io/profile/images/mrosd/pdf/basemap_elevation_11x17_v1.pdf">PDF file</a></p>
-<h2 id="vector-basemap">Vector Basemap</h2>
-<p>Vector basemap showing the locations of Midpenisular Regional Open Space District preserves and the district's boundary.</p>
-<p><a class="mybox" href="images/mrosd/png/basemap_vector_11x17_v1.png"><img alt="Vector Basemap" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mrosd/png/derivatives/large-photo/800w/basemap_vector_11x17_v1.png" srcset="images/mrosd/png/derivatives/large-photo/600w/basemap_vector_11x17_v1.png 600w, images/mrosd/png/derivatives/large-photo/800w/basemap_vector_11x17_v1.png 800w, images/mrosd/png/derivatives/large-photo/1600w/basemap_vector_11x17_v1.png 1600w"/></a></p>
-<p><a href="https://prendergastc.github.io/profile/images/mrosd/pdf/basemap_vector_11x17_v1.pdf">PDF file</a></p>
-<h2 id="proportional-symbol-map">Proportional Symbol Map</h2>
-<p>Proportional symbol map show population by census tract.</p>
-<p><a class="mybox" href="images/mrosd/png/proportional_11x17.png"><img alt="Proportional Symbol Map" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mrosd/png/derivatives/large-photo/800w/proportional_11x17.png" srcset="images/mrosd/png/derivatives/large-photo/600w/proportional_11x17.png 600w, images/mrosd/png/derivatives/large-photo/800w/proportional_11x17.png 800w, images/mrosd/png/derivatives/large-photo/1600w/proportional_11x17.png 1600w"/></a></p>
-<p><a href="https://prendergastc.github.io/profile/images/mrosd/pdf/proportional_11x17.pdf">PDF file</a></p>
-<h2 id="graduated-symbol-map">Graduated Symbol Map</h2>
-<p>Gradualte symbol map showing median household income by census block group.</p>
-<p><a class="mybox" href="images/mrosd/png/graduated_11x17.png"><img alt="Graduated Symbol Map" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mrosd/png/derivatives/large-photo/800w/graduated_11x17.png" srcset="images/mrosd/png/derivatives/large-photo/600w/graduated_11x17.png 600w, images/mrosd/png/derivatives/large-photo/800w/graduated_11x17.png 800w, images/mrosd/png/derivatives/large-photo/1600w/graduated_11x17.png 1600w"/></a></p>
-<p><a href="https://prendergastc.github.io/profile/images/mrosd/pdf/graduated_11x17.pdf">PDF file</a></p>
-<h2 id="thematic-map">Thematic Map</h2>
-<p>Thematic map showing both population by census tract and median houshold income by census block group.</p>
-<p><a class="mybox" href="images/mrosd/png/thematic_11x17.png"><img alt="Thematic Map" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mrosd/png/derivatives/large-photo/800w/thematic_11x17.png" srcset="images/mrosd/png/derivatives/large-photo/600w/thematic_11x17.png 600w, images/mrosd/png/derivatives/large-photo/800w/thematic_11x17.png 800w, images/mrosd/png/derivatives/large-photo/1600w/thematic_11x17.png 1600w"/></a></p>
-<p><a href="https://prendergastc.github.io/profile/images/mrosd/pdf/thematic_11x17.pdf">PDF file</a></p>
-<h2 id="chart">Chart</h2>
-<p>Map and chart of median househod income by census block group and distance to closest Midpeninsula Regional Open Space District preserve.</p>
-<p><a class="mybox" href="images/mrosd/png/charts_11x17.png"><img alt="Chart" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mrosd/png/derivatives/large-photo/800w/charts_11x17.png" srcset="images/mrosd/png/derivatives/large-photo/600w/charts_11x17.png 600w, images/mrosd/png/derivatives/large-photo/800w/charts_11x17.png 800w, images/mrosd/png/derivatives/large-photo/1600w/charts_11x17.png 1600w"/></a></p>
-<p><a href="https://prendergastc.github.io/profile/images/mrosd/pdf/charts_11x17.pdf">PDF file</a></p></main>
+<p>Click here <a href="./images/mrosd/pdf/mrosd_storymap.pdf">PDF file</a> for a PDF copy of the StoryMap.</p>
+<h3 id="multivariate-map">Multivariate Map</h3>
+<p>In the StoryMap the spatial relationship between population by census tract and median household income by census block group together with proximity to MROSD open space preserves is presented as a multivariate map. </p>
+<p>This map presents a multivariate view of the income and population density data. The darker colors indicate higher population densities. Red indicates higher median household income. Blue indicates lower median household income.</p>
+<p><a class="mybox" href="images/mrosd/png/mrosd_multivariate.png"><img alt="Multivariate Map" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mrosd/png/derivatives/large-photo/800w/mrosd_multivariate.png" srcset="images/mrosd/png/derivatives/large-photo/600w/mrosd_multivariate.png 600w, images/mrosd/png/derivatives/large-photo/800w/mrosd_multivariate.png 800w, images/mrosd/png/derivatives/large-photo/1600w/mrosd_multivariate.png 1600w"/></a></p>
+<p><a href="./images/mrosd/pdf/mrsod_multivariate.pdf">PDF file</a></p>
+<h1 id="conclusions">Conclusions</h1>
+<p>In general, larger regional open space preserves are located in less densely populated areas with higher income levels. For the Midpeninsula Regional Open Space District, this means that most of the open space preserves it manages are located in the Santa Cruz mountains and their foothills.</p>
+<p>The communities of Los Gatos, Saratoga, Los Altos Hills, and Portola Valley are located on the western periphery of the urbanized Bay Area, between the densely populated urban areas which surround the San Francisco Bay and the Santa Cruz mountains. This location positions these communities as key access gateways to MROSD open space preserves for residents of more urban areas. In contrast to the urban areas, these gateway communities generally enjoy higher income levels and lower population densities. Consequently, most urban dwellers must take a car trip to access the majority of MROSD open space preserves.</p>
+<p>Equitable access could be improved by providing safe walking, running, and cycling corridors that link the densely populated urban areas to the MROSD open space preserves. These corridors would naturally pass through the gateway communities. Creeks offer an obvious connection between the upland open space preserves and the urban community around the San Francisco Bay. Additional trails running along these creeks could provide enhanced access to the MROSD open space preserves. Public transit routes or regular shuttle service between urban areas and key access points to the MROSD open space preserves would also help to provide more equitable access to MROSD open space preserves for all.</p>
+<h3 id="data-sources-and-credits">Data Sources and Credits</h3>
+<ul>
+<li>Preserve descriptions &amp; photos: MROSD</li>
+<li>Open space GIS data: MROSD</li>
+<li>County and urban boundaries: Alameda, Santa Clara, Santa Cruz, &amp; San Mateo Counties</li>
+<li>Population and  income data: US Census Bureau / American Community Survey</li>
+<li>ArcGIS GeoEnrichment Service: Esri</li>
+</ul></main>
 
 
              
@@ -138,16 +175,19 @@
 <time datetime="2025-06-07T00:00:00-07:00">Sat 07 June 2025</time>
 
             <h4>Category</h4>
-            <a class="category-link" href="https://prendergastc.github.io/profile/categories.html#cartography-ref">Cartography</a>
+            <a class="category-link" href="./categories.html#cartography-ref">Cartography</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="https://prendergastc.github.io/profile/tags.html#arcgis-pro-ref">ArcGIS Pro
+                <li><a href="./tags.html#arcgis-pro-ref">ArcGIS Pro
                     <span class="superscript">21</span>
 </a></li>
-                <li><a href="https://prendergastc.github.io/profile/tags.html#cartography-ref">Cartography
+                <li><a href="./tags.html#cartography-ref">Cartography
                     <span class="superscript">15</span>
 </a></li>
-                <li><a href="https://prendergastc.github.io/profile/tags.html#storymap-ref">StoryMap
+                <li><a href="./tags.html#charts-ref">Charts
+                    <span class="superscript">3</span>
+</a></li>
+                <li><a href="./tags.html#storymap-ref">StoryMap
                     <span class="superscript">8</span>
 </a></li>
             </ul>
@@ -247,18 +287,18 @@
     </div>
 </footer>            <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-        <script src="https://prendergastc.github.io/profile/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script src="./theme/js/elegant.prod.9e9d5ce754.js"></script>
         <script>
             function validateForm(query)
             {
                 return (query.length > 0);
             }
         </script>
-        <script src="https://prendergastc.github.io/profile/theme/js/jquery.colorbox.js"></script>
-        <script src="https://prendergastc.github.io/profile/theme/js/load-colorbox.js"></script>
+        <script src="./theme/js/jquery.colorbox.js"></script>
+        <script src="./theme/js/load-colorbox.js"></script>
         <script src="https://files.stork-search.net/releases/v1.5.0/stork.js"></script>
         <script>
-            stork.register("sitesearch", "https://prendergastc.github.io/profile/search-index.st");
+            stork.register("sitesearch", "./search-index.st");
         </script>
 
     <script>
