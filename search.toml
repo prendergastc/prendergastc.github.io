@@ -9,6 +9,21 @@ url = "/pages/search.html"
 title = "Search"
 
 [[input.files]]
+path = "esri_certificates.html"
+url = "/esri_certificates.html"
+title = "ESRI Certificates"
+
+[[input.files]]
+path = "gis_qualifications.html"
+url = "/gis_qualifications.html"
+title = "GIS Qualifications"
+
+[[input.files]]
+path = "transcripts.html"
+url = "/transcripts.html"
+title = "Academic Transcripts"
+
+[[input.files]]
 path = "urban_green_spaces.html"
 url = "/urban_green_spaces.html"
 title = "Urban Green Spaces in San Francisco and San Jose, California"
