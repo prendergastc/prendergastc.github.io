@@ -9,6 +9,11 @@ url = "/pages/search.html"
 title = "Search"
 
 [[input.files]]
+path = "db_and_programming.html"
+url = "/db_and_programming.html"
+title = "Database, Programming, and Software Skills"
+
+[[input.files]]
 path = "esri_certificates.html"
 url = "/esri_certificates.html"
 title = "ESRI Certificates"
