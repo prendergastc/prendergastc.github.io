@@ -10,6 +10,7 @@
         <link href="//fonts.googleapis.com" rel="dns-prefetch"/>
         <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
         <link href="https://files.stork-search.net/basic.css" rel="stylesheet"/>
+        <link href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" rel="stylesheet"/>
         <link href="../theme/css/colorbox.css" rel="stylesheet"/>
 
         <meta content="Christopher Prendergast" name="author">
@@ -73,11 +74,11 @@
         <div class="span8 offset2 article-content">
 
             <div class="stork-wrapper">
-  <div>
-    <span>Search: </span>
-    <span><input class="stork-input" data-stork="sitesearch"/></span>
-  </div>
-  <div class="stork-output" data-stork="sitesearch-output"></div>
+<div>
+<span>Search: </span>
+<span><input class="stork-input" data-stork="sitesearch"/></span>
+</div>
+<div class="stork-output" data-stork="sitesearch-output"></div>
 </div>
             
 
@@ -181,8 +182,14 @@
         <script src="../theme/js/jquery.colorbox.js"></script>
         <script src="../theme/js/load-colorbox.js"></script>
         <script src="https://files.stork-search.net/releases/v1.5.0/stork.js"></script>
+        <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
         <script>
             stork.register("sitesearch", "../search-index.st");
+        </script>
+        <script>
+            $(document).ready( function () {
+                $('.my-data-table').DataTable();
+            } );
         </script>
 
     <script>
