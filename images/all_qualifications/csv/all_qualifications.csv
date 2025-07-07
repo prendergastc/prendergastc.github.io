@@ -1,168 +1,510 @@
-pdf,png,qualification,institution,date,link,category,grade,honors,display,type,rank
-data_engineering_project_build_streaming_ingestion_pipelines_for_snowflake_with_aws.pdf,data_engineering_project_build_streaming_ingestion_pipelines_for_snowflake_with_aws.png,Data Engineering Project: Build Streaming Ingestion Pipelines for Snowflake with AWS,LinkedIn,03/25/2024,https://www.linkedin.com/learning/certificates/8b3c64e3203407358d11cfabd6f0c056c207817484525eaa96e22f44fb98fc08?trk=share_certificate,"database,snowflake",,,True,,0
-choosing_a_database_postgresql_mysql_mongo_and_cloud.pdf,choosing_a_database_postgresql_mysql_mongo_and_cloud.png,"Choosing a Database: PostgreSQL, MySQL, Mongo, and Cloud",LinkedIn,04/19/2024,https://www.linkedin.com/learning/certificates/24e730c8ee3342edc5823b5cf9f020553f550b959895ba4abbb31e71e6e14162?trk=share_certificate,"database,sql",,,True,,1
-advanced_python_practical_database_examples.pdf,advanced_python_practical_database_examples.png,Advanced Python: Practical Database Examples,LinkedIn,07/12/2024,https://www.linkedin.com/learning/certificates/fbe73a1cc0597ba4cce881a27e6aba2ab644c24a325ebf985cb1fbaf80557229?trk=share_certificate,"database,python",,,True,,2
-advanced_sql_for_application_development.pdf,advanced_sql_for_application_development.png,Advanced SQL for Application Development,LinkedIn,07/30/2024,https://www.linkedin.com/learning/certificates/1720a784229a42265e12f8fe75215434e8985d503cd489a04e5a66415115e9a9?trk=share_certificate,"database,sql",,,True,,3
-building_restful_apis_with_flask.pdf,building_restful_apis_with_flask.png,Building RESTful APIs with Flask,LinkedIn,07/30/2024,https://www.linkedin.com/learning/certificates/6fc395b190b2398fe1c77710873553fdb12d25294ca503d4f04a12112987ffa4?trk=share_certificate,python,,,True,,4
-advanced_python_working_with_databases.pdf,advanced_python_working_with_databases.png,Advanced Python: Working with Databases,LinkedIn,07/26/2024,https://www.linkedin.com/learning/certificates/b65d54a1f9a3977ed96ff37b0ef9ba9d6b3574b0974c85c6255329eebf2133f7?trk=share_certificate,python,,,True,,5
-git_from_scratch.pdf,git_from_scratch.png,Git from Scratch,LinkedIn,05/02/2023,https://www.linkedin.com/learning/certificates/a38c94ff6084cf1b6d660bef2b36510ac036aec02269acd0df9d2c879a0c47f9?trk=share_certificate,python,,,True,,6
-git_essential_training_2023.pdf,git_essential_training_2023.png,Git Essential Training (2023),LinkedIn,05/02/2023,https://www.linkedin.com/learning/certificates/ef6a7d9a412ad65166425623e4bcea40359176db5c75957e924641fb6a3e233a?trk=share_certificate,python,,,True,,7
-fme_desktop_data_translation_for_aec.pdf,fme_desktop_data_translation_for_aec.png,FME Desktop: Data Translation for AEC,LinkedIn,03/22/2024,https://www.linkedin.com/learning/certificates/81348d3cbb7f25a5a601b2384f1626dfa07fbb480d59e58df63b385b0e1ca0d8?trk=share_certificate,gis,,,True,,8
-advanced_snowflake_deep_dive_cloud_data_warehousing_and_analytics.pdf,advanced_snowflake_deep_dive_cloud_data_warehousing_and_analytics.png,Advanced Snowflake: Deep Dive Cloud Data Warehousing and Analytics,LinkedIn,03/25/2024,https://www.linkedin.com/learning/certificates/1bdc273fa7782ff124e19e0af85cfc1a83645372e63827f41eaf91eaef2bcac9?trk=share_certificate,"database,snowflake",,,True,,9
-learning_snowflakedb.pdf,learning_snowflakedb.png,Learning SnowflakeDB,LinkedIn,03/25/2024,https://www.linkedin.com/learning/certificates/50b7ccf982de6d8687c5877f1bf2c32311ac102db6353393f57762d1b9ebbe06?trk=share_certificate,"database,snowflake",,,True,,10
-analyzing_big_data_with_hive.pdf,analyzing_big_data_with_hive.png,Analyzing Big Data with Hive,LinkedIn,07/12/2023,https://www.linkedin.com/learning/certificates/d996865682b3f3a417816974b143cbd797a0057095763060fafa91055365fd48?trk=share_certificate,"database,hive",,,True,,11
-oracle_database_19c_plsql.pdf,oracle_database_19c_plsql.png,Oracle Database 19c: PL/SQL,LinkedIn,08/29/2023,https://www.linkedin.com/learning/certificates/8592cd9cc9e208d2a6891d3fc3d8c37288c8e6c12235702d1e7ed770e2f83fd5?trk=share_certificate,"database,sql",,,True,,12
-everybodys_introduction_to_snowflake.pdf,everybodys_introduction_to_snowflake.png,Everybody's Introduction to Snowflake,LinkedIn,03/23/2024,https://www.linkedin.com/learning/certificates/982904e086db77545d81bee34f0b1e2b04d7b370a84539179404738b403a1c3c?trk=share_certificate,"database,snowflake",,,True,,13
-learning_arcgis_python_scripting_2018.pdf,learning_arcgis_python_scripting_2018.png,Learning ArcGIS Python Scripting (2018),LinkedIn,06/08/2022,https://www.linkedin.com/learning/certificates/2c32ec5e7d0d7bb0e62170d4a49da6ee5a7b966a12a73b8b18ae8e62fa7c1c6d?trk=share_certificate,"gis,python",,,True,,14
-advanced_sql_window_functions.pdf,advanced_sql_window_functions.png,Advanced SQL – Window Functions,LinkedIn,08/31/2023,https://www.linkedin.com/learning/certificates/08731aca415dad71f1efee228811817f8526dfb540724bf249f4cba20ad696db?trk=share_certificate,"database,sql",,,True,,15
-advanced_postgresql.pdf,advanced_postgresql.png,Advanced PostgreSQL,LinkedIn,09/12/2023,https://www.linkedin.com/learning/certificates/c66e565b97e22f2659b41049695e7a78a9b9fedabde58032baf883579e4926a0?trk=share_certificate,"database,sql",,,True,,16
-realworld_gis_2014.pdf,realworld_gis_2014.png,Real-World GIS (2014),LinkedIn,06/07/2022,https://www.linkedin.com/learning/certificates/09ec164f594bc0f325a60d67d7f2f5b6d383e32f93b012e9ee686b4c5e91e4a4?trk=share_certificate,gis,,,True,,17
-foundations_of_geographic_information_systems_gis_2021.pdf,foundations_of_geographic_information_systems_gis_2021.png,Foundations of Geographic Information Systems (GIS) (2021),LinkedIn,05/30/2022,https://www.linkedin.com/learning/certificates/80afce2861c4cf7d493e78edee7ed7e23a8b667c7019500288d7293dc62f4d92?trk=share_certificate,gis,,,True,,18
-arcgis_pro_essential_training_2022.pdf,arcgis_pro_essential_training_2022.png,ArcGIS Pro Essential Training (2022),LinkedIn,05/30/2022,https://www.linkedin.com/learning/certificates/5f393bb43a211c8b64c0fbd6194c29d894da53a061a1fcf8b1c958c3d435a45a?trk=share_certificate,gis,,,True,,19
-advanced_sql_for_query_tuning_and_performance_optimization_2019.pdf,advanced_sql_for_query_tuning_and_performance_optimization_2019.png,Advanced SQL for Query Tuning and Performance Optimization (2019),LinkedIn,09/18/2022,https://www.linkedin.com/learning/certificates/4c6ac2d7fb852bdc82d620237b35d90d7e94c5c1984b3f8acb9b6b635b9534d9?trk=share_certificate,"database,sql",,,True,,20
-how_to_learn_faster.pdf,how_to_learn_faster.png,How to Learn Faster,LinkedIn,08/22/2023,https://www.linkedin.com/learning/certificates/c019f9a9799b60bef48e60ff289066e58de1bde41f230501d8616820e9a08240?trk=share_certificate,miscelaneous,,,True,,21
-advanced_python_working_with_databases_2020.pdf,advanced_python_working_with_databases_2020.png,Advanced Python: Working with Databases (2020),LinkedIn,04/30/2023,https://www.linkedin.com/learning/certificates/6fa1e3ac947abc9a1d98c8b8230c4409e8dfb13e08b0e8a541f4ab7f17d14f6d?trk=share_certificate,"database,python",,,True,,22
-postgresql_essential_training_2020.pdf,postgresql_essential_training_2020.png,PostgreSQL Essential Training (2020),LinkedIn,04/02/2023,https://www.linkedin.com/learning/certificates/bd2e2b6d23ea74beb1267b47959623fab2c11acf61e957f7e7a847d97a13c93b?trk=share_certificate,"database,sql",,,True,,23
-advanced_sql_for_data_scientists.pdf,advanced_sql_for_data_scientists.png,Advanced SQL for Data Scientists,LinkedIn,09/18/2022,https://www.linkedin.com/learning/certificates/719484fb4fd5f9cf828088cc2071fdfad503963fa1328d79d9096df6b8de62b8?trk=share_certificate,"database,datascience,sql",,,True,,24
-fh_as_geographic_information_systems_technology.pdf,fh_as_geographic_information_systems_technology.png,Associate in Science Geographic Information Systems Technology,Foothill College,06/25/2021,,gis,4.0,with highest honors,True,degree,25
-fh_as_geography.pdf,fh_as_geography.png,Associate in Science Geography,Foothill College,06/30/2023,,gis,4.0,with highest honors,True,degree,26
-,ucd_gis_analyst_badge.png,GIS Analyst Metaskill,UC Davis Continuing and Professional Education,06/16/2025,https://www.credly.com/badges/0b108d4c-d815-4199-be43-b637e768fd4c/public_url,gis,,,True,,27
-ucd_intro_to_gis.pdf,ucd_intro_to_gis.png,Introduction to Geographic Information Systems,UC Davis Continuing and Professional Education,08/23/2024,,gis,,,True,,28
-ucd_advanced_gis.pdf,ucd_advanced_gis.png,"Advanced GIS: Productivity, Geoprocessing and Analysis",UC Davis Continuing and Professional Education,12/13/2024,,gis,,,True,,29
-ucd_gis_database_design.pdf,ucd_gis_database_design.png,GIS Database Design,UC Davis Continuing and Professional Education,06/06/2025,,gis,,,True,,30
-ucd_geographic_information_systems.pdf,ucd_geographic_information_systems.png,Geographic Information Systems (GIS) Specialization,UC Davis,06/05/2024,,gis,,,True,specialization,31
-ucd_fundamentals_of_gis.pdf,ucd_fundamentals_of_gis.png,Fundamentals of GIS,UC Davis,03/24/2022,https://www.coursera.org/account/accomplishments/verify/38J6QKKL8BDX,gis,,,True,,32
-ucd_gis_data_formats_design_and_quality.pdf,ucd_gis_data_formats_design_and_quality.png,GIS Data Formats Design and Quality,UC Davis,03/28/2022,https://www.coursera.org/account/accomplishments/verify/LC8J6EWFGJDM,gis,,,True,,33
-ucd_imagery_automation_and_application.pdf,ucd_imagery_automation_and_application.png,Imagery Automation and Applications,UC Davis,04/20/2022,https://www.coursera.org/account/accomplishments/verify/NZ36C3DH8ZXQ,gis,,,True,,34
-ucd_geospatial_and_environmental_analysis.pdf,ucd_geospatial_and_environmental_analysis.png,Geospatial and Environmental Analysis,UC Davis,04/03/2022,https://www.coursera.org/account/accomplishments/verify/VJD97YS452PQ,gis,,,True,,35
-ucd_geospatial_analysis_with_arcgis.pdf,ucd_geospatial_analysis_with_arcgis.png,Geospatial Analysis with ArcGIS,UC Davis,06/04/2024,https://www.coursera.org/account/accomplishments/verify/EDTZM4BGPLRG,gis,,,True,,36
-ucd_gis_applications_across_industries.pdf,ucd_gis_applications_across_industries.png,GIS Applications Across Industries,UC Davis,06/05/2024,https://www.coursera.org/account/accomplishments/verify/SNPERBUS3SAG,gis,,,True,,37
-uot_gis_mapping_and_spatial_analysis.pdf,uot_gis_mapping_and_spatial_analysis.png,GIS Mapping and Spatial Analysis Specialization,University of Toronto,03/25/2022,https://www.coursera.org/account/accomplishments/specialization/PR38ZQZCXTFE,gis,,,True,specialization,38
-uot_introduction_to_gis_mapping.pdf,uot_introduction_to_gis_mapping.png,Introduction to GIS Mapping,University of Toronto,01/20/2022,https://www.coursera.org/account/accomplishments/verify/YSS3UQ85P7HU,gis,,,True,,39
-uot_gis_data_acquision_and_map_design.pdf,uot_gis_data_acquision_and_map_design.png,Data Acquisition and Map Design,University of Toronto,01/26/2022,https://www.coursera.org/account/accomplishments/verify/EAK6QQ88KA5R,gis,,,True,,40
-uot_spatial_analysis_and_satellite_imagery_in_a_gis.pdf,uot_spatial_analysis_and_satellite_imagery_in_a_gis.png,Spatial Analysis and Satellite Imagery in a GIS,University of Toronto,02/12/2022,,gis,,,True,,41
-uot_gis_mapping_and_spatial_analysis_capstone.pdf,uot_gis_mapping_and_spatial_analysis_capstone.png,GIS Mapping and Spatial Analysis Capstone,University of Toronto,03/25/2022,https://www.coursera.org/account/accomplishments/verify/W6ZZSF57NLRC,gis,,,True,,42
-um_gis_for_sustainability.pdf,um_gis_for_sustainability.png,GIS: Geographic Information Systems for Sustainability,University of Michigan,12/22/2024,https://www.coursera.org/account/accomplishments/verify/Q0OFANKPWE3T,gis,,,True,,43
-fh_award_of_excellence_in_field_of_gis.pdf,fh_award_of_excellence_in_field_of_gis.png,Award of Excellence in the field of GIST,Foothill College,06/01/2021,,gis,,,True,,44
-mapping_urban_greenspaces.pdf,mapping_urban_greenspaces.png,Mapping Urban Greenspaces,Coursera Project Network,12/15/2024,https://www.coursera.org/account/accomplishments/verify/56P60OTIEH2D,gis,,,True,,45
-yu_spatial_data_science_and_applications.pdf,yu_spatial_data_science_and_applications.png,Spatial Data Science and Applications,Yonsei University,08/21/2022,https://www.coursera.org/account/accomplishments/verify/49HFPX753NW2,gis,,,True,,46
-cartography_certificate_05202024.pdf,cartography_certificate_05202024.png,Cartography (2024),Esri Training,05/20/2024,,"arcgis_pro,cartography",,,True,,47
-performing_analysis_using_arcgis_api_for_python_certificate_05082024.pdf,performing_analysis_using_arcgis_api_for_python_certificate_05082024.png,Performing Analysis Using ArcGIS API for Python,Esri Training,05/08/2024,,"arcgis,python",,,True,,48
-accessing_data_in_a_portal_using_arcgis_api_for_python_certificate_05032024.pdf,accessing_data_in_a_portal_using_arcgis_api_for_python_certificate_05032024.png,Accessing Data in a Portal Using ArcGIS API for Python,Esri Training,05/03/2024,,"arcgis,python",,,True,,49
-introduction_to_arcgis_api_for_python_certificate_04272024.pdf,introduction_to_arcgis_api_for_python_certificate_04272024.png,Introduction to ArcGIS API for Python,Esri Training,04/27/2024,,"arcgis,python",,,True,,50
-data_science_workflows_using_arcgis_notebooks_certificate_04182024.pdf,data_science_workflows_using_arcgis_notebooks_certificate_04182024.png,Data Science Workflows Using ArcGIS Notebooks,Esri Training,04/18/2024,,"arcgis,datascience",,,True,,51
-arcgis_notebooks_basics_certificate_04122024.pdf,arcgis_notebooks_basics_certificate_04122024.png,ArcGIS Notebooks (2024),Esri Training,04/12/2024,,"arcgis,datascience",,,True,,52
-introduction_to_arcgis_arcade_certificate_03312024.pdf,introduction_to_arcgis_arcade_certificate_03312024.png,Introduction to ArcGIS Arcade,Esri Training,03/31/2024,,"arcgis,arcade",,,True,,53
-python_scripting_for_geoprocessing_workflows_certificate_03212024.pdf,python_scripting_for_geoprocessing_workflows_certificate_03212024.png,Python Scripting for Geoprocessing Workflows,Esri Training,03/21/2024,,"arcgis_pro,python",,,True,,54
-arcgis_survey123_basics_certificate_03022024.pdf,arcgis_survey123_basics_certificate_03022024.png,ArcGIS Survey123 Basics,Esri Training,03/02/2024,,"arcgis,survey123",,,True,,55
-python_scripting_modifying_page_layouts_certificate_03022024.pdf,python_scripting_modifying_page_layouts_certificate_03022024.png,Python Scripting Modifying Page Layouts,Esri Training,03/02/2024,,"arcgis,python",,,True,,56
-python_scripting_repairing_data_sources_certificate_02242024.pdf,python_scripting_repairing_data_sources_certificate_02242024.png,Python Scripting Repairing Data Sources,Esri Training,02/24/2024,,"arcgis_pro,python",,,True,,57
-python_for_everyone_certificate_02102024.pdf,python_for_everyone_certificate_02102024.png,Python for Everyone,Esri Training,02/10/2024,,"arcgis_pro,python",,,True,,58
-mapping_clusters_optimized_hot_spot_and_optimized_outlier_analysis_certificate_11262023.pdf,mapping_clusters_optimized_hot_spot_and_optimized_outlier_analysis_certificate_11262023.png,Mapping Clusters Optimized Hot Spot and Optimized Outlier Analysis,Esri Training,11/26/2023,,arcgis_pro,,,True,,59
-mapping_clusters_hot_spot_and_cluster_and_outlier_analysis_certificate_11182023.pdf,mapping_clusters_hot_spot_and_cluster_and_outlier_analysis_certificate_11182023.png,Mapping Clusters Hot Spot and Cluster and Outlier Analysis,Esri Training,11/18/2023,,arcgis_pro,,,True,,60
-classifying_objects_using_deep_learning_in_arcgis_pro_certificate_11122023.pdf,classifying_objects_using_deep_learning_in_arcgis_pro_certificate_11122023.png,Classifying Objects Using Deep Learning in ArcGIS Pro,Esri Training,11/12/2023,,"arcgis_pro,ml",,,True,,61
-working_with_charts_and_reports_in_arcgis_pro_certificate_09082023.pdf,working_with_charts_and_reports_in_arcgis_pro_certificate_09082023.png,Working with Charts and Reports in ArcGIS Pro,Esri Training,09/08/2023,,arcgis_pro,,,True,,62
-introduction_to_distance_analysis_certificate_09032023.pdf,introduction_to_distance_analysis_certificate_09032023.png,Introduction to Distance Analysis,Esri Training,09/03/2023,,"arcgis_pro,ml",,,True,,63
-space-time_analysis_time-series_clustering_certificate_09032023.pdf,space-time_analysis_time-series_clustering_certificate_09032023.png,Space-Time Analysis Time-Series Clustering,Esri Training,09/03/2023,,arcgis_pro,,,True,,64
-introduction_to_overlay_analysis_certificate_09022023.pdf,introduction_to_overlay_analysis_certificate_09022023.png,Introduction to Overlay Analysis,Esri Training,09/02/2023,,arcgis_pro,,,True,,65
-introduction_to_proximity_analysis_certificate_09022023.pdf,introduction_to_proximity_analysis_certificate_09022023.png,Introduction to Proximity Analysis,Esri Training,09/02/2023,,arcgis_pro,,,True,,66
-calculating_density_using_arcgis_certificate_09022023.pdf,calculating_density_using_arcgis_certificate_09022023.png,Calculating Density Using ArcGIS,Esri Training,09/02/2023,,arcgis_pro,,,True,,67
-understanding_spatial_relationships_certificate_09012023.pdf,understanding_spatial_relationships_certificate_09012023.png,Understanding Spatial Relationships,Esri Training,09/01/2023,,arcgis_pro,,,True,,68
-summarizing_data_by_spatial_relationships_certificate_09012023.pdf,summarizing_data_by_spatial_relationships_certificate_09012023.png,Summarizing Data by Spatial Relationships,Esri Training,09/01/2023,,arcgis_pro,,,True,,69
-arcgis_pro_basics_certificate_09012023.pdf,arcgis_pro_basics_certificate_09012023.png,ArcGIS Pro  (2023),Esri Training,09/01/2023,,arcgis_pro,,,True,,70
-getting_started_with_geoprocessing_certificate_09012023.pdf,getting_started_with_geoprocessing_certificate_09012023.png,Getting Started with Geoprocessing,Esri Training,09/01/2023,,arcgis_pro,,,True,,71
-getting_started_with_spatial_analysis_certificate_09012023.pdf,getting_started_with_spatial_analysis_certificate_09012023.png,Getting Started with Spatial Analysis,Esri Training,09/01/2023,,arcgis_pro,,,True,,72
-managing_data_quality_using_arcgis_data_reviewer_certificate_05092023.pdf,managing_data_quality_using_arcgis_data_reviewer_certificate_05092023.png,Managing Data Quality Using ArcGIS Data Reviewer,Esri Training,05/09/2023,,arcgis_pro,,,True,,73
-managing_raster_data_using_arcgis_certificate_04212023.pdf,managing_raster_data_using_arcgis_certificate_04212023.png,Managing Raster Data Using ArcGIS,Esri Training,04/21/2023,,arcgis_pro,,,True,,74
-editing_basics_in_arcgis_pro_certificate_04092023.pdf,editing_basics_in_arcgis_pro_certificate_04092023.png,Editing Basics in ArcGIS Pro,Esri Training,04/09/2023,,arcgis_pro,,,True,,75
-preparing_for_network_analysis_certificate_03102023.pdf,preparing_for_network_analysis_certificate_03102023.png,Preparing for Network Analysis,Esri Training,03/10/2023,,arcgis_pro,,,True,,76
-getting_started_with_data_management_certificate_03042023.pdf,getting_started_with_data_management_certificate_03042023.png,Getting Started with Data Management,Esri Training,03/04/2023,,arcgis_pro,,,True,,77
-introduction_to_spatial_data_certificate_02262023.pdf,introduction_to_spatial_data_certificate_02262023.png,Introduction to Spatial Data,Esri Training,02/26/2023,,arcgis_pro,,,True,,78
-basics_of_geographic_coordinate_systems_certificate_02182023.pdf,basics_of_geographic_coordinate_systems_certificate_02182023.png,Basics of Geographic Coordinate Systems,Esri Training,02/18/2023,,arcgis_pro,,,True,,80
-getting_started_with_the_geodatabase_certificate_02102023.pdf,getting_started_with_the_geodatabase_certificate_02102023.png,Getting Started with the Geodatabase,Esri Training,02/10/2023,,"arcgis,geodatabase,database",,,True,,81
-applying_the_racial_equity_workflow_using_arcgis_certificate_11282022.pdf,applying_the_racial_equity_workflow_using_arcgis_certificate_11282022.png,Applying the Racial Equity Workflow Using ArcGIS,Esri Training,11/28/2022,,arcgis_pro,,,True,,82
-generating_service_areas_using_arcgis_pro_certificate_11272022.pdf,generating_service_areas_using_arcgis_pro_certificate_11272022.png,Generating Service Areas Using ArcGIS Pro,Esri Training,11/27/2022,,arcgis_pro,,,True,,83
-mapping_addresses_and_places_certificate_11232022.pdf,mapping_addresses_and_places_certificate_11232022.png,Mapping Addresses and Places,Esri Training,11/23/2022,,arcgis_pro,,,True,,84
-spatial_data_science_the_new_frontier_in_analytics_certificate_11222022.pdf,spatial_data_science_the_new_frontier_in_analytics_certificate_11222022.png,Spatial Data Science The New Frontier in Analytics,Esri Training,11/22/2022,,"arcgis,datascience",,,True,,85
-creating_a_web_map_in_arcgis_pro_certificate_11142022.pdf,creating_a_web_map_in_arcgis_pro_certificate_11142022.png,Creating a Web Map in ArcGIS Pro,Esri Training,11/14/2022,,"arcgis_pro,arcgis_online",,,True,,86
-performing_accuracy_assessment_for_image_classification_certificate_11062022.pdf,performing_accuracy_assessment_for_image_classification_certificate_11062022.png,Performing Accuracy Assessment for Image Classification,Esri Training,11/06/2022,,arcgis_pro,,,True,,87
-introduction_to_3d_data_certificate_10312022.pdf,introduction_to_3d_data_certificate_10312022.png,Introduction to 3D Data,Esri Training,10/31/2022,,arcgis_pro,,,True,,88
-displaying_coordinate_data_on_a_map_certificate_10242022.pdf,displaying_coordinate_data_on_a_map_certificate_10242022.png,Displaying Coordinate Data on a Map,Esri Training,10/24/2022,,arcgis_pro,,,True,,89
-creating_and_sharing_animation_in_arcgis_pro_certificate_10182022.pdf,creating_and_sharing_animation_in_arcgis_pro_certificate_10182022.png,Creating and Sharing Animation in ArcGIS Pro,Esri Training,10/18/2022,,arcgis_pro,,,True,,90
-managing_map_layers_in_arcgis_pro_certificate_10152022.pdf,managing_map_layers_in_arcgis_pro_certificate_10152022.png,Managing Map Layers in ArcGIS Pro,Esri Training,10/15/2022,,arcgis_pro,,,True,,94
-introduction_to_image_classification_certificate_09272022.pdf,introduction_to_image_classification_certificate_09272022.png,Introduction to Image Classification,Esri Training,09/27/2022,,"arcgis_pro,ml",,,True,,96
-symbolizing_map_layers_certificate_09262022.pdf,symbolizing_map_layers_certificate_09262022.png,Symbolizing Map Layers,Esri Training,09/26/2022,,arcgis_pro,,,True,,97
-mapping_locations_from_unstructured_text_certificate_09192022.pdf,mapping_locations_from_unstructured_text_certificate_09192022.png,Mapping Locations from Unstructured Text,Esri Training,09/19/2022,,arcgis_pro,,,True,,98
-creating_a_map_layout_certificate_09042022.pdf,creating_a_map_layout_certificate_09042022.png,Creating a Map Layout,Esri Training,09/04/2022,,arcgis_pro,,,True,,99
-arcgis_pro_basics_certificate_09032022.pdf,arcgis_pro_basics_certificate_09032022.png,ArcGIS Pro Basics (2022),Esri Training,09/03/2022,,arcgis_pro,,,True,,100
-getting_started_with_mapping_and_visualization_certificate_09012022.pdf,getting_started_with_mapping_and_visualization_certificate_09012022.png,Getting Started with Mapping and Visualization,Esri Training,09/01/2022,,arcgis_pro,,,True,,101
-imagery_in_action_certificate_06012022.pdf,imagery_in_action_certificate_06012022.png,Imagery in Action,Esri Training,06/01/2022,,arcgis_pro,,,True,,102
-going_places_with_spatial_analysis_certificate_05242022.pdf,going_places_with_spatial_analysis_certificate_05242022.png,Going Places with Spatial Analysis,Esri Training,05/24/2022,,"arcgis,cartography",,,True,,103
-cartography_certificate_03282022.pdf,cartography_certificate_03282022.png,Cartography (2022),Esri Training,03/28/2022,,"arcgis_pro,cartography",,,True,,104
-building_geoprocessing_models_using_arcgis_pro_certificate_05012021.pdf,building_geoprocessing_models_using_arcgis_pro_certificate_05012021.png,Building Geoprocessing Models Using ArcGIS Pro,Esri Training,05/01/2021,,arcgis_pro,,,True,,105
-cartography_certificate_03122021.pdf,cartography_certificate_03122021.png,Cartography (2021),Esri Training,03/12/2021,,"arcgis,cartography",,,True,,106
-performing_supervised_pixel-based_image_classification_certificate_02112021.pdf,performing_supervised_pixel-based_image_classification_certificate_02112021.png,Performing Supervised Pixel-Based Image Classification,Esri Training,02/11/2021,,"arcgis_pro,ml",,,True,,107
-change_detection_using_imagery_certificate_02102021.pdf,change_detection_using_imagery_certificate_02102021.png,Change Detection Using Imagery,Esri Training,02/10/2021,,arcgis_pro,,,True,,108
-processing_raster_data_using_arcgis_pro_certificate_02102021.pdf,processing_raster_data_using_arcgis_pro_certificate_02102021.png,Processing Raster Data Using ArcGIS Pro,Esri Training,02/10/2021,,arcgis_pro,,,True,,109
-creating_optimized_routes_using_arcgis_pro_certificate_02032021.pdf,creating_optimized_routes_using_arcgis_pro_certificate_02032021.png,Creating Optimized Routes Using ArcGIS Pro,Esri Training,02/03/2021,,arcgis_pro,,,True,,110
-arcgis_notebooks_basics_certificate_02022021.pdf,arcgis_notebooks_basics_certificate_02022021.png,ArcGIS Notebooks  (2021),Esri Training,02/02/2021,,"arcgis_pro,python",,,True,,111
-space-time_analysis_finding_temporal_trends_certificate_02022021.pdf,space-time_analysis_finding_temporal_trends_certificate_02022021.png,Space-Time Analysis Finding Temporal Trends,Esri Training,02/02/2021,,arcgis_pro,,,True,,112
-querying_data_using_arcgis_pro_certificate_02022021.pdf,querying_data_using_arcgis_pro_certificate_02022021.png,Querying Data Using ArcGIS Pro,Esri Training,02/02/2021,,arcgis_pro,,,True,,113
-managing_lidar_data_using_terrain_datasets_certificate_01312021.pdf,managing_lidar_data_using_terrain_datasets_certificate_01312021.png,Managing Lidar Data Using Terrain Datasets,Esri Training,01/31/2021,,arcgis_pro,,,True,,114
-3d_visualization_using_arcgis_pro_certificate_01182021.pdf,3d_visualization_using_arcgis_pro_certificate_01182021.png,3D Visualization Using ArcGIS Pro,Esri Training,01/18/2021,,arcgis_pro,,,True,,115
-getting_started_with_arcgis_pro_certificate_01082021.pdf,getting_started_with_arcgis_pro_certificate_01082021.png,Getting Started with ArcGIS Pro,Esri Training,01/08/2021,,arcgis_pro,,,True,,116
-da_aa_database_development_practitioner.pdf,da_aa_database_development_practitioner.png,Associate in Arts Database Development Practitioner,De Anza College,08/23/2024,,"database,sql",4.0,summa cum laude,True,degree,137
-ca_software_development_in_python.pdf,ca_software_development_in_python.png,Software Development in Python,Foothill College,06/25/2021,,python,,,True,,138
-ca_advanced_software_development.pdf,ca_advanced_software_development.png,Advanced Software Development,Foothill College,06/25/2021,,python,,,True,,139
-postgresql_for_everybody.pdf,postgresql_for_everybody.png,PostgreSQL for Everybody Specialization,University of Michigan,08/17/2022,https://www.coursera.org/account/accomplishments/specialization/U9KKPLB8YEC3,"database,postgres,sql",,,True,specialization,140
-database_design_and_basic_sql_in_postgresql.pdf,database_design_and_basic_sql_in_postgresql.png,Database Design and Basic SQL in PostgreSQL,University of Michigan,06/26/2022,https://www.coursera.org/account/accomplishments/verify/H4RC84QQHDSG,"database,postgres,sql",,,True,,141
-intermediate_postgrtesql.pdf,intermediate_postgrtesql.png,Intermediate PostgreSQL,University of Michigan,07/02/2022,https://www.coursera.org/account/accomplishments/certificate/HT4C8JPK8ABX,"database,postgres,sql",,,True,,142
-json_and_natural_language_processing_for_postgresql.pdf,json_and_natural_language_processing_for_postgresql.png,JSON and Natural Language Processing in PostgreSQL,University of Michigan,07/04/2022,https://www.coursera.org/account/accomplishments/certificate/2RFHT7AWHCKU,"json,postgres",,,True,,143
-database_architecture_scale_and_nosql_with_elasticsearch.pdf,database_architecture_scale_and_nosql_with_elasticsearch.png,"Database Architecture, Scale, and NoSQL with Elasticsearch",University of Michigan,08/17/2022,https://www.coursera.org/account/accomplishments/certificate/TZPTPGXW4LMW,database,,,True,,144
-r_programming.pdf,r_programming.png,R Programming,Johns Hopkins University,12/31/2023,https://www.coursera.org/account/accomplishments/verify/NJ4FQ5BQCJBN,R,,,True,,145
-the_data_scientists_toolbox.pdf,the_data_scientists_toolbox.png,The Data Scientist's Toolbox,Johns Hopkins University,01/03/2024,https://www.coursera.org/account/accomplishments/verify/FFZKD3K4PLS5,R,,,True,,146
-wrangling_data_in_the_tidyverse.pdf,wrangling_data_in_the_tidyverse.png,Wrangling Data in the Tidyverse,Johns Hopkins University,01/08/2024,https://www.coursera.org/account/accomplishments/verify/LV3JC5K47MNG,R,,,True,,147
-introduction_to_the_tidyverse.pdf,introduction_to_the_tidyverse.png,Introduction to the Tidyverse,Johns Hopkins University,01/09/2024,https://www.coursera.org/account/accomplishments/verify/KBA5S3XDQ2S3,R,,,True,,148
-data_cleaning_in_snowflake_techniques_to_clean_messy_data.pdf,data_cleaning_in_snowflake_techniques_to_clean_messy_data.png,Data Cleaning in Snowflake: Techniques to Clean Messy Data,Coursera Project Network,04/16/2024,https://www.coursera.org/account/accomplishments/verify/PRDT9ACPLR2X,"database,snowflake",,,True,,149
-into_to_spatial_databases_with_postgis_and_qgis3.pdf,into_to_spatial_databases_with_postgis_and_qgis3.png,Introduction to Spatial Databases with PostGIS and QGIS 3,Udemy,08/14/2022,https://www.udemy.com/certificate/UC-3a2c25a6-418a-418d-8532-64142d1a603c/,"database,postgres,postgis,gis",,,True,,150
-automating_qgis3_with_python.pdf,automating_qgis3_with_python.png,Automating QGIS 3.xx with Python,Udemy,01/01/2023,https://www.udemy.com/certificate/UC-5a1f31d7-911b-4ef6-ba34-be5b1228ca07/,"gis,python",,,True,,151
-webmapping_with_javascript.pdf,webmapping_with_javascript.png,BayGeo's Web Mapping With JavaScript,University of San Francisco,12/13/2024,"https://badgr.com/public/assertions/8yp-v2sNQPqKN3eFv3ljCw"">badgr.com/public/assertions/8yp-v2sNQPqKN3eFv3ljCw","javascript,gis",,,True,,152
-um_python_for_everyone.pdf,um_python_for_everyone.png,Python for Everyone Specialization,University of Michigan,09/06/2024,https://www.coursera.org/account/accomplishments/specialization/DMJ99K40Y01D,python,,,True,specialization,153
-um_using_databases_with_python.pdf,um_using_databases_with_python.png,Using Databases with Python,University of Michigan,09/06/2024,https://www.coursera.org/account/accomplishments/certificate/LGGO9GC40CMF,R,,,True,,154
-um_python_data_structures.pdf,um_python_data_structures.png,Python Data Structures,University of Michigan,09/03/2024,https://www.coursera.org/account/accomplishments/certificate/A9VROQHSUDEL,python,,,True,,155
-um_using_python_to_access_web_data.pdf,um_using_python_to_access_web_data.png,Using Python to Access Web Data,University of Michigan,09/04/2024,https://www.coursera.org/account/accomplishments/certificate/LN2727K1L2SA,python,,,True,,156
-um_getting_started_with_python.pdf,um_getting_started_with_python.png,Programming for Everybody (Getting Started with Python),University of Michigan,09/02/2024,https://www.coursera.org/account/accomplishments/certificate/7TTWADOJLKAN,python,,,True,,157
-um_retrieving_processing_visualizing_data_with_python.pdf,um_retrieving_processing_visualizing_data_with_python.png,"Capstone: Retrieving, Processing, and Visualizing Data with Python",University of Michigan,09/06/2024,https://www.coursera.org/account/accomplishments/certificate/K3TNVCFGDM72,python,,,True,,158
-um_python3_programming.pdf,um_python3_programming.png,Python 3 Programming Specialization,University of Michigan,01/09/2025,https://www.coursera.org/account/accomplishments/specialization/YLSRKUR107V8,python,,,True,specialization,159
-um_python_basics.pdf,um_python_basics.png,Python Basics,University of Michigan,12/31/2024,https://www.coursera.org/account/accomplishments/certificate/WL85C6UD5EWI,python,,,True,,160
-um_python_functions_file_and_dictionaries.pdf,um_python_functions_file_and_dictionaries.png,"Python Functions, Files, and Dictionaries",University of Michigan,01/05/2025,https://www.coursera.org/account/accomplishments/certificate/UOAZ1I1AT6TH,python,,,True,,161
-um_data_collection_and_processing_with_python.pdf,um_data_collection_and_processing_with_python.png,Data Collection and Processing with Python,University of Michigan,01/07/2025,https://www.coursera.org/account/accomplishments/certificate/IS87TCW143LR,python,,,True,,162
-um_python_classes_and_inheritance.pdf,um_python_classes_and_inheritance.png,Python Classes and Inheritance,University of Michigan,12/29/2024,https://www.coursera.org/account/accomplishments/certificate/RE8FGQBN6KEU,python,,,True,,163
-um_python_proj_sw_eng_image_manipulation.pdf,um_python_proj_sw_eng_image_manipulation.png,Python Project: Software Engineering and Image Manipulation,University of Michigan,01/09/2025,https://www.coursera.org/account/accomplishments/certificate/J6P6MXSJI87H,python,,,True,,164
-um_applied_data_science_with_python.pdf,um_applied_data_science_with_python.png,Applied Data Science with Python Specialization,University of Michigan,03/01/2025,https://www.coursera.org/account/accomplishments/specialization/6QOZCNKNGCE0,"datascience,python",,,True,specialization,165
-um_introduction_to_data_science_in_python.pdf,um_introduction_to_data_science_in_python.png,Introduction to Data Science in Python,University of Michigan,10/19/2024,https://www.coursera.org/account/accomplishments/certificate/ZO0M17G4OZUN,"datascience,python",,,True,,166
-um_applied_plotting_charting_and_data_representation_in_python.pdf,um_applied_plotting_charting_and_data_representation_in_python.png,"Applied Plotting, Charting, and Data Representation in Python",University of Michigan,01/24/2025,https://www.coursera.org/account/accomplishments/certificate/AKKTY52VDW18,python,,,True,,167
-um_applied_machine_learning_in_python.pdf,um_applied_machine_learning_in_python.png,Applied Machine Learning in Python,University of Michigan,02/11/2025,https://www.coursera.org/account/accomplishments/certificate/SZC4MCKRTSTY,"ml,python",,,True,,168
-um_applied_text_mining_in_python.pdf,um_applied_text_mining_in_python.png,Applied Text Mining in Python,University of Michigan,02/17/2025,https://www.coursera.org/account/accomplishments/certificate/QMQIIO8XRY3H,"ml,python",,,True,,169
-um_applied_social_network_analysis_in_python.pdf,um_applied_social_network_analysis_in_python.png,Applied Social Network Analysis in Python,University of Michigan,03/01/2025,https://www.coursera.org/account/accomplishments/certificate/DEW3HGVMQCZ4,python,,,True,,170
-machine_learning.pdf,machine_learning.png,Machine Learning,Stanford University,07/12/2021,https://www.coursera.org/account/accomplishments/verify/PJR998U5VR7C,ml,,,True,,171
-tensor_flow_2_for_deep_learning.pdf,tensor_flow_2_for_deep_learning.png,TensorFlow 2 for Deep Learning Specialization,Imperial College London,12/27/2021,https://www.coursera.org/account/accomplishments/specialization/UZTB4ZA9PA8H,"ml,python,tensorflow",,,True,specialization,172
-getting_started_with_tensorflow_2.pdf,getting_started_with_tensorflow_2.png,Getting Started with TensorFlow 2,Imperial College London,09/20/2021,https://www.coursera.org/account/accomplishments/certificate/L2BFK9ZKPX39,"ml,python,tensorflow",,,True,,173
-customising_your_models_with_tensorflow_2.pdf,customising_your_models_with_tensorflow_2.png,Customizing your Models with TensorFlow 2,Imperial College London,10/29/2021,https://www.coursera.org/account/accomplishments/certificate/LK9B5325PERQ,"ml,python,tensorflow",,,True,,174
-probabilistic_deep_learning_with_tensorflow_2.pdf,probabilistic_deep_learning_with_tensorflow_2.png,Probabilistic Deep Learning with TensorFlow 2,Imperial College London,12/27/2021,https://www.coursera.org/account/accomplishments/certificate/9GL4SVNCJRGR,"ml,python,tensorflow",,,True,,175
-modern_gis_geopandas_certification.pdf,modern_gis_geopandas_certification.png,GeoPandas Certification,Modern GIS,04/27/2025,https://moderngis.xyz/certificates/075daabdd0be20cc07d105357979d6b1/,"gis,python",,,True,,176
-modern_gis_qgis_certification.pdf,modern_gis_qgis_certification.png,QGIS Certification,Modern GIS,05/05/2025,https://moderngis.xyz/certificates/094a3c897b4c613635bfc155e76ddf7d/,"gis,qgis",,,True,,177
-mathematics_for_machine_learning.pdf,mathematics_for_machine_learning.png,Mathematics for Machine Learning Specialization,Imperial College London,08/11/2021,https://www.coursera.org/account/accomplishments/specialization/WS43GV8U9F59,ml,,,True,specialization,178
-mathematics_for_machine_leaning_linear_algebra.pdf,mathematics_for_machine_leaning_linear_algebra.png,Mathematics for Machine Learning: Linear Algebra,Imperial College London,07/30/2021,https://www.coursera.org/account/accomplishments/certificate/2HT9T46AXJV3,ml,,,True,,179
-mathematics_for_machine_learning_multivariate_calculus.pdf,mathematics_for_machine_learning_multivariate_calculus.png,Mathematics for Machine Learning: Multivariate Calculus,Imperial College London,08/08/2021,https://www.coursera.org/account/accomplishments/certificate/AL7B8T5QGPF3,ml,,,True,,180
-mathematics_for_machine_learning_pca.pdf,mathematics_for_machine_learning_pca.png,Mathematics for Machine Learning: PCA,Imperial College London,08/11/2021,https://www.coursera.org/account/accomplishments/certificate/CL4QBLSPBLEH,ml,,,True,,181
-uocb_algebra_and_differential_calculus_for_data_science.pdf,uocb_algebra_and_differential_calculus_for_data_science.png,Algebra and Differential Calculus for Data Science,University of Colorado Boulder,03/06/2025,https://www.coursera.org/account/accomplishments/verify/0ONACSD9LCX2,"ml,datascience",,,True,,182
-snowflake_cloud_data_platform.pdf,snowflake_cloud_data_platform.png,Snowflake Cloud Data Platform: Getting Started,Edureka,06/05/2024,https://www.coursera.org/account/accomplishments/verify/UMHBPNYU3QDX,"database,snowflake",,,True,,183
-da_transcript.pdf,da_transcript_1.png,De Anza Transcript (1/2),De Anza College,05/01/2024,,,4.0,,True,transcript,204
-da_transcript.pdf,da_transcript_2.png,De Anza Transcript (2/2),De Anza College,05/01/2024,,,4.0,,True,transcript,205
-fh_transcript.pdf,fh_transcript_1.png,Foothill Transcript (1/2),Foothill College,05/01/2024,,,4.0,,True,transcript,206
-fh_transcript.pdf,fh_transcript_2.png,Foothill Transcript (2/2),Foothill College,05/01/2024,,,4.0,,True,transcript,207
-wvc_transcript.pdf,wvc_transcript_1.png,West Valley Transcript (1/1),West Valley College,05/01/2024,,,4.0,,True,transcript,208
-wvc_gis_ca_email.pdf,wvc_gis_ca_email.png,GIS Technology Certificate of Achievement,West Valley College,06/27/2025,,gis,4.0,,,certificate,209
-wvc_unofficial_transcript.pdf,wvc_unofficial_transcript_1.png,West Valley College Unofficial Transcript (1/2),West Valley College,07/03/2025,,,4.0,,,transcript,210
-wvc_unofficial_transcript.pdf,wvc_unofficial_transcript_2.png,West Valley College Unofficial Transcript (2/2),West Valley College,07/03/2025,,,4.0,,,transcript,211
+pdf,png,qualification,institution,date,link,category,grade,honors,display,type,rank,external_url,description
+fh_as_geographic_information_systems_technology.pdf,fh_as_geographic_information_systems_technology.png,Associate in Science Degree Geographic Information Systems Technology,Foothill College,06/25/2021,,gis,4.0,with highest honors,True,degree,25,https://foothill.edu/gis/,"The associate degree provides a solid technical background in geographic information systems concepts and applications, including cartographic concepts, database design, programming, and interdisciplinary applications of the technology.
+
+* Students will be able to apply cartographic principles of scale, resolution, projection, data management, and spatial analysis to a geographic nature using a geographic information system.
+* Students will be able to plan, evaluate, and execute an original geographic information systems project.
+* Students will be able to demonstrate the ability to communicate orally, in writing and graphically, the outcome of geographic information systems analysis.
+* Students will be able to demonstrate an awareness of professional obligations to society, employers and funders, and individuals as outlined in the Geographic Information Systems Professional Certification Institute Code of Ethics.
+
+###GIST 11  •  INTRODUCTION TO MAPPING & SPATIAL REASONING  •  Units: 4
+
+Introduction to the fundamental concepts of geospatial technology, including Geographic Information Systems (GIS), Remote Sensing (RS) and Global Positioning Systems (GPS), map reading, and cartography. Exploration of how geospatial technologies are used in addressing human and environmental issues and can promote sustainability.
+
+### GIST 12  •  INTRODUCTION TO GEOSPATIAL TECHNOLOGY  •  Units: 4
+
+Study of geospatial technology, including Geographic Information Systems (GIS), Global Positioning Systems (GPS), cartography, remote sensing, and spatial analysis. Application of Geographic Information Systems (GIS) science to spatial data management. Assessment of vector and raster systems, scale, resolution, map projection, coordinate systems and georeferencing. Identification and acquisition of spatial data.
+
+### GIST 52  •  GEOSPATIAL DATA ACQUISITION & MANAGEMENT  •  Units: 4
+
+Study of Geographic Information Systems (GIS) science and its applications to spatial data management. Data acquisition using GPS, digitizing and scanning techniques. Data management. Editing and verifying. Raster data manipulation and importing. Database management. Advanced queries and database manipulation.
+
+### GIST 53  •  ADVANCED GEOSPATIAL TECHNOLOGY & SPATIAL ANALYSIS  •  Units: 4
+
+Introduction to problem-solving and decision-making using geospatial analysis techniques, applicable to a range of disciplines.
+
+### GIST 54A  •  SEMINAR IN SPECIALIZED APPLICATIONS OF GEOGRAPHIC INFORMATION SYSTEMS I  •  Units: 2
+
+Seminar on the diverse applications of Geographic Information Systems (GIS). Weekly presentations by guest speakers.
+
+### GIST 58  •  REMOTE SENSING & DIGITAL IMAGE PROCESSING  •  Units: 3
+
+Physical basis of remote sensing. Aerial photography and high resolution multi-band imaging. Satellite multi-band optical remote sensing. Other forms of remote sensing (RADAR, SAR, LIDAR). Applications of remote sensing.
+
+### GEOG 1  •  PHYSICAL GEOGRAPHY  •  Units: 5
+
+Study of the Earth's surface, including the earth's dimensions and systems; atmospheric processes; patterns of climate, vegetation, and soils; and features, processes, and interactions of land, water, and various energy sources. Use of maps for interpretation.
+
+### GEOG 2  •  HUMAN GEOGRAPHY  •  Units: 4
+
+The cultural geographic landscape. Study of the human population from origins to the present with an emphasis on the future. Examination of population densities, migrations, and settlements; races, languages, and religions; patterns of land use and major environmental perceptions and problems. Analysis of energy, mineral, and food resources, and how cultures utilize them.
+
+### GEOG 10  •  WORLD REGIONAL GEOGRAPHY  •  Units: 4
+
+Survey of the world's major culture regions and major nations. Physical, cultural, economic features. Emphasis on historical influences on population growth, transportation networks, natural environment, potential, and problems. Location, importance, and impact of the foremost features of countries, states, major cities, rivers, and landform regions.
+
+### CS 3A  •  OBJECT-ORIENTED PROGRAMMING METHODOLOGIES IN PYTHON  •  Units: 4.5
+
+Systematic introduction to fundamental concepts of computer science through the study of the Python programming language. Coding topics include control structures, functions, classes, string processing, lists, tuples, dictionaries, working with files, and elementary graphics. Concept topics include algorithms, data abstraction, problem solving strategies, code style, documentation, debugging techniques and testing.
+
+### CS 3B  •  INTERMEDIATE SOFTWARE DESIGN IN PYTHON  •  Units: 4.5
+
+Systematic treatment of intermediate concepts in computer science through the study of Python object-oriented programming (OOP). Coding topics include Python sequences, user-defined classes and interfaces, modules, packages, collection classes, threads, lambda expressions, list comprehensions, regular expressions and multi-dimensional arrays. Concept topics include OOP project design, recursion, inheritance, polymorphism, functional programming, linked-lists, FIFOs, LIFOs, event-driven parsing, exceptions, and guarded code.
+
+### CS 3C  •  ADVANCED DATA STRUCTURES & ALGORITHMS IN PYTHON  •  Units: 4.5
+
+A systematic treatment of advanced data structures, algorithm analysis, and abstract data types in the Python programming language, intended for computer science majors as well as non-majors and professionals seeking advanced Python experience. Coding topics include large program software engineering design, multi-dimensional arrays, string processing, primitives, compound types, and allocation of instance and static data. Data structure concept topics include dynamic memory, inheritance, polymorphism, hierarchies, recursion, linked-lists, stacks, queues, trees, hash tables, and graphs. Algorithm concept topics include searching, big-O time complexity, analysis of all major sorting techniques, top down splaying, AVL tree balancing, shortest path algorithms, minimum spanning trees, and maximum flow graphs.
+
+### CS 22A  •  JAVASCRIPT FOR PROGRAMMERS  •  Units: 4.5
+
+Introduction to object oriented programming in JavaScript. Topics include: client and server side programming, Model/View/Controller architecture, current tools and testing methods, interaction with HTML and CSS, Document Object Model, XML, and JSON. Students will have practice writing programs for mobile web browsers and creating dynamic webpages including animation.
+
+### CS 31A  •  INTRODUCTION TO DATABASE MANAGEMENT SYSTEMS  •  Units: 4.5
+
+Introduction to database design and use of database management systems for applications. Topics include database architecture, comparison to file-based systems, historical data models, conceptual model; integrity constraints and triggers; functional dependencies and normal forms; relational model, algebra, database processing and Structured Query Language (SQL), database access from Applications-Embedded SQL, JDBC, Cursors, Dynamic SQL, Stored Procedures. Emerging trends will be studied, such as NoSQL databases, internet and databases, and Online Analytical Processing (OLAP). A team project that builds a database application for a real-world scenario is an important element of the course.
+
+### CS 48A  •  DATA VISUALIZATION  •  Units: 4.5
+
+Introduction to the effective processing and communication of data. Topics include identifying the key techniques and theory used in data visualization, creating and designing static and interactive visualizations using data, and communicating insight through data visualization to an intended audience. Students will use a data visualization package, such as R, Tableau, or MatPlotLib in Python.
+
+### POLI 2  •  COMPARATIVE GOVERNMENT & POLITICS  •  Units: 4
+
+Introductory analysis of comparative governmental systems and politics emphasizing a variety of political forms; theory of political differentiation and development; and patterns, processes, and regularities among political systems in developing and developed world.
+
+### BIOL 15  •  CALIFORNIA ECOLOGY/NATURAL HISTORY  •  Units: 5
+
+An introduction to ecology, natural history, and field biology through the study, largely in an outdoor setting, of the plants and animals of the San Francisco Bay Area.
+
+### GLST 1  •  INTRODUCTION TO GLOBAL STUDIES  •  Units: 4
+
+This course provides students with an introduction to Global Studies. Students are offered an interdisciplinary view of globalization and its impacts through an examination of social, cultural, political, economic, and environmental contexts. The course emphasizes the interdependence and connections between global institutions, populations, and individuals.
+"
+fh_as_geography.pdf,fh_as_geography.png,Associate in Science Degree Geography,Foothill College,06/30/2023,,gis,4.0,with highest honors,True,degree,26,,
+fh_award_of_excellence_in_field_of_gis.pdf,fh_award_of_excellence_in_field_of_gis.png,Award of Excellence in the field of GIST,Foothill College,06/01/2021,,gis,,,True,award,44,,
+da_transcript.pdf,da_transcript_1.png,De Anza Transcript (1/2),De Anza College,05/01/2024,,,4.0,,True,transcript,204,,
+da_transcript.pdf,da_transcript_2.png,De Anza Transcript (2/2),De Anza College,05/01/2024,,,4.0,,True,transcript,205,,
+fh_transcript.pdf,fh_transcript_1.png,Foothill Transcript (1/2),Foothill College,05/01/2024,,,4.0,,True,transcript,206,,
+fh_transcript.pdf,fh_transcript_2.png,Foothill Transcript (2/2),Foothill College,05/01/2024,,,4.0,,True,transcript,207,,
+wvc_transcript.pdf,wvc_transcript_1.png,West Valley Transcript (1/1),West Valley College,05/01/2024,,,4.0,,True,transcript,208,,
+wvc_gis_ca_email.pdf,wvc_gis_ca_email.png,GIS Technology Certificate of Achievement,West Valley College,06/27/2025,,gis,4.0,,True,certificate,209,https://www.westvalley.edu/catalog/programs/geospatial-technology-certificate-of-achievement.html,"The Geospatial Technology Certificate of Achievement requires the completion of 24 units of coursework. This course of study includes: geographic information science, global positioning systems, remote sensing, and web-based and mobile mapping services. The Geospatial Technology certificate is intended to provide students with a foundation in the field of geospatial technologies. The certificate is designed for those students who have a desire to pursue a career as a GIS Technician or a Remote Sensing Technician, or to enhance skills to maintain current employment.
+
+### GIST 016B  •  MOBILE GIS  •  Units: 3
+
+This course provides students the opportunity to collect field data with location service applications and incorporate that data into mobile GIS applications. The course makes use of cloud-based services in conjunction with mobile data collection resources.
+
+
+### GIST 016C  •  SPATIAL ANALYSIS for GIS  •  Units: 3
+
+This course provides a detailed examination of spatial information systems and a survey of quantitative techniques applicable to spatial data. This course focuses on the functionality of GIS as an effective tool for modeling and analyzing complex spatial relationships. Quantitative methods are studied to include measures of central tendency, dispersion, and density. These methods are presented using empirical data.
+
+
+### GIST 016D  •  CARTOGRAPHIC DESIGN FOR GIS  •  Units: 3
+
+This course provides a comprehensive study of GIS applicable cartography including cartographic principles, data acquisition methods used in map production, and methods of base map development. This course covers the history, principles of cartography map projections, map scale, types of thematic maps and map accuracy. Techniques used in GIS base map development are introduced using hands-on exercises. This course includes the production of professional quality maps and hands-on work in computer assisted mapping projects.
+
+
+### GIST 016E  •  GEODATABASE DESIGN AND MANAGEMENT  •  Units: 3
+
+This course examines the principles of geodatabase management and design including conversion fundamentals, modeling techniques, and strategic planning. The needs, alternatives, and pitfalls of database development and conversion are discussed. Various types of data applicable to GIS and their hardware and software requirements are explored along with the appropriate methodology for developing a conversion plan and data quality assurance. This course includes hands-on practical exercises in geodatabase management skills.
+
+
+### GIST 016G: INTRODUCTION TO REMOTE SENSING  •  Units: 3
+
+This course introduces the concepts of remote sensing. This includes the history and current techniques for remote sensing, the use of imagery to assess and classify land changes over time, and the methods to conduct analysis using current remote sensing software.
+
+
+### GIST 016I: GIS PROGRAMMING AND THE WEB  •  Units: 3
+
+This course focuses on GIS programming and the use of Python. Students have the opportunity to apply the principles of Python programming for GIS applications. The course explores how Python programming adds functionality to GIS mapping software."
+wvc_unofficial_transcript.pdf,wvc_unofficial_transcript_1.png,West Valley College Unofficial Transcript (1/2),West Valley College,07/03/2025,,,4.0,,True,transcript,210,,
+wvc_unofficial_transcript.pdf,wvc_unofficial_transcript_2.png,West Valley College Unofficial Transcript (2/2),West Valley College,07/03/2025,,,4.0,,True,transcript,211,,
+ucd_gis_analyst_badge.pdf,ucd_gis_analyst_badge.png,GIS Analyst Metaskill,UC Davis,06/16/2025,https://www.credly.com/badges/0b108d4c-d815-4199-be43-b637e768fd4c/public_url,gis,,,True,certificate,27,https://cpe.ucdavis.edu/course/gis-analyst-program,"Geographic information systems (GIS) are an indispensable tool utilized across nearly all business sectors and industries. Given it’s near ubiquitous usage and constantly evolving suite of platforms, tools and capabilities, training is essential for any GIS analyst or other professional who needs to use GIS to help inform their work.
+
+The GIS Analyst Program has been designed to provide professionals with a comprehensive overview of GIS tools, processes, and best practices. Through lectures and lab work that instructors and fellow learners bring to the discussion, you’ll gain an understanding of how to use, ArcGIS Pro, the most common GIS platform to build accurate maps, effectively manage databases and more. By the end of this program, you will not only possess the GIS skills to improve the efficiency and accuracy of your work, you’ll also be empowered to help make informed, data-driven policy and business decisions within your organization."
+ucd_intro_to_gis.pdf,ucd_intro_to_gis.png,Introduction to Geographic Information Systems,UC Davis,08/23/2024,,gis,,,True,course,28,https://cpe.ucdavis.edu/section/introduction-geographic-information-systems,Geographic Information Systems (GIS) is an exciting set of technology tools used in almost every field imaginable. Knowledge of GIS and experience with spatial analysis will enhance your resume and allow you to analyze and manage your data more effectively than ever before. Gain an overview of GIS in this hands-on workshop. Learn about terms and concepts
+ucd_advanced_gis.pdf,ucd_advanced_gis.png,"Advanced GIS: Productivity, Geoprocessing and Analysis",UC Davis,12/13/2024,,gis,,,True,course,29,https://cpe.ucdavis.edu/section/advanced-gis-productivity-geoprocessing-and-analysis-0,"Increase your understanding of available tools in ArcGIS for many types of spatial analyses, and understand how to choose the appropriate set of tools for different situations. Gain experience with a variety of geoprocessing tools in ArcGIS, discover better work routines and learn how to improve your workflow using ModelBuilder. Review important topics such as projections and editing, and explore many overlooked but useful tools that make life easier and save time and effort, including many advanced editing tools and map topology. You will also learn how to create map books using data-driven pages and ModelBuilder effectively for streamlining analyses and creating an easily modifiable interface for spatial analysis steps that are repeated many times.
+"
+ucd_gis_database_design.pdf,ucd_gis_database_design.png,GIS Database Design,UC Davis,06/06/2025,,gis,,,True,course,30,https://cpe.ucdavis.edu/section/gis-database-design,"Review industry-standard and emerging data design technologies for today's natural resource and land use planning. Learn to identify poor data design characteristics, convert logical data definitions and relationships to physical data design, prepare a plan for efficient data loading and manage quality assurance. Analyze real-world examples, including green site selection, government service delivery and sustainability projects. Discuss tabular, spatial, document, image and other types of data formats, as well as new challenges in integrating data of different sources, qualities, scales and complexities. Examine prevailing application development methodologies, such as:
+
+* Interpreting and documenting business requirements
+* Modeling data relationships
+* Database language options
+* Data population
+* Database administration
+
+Participants will propose, design and populate a database of their choice using spatial and other forms of data.
+
+This course is intended for professionals who desire to include GIS as a tool in land use and resource planning efforts, and will also be beneficial to anyone with a strong desire to incorporate GIS database design and maintenance technology in a systematic and comprehensive manner. The course is directed at those who have a working knowledge of ArcGIS; it is highly recommended that students have experience using ArcGIS or take Introduction to Geographic Information Systems prior to undertaking this course.
+
+[https://cpe.ucdavis.edu/section/gis-database-design](https://cpe.ucdavis.edu/section/gis-database-design){:target=""_blank""}
+"
+ucd_geographic_information_systems.pdf,ucd_geographic_information_systems.png,Geographic Information Systems (GIS) Specialization,UC Davis,06/05/2024,https://www.coursera.org/specializations/gis#courses,gis,,,True,certificate,31,https://www.coursera.org/specializations/gis#courses,"Knowledge of Geographic Information Systems (GIS) is an increasingly sought after skill in industries from agriculture to public health. This Specialization, offered in partnership with ArcGIS developer Esri, will teach the skills you need to successfully use GIS software in a professional setting. You will learn how to analyze your spatial data, use cartography techniques to communicate your results in maps, and collaborate with peers in GIS and GIS-dependent fields.
+
+Applied Learning Project
+
+Learners will work through the various course projects to gain experience and skills related to geographic information systems. Each course builds on the knowledge of the previous and the final course provides you a survey of the various industries GIS is being used. "
+ucd_fundamentals_of_gis.pdf,ucd_fundamentals_of_gis.png,Fundamentals of GIS,UC Davis,03/24/2022,https://www.coursera.org/account/accomplishments/verify/38J6QKKL8BDX,gis,,,True,course,32,https://www.coursera.org/learn/gis#modules,"Explore the world of spatial analysis and cartography with geographic information systems (GIS). In this class you will learn the basics of the industry’s leading software tool, ArcGIS, during four week-long modules:
+
+Week 1: Learn how GIS grew from paper maps to the globally integrated electronic software packages of today. You will install ArcGIS on your computer and learn how to use online help to answer technical questions.
+
+Week 2: Open up ArcGIS and explore data using ArcMap. Learn the foundational concepts of GIS, how to analyze data, and make your first map.
+
+Week 3: Make your own maps! Symbolize data and create an eye-catching final product.
+
+Week 4: Share your data and maps and learn to store and organize your data."
+ucd_gis_data_formats_design_and_quality.pdf,ucd_gis_data_formats_design_and_quality.png,GIS Data Formats Design and Quality,UC Davis,03/28/2022,https://www.coursera.org/account/accomplishments/verify/LC8J6EWFGJDM,gis,,,True,course,33,https://www.coursera.org/learn/gis-data#modules,"In this course, the second in the Geographic Information Systems (GIS) Specialization, you will go in-depth with common data types (such as raster and vector data), structures, quality and storage during four week-long modules:
+
+Week 1: Learn about data models and formats, including a full understanding of vector data and raster concepts. You will also learn about the implications of a data’s scale and how to load layers from web services.
+
+Week 2: Create a vector data model by using vector attribute tables, writing query strings, defining queries, and adding and calculating fields. You'll also learn how to create new data through the process of digitizing and you'll use the built-in Editor tools in ArcGIS.
+
+Week 3: Learn about common data storage mechanisms within GIS, including geodatabases and shapefiles. Learn how to choose between them for your projects and how to optimize them for speed and size. You'll also work with rasters for the first time, using digital elevation models and creating slope and distance analysis products.
+
+Week 4: Explore datasets and assess them for quality and uncertainty.  You will also learn how to bring your maps and data to the Internet and create web maps quickly with ArcGIS Online."
+ucd_imagery_automation_and_application.pdf,ucd_imagery_automation_and_application.png,Imagery Automation and Applications,UC Davis,04/20/2022,https://www.coursera.org/account/accomplishments/verify/NZ36C3DH8ZXQ,gis,,,True,course,34,https://www.coursera.org/learn/gis-applications#modules,"Using the knowledge you’ve learned about ArcGIS, complete technical tasks such raster calculations and suitability analysis. In this class you will become comfortable with spatial analysis and applications within GIS during four week-long modules:
+
+Week 1: You'll learn all about remotely sensed and satellite imagery, and be introduced to the electromagnetic spectrum. At the end of this week, you'll be able to find and download satellite imagery online and use it for two common types of analysis: NDVI and trained classification.
+
+Week 2: You'll learn how to use ModelBuilder to create large processing workflows that use parameters, preconditions, variables, and a new set of tools. We'll also explore a few topics that we don't really have time to discuss in detail, but might whet your appetite for future learning in other avenues: geocoding, time-enabled data, spatial statistics, and ArcGIS Pro.
+
+Week 3: In week three, we'll make and use digital elevation models using some new, specific tools such as the cut fill tool, hillshades, viewsheds and more. We'll also go through a few common algorithms including a very important one: the suitability analysis.
+
+Week 4: We'll begin the final week by talking about a few spatial analyst tools we haven't yet touched on in the specialization: Region Group to make our own zones, Focal Statistics to smooth a hillshade, Reclassify to change values, and Point Density to create a density surface. Finally, we'll wrap up by talking about a few more things that you might want to explore more as you start working on learning about GIS topics on your own."
+ucd_geospatial_and_environmental_analysis.pdf,ucd_geospatial_and_environmental_analysis.png,Geospatial and Environmental Analysis,UC Davis,04/03/2022,https://www.coursera.org/account/accomplishments/verify/VJD97YS452PQ,gis,,,True,course,35,https://www.coursera.org/learn/spatial-analysis#modules,"Apply your GIS knowledge in this course on geospatial analysis, focusing on analysis tools, 3D data, working with rasters, projections, and environment variables. Through all four weeks of this course, we'll work through a project together - something unique to this course - from project conception, through data retrieval, initial data management and processing, and finally to our analysis products.
+
+In this class you will learn the fundamentals of geospatial and environmental analysis during four week-long modules:
+
+Week 1: Tour ArcToolbox and learn how to use common geospatial analysis tools built into ArcGIS.
+
+Week 2: Gain a working understanding of raster data models: symbolize, reproject, overlay, and assess rasters. Take a detour into 3D data models, and interpolation of observations into 3D surfaces and rasters.
+
+Week 3: Go in-depth on projections and coordinate systems, which are foundational to all GIS. Learn how to use environment variables to constrain your analyses and get better quality data products.
+
+Week 4: Expand your knowledge of symbology. Learn how to visually display your data by classifying it in logical groupings and then symbolizing it on your map."
+ucd_geospatial_analysis_with_arcgis.pdf,ucd_geospatial_analysis_with_arcgis.png,Geospatial Analysis with ArcGIS,UC Davis,06/04/2024,https://www.coursera.org/account/accomplishments/verify/EDTZM4BGPLRG,gis,,,True,course,36,https://www.coursera.org/learn/geospatial-analysis#modules,"In this class you will learn the fundamentals of geospatial and environmental analysis during four week-long modules:
+
+Week 1: How to represent spatial data and analyze spatial relationships using ArcGIS Pro.
+
+Week 2: Conduct Network-Based Analysis.
+
+Week 3: Demonstrate Heatmaps and Hotspot Analysis in ArcGIS Pro.
+
+Week 4: Expand your knowledge of data storytelling. Learn how to visually display your data and sharing your maps in ArcGIS Online."
+ucd_gis_applications_across_industries.pdf,ucd_gis_applications_across_industries.png,GIS Applications Across Industries,UC Davis,06/05/2024,https://www.coursera.org/account/accomplishments/verify/SNPERBUS3SAG,gis,,,True,course,37,https://www.coursera.org/specializations/gis-mapping-spatial-analysis#courses,"Geographic Information Systems (GIS) is becoming an essential business skill across a variety of different disciplines. In this course, you will explore how GIS skills are commonly applied and used in a variety of industries focusing specifically on: environmental studies, public health, emergency management, and business development. You will be empowered to conduct GIS-based analyses that are commonly used in these areas and benefit from how each industry uses GIS to tackle common analysis needs. Additionally, you will work through a series of hands-on exercises that will improve your knowledge of the advanced analysis capabilities of ArcGIS Pro."
+uot_gis_mapping_and_spatial_analysis.pdf,uot_gis_mapping_and_spatial_analysis.png,GIS Mapping and Spatial Analysis Specialization,University of Toronto,03/25/2022,https://www.coursera.org/account/accomplishments/specialization/PR38ZQZCXTFE,gis,,,True,certificate,38,https://www.coursera.org/specializations/gis-mapping-spatial-analysis#courses,"This Specialization is for those new to mapping and GIS, as well as anyone looking to gain a better understanding of how it all works and why. You will learn practical skills that can be applied to your own work using cutting-edge software created by Esri Inc., the world's leading GIS company and our industry partner."
+uot_introduction_to_gis_mapping.pdf,uot_introduction_to_gis_mapping.png,Introduction to GIS Mapping,University of Toronto,01/20/2022,https://www.coursera.org/account/accomplishments/verify/YSS3UQ85P7HU,gis,,,True,course,39,https://www.coursera.org/learn/introduction-gis-mapping#modules,"Get started learning about the fascinating and useful world of geographic information systems (GIS)! In this first course of the specialization GIS, Mapping, and Spatial Analysis, you'll learn about what a GIS is, how to get started with the software yourself, how things we find in the real world can be represented on a map, how we record locations using coordinates, and how we can make a two-dimensional map from a three-dimensional Earth. In the course project, you will create your own GIS data by tracing geographic features from a satellite image for a location and theme of your choice. This course will give you a strong foundation in mapping and GIS that will give you the understanding you need to start working with GIS, and to succeed in the other courses in this specialization.
+
+This course is for anyone who wants to learn about mapping and GIS. You don't have to have any previous experience - just your curiosity! The course includes both practical software training and explanations of the concepts you need to know to make informed decisions as you start your journey to becoming a GIS analyst."
+uot_gis_data_acquision_and_map_design.pdf,uot_gis_data_acquision_and_map_design.png,Data Acquisition and Map Design,University of Toronto,01/26/2022,https://www.coursera.org/account/accomplishments/verify/EAK6QQ88KA5R,gis,,,True,course,40,https://www.coursera.org/learn/gis-data-acquisition-map-design#modules,"In this course, you will learn how to find GIS data for your own projects, and how to create a well-designed map that effectively communicates your message. The first section focuses on the basic building blocks of GIS data, so that you know what types of GIS files exist, and the implications of choosing one type over another. Next, we'll discuss metadata (which is information about a data set) so you know how to evaluate a data set before you decide to use it, as well as preparing data by merging and clipping files as needed. We'll then talk about how to take non-GIS data, such as a list of addresses, and convert it into ""mappable"" data using geocoding. Finally, you'll learn about how to take data that you have found and design a map using cartographic principles. In the course project, you will find your own data and create your own quantitative map."
+uot_spatial_analysis_and_satellite_imagery_in_a_gis.pdf,uot_spatial_analysis_and_satellite_imagery_in_a_gis.png,Spatial Analysis and Satellite Imagery in a GIS,University of Toronto,02/12/2022,https://www.coursera.org/account/accomplishments/verify/ZUFPRT4Y8EZU,gis,,,True,course,41,https://www.coursera.org/learn/spatial-analysis-satellite-imagery-in-a-gis#modules,"In this course, you will learn how to analyze map data using different data types and methods to answer geographic questions. First, you will learn how to filter a data set using different types of queries to find just the data you need to answer a particular question. Then, we will discuss simple yet powerful analysis methods that use vector data to find spatial relationships within and between data sets. In this section, you will also learn about how to use ModelBuilder, a simple but powerful tool for building analysis flowcharts that can then also be run as models. You will then learn how to find, understand, and use remotely sensed data such as satellite imagery, as a rich source of GIS data. You will then learn how to analyze raster data. Finally, you will complete your own project where you get to try out the new skills and tools you have learned about in this course."
+uot_gis_mapping_and_spatial_analysis_capstone.pdf,uot_gis_mapping_and_spatial_analysis_capstone.png,GIS Mapping and Spatial Analysis Capstone,University of Toronto,03/25/2022,https://www.coursera.org/account/accomplishments/verify/W6ZZSF57NLRC,gis,,,True,course,42,https://www.coursera.org/learn/gis-mapping-spatial-analysis-capstone#modules,"In this capstone course, you will apply everything you have learned by designing and then completing your own GIS project. You will plan out your project by writing a brief proposal that explains what you plan to do and why. You will then find data for a topic and location of your choice, and perform analysis and create maps that allow you to try out different tools and data sets. The results of your work will be assembled into an Esri story map, which is a web site with maps, images, text, and video. The goal is for you to have a finished product that you can share, and that demonstrates what you have learned."
+um_gis_for_sustainability.pdf,um_gis_for_sustainability.png,GIS: Geographic Information Systems for Sustainability,University of Michigan,12/22/2024,https://www.coursera.org/account/accomplishments/verify/Q0OFANKPWE3T,gis,,,True,course,43,https://www.coursera.org/learn/gis-geographic-information-systems-for-sustainability#modules,"The world is currently experiencing complex challenges in social, economic, and environmental sustainability. Geographic information systems (GIS) help us organize, analyze, and display large spatial datasets that reveal critical spatial and temporal patterns crucial for addressing these complex issues.
+
+“GIS: Geographic Information Systems for Sustainability” is designed for sustainability professionals seeking an introduction to GIS that is accessible, geospatial professionals beginning to delve into sustainability, and learners needing some exposure to GIS for their job. Through this course, you’ll learn fundamental GIS principles through the lens of the United Nations’ Sustainable Development Goals. You’ll engage with instructor-led lectures about how GIS can be applied to various aspects of sustainability. You’ll hear from sustainability professionals about the relevance of GIS in their own work and where they see GIS and sustainability tying together in the future. You’ll also gain technical GIS skills through hands-on exercises using real-world data and scenarios. By learning how to use GIS, you can guide your organization to use spatial analysis in sustainability practices that increase public awareness, empower communities, or help decision-makers engage diverse stakeholders."
+webmapping_with_javascript.pdf,webmapping_with_javascript.png,BayGeo's Web Mapping With JavaScript,University of San Francisco,12/13/2024,"https://badgr.com/public/assertions/8yp-v2sNQPqKN3eFv3ljCw"">badgr.com/public/assertions/8yp-v2sNQPqKN3eFv3ljCw","javascript,gis",,,True,course,152,https://www.usfca.edu/arts-sciences/programs/professional-certificates/baygeo-web-mapping-javascript,"Web mapping with JavaScript involves using JavaScript libraries and tools to create, display, and interact with maps on web platforms.
+
+In this certificate, students will learn how to acquire, create, and process geospatial data, then publish those data as interactive maps using cutting-edge JavaScript tools and web-based services. Key topics include Mapbox GL JS, Mapbox services, GeoJSON, TurfJS, and deploying web maps with GitHub.
+
+This hands-on certificate certificate empowers students to develop and publish custom web maps and perform geospatial processing using modern JavaScript approaches and tools. Students will walk away from the class having published a custom map to the web similar to this one."
+into_to_spatial_databases_with_postgis_and_qgis3.pdf,into_to_spatial_databases_with_postgis_and_qgis3.png,Introduction to Spatial Databases with PostGIS and QGIS 3,Udemy,08/14/2022,https://www.udemy.com/certificate/UC-3a2c25a6-418a-418d-8532-64142d1a603c/,"database,postgres,postgis,gis",,,True,course,150,https://www.udemy.com/course/introduction-to-spatial-databases-with-postgis-and-qgis/,"This course is intended to provide an introduction to spatial databases in general and PostGIS in particular to GIS professionals who are interested in expanding their skillset to multi-user enterprise level spatial databases. This course uses the latest (as of 2/18) versions of PostgreSQL (10.1), PostGIS (2.4), and QGIS (3.0). I believe it is the most current and thorough course on spatial databases available today. You will learn
+
+* What a spatial database is and why you would want to use one.
+* What SQL is, why you would want to use it, and how it can be applied to geospatial concepts.
+* How to install PostGIS locally for development purposes and how to access a production version via a network or the internet.
+* How to load your spatial data into PostGIS and access it from a variety of clients, especially QGIS
+* The basics of SQL for both spatial and non-spatial queries
+* How to validate data and control user access with the tools built-in to PostGIS
+* Optimizing your queries for the best performance
+* How to work with raster data in PostGIS
+* The basics of programming custom functions with PL/pgSQL
+* The basics of database administration to keep your database operating smoothly"
+automating_qgis3_with_python.pdf,automating_qgis3_with_python.png,Automating QGIS 3.xx with Python,Udemy,01/01/2023,https://www.udemy.com/certificate/UC-5a1f31d7-911b-4ef6-ba34-be5b1228ca07/,"gis,python",,,True,course,151,https://www.udemy.com/course/automating-qgis-3xx-with-python/,"Take your QGIS skills to the next level by learning how to write python scripts to automate QGIS.  This course was created using QGIS 3.8 and the material should be valid for many years to come as there are not expected to be major changes to the PyQGIS package after the recent change to QGIS 3.0.  All you need for this course is a basic understanding of QGIS and Python. We will be using the editor included with QGIS to write scripts.
+
+Python scripts are much simpler than a full-blown QGIS plugín and the material in this course is focused on the GIS professional who is looking to use python scripts to improve their productivity, rather than the professional programmer. In my work, I have found this knowledge to be indispensable and I can't imagine working in GIS without having some level of scripting ability.  I believe that by the end of this course you will feel the same way."
+mapping_urban_greenspaces.pdf,mapping_urban_greenspaces.png,Mapping Urban Greenspaces,Coursera Project Network,12/15/2024,https://www.coursera.org/account/accomplishments/verify/56P60OTIEH2D,gis,,,True,course,45,https://www.coursera.org/projects/arcgis-for-beginners-mapping-urban-green-spaces#details,"Are you ready to explore the world of Geographic Information Systems (GIS) and learn how to transform and visualize data? Join us in this beginner-friendly guided project where working with urban parks data and master the essential function of table joins in GIS.
+
+In this project, you will embark on a journey to understand, analyze, and visualize geospatial information effectively. The project is inspired by the scenario of the imaginary nonprofit, A Greener Town Today, and its initiative to promote urban green spaces. You will become proficient in navigating databases, importing geospatial data, and performing table joins to combine different datasets. Through the project, you will also learn to change map symbology and create user-friendly visuals for stakeholders.
+
+This project is designed for GIS beginners eager to learn how to transform data and visualize it through the essential function of table joins. To successfully complete this project, you will need a fully-configured ArcGIS account and some basic understanding of GIS, such as examples of uses and industry applications. Whether you are a student, a professional in urban planning, or simply passionate about environmental advocacy, this guided project will equip you with practical skills and knowledge to make a meaningful geospatial impact.
+
+Join us on this journey to unlock GIS's potential and contribute to creating a greener, more sustainable urban environment. Let's explore the power of green spaces together!"
+yu_spatial_data_science_and_applications.pdf,yu_spatial_data_science_and_applications.png,Spatial Data Science and Applications,Yonsei University,08/21/2022,https://www.coursera.org/account/accomplishments/verify/49HFPX753NW2,gis,,,True,course,46,https://www.coursera.org/learn/spatial-data-science#modules,"Spatial (map) is considered as a core infrastructure of modern IT world, which is substantiated by business transactions of major IT companies such as Apple, Google, Microsoft, Amazon, Intel, and Uber, and even motor companies such as Audi, BMW, and Mercedes. Consequently, they are bound to hire more and more spatial data scientists.  Based on such business trend, this course is designed to present a firm understanding of spatial data science to the learners, who would have a basic knowledge of data science and data analysis, and eventually to make their expertise differentiated from other nominal data scientists and data analysts.  Additionally, this course could make learners realize the value of spatial big data and the power of open source software's to deal with spatial data science problems.
+
+This course will start with defining spatial data science and answering why spatial is special from three different perspectives - business, technology, and data in the first week.  In the second week, four disciplines related to spatial data science - GIS, DBMS, Data Analytics, and Big Data Systems, and the related open source software's - QGIS, PostgreSQL, PostGIS, R, and Hadoop tools are introduced together.  During the third, fourth, and fifth weeks, you will learn the four disciplines one by one from the principle to applications.  In the final week, five real world problems and the corresponding solutions are presented with step-by-step procedures in environment of open source software."
+cartography_certificate_05202024.pdf,cartography_certificate_05202024.png,Cartography (2024),Esri Training,05/20/2024,,"arcgis_pro,cartography",,,True,course,47,https://www.esri.com/training/catalog/596e584bb826875993ba4ebf/cartography/,"Learn from experts and make beautiful maps using ArcGIS Pro.
+
+Once, only cartographers made maps. Today, anyone can. Still, cartographers can teach people to make better maps, just as chefs can show people how to prepare better meals. With coaching from accomplished cartographers and practical, hands-on exercises, you'll become a smarter mapmaker, ready to go beyond the defaults and produce engaging maps that communicate with impact.
+
+
+### SECTION 1  •  Let’s Get Mapping
+
+Consider the value and purpose of cartography as science and art. Get set up with ArcGIS® Pro, ArcGIS Online, and exercise data. Use ArcGIS Pro to design a small-format, multiscale topographic map, using generalization tools and scale-dependent symbology. Use map layouts for composition. Add contextual detail, insets, legends, and elements.
+
+
+### SECTION 2  •  Maths for Map Makers
+
+Explore how coordinate systems, transformations, and projections affect your map’s message. Deal with the effects of projections and data classification methods on thematic maps. Design and publish a custom basemap in a nonstandard projection to support thematic data. Build attribute-driven symbology. Publish a multiscale web map and app.
+
+
+### SECTION 3  •  The Language of Graphics
+
+See how generalization, symbology, and color affect your story. Explore generalization techniques that reduce feature complexity for smaller-scale displays. Create a variety of thematic maps, including choropleth, proportional symbol, value-by alpha, and multivariate maps. Change symbology and use transparency in creative ways.
+
+
+### SECTION 4  •  Labels and Composition
+
+Learn basic typography concepts, label placement, and map composition. Set up a palette of label styles for different features and explore options for positioning them around other map details. Create a map layout that includes a range of elements. Use ArcGIS expressions to define labels in innovative ways.
+
+
+### SECTION 5  •  Going 3D
+
+Consider how to best use the z dimension to represent data for both reference and thematic maps. Use 3D symbology and develop a sense of when 3D adds value to your map. Build 3D scenes and vary the way features are represented using attributes and dynamic symbology.
+
+### SECTION 6  •  Mapping Movement and Change
+
+Use the time-aware and animation controls in ArcGIS Pro to design maps that show temporal change. Direct an animated movie to map change; add captions and dynamic overlay information; and publish in a range of popular, shareable formats. Create a display of small multiples for an infographic poster.
+"
+performing_analysis_using_arcgis_api_for_python_certificate_05082024.pdf,performing_analysis_using_arcgis_api_for_python_certificate_05082024.png,Performing Analysis Using ArcGIS API for Python,Esri Training,05/08/2024,,"arcgis,python",,,True,course,48,https://www.esri.com/training/catalog/5c476edd036a82744a781cec/performing-analysis-using-arcgis-api-for-python/,Learn how to use ArcGIS API for Python to discover patterns in your data. This course introduces the analysis capabilities available in the API and demonstrates the process for integrating them into your apps.
+accessing_data_in_a_portal_using_arcgis_api_for_python_certificate_05032024.pdf,accessing_data_in_a_portal_using_arcgis_api_for_python_certificate_05032024.png,Accessing Data in a Portal Using ArcGIS API for Python,Esri Training,05/03/2024,,"arcgis,python",,,True,course,49,,
+introduction_to_arcgis_api_for_python_certificate_04272024.pdf,introduction_to_arcgis_api_for_python_certificate_04272024.png,Introduction to ArcGIS API for Python,Esri Training,04/27/2024,,"arcgis,python",,,True,course,50,,
+data_science_workflows_using_arcgis_notebooks_certificate_04182024.pdf,data_science_workflows_using_arcgis_notebooks_certificate_04182024.png,Data Science Workflows Using ArcGIS Notebooks,Esri Training,04/18/2024,,"arcgis,datascience",,,True,course,51,,
+arcgis_notebooks_basics_certificate_04122024.pdf,arcgis_notebooks_basics_certificate_04122024.png,ArcGIS Notebooks (2024),Esri Training,04/12/2024,,"arcgis,datascience",,,True,course,52,,
+introduction_to_arcgis_arcade_certificate_03312024.pdf,introduction_to_arcgis_arcade_certificate_03312024.png,Introduction to ArcGIS Arcade,Esri Training,03/31/2024,,"arcgis,arcade",,,True,course,53,,
+python_scripting_for_geoprocessing_workflows_certificate_03212024.pdf,python_scripting_for_geoprocessing_workflows_certificate_03212024.png,Python Scripting for Geoprocessing Workflows,Esri Training,03/21/2024,,"arcgis_pro,python",,,True,course,54,,
+arcgis_survey123_basics_certificate_03022024.pdf,arcgis_survey123_basics_certificate_03022024.png,ArcGIS Survey123 Basics,Esri Training,03/02/2024,,"arcgis,survey123",,,True,course,55,,
+python_scripting_modifying_page_layouts_certificate_03022024.pdf,python_scripting_modifying_page_layouts_certificate_03022024.png,Python Scripting Modifying Page Layouts,Esri Training,03/02/2024,,"arcgis,python",,,True,course,56,,
+python_scripting_repairing_data_sources_certificate_02242024.pdf,python_scripting_repairing_data_sources_certificate_02242024.png,Python Scripting Repairing Data Sources,Esri Training,02/24/2024,,"arcgis_pro,python",,,True,course,57,,
+python_for_everyone_certificate_02102024.pdf,python_for_everyone_certificate_02102024.png,Python for Everyone,Esri Training,02/10/2024,,"arcgis_pro,python",,,True,course,58,,
+mapping_clusters_optimized_hot_spot_and_optimized_outlier_analysis_certificate_11262023.pdf,mapping_clusters_optimized_hot_spot_and_optimized_outlier_analysis_certificate_11262023.png,Mapping Clusters Optimized Hot Spot and Optimized Outlier Analysis,Esri Training,11/26/2023,,arcgis_pro,,,True,course,59,,
+mapping_clusters_hot_spot_and_cluster_and_outlier_analysis_certificate_11182023.pdf,mapping_clusters_hot_spot_and_cluster_and_outlier_analysis_certificate_11182023.png,Mapping Clusters Hot Spot and Cluster and Outlier Analysis,Esri Training,11/18/2023,,arcgis_pro,,,True,course,60,,
+classifying_objects_using_deep_learning_in_arcgis_pro_certificate_11122023.pdf,classifying_objects_using_deep_learning_in_arcgis_pro_certificate_11122023.png,Classifying Objects Using Deep Learning in ArcGIS Pro,Esri Training,11/12/2023,,"arcgis_pro,ml",,,True,course,61,,
+working_with_charts_and_reports_in_arcgis_pro_certificate_09082023.pdf,working_with_charts_and_reports_in_arcgis_pro_certificate_09082023.png,Working with Charts and Reports in ArcGIS Pro,Esri Training,09/08/2023,,arcgis_pro,,,True,course,62,,
+introduction_to_distance_analysis_certificate_09032023.pdf,introduction_to_distance_analysis_certificate_09032023.png,Introduction to Distance Analysis,Esri Training,09/03/2023,,"arcgis_pro,ml",,,True,course,63,,
+space-time_analysis_time-series_clustering_certificate_09032023.pdf,space-time_analysis_time-series_clustering_certificate_09032023.png,Space-Time Analysis Time-Series Clustering,Esri Training,09/03/2023,,arcgis_pro,,,True,course,64,,
+introduction_to_overlay_analysis_certificate_09022023.pdf,introduction_to_overlay_analysis_certificate_09022023.png,Introduction to Overlay Analysis,Esri Training,09/02/2023,,arcgis_pro,,,True,course,65,,
+introduction_to_proximity_analysis_certificate_09022023.pdf,introduction_to_proximity_analysis_certificate_09022023.png,Introduction to Proximity Analysis,Esri Training,09/02/2023,,arcgis_pro,,,True,course,66,,
+calculating_density_using_arcgis_certificate_09022023.pdf,calculating_density_using_arcgis_certificate_09022023.png,Calculating Density Using ArcGIS,Esri Training,09/02/2023,,arcgis_pro,,,True,course,67,,
+understanding_spatial_relationships_certificate_09012023.pdf,understanding_spatial_relationships_certificate_09012023.png,Understanding Spatial Relationships,Esri Training,09/01/2023,,arcgis_pro,,,True,course,68,,
+summarizing_data_by_spatial_relationships_certificate_09012023.pdf,summarizing_data_by_spatial_relationships_certificate_09012023.png,Summarizing Data by Spatial Relationships,Esri Training,09/01/2023,,arcgis_pro,,,True,course,69,,
+arcgis_pro_basics_certificate_09012023.pdf,arcgis_pro_basics_certificate_09012023.png,ArcGIS Pro  (2023),Esri Training,09/01/2023,,arcgis_pro,,,True,course,70,,
+getting_started_with_geoprocessing_certificate_09012023.pdf,getting_started_with_geoprocessing_certificate_09012023.png,Getting Started with Geoprocessing,Esri Training,09/01/2023,,arcgis_pro,,,True,course,71,,
+getting_started_with_spatial_analysis_certificate_09012023.pdf,getting_started_with_spatial_analysis_certificate_09012023.png,Getting Started with Spatial Analysis,Esri Training,09/01/2023,,arcgis_pro,,,True,course,72,,
+managing_data_quality_using_arcgis_data_reviewer_certificate_05092023.pdf,managing_data_quality_using_arcgis_data_reviewer_certificate_05092023.png,Managing Data Quality Using ArcGIS Data Reviewer,Esri Training,05/09/2023,,arcgis_pro,,,True,course,73,,
+managing_raster_data_using_arcgis_certificate_04212023.pdf,managing_raster_data_using_arcgis_certificate_04212023.png,Managing Raster Data Using ArcGIS,Esri Training,04/21/2023,,arcgis_pro,,,True,course,74,,
+editing_basics_in_arcgis_pro_certificate_04092023.pdf,editing_basics_in_arcgis_pro_certificate_04092023.png,Editing Basics in ArcGIS Pro,Esri Training,04/09/2023,,arcgis_pro,,,True,course,75,,
+preparing_for_network_analysis_certificate_03102023.pdf,preparing_for_network_analysis_certificate_03102023.png,Preparing for Network Analysis,Esri Training,03/10/2023,,arcgis_pro,,,True,course,76,,
+getting_started_with_data_management_certificate_03042023.pdf,getting_started_with_data_management_certificate_03042023.png,Getting Started with Data Management,Esri Training,03/04/2023,,arcgis_pro,,,True,course,77,,
+introduction_to_spatial_data_certificate_02262023.pdf,introduction_to_spatial_data_certificate_02262023.png,Introduction to Spatial Data,Esri Training,02/26/2023,,arcgis_pro,,,True,course,78,,
+basics_of_geographic_coordinate_systems_certificate_02182023.pdf,basics_of_geographic_coordinate_systems_certificate_02182023.png,Basics of Geographic Coordinate Systems,Esri Training,02/18/2023,,arcgis_pro,,,True,course,80,,
+getting_started_with_the_geodatabase_certificate_02102023.pdf,getting_started_with_the_geodatabase_certificate_02102023.png,Getting Started with the Geodatabase,Esri Training,02/10/2023,,"arcgis,geodatabase,database",,,True,course,81,,
+applying_the_racial_equity_workflow_using_arcgis_certificate_11282022.pdf,applying_the_racial_equity_workflow_using_arcgis_certificate_11282022.png,Applying the Racial Equity Workflow Using ArcGIS,Esri Training,11/28/2022,,arcgis_pro,,,True,course,82,,
+generating_service_areas_using_arcgis_pro_certificate_11272022.pdf,generating_service_areas_using_arcgis_pro_certificate_11272022.png,Generating Service Areas Using ArcGIS Pro,Esri Training,11/27/2022,,arcgis_pro,,,True,course,83,,
+mapping_addresses_and_places_certificate_11232022.pdf,mapping_addresses_and_places_certificate_11232022.png,Mapping Addresses and Places,Esri Training,11/23/2022,,arcgis_pro,,,True,course,84,,
+spatial_data_science_the_new_frontier_in_analytics_certificate_11222022.pdf,spatial_data_science_the_new_frontier_in_analytics_certificate_11222022.png,Spatial Data Science The New Frontier in Analytics,Esri Training,11/22/2022,,"arcgis,datascience",,,True,course,85,,
+creating_a_web_map_in_arcgis_pro_certificate_11142022.pdf,creating_a_web_map_in_arcgis_pro_certificate_11142022.png,Creating a Web Map in ArcGIS Pro,Esri Training,11/14/2022,,"arcgis_pro,arcgis_online",,,True,course,86,,
+performing_accuracy_assessment_for_image_classification_certificate_11062022.pdf,performing_accuracy_assessment_for_image_classification_certificate_11062022.png,Performing Accuracy Assessment for Image Classification,Esri Training,11/06/2022,,arcgis_pro,,,True,course,87,,
+introduction_to_3d_data_certificate_10312022.pdf,introduction_to_3d_data_certificate_10312022.png,Introduction to 3D Data,Esri Training,10/31/2022,,arcgis_pro,,,True,course,88,,
+displaying_coordinate_data_on_a_map_certificate_10242022.pdf,displaying_coordinate_data_on_a_map_certificate_10242022.png,Displaying Coordinate Data on a Map,Esri Training,10/24/2022,,arcgis_pro,,,True,course,89,,
+creating_and_sharing_animation_in_arcgis_pro_certificate_10182022.pdf,creating_and_sharing_animation_in_arcgis_pro_certificate_10182022.png,Creating and Sharing Animation in ArcGIS Pro,Esri Training,10/18/2022,,arcgis_pro,,,True,course,90,,
+managing_map_layers_in_arcgis_pro_certificate_10152022.pdf,managing_map_layers_in_arcgis_pro_certificate_10152022.png,Managing Map Layers in ArcGIS Pro,Esri Training,10/15/2022,,arcgis_pro,,,True,course,94,,
+introduction_to_image_classification_certificate_09272022.pdf,introduction_to_image_classification_certificate_09272022.png,Introduction to Image Classification,Esri Training,09/27/2022,,"arcgis_pro,ml",,,True,course,96,,
+symbolizing_map_layers_certificate_09262022.pdf,symbolizing_map_layers_certificate_09262022.png,Symbolizing Map Layers,Esri Training,09/26/2022,,arcgis_pro,,,True,course,97,,
+mapping_locations_from_unstructured_text_certificate_09192022.pdf,mapping_locations_from_unstructured_text_certificate_09192022.png,Mapping Locations from Unstructured Text,Esri Training,09/19/2022,,arcgis_pro,,,True,course,98,,
+creating_a_map_layout_certificate_09042022.pdf,creating_a_map_layout_certificate_09042022.png,Creating a Map Layout,Esri Training,09/04/2022,,arcgis_pro,,,True,course,99,,
+arcgis_pro_basics_certificate_09032022.pdf,arcgis_pro_basics_certificate_09032022.png,ArcGIS Pro Basics (2022),Esri Training,09/03/2022,,arcgis_pro,,,True,course,100,,
+getting_started_with_mapping_and_visualization_certificate_09012022.pdf,getting_started_with_mapping_and_visualization_certificate_09012022.png,Getting Started with Mapping and Visualization,Esri Training,09/01/2022,,arcgis_pro,,,True,course,101,,
+imagery_in_action_certificate_06012022.pdf,imagery_in_action_certificate_06012022.png,Imagery in Action,Esri Training,06/01/2022,,arcgis_pro,,,True,course,102,,
+going_places_with_spatial_analysis_certificate_05242022.pdf,going_places_with_spatial_analysis_certificate_05242022.png,Going Places with Spatial Analysis,Esri Training,05/24/2022,,"arcgis,cartography",,,True,course,103,https://www.esri.com/training/catalog/57660f19bb54adb30c9454b0/going-places-with-spatial-analysis/,"This course is for people who know something about data analysis and want to learn how the special capabilities of spatial data analysis provide deeper understanding. You'll get free access to the full analytical capabilities of ArcGIS Online, Esri's cloud-based mapping and analytics platform.
+
+### SECTION 1  • Geography Matters
+
+This lesson introduces spatial analysis and all the different ways that location affects our lives. It identifies the tools and data used to explore spatial questions and problems.
+
+
+### SECTION 2  • Understanding and Comparing Places
+
+Different locations host different physical and cultural features and populations. Locations can be described and summarized with attributes and can be compared to one another.
+
+
+### SECTION 3  • Determining How Places are Related
+
+How you arrange your data affects how you understand locations. Choosing the appropriate scale and combining meaningful data sets can help reveal relationships.
+
+
+### SECTION 4  • Finding the Best Locations and Paths
+
+Topology defines spatial relationships between features. Querying these relationships along with specific attributes helps find optimal locations for activities, structures and routes.
+
+
+### SECTION 5  • Detecting and Quantifying Patterns
+
+Information on the distribution patterns of a phenomenon can guide policies that encourage positive activities and deter negative ones.
+
+### SECTION 6  • Making Predictions
+
+Models help predict the situation in locations where data is not available and help analysts understand the underlying causes of patterns."
+cartography_certificate_03282022.pdf,cartography_certificate_03282022.png,Cartography (2022),Esri Training,03/28/2022,,"arcgis_pro,cartography",,,True,course,104,https://www.esri.com/training/catalog/596e584bb826875993ba4ebf/cartography/,"Learn from experts and make beautiful maps using ArcGIS Pro.
+
+Once, only cartographers made maps. Today, anyone can. Still, cartographers can teach people to make better maps, just as chefs can show people how to prepare better meals. With coaching from accomplished cartographers and practical, hands-on exercises, you'll become a smarter mapmaker, ready to go beyond the defaults and produce engaging maps that communicate with impact.
+
+
+### SECTION 1  •  Let’s Get Mapping
+
+Consider the value and purpose of cartography as science and art. Get set up with ArcGIS® Pro, ArcGIS Online, and exercise data. Use ArcGIS Pro to design a small-format, multiscale topographic map, using generalization tools and scale-dependent symbology. Use map layouts for composition. Add contextual detail, insets, legends, and elements.
+
+
+### SECTION 2  •  Maths for Map Makers
+
+Explore how coordinate systems, transformations, and projections affect your map’s message. Deal with the effects of projections and data classification methods on thematic maps. Design and publish a custom basemap in a nonstandard projection to support thematic data. Build attribute-driven symbology. Publish a multiscale web map and app.
+
+
+### SECTION 3  •  The Language of Graphics
+
+See how generalization, symbology, and color affect your story. Explore generalization techniques that reduce feature complexity for smaller-scale displays. Create a variety of thematic maps, including choropleth, proportional symbol, value-by alpha, and multivariate maps. Change symbology and use transparency in creative ways.
+
+
+### SECTION 4  •  Labels and Composition
+
+Learn basic typography concepts, label placement, and map composition. Set up a palette of label styles for different features and explore options for positioning them around other map details. Create a map layout that includes a range of elements. Use ArcGIS expressions to define labels in innovative ways.
+
+
+### SECTION 5  •  Going 3D
+
+Consider how to best use the z dimension to represent data for both reference and thematic maps. Use 3D symbology and develop a sense of when 3D adds value to your map. Build 3D scenes and vary the way features are represented using attributes and dynamic symbology.
+
+### SECTION 6  •  Mapping Movement and Change
+
+Use the time-aware and animation controls in ArcGIS Pro to design maps that show temporal change. Direct an animated movie to map change; add captions and dynamic overlay information; and publish in a range of popular, shareable formats. Create a display of small multiples for an infographic poster.
+"
+building_geoprocessing_models_using_arcgis_pro_certificate_05012021.pdf,building_geoprocessing_models_using_arcgis_pro_certificate_05012021.png,Building Geoprocessing Models Using ArcGIS Pro,Esri Training,05/01/2021,,arcgis_pro,,,True,course,105,,
+cartography_certificate_03122021.pdf,cartography_certificate_03122021.png,Cartography (2021),Esri Training,03/12/2021,,"arcgis,cartography",,,True,course,106,https://www.esri.com/training/catalog/596e584bb826875993ba4ebf/cartography/,"Learn from experts and make beautiful maps using ArcGIS Pro.
+
+Once, only cartographers made maps. Today, anyone can. Still, cartographers can teach people to make better maps, just as chefs can show people how to prepare better meals. With coaching from accomplished cartographers and practical, hands-on exercises, you'll become a smarter mapmaker, ready to go beyond the defaults and produce engaging maps that communicate with impact.
+
+
+### SECTION 1  •  Let’s Get Mapping
+
+Consider the value and purpose of cartography as science and art. Get set up with ArcGIS® Pro, ArcGIS Online, and exercise data. Use ArcGIS Pro to design a small-format, multiscale topographic map, using generalization tools and scale-dependent symbology. Use map layouts for composition. Add contextual detail, insets, legends, and elements.
+
+
+### SECTION 2  •  Maths for Map Makers
+
+Explore how coordinate systems, transformations, and projections affect your map’s message. Deal with the effects of projections and data classification methods on thematic maps. Design and publish a custom basemap in a nonstandard projection to support thematic data. Build attribute-driven symbology. Publish a multiscale web map and app.
+
+
+### SECTION 3  •  The Language of Graphics
+
+See how generalization, symbology, and color affect your story. Explore generalization techniques that reduce feature complexity for smaller-scale displays. Create a variety of thematic maps, including choropleth, proportional symbol, value-by alpha, and multivariate maps. Change symbology and use transparency in creative ways.
+
+
+### SECTION 4  •  Labels and Composition
+
+Learn basic typography concepts, label placement, and map composition. Set up a palette of label styles for different features and explore options for positioning them around other map details. Create a map layout that includes a range of elements. Use ArcGIS expressions to define labels in innovative ways.
+
+
+### SECTION 5  •  Going 3D
+
+Consider how to best use the z dimension to represent data for both reference and thematic maps. Use 3D symbology and develop a sense of when 3D adds value to your map. Build 3D scenes and vary the way features are represented using attributes and dynamic symbology.
+
+### SECTION 6  •  Mapping Movement and Change
+
+Use the time-aware and animation controls in ArcGIS Pro to design maps that show temporal change. Direct an animated movie to map change; add captions and dynamic overlay information; and publish in a range of popular, shareable formats. Create a display of small multiples for an infographic poster.
+"
+performing_supervised_pixel-based_image_classification_certificate_02112021.pdf,performing_supervised_pixel-based_image_classification_certificate_02112021.png,Performing Supervised Pixel-Based Image Classification,Esri Training,02/11/2021,,"arcgis_pro,ml",,,True,course,107,,
+change_detection_using_imagery_certificate_02102021.pdf,change_detection_using_imagery_certificate_02102021.png,Change Detection Using Imagery,Esri Training,02/10/2021,,arcgis_pro,,,True,course,108,,
+processing_raster_data_using_arcgis_pro_certificate_02102021.pdf,processing_raster_data_using_arcgis_pro_certificate_02102021.png,Processing Raster Data Using ArcGIS Pro,Esri Training,02/10/2021,,arcgis_pro,,,True,course,109,,
+creating_optimized_routes_using_arcgis_pro_certificate_02032021.pdf,creating_optimized_routes_using_arcgis_pro_certificate_02032021.png,Creating Optimized Routes Using ArcGIS Pro,Esri Training,02/03/2021,,arcgis_pro,,,True,course,110,,
+arcgis_notebooks_basics_certificate_02022021.pdf,arcgis_notebooks_basics_certificate_02022021.png,ArcGIS Notebooks (2021),Esri Training,02/02/2021,,"arcgis_pro,python",,,True,course,111,,
+space-time_analysis_finding_temporal_trends_certificate_02022021.pdf,space-time_analysis_finding_temporal_trends_certificate_02022021.png,Space-Time Analysis Finding Temporal Trends,Esri Training,02/02/2021,,arcgis_pro,,,True,course,112,,
+querying_data_using_arcgis_pro_certificate_02022021.pdf,querying_data_using_arcgis_pro_certificate_02022021.png,Querying Data Using ArcGIS Pro,Esri Training,02/02/2021,,arcgis_pro,,,True,course,113,,
+managing_lidar_data_using_terrain_datasets_certificate_01312021.pdf,managing_lidar_data_using_terrain_datasets_certificate_01312021.png,Managing Lidar Data Using Terrain Datasets,Esri Training,01/31/2021,,arcgis_pro,,,True,course,114,,
+3d_visualization_using_arcgis_pro_certificate_01182021.pdf,3d_visualization_using_arcgis_pro_certificate_01182021.png,3D Visualization Using ArcGIS Pro,Esri Training,01/18/2021,,arcgis_pro,,,True,course,115,,
+getting_started_with_arcgis_pro_certificate_01082021.pdf,getting_started_with_arcgis_pro_certificate_01082021.png,Getting Started with ArcGIS Pro,Esri Training,01/08/2021,,arcgis_pro,,,True,course,116,,
+learning_arcgis_python_scripting_2018.pdf,learning_arcgis_python_scripting_2018.png,Learning ArcGIS Python Scripting (2018),LinkedIn,06/08/2022,https://www.linkedin.com/learning/certificates/2c32ec5e7d0d7bb0e62170d4a49da6ee5a7b966a12a73b8b18ae8e62fa7c1c6d?trk=share_certificate,"gis,python",,,True,course,14,https://www.linkedin.com/learning/learning-arcgis-python-scripting-21011315/,"Have you ever needed to find all the broken links in a set of map documents? Or convert units before loading map data? Python is the gateway for automating common GIS tasks. Are you ready to get up to speed? In this course, designed for experienced ArcGIS users, join instructor Jennifer Harrison—the founder of TeachMeGIS—as she shows you how to produce faster, deeper insights into your GIS data by adding Python scripting to ArcGIS.
+
+Start with an overview of the basics, including strings, variables, and conditional statements. Jennifer helps you get comfortable writing scripts in IDLE, the integrated development environment for Python. Explore the skills required for writing output to the screen, passing command-line arguments into scripts, using list functions to get to the ArcGIS objects, and reading from and writing to a log file. By the end of this course, you’ll also be prepared to attach your script to a tool in ArcGIS Pro and create help documentation for a script tool.
+"
+realworld_gis_2014.pdf,realworld_gis_2014.png,Real-World GIS (2014),LinkedIn,06/07/2022,https://www.linkedin.com/learning/certificates/09ec164f594bc0f325a60d67d7f2f5b6d383e32f93b012e9ee686b4c5e91e4a4?trk=share_certificate,gis,,,True,course,17,https://www.linkedin.com/learning/real-world-gis-22715766/,"Geographic information systems, or GIS, is a way to approach mapping and spacial analysis using a computer environment. Learning GIS requires training in cartography, database management, and spatial analysis. But once you've built a solid foundation in the basics, how do you approach GIS challenges in the real world? In this course, Dr. Jason VanHorn helps you master practical, real-world GIS scenarios. He shows you how to get GIS data; uses for GIS data; how to understand and master projections; how to collect GIS data in the field; and how to build online web maps and mapping applications using ArcGIS.com. Jason also provides a series of challenges and solutions you can use to build your own GIS project from scratch, and finishes with some practical advice on the tips on how you can land a GIS job—and the different types of GIS jobs that are out there. "
+foundations_of_geographic_information_systems_gis_2021.pdf,foundations_of_geographic_information_systems_gis_2021.png,Foundations of Geographic Information Systems (GIS) (2021),LinkedIn,05/30/2022,https://www.linkedin.com/learning/certificates/80afce2861c4cf7d493e78edee7ed7e23a8b667c7019500288d7293dc62f4d92?trk=share_certificate,gis,,,True,course,18,,
+arcgis_pro_essential_training_2022.pdf,arcgis_pro_essential_training_2022.png,ArcGIS Pro Essential Training (2022),LinkedIn,05/30/2022,https://www.linkedin.com/learning/certificates/5f393bb43a211c8b64c0fbd6194c29d894da53a061a1fcf8b1c958c3d435a45a?trk=share_certificate,gis,,,True,course,19,,
+fme_desktop_data_translation_for_aec.pdf,fme_desktop_data_translation_for_aec.png,FME Desktop: Data Translation for AEC,LinkedIn,03/22/2024,https://www.linkedin.com/learning/certificates/81348d3cbb7f25a5a601b2384f1626dfa07fbb480d59e58df63b385b0e1ca0d8?trk=share_certificate,gis,,,True,course,8,,
+modern_gis_geopandas_certification.pdf,modern_gis_geopandas_certification.png,GeoPandas Certification,Modern GIS,04/27/2025,https://moderngis.xyz/certificates/075daabdd0be20cc07d105357979d6b1/,"gis,python",,,True,course,176,https://moderngis.xyz/courses/geopandas-free-certification/,"Take your geospatial Python skills to the next level with this comprehensive course on Geopandas, one of the most foundational libraries for working with geospatial data in Python. Whether you’re a beginner or looking to expand your expertise, this course provides a clear, step-by-step guide to mastering Geopandas through hands-on exercises and practical projects.
+
+
+* Introduction to Geopandas  •  Understand why Geopandas is a cornerstone of geospatial analysis in Python and how it can elevate your data workflows.
+* Core Fundamentals  •  Dive into the essential concepts of Geopandas, including GeoDataFrames, spatial joins, and geometry manipulations.
+* Working with Geospatial Data  •  Learn how to handle vector data, projections, and common file formats like Shapefiles, GeoJSON, and GeoParquet.
+* Performing Spatial Analysis  •  Explore spatial queries, intersections, and overlays to unlock insights from your data.
+* Creating a Portfolio Project  •  Apply your skills to a real-world project that you can showcase as part of your professional portfolio.
+"
+modern_gis_qgis_certification.pdf,modern_gis_qgis_certification.png,QGIS Certification,Modern GIS,05/05/2025,https://moderngis.xyz/certificates/094a3c897b4c613635bfc155e76ddf7d/,"gis,qgis",,,True,course,177,https://moderngis.xyz/courses/qgis-free-youtube-certification/,"Unlock the power of geospatial analysis with QGIS, a leading open-source GIS software. This free certification course is designed for absolute beginners and anyone looking to build a solid foundation in GIS. Whether you’re completely new to spatial data or want to pick up new skills, this course provides a clear, step-by-step introduction to QGIS, making GIS accessible to everyone.
+
+What You Will Learn:
+
+* Introduction to QGIS  •  Learn about QGIS as a free and open-source GIS software and how to get started.
+* Installing QGIS  •   step-by-step guide to downloading and setting up QGIS on your computer.
+* Basic GIS Concepts  •  Explore the fundamentals of spatial data, layers, and projections.
+* Working with Spatial Data  •  Learn how to import, visualize, and manipulate vector and raster data in QGIS.
+* Performing Spatial Analysis  •  Discover tools for performing simple spatial analysis and creating maps.
+* Hands-on Practice  •  Step-by-step exercises to help you build confidence with the software.
+"
+da_aa_database_development_practitioner.pdf,da_aa_database_development_practitioner.png,Associate in Arts Degree Database Development Practitioner,De Anza College,08/23/2024,,"database,sql",4.0,summa cum laude,True,degree,137,,
+ca_software_development_in_python.pdf,ca_software_development_in_python.png,Software Development in Python,Foothill College,06/25/2021,,python,,,True,course,138,,
+ca_advanced_software_development.pdf,ca_advanced_software_development.png,Advanced Software Development,Foothill College,06/25/2021,,python,,,True,course,139,,
+postgresql_for_everybody.pdf,postgresql_for_everybody.png,PostgreSQL for Everybody Specialization,University of Michigan,08/17/2022,https://www.coursera.org/account/accomplishments/specialization/U9KKPLB8YEC3,"database,postgres,sql",,,True,certificate,140,,
+database_design_and_basic_sql_in_postgresql.pdf,database_design_and_basic_sql_in_postgresql.png,Database Design and Basic SQL in PostgreSQL,University of Michigan,06/26/2022,https://www.coursera.org/account/accomplishments/verify/H4RC84QQHDSG,"database,postgres,sql",,,True,course,141,,
+intermediate_postgrtesql.pdf,intermediate_postgrtesql.png,Intermediate PostgreSQL,University of Michigan,07/02/2022,https://www.coursera.org/account/accomplishments/certificate/HT4C8JPK8ABX,"database,postgres,sql",,,True,course,142,,
+json_and_natural_language_processing_for_postgresql.pdf,json_and_natural_language_processing_for_postgresql.png,JSON and Natural Language Processing in PostgreSQL,University of Michigan,07/04/2022,https://www.coursera.org/account/accomplishments/certificate/2RFHT7AWHCKU,"json,postgres",,,True,course,143,,
+database_architecture_scale_and_nosql_with_elasticsearch.pdf,database_architecture_scale_and_nosql_with_elasticsearch.png,"Database Architecture, Scale, and NoSQL with Elasticsearch",University of Michigan,08/17/2022,https://www.coursera.org/account/accomplishments/certificate/TZPTPGXW4LMW,database,,,True,course,144,,
+r_programming.pdf,r_programming.png,R Programming,Johns Hopkins University,12/31/2023,https://www.coursera.org/account/accomplishments/verify/NJ4FQ5BQCJBN,R,,,True,course,145,,
+the_data_scientists_toolbox.pdf,the_data_scientists_toolbox.png,The Data Scientist's Toolbox,Johns Hopkins University,01/03/2024,https://www.coursera.org/account/accomplishments/verify/FFZKD3K4PLS5,R,,,True,course,146,,
+wrangling_data_in_the_tidyverse.pdf,wrangling_data_in_the_tidyverse.png,Wrangling Data in the Tidyverse,Johns Hopkins University,01/08/2024,https://www.coursera.org/account/accomplishments/verify/LV3JC5K47MNG,R,,,True,course,147,,
+introduction_to_the_tidyverse.pdf,introduction_to_the_tidyverse.png,Introduction to the Tidyverse,Johns Hopkins University,01/09/2024,https://www.coursera.org/account/accomplishments/verify/KBA5S3XDQ2S3,R,,,True,course,148,,
+data_cleaning_in_snowflake_techniques_to_clean_messy_data.pdf,data_cleaning_in_snowflake_techniques_to_clean_messy_data.png,Data Cleaning in Snowflake: Techniques to Clean Messy Data,Coursera Project Network,04/16/2024,https://www.coursera.org/account/accomplishments/verify/PRDT9ACPLR2X,"database,snowflake",,,True,course,149,,
+um_python_for_everyone.pdf,um_python_for_everyone.png,certificate,University of Michigan,09/06/2024,https://www.coursera.org/account/accomplishments/specialization/DMJ99K40Y01D,python,,,True,certificate,153,,
+um_using_databases_with_python.pdf,um_using_databases_with_python.png,Using Databases with Python,University of Michigan,09/06/2024,https://www.coursera.org/account/accomplishments/certificate/LGGO9GC40CMF,R,,,True,course,154,,
+um_python_data_structures.pdf,um_python_data_structures.png,Python Data Structures,University of Michigan,09/03/2024,https://www.coursera.org/account/accomplishments/certificate/A9VROQHSUDEL,python,,,True,course,155,,
+um_using_python_to_access_web_data.pdf,um_using_python_to_access_web_data.png,Using Python to Access Web Data,University of Michigan,09/04/2024,https://www.coursera.org/account/accomplishments/certificate/LN2727K1L2SA,python,,,True,course,156,,
+um_getting_started_with_python.pdf,um_getting_started_with_python.png,Programming for Everybody (Getting Started with Python),University of Michigan,09/02/2024,https://www.coursera.org/account/accomplishments/certificate/7TTWADOJLKAN,python,,,True,course,157,,
+um_retrieving_processing_visualizing_data_with_python.pdf,um_retrieving_processing_visualizing_data_with_python.png,"Capstone: Retrieving, Processing, and Visualizing Data with Python",University of Michigan,09/06/2024,https://www.coursera.org/account/accomplishments/certificate/K3TNVCFGDM72,python,,,True,course,158,,
+um_python3_programming.pdf,um_python3_programming.png,Python 3 Programming Specialization,University of Michigan,01/09/2025,https://www.coursera.org/account/accomplishments/specialization/YLSRKUR107V8,python,,,True,certificate,159,,
+um_python_basics.pdf,um_python_basics.png,Python Basics,University of Michigan,12/31/2024,https://www.coursera.org/account/accomplishments/certificate/WL85C6UD5EWI,python,,,True,course,160,,
+um_python_functions_file_and_dictionaries.pdf,um_python_functions_file_and_dictionaries.png,"Python Functions, Files, and Dictionaries",University of Michigan,01/05/2025,https://www.coursera.org/account/accomplishments/certificate/UOAZ1I1AT6TH,python,,,True,course,161,,
+um_data_collection_and_processing_with_python.pdf,um_data_collection_and_processing_with_python.png,Data Collection and Processing with Python,University of Michigan,01/07/2025,https://www.coursera.org/account/accomplishments/certificate/IS87TCW143LR,python,,,True,course,162,,
+um_python_classes_and_inheritance.pdf,um_python_classes_and_inheritance.png,Python Classes and Inheritance,University of Michigan,12/29/2024,https://www.coursera.org/account/accomplishments/certificate/RE8FGQBN6KEU,python,,,True,course,163,,
+um_python_proj_sw_eng_image_manipulation.pdf,um_python_proj_sw_eng_image_manipulation.png,Python Project: Software Engineering and Image Manipulation,University of Michigan,01/09/2025,https://www.coursera.org/account/accomplishments/certificate/J6P6MXSJI87H,python,,,True,course,164,,
+um_applied_data_science_with_python.pdf,um_applied_data_science_with_python.png,Applied Data Science with Python Specialization,University of Michigan,03/01/2025,https://www.coursera.org/account/accomplishments/specialization/6QOZCNKNGCE0,"datascience,python",,,True,certificate,165,,
+um_introduction_to_data_science_in_python.pdf,um_introduction_to_data_science_in_python.png,Introduction to Data Science in Python,University of Michigan,10/19/2024,https://www.coursera.org/account/accomplishments/certificate/ZO0M17G4OZUN,"datascience,python",,,True,course,166,,
+um_applied_plotting_charting_and_data_representation_in_python.pdf,um_applied_plotting_charting_and_data_representation_in_python.png,"Applied Plotting, Charting, and Data Representation in Python",University of Michigan,01/24/2025,https://www.coursera.org/account/accomplishments/certificate/AKKTY52VDW18,python,,,True,course,167,,
+um_applied_machine_learning_in_python.pdf,um_applied_machine_learning_in_python.png,Applied Machine Learning in Python,University of Michigan,02/11/2025,https://www.coursera.org/account/accomplishments/certificate/SZC4MCKRTSTY,"ml,python",,,True,course,168,,
+um_applied_text_mining_in_python.pdf,um_applied_text_mining_in_python.png,Applied Text Mining in Python,University of Michigan,02/17/2025,https://www.coursera.org/account/accomplishments/certificate/QMQIIO8XRY3H,"ml,python",,,True,course,169,,
+um_applied_social_network_analysis_in_python.pdf,um_applied_social_network_analysis_in_python.png,Applied Social Network Analysis in Python,University of Michigan,03/01/2025,https://www.coursera.org/account/accomplishments/certificate/DEW3HGVMQCZ4,python,,,True,course,170,,
+machine_learning.pdf,machine_learning.png,Machine Learning,Stanford University,07/12/2021,https://www.coursera.org/account/accomplishments/verify/PJR998U5VR7C,ml,,,True,course,171,,
+tensor_flow_2_for_deep_learning.pdf,tensor_flow_2_for_deep_learning.png,TensorFlow 2 for Deep Learning Specialization,Imperial College London,12/27/2021,https://www.coursera.org/account/accomplishments/specialization/UZTB4ZA9PA8H,"ml,python,tensorflow",,,True,certificate,172,,
+getting_started_with_tensorflow_2.pdf,getting_started_with_tensorflow_2.png,Getting Started with TensorFlow 2,Imperial College London,09/20/2021,https://www.coursera.org/account/accomplishments/certificate/L2BFK9ZKPX39,"ml,python,tensorflow",,,True,course,173,,
+customising_your_models_with_tensorflow_2.pdf,customising_your_models_with_tensorflow_2.png,Customizing your Models with TensorFlow 2,Imperial College London,10/29/2021,https://www.coursera.org/account/accomplishments/certificate/LK9B5325PERQ,"ml,python,tensorflow",,,True,course,174,,
+probabilistic_deep_learning_with_tensorflow_2.pdf,probabilistic_deep_learning_with_tensorflow_2.png,Probabilistic Deep Learning with TensorFlow 2,Imperial College London,12/27/2021,https://www.coursera.org/account/accomplishments/certificate/9GL4SVNCJRGR,"ml,python,tensorflow",,,True,course,175,,
+mathematics_for_machine_learning.pdf,mathematics_for_machine_learning.png,Mathematics for Machine Learning Specialization,Imperial College London,08/11/2021,https://www.coursera.org/account/accomplishments/specialization/WS43GV8U9F59,ml,,,True,certificate,178,,
+mathematics_for_machine_leaning_linear_algebra.pdf,mathematics_for_machine_leaning_linear_algebra.png,Mathematics for Machine Learning: Linear Algebra,Imperial College London,07/30/2021,https://www.coursera.org/account/accomplishments/certificate/2HT9T46AXJV3,ml,,,True,course,179,,
+mathematics_for_machine_learning_multivariate_calculus.pdf,mathematics_for_machine_learning_multivariate_calculus.png,Mathematics for Machine Learning: Multivariate Calculus,Imperial College London,08/08/2021,https://www.coursera.org/account/accomplishments/certificate/AL7B8T5QGPF3,ml,,,True,course,180,,
+mathematics_for_machine_learning_pca.pdf,mathematics_for_machine_learning_pca.png,Mathematics for Machine Learning: PCA,Imperial College London,08/11/2021,https://www.coursera.org/account/accomplishments/certificate/CL4QBLSPBLEH,ml,,,True,course,181,,
+uocb_algebra_and_differential_calculus_for_data_science.pdf,uocb_algebra_and_differential_calculus_for_data_science.png,Algebra and Differential Calculus for Data Science,University of Colorado Boulder,03/06/2025,https://www.coursera.org/account/accomplishments/verify/0ONACSD9LCX2,"ml,datascience",,,True,course,182,,
+snowflake_cloud_data_platform.pdf,snowflake_cloud_data_platform.png,Snowflake Cloud Data Platform: Getting Started,Edureka,06/05/2024,https://www.coursera.org/account/accomplishments/verify/UMHBPNYU3QDX,"database,snowflake",,,True,course,183,,
+choosing_a_database_postgresql_mysql_mongo_and_cloud.pdf,choosing_a_database_postgresql_mysql_mongo_and_cloud.png,"Choosing a Database: PostgreSQL, MySQL, Mongo, and Cloud",LinkedIn,04/19/2024,https://www.linkedin.com/learning/certificates/24e730c8ee3342edc5823b5cf9f020553f550b959895ba4abbb31e71e6e14162?trk=share_certificate,"database,sql",,,True,course,1,,
+advanced_python_practical_database_examples.pdf,advanced_python_practical_database_examples.png,Advanced Python: Practical Database Examples,LinkedIn,07/12/2024,https://www.linkedin.com/learning/certificates/fbe73a1cc0597ba4cce881a27e6aba2ab644c24a325ebf985cb1fbaf80557229?trk=share_certificate,"database,python",,,True,course,2,,
+advanced_sql_for_application_development.pdf,advanced_sql_for_application_development.png,Advanced SQL for Application Development,LinkedIn,07/30/2024,https://www.linkedin.com/learning/certificates/1720a784229a42265e12f8fe75215434e8985d503cd489a04e5a66415115e9a9?trk=share_certificate,"database,sql",,,True,course,3,,
+building_restful_apis_with_flask.pdf,building_restful_apis_with_flask.png,Building RESTful APIs with Flask,LinkedIn,07/30/2024,https://www.linkedin.com/learning/certificates/6fc395b190b2398fe1c77710873553fdb12d25294ca503d4f04a12112987ffa4?trk=share_certificate,python,,,True,course,4,,
+advanced_python_working_with_databases.pdf,advanced_python_working_with_databases.png,Advanced Python: Working with Databases,LinkedIn,07/26/2024,https://www.linkedin.com/learning/certificates/b65d54a1f9a3977ed96ff37b0ef9ba9d6b3574b0974c85c6255329eebf2133f7?trk=share_certificate,python,,,True,course,5,,
+git_from_scratch.pdf,git_from_scratch.png,Git from Scratch,LinkedIn,05/02/2023,https://www.linkedin.com/learning/certificates/a38c94ff6084cf1b6d660bef2b36510ac036aec02269acd0df9d2c879a0c47f9?trk=share_certificate,python,,,True,course,6,,
+git_essential_training_2023.pdf,git_essential_training_2023.png,Git Essential Training (2023),LinkedIn,05/02/2023,https://www.linkedin.com/learning/certificates/ef6a7d9a412ad65166425623e4bcea40359176db5c75957e924641fb6a3e233a?trk=share_certificate,python,,,True,course,7,,
+modernadvanced_snowflake_deep_dive_cloud_data_warehousing_and_analytics.pdf,advanced_snowflake_deep_dive_cloud_data_warehousing_and_analytics.png,Advanced Snowflake: Deep Dive Cloud Data Warehousing and Analytics,LinkedIn,03/25/2024,https://www.linkedin.com/learning/certificates/1bdc273fa7782ff124e19e0af85cfc1a83645372e63827f41eaf91eaef2bcac9?trk=share_certificate,"database,snowflake",,,True,course,9,,
+learning_snowflakedb.pdf,learning_snowflakedb.png,Learning SnowflakeDB,LinkedIn,03/25/2024,https://www.linkedin.com/learning/certificates/50b7ccf982de6d8687c5877f1bf2c32311ac102db6353393f57762d1b9ebbe06?trk=share_certificate,"database,snowflake",,,True,course,10,,
+analyzing_big_data_with_hive.pdf,analyzing_big_data_with_hive.png,Analyzing Big Data with Hive,LinkedIn,07/12/2023,https://www.linkedin.com/learning/certificates/d996865682b3f3a417816974b143cbd797a0057095763060fafa91055365fd48?trk=share_certificate,"database,hive",,,True,course,11,,
+oracle_database_19c_plsql.pdf,oracle_database_19c_plsql.png,Oracle Database 19c: PL/SQL,LinkedIn,08/29/2023,https://www.linkedin.com/learning/certificates/8592cd9cc9e208d2a6891d3fc3d8c37288c8e6c12235702d1e7ed770e2f83fd5?trk=share_certificate,"database,sql",,,True,course,12,,
+everybodys_introduction_to_snowflake.pdf,everybodys_introduction_to_snowflake.png,Everybody's Introduction to Snowflake,LinkedIn,03/23/2024,https://www.linkedin.com/learning/certificates/982904e086db77545d81bee34f0b1e2b04d7b370a84539179404738b403a1c3c?trk=share_certificate,"database,snowflake",,,True,course,13,,
+advanced_sql_for_query_tuning_and_performance_optimization_2019.pdf,advanced_sql_for_query_tuning_and_performance_optimization_2019.png,Advanced SQL for Query Tuning and Performance Optimization (2019),LinkedIn,09/18/2022,https://www.linkedin.com/learning/certificates/4c6ac2d7fb852bdc82d620237b35d90d7e94c5c1984b3f8acb9b6b635b9534d9?trk=share_certificate,"database,sql",,,True,course,20,,
+how_to_learn_faster.pdf,how_to_learn_faster.png,How to Learn Faster,LinkedIn,08/22/2023,https://www.linkedin.com/learning/certificates/c019f9a9799b60bef48e60ff289066e58de1bde41f230501d8616820e9a08240?trk=share_certificate,miscelaneous,,,True,course,21,,
+advanced_python_working_with_databases_2020.pdf,advanced_python_working_with_databases_2020.png,Advanced Python: Working with Databases (2020),LinkedIn,04/30/2023,https://www.linkedin.com/learning/certificates/6fa1e3ac947abc9a1d98c8b8230c4409e8dfb13e08b0e8a541f4ab7f17d14f6d?trk=share_certificate,"database,python",,,True,course,22,,
+postgresql_essential_training_2020.pdf,postgresql_essential_training_2020.png,PostgreSQL Essential Training (2020),LinkedIn,04/02/2023,https://www.linkedin.com/learning/certificates/bd2e2b6d23ea74beb1267b47959623fab2c11acf61e957f7e7a847d97a13c93b?trk=share_certificate,"database,sql",,,True,course,23,,
+advanced_sql_for_data_scientists.pdf,advanced_sql_for_data_scientists.png,Advanced SQL for Data Scientists,LinkedIn,09/18/2022,https://www.linkedin.com/learning/certificates/719484fb4fd5f9cf828088cc2071fdfad503963fa1328d79d9096df6b8de62b8?trk=share_certificate,"database,datascience,sql",,,True,course,24,,
+advanced_sql_window_functions.pdf,advanced_sql_window_functions.png,Advanced SQL – Window Functions,LinkedIn,08/31/2023,https://www.linkedin.com/learning/certificates/08731aca415dad71f1efee228811817f8526dfb540724bf249f4cba20ad696db?trk=share_certificate,"database,sql",,,True,course,15,,
+advanced_postgresql.pdf,advanced_postgresql.png,Advanced PostgreSQL,LinkedIn,09/12/2023,https://www.linkedin.com/learning/certificates/c66e565b97e22f2659b41049695e7a78a9b9fedabde58032baf883579e4926a0?trk=share_certificate,"database,sql",,,True,course,16,,
