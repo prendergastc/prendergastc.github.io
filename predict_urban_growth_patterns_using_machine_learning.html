@@ -81,19 +81,19 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <main><p>GIS Meetup and Educational Seminar Summary #10</p>
-<h1 id="predict-urban-growth-patterns-using-machine-learning-with-arcgis-pro-and-r">Predict Urban Growth Patterns Using Machine Learning with ArcGIS Pro and R</h1>
-<p>9 February 2021</p>
-<p>Esri Geodesign Summit 2021</p>
-<p><a href="https://www.youtube.com/watch?v=gu1bN2c8BrM"><img alt="Predict Urban Growth Patterns Using Machine Learning video" src="https://img.youtube.com/vi/gu1bN2c8BrM/0.jpg"/></a></p>
-<p><a href="https://www.youtube.com/watch?v=gu1bN2c8BrM" target="_blank">https://www.youtube.com/watch?v=MANprK_eIw4</a></p>
-<p>20 minutes.</p>
+            <main><h2 id="gis-meetup-and-educational-seminar-summary-10">GIS Meetup and Educational Seminar Summary #10</h2>
+<p>Presented at: Esri Geodesign Summit 2021</p>
+<p>Presented on: 9 February 2021</p>
+<p>Presenter:</p>
 <ul>
 <li>Carsten Lange. Professor Economics, Cal Poly, Pomona</li>
 </ul>
+<p><a href="https://www.youtube.com/watch?v=gu1bN2c8BrM"><img alt="Predict Urban Growth Patterns Using Machine Learning video" src="https://img.youtube.com/vi/gu1bN2c8BrM/0.jpg"/></a></p>
+<h3 id="overview">Overview</h3>
 <p>This presentation covers the application of the random forest machine learning algorithm to a real-world problem. </p>
 <p>Carsten Lange presents the results of his collaboration with Witold Fraczek, Esri Applications Prototype Lab, and Jian Lange, Esri Spatial Analysis Product Manager. He highlights the benefits and pitfalls of a multidisciplinary collaboration using machine learning implemented across two different software platforms: ArcGIS Pro and R. </p>
 <p>The goal of the collaboration was to predict areas of the tri-city region of North Carolina that changed from an undeveloped classification in 2001, to an urban classification in 2016. The study covered a rectangular area of 80 miles by 50 miles. This area was divided into a 30-meter by 30-meter raster grid resulting in 11 million raster cells. </p>
+<h3 id="building-the-model">Building the Model</h3>
 <p>Building the model involved four steps:</p>
 <ol>
 <li>
@@ -115,7 +115,9 @@
 <p>Applying the ML random forest algorithm using R to predict which areas changed from undeveloped to developed.</p>
 </li>
 </ol>
+<h3 id="data-source">Data Source</h3>
 <p>The data for this study was obtained from the National Land Cover Database (NLCDB).  In the NLCDB data each cell falls into one of twenty categories. For this study, these were recategorized into one of two classes, either developed or undeveloped. </p>
+<h3 id="change-in-classification">Change in Classification</h3>
 <p>ArcGIS was then used to examine which raster cells had changed classification. The dataset is very unbalanced. </p>
 <p>The findings were as follows:</p>
 <table class="my-data-table">
@@ -139,6 +141,7 @@
 </tr>
 </tbody>
 </table>
+<h3 id="additional-data">Additional Data</h3>
 <p>Next, additional data was collected for each of the approximately 9 million raster cells which could potentially explain urbanization. This data was displayed as layers in ArcGIS Pro using the Spatial Analyst Extension. The following data was collected:</p>
 <ul>
 <li>
@@ -163,6 +166,7 @@
 <p>Distance to closest protected area</p>
 </li>
 </ul>
+<h3 id="r-bridge">R Bridge</h3>
 <p>This data was then aggregated into a single layer and pushed to R using the "R bridge" which created a dynamic link between ArcGIS Pro and R. It only takes five lines of code in R-Studio to import the data from ArcGIS. Next, the data was split in to two sets: 85% training data and 15% testing data to be used to validate the model. A random forest model with 500 decision trees was trained using the training data. At first glance the predictions made by this mode look impressive with the correct category predicted for 99.8% of cells. However, these results look too good to be true. A confusion matrix gives more insight into how the model performed. </p>
 <table class="my-data-table">
 <thead>
@@ -185,6 +189,7 @@
 </tr>
 </tbody>
 </table>
+<h3 id="decision-tree">Decision Tree</h3>
 <p>The decision tree simply predicted that no cells changed from undeveloped to urban. The model achieved this high precision because only an exceedingly small proportion of the cells changed in reality. Because the training dataset was so unbalanced this model is not useful. This outcome highlights some problems with all decision tree models which are: </p>
 <ul>
 <li>
@@ -194,36 +199,63 @@
 <p>Sensitive to changes in data and hyperparameters</p>
 </li>
 </ul>
-<p>The random forest algorithm uses the average of many decision trees to improve the predictive power. To improve the performance of the random forest algorithm, the Synthetic Minority Oversampling Technique (SMOTE), i.e., up- and down-sampling, was used to balance the data. This procedure eliminates random records from the majority class and generates new records in the minority class like the existing records using a KNN (k-nearest neighbors) algorithm. Using this approach, the random forest model made these predictions from the training data. The accuracy dropped to 95%.
-    Actual no   Actual yes
-Predicted no    1,245,362   173
-Predicted yes       65,328  1,421</p>
+<h3 id="random-forest">Random Forest</h3>
+<p>The random forest algorithm uses the average of many decision trees to improve the predictive power. To improve the performance of the random forest algorithm, the Synthetic Minority Oversampling Technique (SMOTE), i.e., up- and down-sampling, was used to balance the data. This procedure eliminates random records from the majority class and generates new records in the minority class like the existing records using a KNN (k-nearest neighbors) algorithm. Using this approach, the random forest model made these predictions from the training data. The accuracy dropped to 95%.</p>
+<table class="my-data-table">
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Actual no</th>
+<th style="text-align: right;">Actual yes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Predicted no</td>
+<td style="text-align: right;">1,245,362</td>
+<td style="text-align: right;">173</td>
+</tr>
+<tr>
+<td style="text-align: left;">Predicted yes</td>
+<td style="text-align: right;">65,328</td>
+<td style="text-align: right;">1,421</td>
+</tr>
+</tbody>
+</table>
+<h3 id="prediction">Prediction</h3>
 <p>All the data was the used to predict the probability of a cell changing from undeveloped to urban. The data was processed in in R then the predictions were sent back to ArcGIS Pro using the “R-bridge.” This allowed the results to be viewed in in ArcGIS Pro as a raster layer of color-coded predictions. The predictions made by this model have subsequently been confirmed with recent satellite imagery; some of the areas predicted to have a high likelihood urbanization in 2016 already have houses visible in 2020 satellite images.</p>
 <h3 id="reaction">Reaction</h3>
 <p>For me this was a great illustration of a real-world use of machine learning to address an issue I care about. I am interested in the preservation of open space and can see how a model like this could help planners prioritize which undeveloped areas are in most urgent need of protection. This was a straightforward application of machine learning and I feel like I could follow all the steps in both ArcGIS and R. The talk also highlighted some of the pitfalls of a naïve application of machine learning.</p>
 <h1 id="utilizing-arcgis-urban-dashboards-and-hub-for-future-land-use-change-scenarios">Utilizing ArcGIS Urban, Dashboards and Hub for Future Land Use Change Scenarios</h1>
-<p>9 February 2021</p>
-<p>ESRI Geodesign Summit 2021</p>
-<p><a href="https://www.youtube.com/watch?v=D0AH2bgSUuc"><img alt="Predict Urban Growth Patterns Using Machine Learning video" src="https://img.youtube.com/vi/D0AH2bgSUuc/0.jpg"/></a></p>
-<p><a href="https://www.youtube.com/watch?v=D0AH2bgSUuc" target="_blank">https://www.youtube.com/watch?v=MANprK_eIw4</a></p>
-<p>20 minutes.</p>
+<p>Presented on: 9 February 2021</p>
+<p>Presented at: ESRI Geodesign Summit 2021</p>
+<p>Presenters:</p>
 <ul>
 <li>Jennifer Immich, GIS Analyst II, City of Boulder</li>
 <li>Kalani Pahoa, Planning and Development Services, City of Boulder</li>
 </ul>
+<p><a href="https://www.youtube.com/watch?v=D0AH2bgSUuc"><img alt="Utilizing ArcGIS Urban, Dashboards and Hub video" src="https://img.youtube.com/vi/D0AH2bgSUuc/0.jpg"/></a></p>
+<h3 id="overview_1">Overview</h3>
 <p>This short presentation covers the use of ArcGIS Urban, Operation Dashboard, and Hub by the city of Boulder to monitor, communicate, and assess future land use change scenarios. The goal of this project was to provide better information on land use planning and future land use changes to city staff, decision makers, and wider the community. This is important because land use planning impacts the amount of urban development and open space, jobs, housing, resiliency, environmental stewardship, and transportation. Easy access to this information gives stakeholders and decision makers a better understanding of issues.</p>
-<p>The project created an expanded set of capacity indicators and projections. Integrating Hub with ArcGIS enabled the team to communicate this complex information to stakeholders. ArcGIS was configured with the city's land use and zoning code data. This included 25 land use districts, 44 zoning districts, 24 space use types, and 75 common building types. In addition, information on various development standards, lot coverage maximums, FAR density calculations, and overall land efficiency numbers was entered into the system. The various space use categories were linked to indicators such as energy use and carbon emissions. Because the city of Boulder did not have an existing land use GIS database available, parcel data was used to generate this information. Four scenarios were modeled. Each scenario model provides summary information for total population, housing, and jobs plus a breakdown of space use. The models also calculate the impact of each potential development. Operations dashboard is used to present a series of views that cover carbon and co2 measures, land use percentages by acreage, and jobs by space use type. In addition, four transportation scenarios were modeled. The data is presented on a community engagement webpage and linked to a survey on the same website. Overall, the project provides easy access to information which was previously difficult or impossible to obtain such as energy consumption, water use, and number of housing units.</p>
+<h3 id="capacity-indicators-and-projections">Capacity Indicators and Projections</h3>
+<p>The project created an expanded set of capacity indicators and projections. Integrating Hub with ArcGIS enabled the team to communicate this complex information to stakeholders. ArcGIS was configured with the city's land use and zoning code data. This included 25 land use districts, 44 zoning districts, 24 space use types, and 75 common building types. </p>
+<p>In addition, information on various development standards, lot coverage maximums, FAR density calculations, and overall land efficiency numbers was entered into the system. The various space use categories were linked to indicators such as energy use and carbon emissions. </p>
+<p>Because the city of Boulder did not have an existing land use GIS database available, parcel data was used to generate this information. </p>
+<h3 id="scenarios">Scenarios</h3>
+<p>Four scenarios were modeled. Each scenario model provides summary information for total population, housing, and jobs plus a breakdown of space use. The models also calculate the impact of each potential development. </p>
+<h3 id="operations-dashboard">Operations Dashboard</h3>
+<p>Operations dashboard is used to present a series of views that cover carbon and co2 measures, land use percentages by acreage, and jobs by space use type. In addition, four transportation scenarios were modeled. The data is presented on a community engagement webpage and linked to a survey on the same website. Overall, the project provides easy access to information which was previously difficult or impossible to obtain such as energy consumption, water use, and number of housing units.</p>
 <h3 id="reaction_1">Reaction</h3>
-<p>It was interesting to see some of the details of a project that uses the ArcGIS tools to make city planning information more easily accessible to decision makers and the public. I am particularly interested in the use of such data in the preservation of open space, resiliency planning, and the design of smarter developments which reduce energy consumption and carbon emissions and make our cities more livable and pleasant. It is a pity that many local government employees lack presentation skills and rely heavily so on internal jargon making the mistake of assuming that their audience shares the same inside-city-government context of their work lives.</p>
+<p>It was interesting to see some of the details of a project that uses the ArcGIS tools to make city planning information more easily accessible to decision makers and the public. I am particularly interested in the use of such data in the preservation of open space, resiliency planning, and the design of smarter developments which reduce energy consumption and carbon emissions and make our cities more livable and pleasant. </p>
 <h1 id="building-conservation-resiliency-with-geodesign">Building Conservation Resiliency with Geodesign</h1>
-<p>9 February 2021</p>
-<p>ESRI Geodesign Summit 2021</p>
-<p><a href="https://www.youtube.com/watch?v=j1_usqtbOJs"><img alt="Predict Urban Growth Patterns Using Machine Learning video" src="https://img.youtube.com/vi/j1_usqtbOJs/0.jpg"/></a></p>
-<p><a href="https://www.youtube.com/watch?v=j1_usqtbOJs" target="_blank">https://www.youtube.com/watch?v=MANprK_eIw4</a></p>
-<p>20 minutes.</p>
+<p>Presented on: 9 February 2021</p>
+<p>Presented at: ESRI Geodesign Summit 2021</p>
+<p>Presenter:</p>
 <ul>
-<li>Eliza Gutierrez-Dewar, consultant for the geodesign team and Esri's professional services </li>
+<li>Eliza Gutierrez-Dewar, consultant for the geodesign team and Esri's professional services</li>
 </ul>
+<p><a href="https://www.youtube.com/watch?v=j1_usqtbOJs"><img alt="Building Conservation Resiliency with Geodesign video" src="https://img.youtube.com/vi/j1_usqtbOJs/0.jpg"/></a></p>
+<h3 id="conservation-planning">Conservation Planning</h3>
 <p>Conservation planning is important to protect biodiversity in the face of diminishing and threatened natural resources. The goal of conservation planning is to conserve a certain percentage of land area for biodiversity. But how should we prioritize which areas to protect? This presentation claims that the answer is an iterative and geographically informed and holistic planning process. This process of conservation planning is called geodesign and involves the following steps:</p>
 <ul>
 <li>
@@ -245,6 +277,7 @@ Predicted yes       65,328  1,421</p>
 <p>Implement and take actions</p>
 </li>
 </ul>
+<h3 id="arcgis-geoplanner">ArcGIS GeoPlanner</h3>
 <p>The ArcGIS GeoPlanner product was demonstrated showing the steps in this process using San Bernardino county as an example. The GeoPlanner tool allows planners to be strategic about where they put protected areas. In addition to land cover class, this process uses the following indicators:</p>
 <ul>
 <li>
@@ -269,6 +302,7 @@ Predicted yes       65,328  1,421</p>
 <p>Population </p>
 </li>
 </ul>
+<h3 id="scenarios_1">Scenarios</h3>
 <p>These layers are used to create various scenarios which represent the proposed changes to zoning. These scenarios can then be analyzed from various perspectives including: </p>
 <ul>
 <li>
@@ -307,7 +341,7 @@ Predicted yes       65,328  1,421</p>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="./tags.html#arcgis-pro-ref">ArcGIS Pro
-                    <span class="superscript">24</span>
+                    <span class="superscript">25</span>
 </a></li>
                 <li><a href="./tags.html#machine-learning-ref">Machine Learning
                     <span class="superscript">3</span>
