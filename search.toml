@@ -199,6 +199,66 @@ url = "/lyell_glacier.html"
 title = "Lyell Glacier, Yosemite National Park"
 
 [[input.files]]
+path = "ai_implications_for_spatial_science.html"
+url = "/ai_implications_for_spatial_science.html"
+title = "The Emergence of AI Engineering and its Implications for Spatial Science"
+
+[[input.files]]
+path = "arcgis_and_jupyter_for_spatial_data_science.html"
+url = "/arcgis_and_jupyter_for_spatial_data_science.html"
+title = "Explore How to Use ArcGIS and Jupyter for Geospatial Data Science"
+
+[[input.files]]
+path = "data_management_for_gis_projects.html"
+url = "/data_management_for_gis_projects.html"
+title = "Data Management for GIS Projects"
+
+[[input.files]]
+path = "geo_ai_for_transportation.html"
+url = "/geo_ai_for_transportation.html"
+title = "GeoAI for Transportation Webinar"
+
+[[input.files]]
+path = "integrating_deep_learning_with_arcgis_using_python.html"
+url = "/integrating_deep_learning_with_arcgis_using_python.html"
+title = "Integrating Deep Learning with ArcGIS using Python"
+
+[[input.files]]
+path = "machine_learning_ai_and_arcgis.html"
+url = "/machine_learning_ai_and_arcgis.html"
+title = "Machine Learning, Artificial Intelligence and ArcGIS"
+
+[[input.files]]
+path = "planning_you_gis_career.html"
+url = "/planning_you_gis_career.html"
+title = "Planning your GIS Career discussion with Nathan Heazlewood and Joseph Kerski"
+
+[[input.files]]
+path = "predict_urban_growth_patterns_using_machine_learning.html"
+url = "/predict_urban_growth_patterns_using_machine_learning.html"
+title = "Predict Urban Growth Patterns Using Machine Learning with ArcGIS Pro and R"
+
+[[input.files]]
+path = "spatial_analysis_and_data_science.html"
+url = "/spatial_analysis_and_data_science.html"
+title = "Spatial Analysis and Data Science"
+
+[[input.files]]
+path = "spatial_data_science_transforming_our_planet.html"
+url = "/spatial_data_science_transforming_our_planet.html"
+title = "Spatial Data Science: Transforming Our Planet"
+
+[[input.files]]
+path = "underutilization_of_gis_and_how_to_cure_it.html"
+url = "/underutilization_of_gis_and_how_to_cure_it.html"
+title = "Underutilizarion of GIS and How to Cure it"
+
+[[input.files]]
+path = "machine_learning_in_arcgis.html"
+url = "/machine_learning_in_arcgis.html"
+title = "Machine Learning in ArcGIS"
+
+[[input.files]]
 path = "farmers_market_site_selection.html"
 url = "/farmers_market_site_selection.html"
 title = "Farmers Market Site Selection"

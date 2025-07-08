@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <link href="./theme/css/elegant.prod.9e9d5ce754.css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="./theme/css/custom.css" media="screen" rel="stylesheet" type="text/css"/>
+
+        <link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+        <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+        <link href="https://files.stork-search.net/basic.css" rel="stylesheet"/>
+        <link href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" rel="stylesheet"/>
+        <link href="./theme/css/colorbox.css" rel="stylesheet"/>
+
+        <meta content="Christopher Prendergast" name="author">
+
+        <meta content="article" property="og:type">
+        <meta content="summary" name="twitter:card"/>
+
+<meta content="Machine Learning, R, ArcGIS Pro, Urban Growth, Essay, " name="keywords">
+
+<meta content="Predict Urban Growth Patterns Using Machine Learning with ArcGIS Pro and R " property="og:title">
+<meta content="./predict_urban_growth_patterns_using_machine_learning.html" property="og:url"/>
+<meta content="This presentation covers the application of the random forest machine learning algorithm to a real-world problem." property="og:description"/>
+<meta content="portfolio" property="og:site_name"/>
+<meta content="Christopher Prendergast" property="og:article:author"/>
+<meta content="2021-03-18T00:00:00-07:00" property="og:article:published_time"/>
+<meta content="2025-06-07T00:00:00-07:00" property="og:article:modified_time"/>
+<meta content="Predict Urban Growth Patterns Using Machine Learning with ArcGIS Pro and R " name="twitter:title"/>
+<meta content="This presentation covers the application of the random forest machine learning algorithm to a real-world problem." name="twitter:description"/>
+
+        <title>Predict Urban Growth Patterns Using Machine Learning with ArcGIS Pro and R  · portfolio
+</title>
+
+
+
+    </meta></meta></meta></meta></head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="./"><span class="site-name">portfolio</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li>
+                                    <a href=".">Home</a>
+                                </li>
+                                <li><a href="./pages/search.html">Search</a></li>
+                                <li><a href="./categories.html">Categories</a></li>
+                                <li><a href="./tags.html">Tags</a></li>
+                                <li><a href="./archives.html">Archives</a></li>
+                                <li><form action="./search.html" class="navbar-search" onsubmit="return validateForm(this.elements['q'].value);"> <input class="search-query" id="tipue_search_input" name="q" placeholder="Search" type="text"/></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope="">
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="./predict_urban_growth_patterns_using_machine_learning.html">
+                Predict Urban Growth Patterns Using Machine Learning with ArcGIS Pro and R
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <main><p>GIS Meetup and Educational Seminar Summary #10</p>
+<h1 id="predict-urban-growth-patterns-using-machine-learning-with-arcgis-pro-and-r">Predict Urban Growth Patterns Using Machine Learning with ArcGIS Pro and R</h1>
+<p>9 February 2021</p>
+<p>Esri Geodesign Summit 2021</p>
+<p><a href="https://www.youtube.com/watch?v=gu1bN2c8BrM"><img alt="Predict Urban Growth Patterns Using Machine Learning video" src="https://img.youtube.com/vi/gu1bN2c8BrM/0.jpg"/></a></p>
+<p><a href="https://www.youtube.com/watch?v=gu1bN2c8BrM" target="_blank">https://www.youtube.com/watch?v=MANprK_eIw4</a></p>
+<p>20 minutes.</p>
+<ul>
+<li>Carsten Lange. Professor Economics, Cal Poly, Pomona</li>
+</ul>
+<p>This presentation covers the application of the random forest machine learning algorithm to a real-world problem. </p>
+<p>Carsten Lange presents the results of his collaboration with Witold Fraczek, Esri Applications Prototype Lab, and Jian Lange, Esri Spatial Analysis Product Manager. He highlights the benefits and pitfalls of a multidisciplinary collaboration using machine learning implemented across two different software platforms: ArcGIS Pro and R. </p>
+<p>The goal of the collaboration was to predict areas of the tri-city region of North Carolina that changed from an undeveloped classification in 2001, to an urban classification in 2016. The study covered a rectangular area of 80 miles by 50 miles. This area was divided into a 30-meter by 30-meter raster grid resulting in 11 million raster cells. </p>
+<p>Building the model involved four steps:</p>
+<ol>
+<li>
+<p>Categorizing all raster cells as either developed or undeveloped for both 2001 and 2016.</p>
+</li>
+<li>
+<p>Comparing the classifications for 2001 to 2016 and identifying cells that were:</p>
+</li>
+<li>
+<p>Undeveloped areas in 2001 that remained undeveloped in 2016.</p>
+</li>
+<li>
+<p>Undeveloped areas in 2001 that that became developed in 2016. </p>
+</li>
+<li>
+<p>Collecting data to explain urbanization.</p>
+</li>
+<li>
+<p>Applying the ML random forest algorithm using R to predict which areas changed from undeveloped to developed.</p>
+</li>
+</ol>
+<p>The data for this study was obtained from the National Land Cover Database (NLCDB).  In the NLCDB data each cell falls into one of twenty categories. For this study, these were recategorized into one of two classes, either developed or undeveloped. </p>
+<p>ArcGIS was then used to examine which raster cells had changed classification. The dataset is very unbalanced. </p>
+<p>The findings were as follows:</p>
+<table class="my-data-table">
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Developed 2016</th>
+<th style="text-align: right;">Undeveloped 2016</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Developed 2001</td>
+<td style="text-align: right;">1,720,225</td>
+<td style="text-align: right;">2,378</td>
+</tr>
+<tr>
+<td style="text-align: left;">Undeveloped 2001</td>
+<td style="text-align: right;">10,635 <br/>(Became Urban=Yes)</td>
+<td style="text-align: right;">8,918,415<br/>(Became Urban=No)</td>
+</tr>
+</tbody>
+</table>
+<p>Next, additional data was collected for each of the approximately 9 million raster cells which could potentially explain urbanization. This data was displayed as layers in ArcGIS Pro using the Spatial Analyst Extension. The following data was collected:</p>
+<ul>
+<li>
+<p>Drive time to major city</p>
+</li>
+<li>
+<p>Predicted population growth</p>
+</li>
+<li>
+<p>Distance to closest highway</p>
+</li>
+<li>
+<p>Distance to closest road</p>
+</li>
+<li>
+<p>Distance to closest airport</p>
+</li>
+<li>
+<p>Distance to closest flood zone</p>
+</li>
+<li>
+<p>Distance to closest protected area</p>
+</li>
+</ul>
+<p>This data was then aggregated into a single layer and pushed to R using the "R bridge" which created a dynamic link between ArcGIS Pro and R. It only takes five lines of code in R-Studio to import the data from ArcGIS. Next, the data was split in to two sets: 85% training data and 15% testing data to be used to validate the model. A random forest model with 500 decision trees was trained using the training data. At first glance the predictions made by this mode look impressive with the correct category predicted for 99.8% of cells. However, these results look too good to be true. A confusion matrix gives more insight into how the model performed. </p>
+<table class="my-data-table">
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Actual no</th>
+<th style="text-align: right;">Actual yes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Predicted no</td>
+<td style="text-align: right;">1,310,690</td>
+<td style="text-align: right;">1,594</td>
+</tr>
+<tr>
+<td style="text-align: left;">Predicted yes</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>The decision tree simply predicted that no cells changed from undeveloped to urban. The model achieved this high precision because only an exceedingly small proportion of the cells changed in reality. Because the training dataset was so unbalanced this model is not useful. This outcome highlights some problems with all decision tree models which are: </p>
+<ul>
+<li>
+<p>Illustrative but do not have strong predictive power</p>
+</li>
+<li>
+<p>Sensitive to changes in data and hyperparameters</p>
+</li>
+</ul>
+<p>The random forest algorithm uses the average of many decision trees to improve the predictive power. To improve the performance of the random forest algorithm, the Synthetic Minority Oversampling Technique (SMOTE), i.e., up- and down-sampling, was used to balance the data. This procedure eliminates random records from the majority class and generates new records in the minority class like the existing records using a KNN (k-nearest neighbors) algorithm. Using this approach, the random forest model made these predictions from the training data. The accuracy dropped to 95%.
+    Actual no   Actual yes
+Predicted no    1,245,362   173
+Predicted yes       65,328  1,421</p>
+<p>All the data was the used to predict the probability of a cell changing from undeveloped to urban. The data was processed in in R then the predictions were sent back to ArcGIS Pro using the “R-bridge.” This allowed the results to be viewed in in ArcGIS Pro as a raster layer of color-coded predictions. The predictions made by this model have subsequently been confirmed with recent satellite imagery; some of the areas predicted to have a high likelihood urbanization in 2016 already have houses visible in 2020 satellite images.</p>
+<h3 id="reaction">Reaction</h3>
+<p>For me this was a great illustration of a real-world use of machine learning to address an issue I care about. I am interested in the preservation of open space and can see how a model like this could help planners prioritize which undeveloped areas are in most urgent need of protection. This was a straightforward application of machine learning and I feel like I could follow all the steps in both ArcGIS and R. The talk also highlighted some of the pitfalls of a naïve application of machine learning.</p>
+<h1 id="utilizing-arcgis-urban-dashboards-and-hub-for-future-land-use-change-scenarios">Utilizing ArcGIS Urban, Dashboards and Hub for Future Land Use Change Scenarios</h1>
+<p>9 February 2021</p>
+<p>ESRI Geodesign Summit 2021</p>
+<p><a href="https://www.youtube.com/watch?v=D0AH2bgSUuc"><img alt="Predict Urban Growth Patterns Using Machine Learning video" src="https://img.youtube.com/vi/D0AH2bgSUuc/0.jpg"/></a></p>
+<p><a href="https://www.youtube.com/watch?v=D0AH2bgSUuc" target="_blank">https://www.youtube.com/watch?v=MANprK_eIw4</a></p>
+<p>20 minutes.</p>
+<ul>
+<li>Jennifer Immich, GIS Analyst II, City of Boulder</li>
+<li>Kalani Pahoa, Planning and Development Services, City of Boulder</li>
+</ul>
+<p>This short presentation covers the use of ArcGIS Urban, Operation Dashboard, and Hub by the city of Boulder to monitor, communicate, and assess future land use change scenarios. The goal of this project was to provide better information on land use planning and future land use changes to city staff, decision makers, and wider the community. This is important because land use planning impacts the amount of urban development and open space, jobs, housing, resiliency, environmental stewardship, and transportation. Easy access to this information gives stakeholders and decision makers a better understanding of issues.</p>
+<p>The project created an expanded set of capacity indicators and projections. Integrating Hub with ArcGIS enabled the team to communicate this complex information to stakeholders. ArcGIS was configured with the city's land use and zoning code data. This included 25 land use districts, 44 zoning districts, 24 space use types, and 75 common building types. In addition, information on various development standards, lot coverage maximums, FAR density calculations, and overall land efficiency numbers was entered into the system. The various space use categories were linked to indicators such as energy use and carbon emissions. Because the city of Boulder did not have an existing land use GIS database available, parcel data was used to generate this information. Four scenarios were modeled. Each scenario model provides summary information for total population, housing, and jobs plus a breakdown of space use. The models also calculate the impact of each potential development. Operations dashboard is used to present a series of views that cover carbon and co2 measures, land use percentages by acreage, and jobs by space use type. In addition, four transportation scenarios were modeled. The data is presented on a community engagement webpage and linked to a survey on the same website. Overall, the project provides easy access to information which was previously difficult or impossible to obtain such as energy consumption, water use, and number of housing units.</p>
+<h3 id="reaction_1">Reaction</h3>
+<p>It was interesting to see some of the details of a project that uses the ArcGIS tools to make city planning information more easily accessible to decision makers and the public. I am particularly interested in the use of such data in the preservation of open space, resiliency planning, and the design of smarter developments which reduce energy consumption and carbon emissions and make our cities more livable and pleasant. It is a pity that many local government employees lack presentation skills and rely heavily so on internal jargon making the mistake of assuming that their audience shares the same inside-city-government context of their work lives.</p>
+<h1 id="building-conservation-resiliency-with-geodesign">Building Conservation Resiliency with Geodesign</h1>
+<p>9 February 2021</p>
+<p>ESRI Geodesign Summit 2021</p>
+<p><a href="https://www.youtube.com/watch?v=j1_usqtbOJs"><img alt="Predict Urban Growth Patterns Using Machine Learning video" src="https://img.youtube.com/vi/j1_usqtbOJs/0.jpg"/></a></p>
+<p><a href="https://www.youtube.com/watch?v=j1_usqtbOJs" target="_blank">https://www.youtube.com/watch?v=MANprK_eIw4</a></p>
+<p>20 minutes.</p>
+<ul>
+<li>Eliza Gutierrez-Dewar, consultant for the geodesign team and Esri's professional services </li>
+</ul>
+<p>Conservation planning is important to protect biodiversity in the face of diminishing and threatened natural resources. The goal of conservation planning is to conserve a certain percentage of land area for biodiversity. But how should we prioritize which areas to protect? This presentation claims that the answer is an iterative and geographically informed and holistic planning process. This process of conservation planning is called geodesign and involves the following steps:</p>
+<ul>
+<li>
+<p>Assess current status</p>
+</li>
+<li>
+<p>Assemble and review data</p>
+</li>
+<li>
+<p>Map assets to conserve</p>
+</li>
+<li>
+<p>Assess constraints and threats</p>
+</li>
+<li>
+<p>Set goals and prioritize areas</p>
+</li>
+<li>
+<p>Implement and take actions</p>
+</li>
+</ul>
+<p>The ArcGIS GeoPlanner product was demonstrated showing the steps in this process using San Bernardino county as an example. The GeoPlanner tool allows planners to be strategic about where they put protected areas. In addition to land cover class, this process uses the following indicators:</p>
+<ul>
+<li>
+<p>Species richness hot spots</p>
+</li>
+<li>
+<p>Intact habitat cores</p>
+</li>
+<li>
+<p>Suitability layer - a weighted raster overlay model consisting of</p>
+</li>
+<li>
+<p>Carbon biomass</p>
+</li>
+<li>
+<p>Bioclimates</p>
+</li>
+<li>
+<p>Ecophysiographic diversity</p>
+</li>
+<li>
+<p>Population </p>
+</li>
+</ul>
+<p>These layers are used to create various scenarios which represent the proposed changes to zoning. These scenarios can then be analyzed from various perspectives including: </p>
+<ul>
+<li>
+<p>Constraints and threats</p>
+</li>
+<li>
+<p>Potential habitat loss</p>
+</li>
+</ul>
+<h3 id="reaction_2">Reaction</h3>
+<p>Because I care deeply about the preservation of open space and biodiversity, I was interested in this presentation. Although GIS provides a tool to analyze the impacts of competing land use demands, it is still up to all of us to develop the political will to protect critical habit from development and other land uses which threaten biodiversity. Easily accessible information on these issues is a necessary step but there is still much more to be done to change short-sighted pro-growth attitudes. </p></main>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+        </div>
+        <section class="span2" id="article-sidebar">
+            <h4>Published</h4>
+            <time datetime="2021-03-18T00:00:00-07:00" itemprop="dateCreated">Thu 18 March 2021</time>
+<h4>Last Updated</h4>
+<time datetime="2025-06-07T00:00:00-07:00">Sat 07 June 2025</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#essay-ref">Essay</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="./tags.html#arcgis-pro-ref">ArcGIS Pro
+                    <span class="superscript">24</span>
+</a></li>
+                <li><a href="./tags.html#machine-learning-ref">Machine Learning
+                    <span class="superscript">3</span>
+</a></li>
+                <li><a href="./tags.html#r-ref">R
+                    <span class="superscript">2</span>
+</a></li>
+                <li><a href="./tags.html#urban-growth-ref">Urban Growth
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" rel="nofollow noopener noreferrer" target="_blank" title="Pelican Home Page">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" rel="nofollow noopener noreferrer" target="_blank" title="Theme Elegant Home Page">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="./theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+        <script src="./theme/js/jquery.colorbox.js"></script>
+        <script src="./theme/js/load-colorbox.js"></script>
+        <script src="https://files.stork-search.net/releases/v1.5.0/stork.js"></script>
+        <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+        <script>
+            stork.register("sitesearch", "./search-index.st");
+        </script>
+        <script>
+            $(document).ready( function () {
+                $('.my-data-table').DataTable();
+            } );
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>
