@@ -11,12 +11,12 @@ title = "Search"
 [[input.files]]
 path = "database_skills.html"
 url = "/database_skills.html"
-title = "Database, Programming, and Software Skills"
+title = "Database Skills"
 
 [[input.files]]
 path = "gis_skills.html"
 url = "/gis_skills.html"
-title = "GIS Qualifications"
+title = "GIS Skills"
 
 [[input.files]]
 path = "machine_learning_skills.html"
@@ -27,11 +27,6 @@ title = "Machine Learning Skills"
 path = "python_skills.html"
 url = "/python_skills.html"
 title = "Python Scripting and Programming Skills"
-
-[[input.files]]
-path = "test_gallery.html"
-url = "/test_gallery.html"
-title = "Test Gallery"
 
 [[input.files]]
 path = "transcripts.html"
