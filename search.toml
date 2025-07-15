@@ -9,19 +9,29 @@ url = "/pages/search.html"
 title = "Search"
 
 [[input.files]]
-path = "db_and_programming.html"
-url = "/db_and_programming.html"
+path = "database_skills.html"
+url = "/database_skills.html"
 title = "Database, Programming, and Software Skills"
 
 [[input.files]]
-path = "esri_certificates.html"
-url = "/esri_certificates.html"
-title = "ESRI Certificates"
+path = "gis_skills.html"
+url = "/gis_skills.html"
+title = "GIS Qualifications"
 
 [[input.files]]
-path = "gis_qualifications.html"
-url = "/gis_qualifications.html"
-title = "GIS Qualifications"
+path = "machine_learning_skills.html"
+url = "/machine_learning_skills.html"
+title = "Machine Learning Skills"
+
+[[input.files]]
+path = "python_skills.html"
+url = "/python_skills.html"
+title = "Python Scripting and Programming Skills"
+
+[[input.files]]
+path = "test_gallery.html"
+url = "/test_gallery.html"
+title = "Test Gallery"
 
 [[input.files]]
 path = "transcripts.html"

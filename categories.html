@@ -189,12 +189,20 @@
             <div class="accordion-group">
                 <div class="accordion-heading">
                     <a class="accordion-toggle category-title-inside-accordion collapsed" data-parent="#accordion2" data-toggle="collapse" href="#essay-ref">
-                        Essay<span class="superscript">18</span>
+                        Essay<span class="superscript">19</span>
                     </a>
                 </div>
                 <div class="accordion-body collapse" id="essay-ref">
                     <div class="accordion-inner">
                         <ul class="list-articles-under-tag-category">
+                            <li itemscope="">
+                                    <a href="./test_gallery.html">
+                                        Test Gallery
+                                    </a>
+                                <time datetime="2025-06-07T00:00:00-07:00" itemprop="dateCreated">
+                                    Sat 07 June 2025
+                                </time>
+                            </li>
                             <li itemscope="">
                                     <a href="./analysis_3d.html">
                                         ArcGIS Pro: An Overview of 3D Analysis
@@ -425,14 +433,14 @@
             <div class="accordion-group">
                 <div class="accordion-heading">
                     <a class="accordion-toggle category-title-inside-accordion collapsed" data-parent="#accordion2" data-toggle="collapse" href="#qualifications-ref">
-                        Qualifications<span class="superscript">4</span>
+                        Qualifications<span class="superscript">5</span>
                     </a>
                 </div>
                 <div class="accordion-body collapse" id="qualifications-ref">
                     <div class="accordion-inner">
                         <ul class="list-articles-under-tag-category">
                             <li itemscope="">
-                                    <a href="./db_and_programming.html">
+                                    <a href="./database_skills.html">
                                         Database, Programming, and Software Skills
                                     </a>
                                 <time datetime="2025-06-07T00:00:00-07:00" itemprop="dateCreated">
@@ -440,16 +448,24 @@
                                 </time>
                             </li>
                             <li itemscope="">
-                                    <a href="./esri_certificates.html">
-                                        ESRI Certificates
+                                    <a href="./gis_skills.html">
+                                        GIS Qualifications
                                     </a>
                                 <time datetime="2025-06-07T00:00:00-07:00" itemprop="dateCreated">
                                     Sat 07 June 2025
                                 </time>
                             </li>
                             <li itemscope="">
-                                    <a href="./gis_qualifications.html">
-                                        GIS Qualifications
+                                    <a href="./machine_learning_skills.html">
+                                        Machine Learning Skills
+                                    </a>
+                                <time datetime="2025-06-07T00:00:00-07:00" itemprop="dateCreated">
+                                    Sat 07 June 2025
+                                </time>
+                            </li>
+                            <li itemscope="">
+                                    <a href="./python_skills.html">
+                                        Python Scripting and Programming Skills
                                     </a>
                                 <time datetime="2025-06-07T00:00:00-07:00" itemprop="dateCreated">
                                     Sat 07 June 2025
@@ -705,6 +721,11 @@
             $(document).ready( function () {
                 $('.my-data-table').DataTable();
             } );
+        </script>
+        <script>
+            jQuery(document).ready(function () {
+                jQuery('a.gallery').colorbox({slideshow:true});
+            });
         </script>
 
 <script>
