@@ -1,5 +1,5 @@
 pdf,png,qualification,institution,date,link,category,grade,honors,display,type,rank,external_url,description
-fh_as_geographic_information_systems_technology.pdf,fh_as_geographic_information_systems_technology.png,"Associate in Science Degree, Geographic Information Systems Technology",Foothill College,06/25/2021,,gis,4.0,with highest honors,True,degree,25,https://foothill.edu/gis/,"The associate degree provides a solid technical background in geographic information systems concepts and applications, including cartographic concepts, database design, programming, and interdisciplinary applications of the technology.
+fh_as_geographic_information_systems_technology.pdf,fh_as_geographic_information_systems_technology.png,"Associate in Science Degree, Geographic Information Systems Technology",Foothill College,06/25/2021,,gis,4.0,with highest honors,True,degree,25,,"The associate degree provides a solid technical background in geographic information systems concepts and applications, including cartographic concepts, database design, programming, and interdisciplinary applications of the technology.
 
 * Students will be able to apply cartographic principles of scale, resolution, projection, data management, and spatial analysis to a geographic nature using a geographic information system.
 
@@ -10,7 +10,8 @@ fh_as_geographic_information_systems_technology.pdf,fh_as_geographic_information
 * Students will be able to demonstrate an awareness of professional obligations to society, employers and funders, and individuals as outlined in the Geographic Information Systems Professional Certification Institute Code of Ethics.
 
 [PDF](images/all_qualifications/pdf/fh_gist.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/degrees-certificates/geographic-information-systems-technology/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/degrees-certificates/geographic-information-systems-technology/){:target=""_blank""} |
+[Return to overview](#overview)
 
 ### GIST 11  •  INTRODUCTION TO MAPPING & SPATIAL REASONING  •  4 Units
 
@@ -33,7 +34,8 @@ Student Learning Outcomes
 * Interpreting maps and data.
 
 [PDF](images/all_qualifications/pdf/fh_gist11.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/GIST-11/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/GIST-11/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### GIST 12  •  INTRODUCTION TO GEOSPATIAL TECHNOLOGY  •   4 Units
@@ -49,7 +51,8 @@ Student Learning Outcomes
 * Apply cartographic principles of scale, resolution, projection, data management and spatial analysis to a geographic nature using a GIS.
 
 [PDF](images/all_qualifications/pdf/fh_gist12.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/GIST-12/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/GIST-12/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 
@@ -66,7 +69,8 @@ Student Learning Outcomes
 * Create new GIS databases.
 
 [PDF](images/all_qualifications/pdf/fh_gist52.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/GIST-52/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/GIST-52/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### GIST 53  •  ADVANCED GEOSPATIAL TECHNOLOGY & SPATIAL ANALYSIS  •  4 Units
@@ -86,10 +90,11 @@ Student Learning Outcomes
 * Determine an appropriate approach to solving a problem using geospatial tools and methods.
 
 [PDF](images/all_qualifications/pdf/fh_gist53.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/GIST-53/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/GIST-53/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
-### GIST 54A  •  SEMINAR IN SPECIALIZED APPLICATIONS OF GEOGRAPHIC INFORMATION SYSTEMS I  •  Units: 2
+### GIST 54A  •  SEMINAR IN SPECIALIZED APPLICATIONS OF GEOGRAPHIC INFORMATION SYSTEMS I  •  2 Units
 
 Seminar on the diverse applications of Geographic Information Systems (GIS). Weekly presentations by guest speakers.
 
@@ -99,7 +104,8 @@ Student Learning Outcomes
 * Explain how Geospatial Technology can be used to solve a problem of a geographic nature
 
 [PDF](images/all_qualifications/pdf/fh_gist54a.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/GIST-54A/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/GIST-54A/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### GIST 58  •  REMOTE SENSING & DIGITAL IMAGE PROCESSING  •  3 Units
@@ -115,7 +121,8 @@ Student Learning Outcomes
 * Discuss the physical basis for remote sensing in terms of the electromagnetic spectrum.
 
 [PDF](images/all_qualifications/pdf/fh_gist58.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/GIST-58/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/GIST-58/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### CS 3A  •  OBJECT-ORIENTED PROGRAMMING METHODOLOGIES IN PYTHON  •  4.5 Units
@@ -130,7 +137,8 @@ Student Learning Outcomes
 
 
 [PDF](images/all_qualifications/pdf/fh_cs3a.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/C-S-3A/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/C-S-3A/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### CS 3B  •  INTERMEDIATE SOFTWARE DESIGN IN PYTHON  •  4.5 Units
@@ -144,7 +152,8 @@ Student Learning Outcomes
 * A successful student will be able to write and debug Python programs which make use of inheritance, i.e., the ""is a"" relationship, common to all OOP languages. Specifically, the student will define base and derived classes and use common techniques such as method chaining in his or her programs.
 
 [PDF](images/all_qualifications/pdf/fh_cs3b.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/C-S-3B/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/C-S-3B/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### CS 3C  •  ADVANCED DATA STRUCTURES & ALGORITHMS IN PYTHON  •  4.5 Units
@@ -158,7 +167,8 @@ Student Learning Outcomes
 * The successful student will be able to analyze the time complexity of a variety of algorithms and data structure access techniques and choose the best algorithm and/or data structure for the project at hand.
 
 [PDF](images/all_qualifications/pdf/fh_cs3c.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/C-S-3C/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/C-S-3C/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### CS 22A  •  JAVASCRIPT FOR PROGRAMMERS  •  4.5 Units
@@ -172,7 +182,8 @@ Student Learning Outcomes
 * Write modifiable JavaScript programs that modify the DOM, respond to user events and make requests to the server.
 
 [PDF](images/all_qualifications/pdf/fh_cs22a.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/C-S-22A/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/C-S-22A/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### CS 31A  •  INTRODUCTION TO DATABASE MANAGEMENT SYSTEMS  •  4.5 Units
@@ -186,7 +197,8 @@ Student Learning Outcomes
 * Use Structured Query Language to perform queries on a database.
 
 [PDF](images/all_qualifications/pdf/fh_cs31a.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/C-S-31A/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/C-S-31A/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### CS 48A  •  DATA VISUALIZATION  •  4.5 Units
@@ -202,10 +214,11 @@ Student Learning Outcomes
 * The student will be able to create and design static and interactive visualizations using a data visualization package.
 
 [PDF](images/all_qualifications/pdf/fh_cs48a.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/C-S-48A/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/C-S-48A/){:target=""_blank""} |
+[Return to overview](#overview)
 
 "
-fh_as_geography.pdf,fh_as_geography.png,"Associate in Science Degree, Geography",Foothill College,06/30/2023,,gis,4.0,with highest honors,True,degree,26,https://foothill.edu/geography/,"Geography serves as an excellent undergraduate major. City, county, and state governments are hiring geographers in the field of Geographic Information Systems (GIS), urban planning, and environmental studies because of their broad training. A geography degree also provides a good foundation for careers in international work with agencies such as the State Department, the United Nations, or international NGOs. The national mapping division of the United States Geological Survey traditionally needs geographers in map making and its related job openings such as photo-interpretation, satellite image analysis, land use, and land cover mapping. In addition, the analytical skills gained through a geography major provide a strong foundation for graduate study in law, urban planning, and architecture. Geographers with advanced degrees are also in demand in colleges and universities around the world. Students should enhance their major with a strong array of courses in the international arena, statistics, physical sciences, computer science, and basic business principles.
+fh_as_geography.pdf,fh_as_geography.png,"Associate in Science Degree, Geography",Foothill College,06/30/2023,,gis,4.0,with highest honors,True,degree,26,,"Geography serves as an excellent undergraduate major. City, county, and state governments are hiring geographers in the field of Geographic Information Systems (GIS), urban planning, and environmental studies because of their broad training. A geography degree also provides a good foundation for careers in international work with agencies such as the State Department, the United Nations, or international NGOs. The national mapping division of the United States Geological Survey traditionally needs geographers in map making and its related job openings such as photo-interpretation, satellite image analysis, land use, and land cover mapping. In addition, the analytical skills gained through a geography major provide a strong foundation for graduate study in law, urban planning, and architecture. Geographers with advanced degrees are also in demand in colleges and universities around the world. Students should enhance their major with a strong array of courses in the international arena, statistics, physical sciences, computer science, and basic business principles.
 
 Program Learning Outcomes
 
@@ -214,7 +227,8 @@ Program Learning Outcomes
 * Students will be able to evaluate core concepts in cultural and physical geography and apply them to contemporary events and issues.
 
 [PDF](images/all_qualifications/pdf/fh_geography.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/degrees-certificates/geography/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/degrees-certificates/geography/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### GEOG 1  •  PHYSICAL GEOGRAPHY  •  5 Units
@@ -232,7 +246,8 @@ Student Learning Outcomes
 * Use tools of Geography including maps, graphs and/or Geographic Information Systems (GIS) to analyze and interpret data and draw valid conclusions
 
 [PDF](images/all_qualifications/pdf/fh_geog1.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/GEOG-1/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/GEOG-1/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### GEOG 2  •  HUMAN GEOGRAPHY  •  4 Units
@@ -250,7 +265,8 @@ Student Learning Outcomes
 * Discuss patterns of population growth and change around the world.
 
 [PDF](images/all_qualifications/pdf/fh_geog2.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/GEOG-2/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/GEOG-2/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### GEOG 10  •  WORLD REGIONAL GEOGRAPHY  •  4 Units
@@ -266,7 +282,8 @@ Student Learning Outcomes
 * Compare and contrast major regions of the world with regard to their natural environments, peoples, natural resources, economies and contemporary problems.
 
 [PDF](images/all_qualifications/pdf/fh_geog10.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/GEOG-10/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/GEOG-10/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### GIST 11  •  INTRODUCTION TO MAPPING & SPATIAL REASONING  •  4 Units
@@ -290,7 +307,8 @@ Student Learning Outcomes
 * Interpreting maps and data.
 
 [PDF](images/all_qualifications/pdf/fh_gist11.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/GIST-11/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/GIST-11/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### GIST 12  •  INTRODUCTION TO GEOSPATIAL TECHNOLOGY  •   4 Units
@@ -306,7 +324,8 @@ Student Learning Outcomes
 * Apply cartographic principles of scale, resolution, projection, data management and spatial analysis to a geographic nature using a GIS.
 
 [PDF](images/all_qualifications/pdf/fh_gist12.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/GIST-12/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/GIST-12/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### GLST 1  •  INTRODUCTION TO GLOBAL STUDIES  •   4 Units
@@ -322,10 +341,11 @@ Student Learning Outcomes
 * Students will be able to formulate an informed position on the roles and responsibilities of global institutions, governments and individuals as global citizens.
 
 [PDF](images/all_qualifications/pdf/fh_glst1.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/GLST-1/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/GLST-1/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
-### BIOL 15  •  CALIFORNIA ECOLOGY/NATURAL HISTORY  •   Units 5
+### BIOL 15  •  CALIFORNIA ECOLOGY/NATURAL HISTORY  •   5 Units
 
 An introduction to ecology, natural history, and field biology through the study, largely in an outdoor setting, of the plants and animals of the San Francisco Bay Area.
 
@@ -336,10 +356,11 @@ Student Learning Outcomes
 * The student will explain basic principles of organismal, population, community and ecology.
 
 [PDF](images/all_qualifications/pdf/fh_biol15.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/BIOL-15/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/BIOL-15/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
-### POLI 2  •  COMPARATIVE GOVERNMENT & POLITICS  •   Units 4
+### POLI 2  •  COMPARATIVE GOVERNMENT & POLITICS  •   4 Units
 
 Introductory analysis of comparative governmental systems and politics emphasizing a variety of political forms; theory of political differentiation and development; and patterns, processes, and regularities among political systems in developing and developed world.
 
@@ -350,7 +371,8 @@ Student Learning Outcomes
 * Critically analyze concepts and apply research to support hypothesis about course content.
 
 [PDF](images/all_qualifications/pdf/fh_poli2.pdf){:target=""_blank""} |
-[External link](https://catalog.foothill.edu/course-outlines/POLI-2/){:target=""_blank""}
+[External link](https://catalog.foothill.edu/course-outlines/POLI-2/){:target=""_blank""} |
+[Return to overview](#overview)
 
 "
 fh_award_of_excellence_in_field_of_gis.pdf,fh_award_of_excellence_in_field_of_gis.png,Award of Excellence in the field of GIST,Foothill College,06/01/2021,,gis,,,True,award,44,,
@@ -359,10 +381,11 @@ da_transcript.pdf,da_transcript_2.png,De Anza Transcript (2/2),De Anza College,0
 fh_transcript.pdf,fh_transcript_1.png,Foothill Transcript (1/2),Foothill College,05/01/2024,,,4.0,,True,transcript,206,,
 fh_transcript.pdf,fh_transcript_2.png,Foothill Transcript (2/2),Foothill College,05/01/2024,,,4.0,,True,transcript,207,,
 wvc_transcript.pdf,wvc_transcript_1.png,West Valley Transcript (1/1),West Valley College,05/01/2024,,,4.0,,True,transcript,208,,
-wvc_gis_ca_email.pdf,wvc_gis_ca_email.png,Geospatial Technology Certificate of Achievement,West Valley College,06/27/2025,,gis,4.0,,True,certificate,209,https://www.westvalley.edu/catalog/programs/geospatial-technology-certificate-of-achievement.html,"The Geospatial Technology Certificate of Achievement requires the completion of 24 units of coursework. This course of study includes: geographic information science, global positioning systems, remote sensing, and web-based and mobile mapping services. The Geospatial Technology certificate is intended to provide students with a foundation in the field of geospatial technologies. The certificate is designed for those students who have a desire to pursue a career as a GIS Technician or a Remote Sensing Technician, or to enhance skills to maintain current employment.
+wvc_gis_ca_email.pdf,wvc_gis_ca_email.png,Geospatial Technology Certificate of Achievement,West Valley College,06/27/2025,,gis,4.0,,True,certificate,209,,"The Geospatial Technology Certificate of Achievement requires the completion of 24 units of coursework. This course of study includes: geographic information science, global positioning systems, remote sensing, and web-based and mobile mapping services. The Geospatial Technology certificate is intended to provide students with a foundation in the field of geospatial technologies. The certificate is designed for those students who have a desire to pursue a career as a GIS Technician or a Remote Sensing Technician, or to enhance skills to maintain current employment.
 
 [PDF](images/all_qualifications/pdf/wvc_geospatial_technology.pdf){:target=""_blank""} |
-[External link](https://www.westvalley.edu/catalog/courses/geospatial-technology/){:target=""_blank""}
+[External link](https://www.westvalley.edu/catalog/courses/geospatial-technology/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### GIST 016B  •  MOBILE GIS  •  3 Units
@@ -370,7 +393,8 @@ wvc_gis_ca_email.pdf,wvc_gis_ca_email.png,Geospatial Technology Certificate of A
 This course provides students the opportunity to collect field data with location service applications and incorporate that data into mobile GIS applications. The course makes use of cloud-based services in conjunction with mobile data collection resources.
 
 [PDF](images/all_qualifications/pdf/wvc_gist016b.pdf){:target=""_blank""} |
-[External link](https://www.westvalley.edu/catalog/courses/geospatial-technology/gist016b.html){:target=""_blank""}
+[External link](https://www.westvalley.edu/catalog/courses/geospatial-technology/gist016b.html){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### GIST 016C  •  SPATIAL ANALYSIS for GIS  •  3 Units
@@ -378,7 +402,8 @@ This course provides students the opportunity to collect field data with locatio
 This course provides a detailed examination of spatial information systems and a survey of quantitative techniques applicable to spatial data. This course focuses on the functionality of GIS as an effective tool for modeling and analyzing complex spatial relationships. Quantitative methods are studied to include measures of central tendency, dispersion, and density. These methods are presented using empirical data.
 
 [PDF](images/all_qualifications/pdf/wvc_gist016c.pdf){:target=""_blank""} |
-[External link](https://www.westvalley.edu/catalog/courses/geospatial-technology/gist016c.html){:target=""_blank""}
+[External link](https://www.westvalley.edu/catalog/courses/geospatial-technology/gist016c.html){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### GIST 016D  •  CARTOGRAPHIC DESIGN FOR GIS  •  3 Units
@@ -386,7 +411,8 @@ This course provides a detailed examination of spatial information systems and a
 This course provides a comprehensive study of GIS applicable cartography including cartographic principles, data acquisition methods used in map production, and methods of base map development. This course covers the history, principles of cartography map projections, map scale, types of thematic maps and map accuracy. Techniques used in GIS base map development are introduced using hands-on exercises. This course includes the production of professional quality maps and hands-on work in computer assisted mapping projects.
 
 [PDF](images/all_qualifications/pdf/wvc_gist016d.pdf){:target=""_blank""} |
-[External link](https://www.westvalley.edu/catalog/courses/geospatial-technology/gist016d.html){:target=""_blank""}
+[External link](https://www.westvalley.edu/catalog/courses/geospatial-technology/gist016d.html){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### GIST 016E  •  GEODATABASE DESIGN AND MANAGEMENT  •  3 Units
@@ -394,7 +420,8 @@ This course provides a comprehensive study of GIS applicable cartography includi
 This course examines the principles of geodatabase management and design including conversion fundamentals, modeling techniques, and strategic planning. The needs, alternatives, and pitfalls of database development and conversion are discussed. Various types of data applicable to GIS and their hardware and software requirements are explored along with the appropriate methodology for developing a conversion plan and data quality assurance. This course includes hands-on practical exercises in geodatabase management skills.
 
 [PDF](images/all_qualifications/pdf/wvc_gist016e.pdf){:target=""_blank""} |
-[External link](https://www.westvalley.edu/catalog/courses/geospatial-technology/gist016e.html){:target=""_blank""}
+[External link](https://www.westvalley.edu/catalog/courses/geospatial-technology/gist016e.html){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### GIST 016G: INTRODUCTION TO REMOTE SENSING  •  3 Units
@@ -402,7 +429,8 @@ This course examines the principles of geodatabase management and design includi
 This course introduces the concepts of remote sensing. This includes the history and current techniques for remote sensing, the use of imagery to assess and classify land changes over time, and the methods to conduct analysis using current remote sensing software.
 
 [PDF](images/all_qualifications/pdf/wvc_gist016g.pdf){:target=""_blank""} |
-[External link](https://www.westvalley.edu/catalog/courses/geospatial-technology/gist016g.html){:target=""_blank""}
+[External link](https://www.westvalley.edu/catalog/courses/geospatial-technology/gist016g.html){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### GIST 016I: GIS PROGRAMMING AND THE WEB  •  3 Units
@@ -410,12 +438,13 @@ This course introduces the concepts of remote sensing. This includes the history
 This course focuses on GIS programming and the use of Python. Students have the opportunity to apply the principles of Python programming for GIS applications. The course explores how Python programming adds functionality to GIS mapping software.
 
 [PDF](images/all_qualifications/pdf/wvc_gist016i.pdf){:target=""_blank""} |
-[External link](https://www.westvalley.edu/catalog/courses/geospatial-technology/gist016i.html){:target=""_blank""}
+[External link](https://www.westvalley.edu/catalog/courses/geospatial-technology/gist016i.html){:target=""_blank""} |
+[Return to overview](#overview)
 
 "
 wvc_unofficial_transcript.pdf,wvc_unofficial_transcript_1.png,West Valley College Unofficial Transcript (1/2),West Valley College,07/03/2025,,,4.0,,True,transcript,210,,
 wvc_unofficial_transcript.pdf,wvc_unofficial_transcript_2.png,West Valley College Unofficial Transcript (2/2),West Valley College,07/03/2025,,,4.0,,True,transcript,211,,
-ucd_gis_analyst_badge.pdf,ucd_gis_analyst_badge.png,GIS Analyst Metaskill,UC Davis,06/16/2025,https://www.credly.com/badges/0b108d4c-d815-4199-be43-b637e768fd4c/public_url,gis,,,True,certificate,27,https://cpe.ucdavis.edu/course/gis-analyst-program,"Geographic information systems (GIS) are an indispensable tool utilized across nearly all business sectors and industries. Given it’s near ubiquitous usage and constantly evolving suite of platforms, tools and capabilities, training is essential for any GIS analyst or other professional who needs to use GIS to help inform their work.
+ucd_gis_analyst_badge.pdf,ucd_gis_analyst_badge.png,GIS Analyst Metaskill,UC Davis,06/16/2025,https://www.credly.com/badges/0b108d4c-d815-4199-be43-b637e768fd4c/public_url,gis,,,True,certificate,27,,"Geographic information systems (GIS) are an indispensable tool utilized across nearly all business sectors and industries. Given it’s near ubiquitous usage and constantly evolving suite of platforms, tools and capabilities, training is essential for any GIS analyst or other professional who needs to use GIS to help inform their work.
 
 The GIS Analyst Program has been designed to provide professionals with a comprehensive overview of GIS tools, processes, and best practices. Through lectures and lab work that instructors and fellow learners bring to the discussion, you’ll gain an understanding of how to use, ArcGIS Pro, the most common GIS platform to build accurate maps, effectively manage databases and more. By the end of this program, you will not only possess the GIS skills to improve the efficiency and accuracy of your work, you’ll also be empowered to help make informed, data-driven policy and business decisions within your organization."
 ucd_intro_to_gis.pdf,ucd_intro_to_gis.png,Introduction to Geographic Information Systems,UC Davis,08/23/2024,,gis,,,True,course,28,https://cpe.ucdavis.edu/section/introduction-geographic-information-systems,Geographic Information Systems (GIS) is an exciting set of technology tools used in almost every field imaginable. Knowledge of GIS and experience with spatial analysis will enhance your resume and allow you to analyze and manage your data more effectively than ever before. Gain an overview of GIS in this hands-on workshop. Learn about terms and concepts
@@ -432,8 +461,6 @@ ucd_gis_database_design.pdf,ucd_gis_database_design.png,GIS Database Design,UC D
 Participants will propose, design and populate a database of their choice using spatial and other forms of data.
 
 This course is intended for professionals who desire to include GIS as a tool in land use and resource planning efforts, and will also be beneficial to anyone with a strong desire to incorporate GIS database design and maintenance technology in a systematic and comprehensive manner. The course is directed at those who have a working knowledge of ArcGIS; it is highly recommended that students have experience using ArcGIS or take Introduction to Geographic Information Systems prior to undertaking this course.
-
-[https://cpe.ucdavis.edu/section/gis-database-design](https://cpe.ucdavis.edu/section/gis-database-design){:target=""_blank""}
 "
 ucd_geographic_information_systems.pdf,ucd_geographic_information_systems.png,Geographic Information Systems (GIS) Specialization,UC Davis,06/05/2024,https://www.coursera.org/specializations/gis#courses,gis,,,True,certificate,31,https://www.coursera.org/specializations/gis#courses,"Knowledge of Geographic Information Systems (GIS) is an increasingly sought after skill in industries from agriculture to public health. This Specialization, offered in partnership with ArcGIS developer Esri, will teach the skills you need to successfully use GIS software in a professional setting. You will learn how to analyze your spatial data, use cartography techniques to communicate your results in maps, and collaborate with peers in GIS and GIS-dependent fields.
 
@@ -442,51 +469,51 @@ Applied Learning Project
 Learners will work through the various course projects to gain experience and skills related to geographic information systems. Each course builds on the knowledge of the previous and the final course provides you a survey of the various industries GIS is being used. "
 ucd_fundamentals_of_gis.pdf,ucd_fundamentals_of_gis.png,Fundamentals of GIS,UC Davis,03/24/2022,https://www.coursera.org/account/accomplishments/verify/38J6QKKL8BDX,gis,,,True,course,32,https://www.coursera.org/learn/gis#modules,"Explore the world of spatial analysis and cartography with geographic information systems (GIS). In this class you will learn the basics of the industry’s leading software tool, ArcGIS, during four week-long modules:
 
-Week 1: Learn how GIS grew from paper maps to the globally integrated electronic software packages of today. You will install ArcGIS on your computer and learn how to use online help to answer technical questions.
+**Week 1:** Learn how GIS grew from paper maps to the globally integrated electronic software packages of today. You will install ArcGIS on your computer and learn how to use online help to answer technical questions.
 
-Week 2: Open up ArcGIS and explore data using ArcMap. Learn the foundational concepts of GIS, how to analyze data, and make your first map.
+**Week 2:** Open up ArcGIS and explore data using ArcMap. Learn the foundational concepts of GIS, how to analyze data, and make your first map.
 
-Week 3: Make your own maps! Symbolize data and create an eye-catching final product.
+**Week 3:** Make your own maps! Symbolize data and create an eye-catching final product.
 
-Week 4: Share your data and maps and learn to store and organize your data."
+**Week 4:** Share your data and maps and learn to store and organize your data."
 ucd_gis_data_formats_design_and_quality.pdf,ucd_gis_data_formats_design_and_quality.png,GIS Data Formats Design and Quality,UC Davis,03/28/2022,https://www.coursera.org/account/accomplishments/verify/LC8J6EWFGJDM,gis,,,True,course,33,https://www.coursera.org/learn/gis-data#modules,"In this course, the second in the Geographic Information Systems (GIS) Specialization, you will go in-depth with common data types (such as raster and vector data), structures, quality and storage during four week-long modules:
 
-Week 1: Learn about data models and formats, including a full understanding of vector data and raster concepts. You will also learn about the implications of a data’s scale and how to load layers from web services.
+**Week 1:** Learn about data models and formats, including a full understanding of vector data and raster concepts. You will also learn about the implications of a data’s scale and how to load layers from web services.
 
-Week 2: Create a vector data model by using vector attribute tables, writing query strings, defining queries, and adding and calculating fields. You'll also learn how to create new data through the process of digitizing and you'll use the built-in Editor tools in ArcGIS.
+**Week 2:** Create a vector data model by using vector attribute tables, writing query strings, defining queries, and adding and calculating fields. You'll also learn how to create new data through the process of digitizing and you'll use the built-in Editor tools in ArcGIS.
 
-Week 3: Learn about common data storage mechanisms within GIS, including geodatabases and shapefiles. Learn how to choose between them for your projects and how to optimize them for speed and size. You'll also work with rasters for the first time, using digital elevation models and creating slope and distance analysis products.
+**Week 3:** Learn about common data storage mechanisms within GIS, including geodatabases and shapefiles. Learn how to choose between them for your projects and how to optimize them for speed and size. You'll also work with rasters for the first time, using digital elevation models and creating slope and distance analysis products.
 
-Week 4: Explore datasets and assess them for quality and uncertainty.  You will also learn how to bring your maps and data to the Internet and create web maps quickly with ArcGIS Online."
+**Week 4:** Explore datasets and assess them for quality and uncertainty.  You will also learn how to bring your maps and data to the Internet and create web maps quickly with ArcGIS Online."
 ucd_imagery_automation_and_application.pdf,ucd_imagery_automation_and_application.png,Imagery Automation and Applications,UC Davis,04/20/2022,https://www.coursera.org/account/accomplishments/verify/NZ36C3DH8ZXQ,gis,,,True,course,34,https://www.coursera.org/learn/gis-applications#modules,"Using the knowledge you’ve learned about ArcGIS, complete technical tasks such raster calculations and suitability analysis. In this class you will become comfortable with spatial analysis and applications within GIS during four week-long modules:
 
-Week 1: You'll learn all about remotely sensed and satellite imagery, and be introduced to the electromagnetic spectrum. At the end of this week, you'll be able to find and download satellite imagery online and use it for two common types of analysis: NDVI and trained classification.
+**Week 1:** You'll learn all about remotely sensed and satellite imagery, and be introduced to the electromagnetic spectrum. At the end of this week, you'll be able to find and download satellite imagery online and use it for two common types of analysis: NDVI and trained classification.
 
-Week 2: You'll learn how to use ModelBuilder to create large processing workflows that use parameters, preconditions, variables, and a new set of tools. We'll also explore a few topics that we don't really have time to discuss in detail, but might whet your appetite for future learning in other avenues: geocoding, time-enabled data, spatial statistics, and ArcGIS Pro.
+**Week 2:** You'll learn how to use ModelBuilder to create large processing workflows that use parameters, preconditions, variables, and a new set of tools. We'll also explore a few topics that we don't really have time to discuss in detail, but might whet your appetite for future learning in other avenues: geocoding, time-enabled data, spatial statistics, and ArcGIS Pro.
 
-Week 3: In week three, we'll make and use digital elevation models using some new, specific tools such as the cut fill tool, hillshades, viewsheds and more. We'll also go through a few common algorithms including a very important one: the suitability analysis.
+**Week 3:** In week three, we'll make and use digital elevation models using some new, specific tools such as the cut fill tool, hillshades, viewsheds and more. We'll also go through a few common algorithms including a very important one: the suitability analysis.
 
-Week 4: We'll begin the final week by talking about a few spatial analyst tools we haven't yet touched on in the specialization: Region Group to make our own zones, Focal Statistics to smooth a hillshade, Reclassify to change values, and Point Density to create a density surface. Finally, we'll wrap up by talking about a few more things that you might want to explore more as you start working on learning about GIS topics on your own."
+**Week 4:** We'll begin the final week by talking about a few spatial analyst tools we haven't yet touched on in the specialization: Region Group to make our own zones, Focal Statistics to smooth a hillshade, Reclassify to change values, and Point Density to create a density surface. Finally, we'll wrap up by talking about a few more things that you might want to explore more as you start working on learning about GIS topics on your own."
 ucd_geospatial_and_environmental_analysis.pdf,ucd_geospatial_and_environmental_analysis.png,Geospatial and Environmental Analysis,UC Davis,04/03/2022,https://www.coursera.org/account/accomplishments/verify/VJD97YS452PQ,gis,,,True,course,35,https://www.coursera.org/learn/spatial-analysis#modules,"Apply your GIS knowledge in this course on geospatial analysis, focusing on analysis tools, 3D data, working with rasters, projections, and environment variables. Through all four weeks of this course, we'll work through a project together - something unique to this course - from project conception, through data retrieval, initial data management and processing, and finally to our analysis products.
 
 In this class you will learn the fundamentals of geospatial and environmental analysis during four week-long modules:
 
-Week 1: Tour ArcToolbox and learn how to use common geospatial analysis tools built into ArcGIS.
+**Week 1:** Tour ArcToolbox and learn how to use common geospatial analysis tools built into ArcGIS.
 
-Week 2: Gain a working understanding of raster data models: symbolize, reproject, overlay, and assess rasters. Take a detour into 3D data models, and interpolation of observations into 3D surfaces and rasters.
+**Week 2:** Gain a working understanding of raster data models: symbolize, reproject, overlay, and assess rasters. Take a detour into 3D data models, and interpolation of observations into 3D surfaces and rasters.
 
-Week 3: Go in-depth on projections and coordinate systems, which are foundational to all GIS. Learn how to use environment variables to constrain your analyses and get better quality data products.
+**Week 3:** Go in-depth on projections and coordinate systems, which are foundational to all GIS. Learn how to use environment variables to constrain your analyses and get better quality data products.
 
-Week 4: Expand your knowledge of symbology. Learn how to visually display your data by classifying it in logical groupings and then symbolizing it on your map."
+**Week 4:** Expand your knowledge of symbology. Learn how to visually display your data by classifying it in logical groupings and then symbolizing it on your map."
 ucd_geospatial_analysis_with_arcgis.pdf,ucd_geospatial_analysis_with_arcgis.png,Geospatial Analysis with ArcGIS,UC Davis,06/04/2024,https://www.coursera.org/account/accomplishments/verify/EDTZM4BGPLRG,gis,,,True,course,36,https://www.coursera.org/learn/geospatial-analysis#modules,"In this class you will learn the fundamentals of geospatial and environmental analysis during four week-long modules:
 
-Week 1: How to represent spatial data and analyze spatial relationships using ArcGIS Pro.
+**Week 1:** How to represent spatial data and analyze spatial relationships using ArcGIS Pro.
 
-Week 2: Conduct Network-Based Analysis.
+**Week 2:** Conduct Network-Based Analysis.
 
-Week 3: Demonstrate Heatmaps and Hotspot Analysis in ArcGIS Pro.
+**Week 3:** Demonstrate Heatmaps and Hotspot Analysis in ArcGIS Pro.
 
-Week 4: Expand your knowledge of data storytelling. Learn how to visually display your data and sharing your maps in ArcGIS Online."
+**Week 4:** Expand your knowledge of data storytelling. Learn how to visually display your data and sharing your maps in ArcGIS Online."
 ucd_gis_applications_across_industries.pdf,ucd_gis_applications_across_industries.png,GIS Applications Across Industries,UC Davis,06/05/2024,https://www.coursera.org/account/accomplishments/verify/SNPERBUS3SAG,gis,,,True,course,37,https://www.coursera.org/specializations/gis-mapping-spatial-analysis#courses,"Geographic Information Systems (GIS) is becoming an essential business skill across a variety of different disciplines. In this course, you will explore how GIS skills are commonly applied and used in a variety of industries focusing specifically on: environmental studies, public health, emergency management, and business development. You will be empowered to conduct GIS-based analyses that are commonly used in these areas and benefit from how each industry uses GIS to tackle common analysis needs. Additionally, you will work through a series of hands-on exercises that will improve your knowledge of the advanced analysis capabilities of ArcGIS Pro."
 uot_gis_mapping_and_spatial_analysis.pdf,uot_gis_mapping_and_spatial_analysis.png,GIS Mapping and Spatial Analysis Specialization,University of Toronto,03/25/2022,https://www.coursera.org/account/accomplishments/specialization/PR38ZQZCXTFE,gis,,,True,certificate,38,https://www.coursera.org/specializations/gis-mapping-spatial-analysis#courses,"This Specialization is for those new to mapping and GIS, as well as anyone looking to gain a better understanding of how it all works and why. You will learn practical skills that can be applied to your own work using cutting-edge software created by Esri Inc., the world's leading GIS company and our industry partner."
 uot_introduction_to_gis_mapping.pdf,uot_introduction_to_gis_mapping.png,Introduction to GIS Mapping,University of Toronto,01/20/2022,https://www.coursera.org/account/accomplishments/verify/YSS3UQ85P7HU,gis,,,True,course,39,https://www.coursera.org/learn/introduction-gis-mapping#modules,"Get started learning about the fascinating and useful world of geographic information systems (GIS)! In this first course of the specialization GIS, Mapping, and Spatial Analysis, you'll learn about what a GIS is, how to get started with the software yourself, how things we find in the real world can be represented on a map, how we record locations using coordinates, and how we can make a two-dimensional map from a three-dimensional Earth. In the course project, you will create your own GIS data by tracing geographic features from a satellite image for a location and theme of your choice. This course will give you a strong foundation in mapping and GIS that will give you the understanding you need to start working with GIS, and to succeed in the other courses in this specialization.
