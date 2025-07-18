@@ -816,7 +816,12 @@ What You Will Learn:
 * Performing Spatial Analysis  •  Discover tools for performing simple spatial analysis and creating maps.
 * Hands-on Practice  •  Step-by-step exercises to help you build confidence with the software.
 "
-da_aa_database_development_practitioner.pdf,da_aa_database_development_practitioner.png,"Associate in Arts Degree, Database Development Practitioner",De Anza College,08/23/2024,,"database,sql",4.0,summa cum laude,True,degree,137,https://www.deanza.edu/_resources/php/degrees/degree-preview-1.php?deg=49,"The Database Development Practitioner Certificate of Achievement includes database management system fundamentals, SQL, PL/SQL, large scale data processing and big data and analytics. Students become proficient in organizing essential information and abstract relationships into a database. They also learn to update, maintain and repair databases. Database skills are applied by software engineers, business analysts, database architects, database administrators, database designers and reporting analysts.
+da_aa_database_development_practitioner.pdf,da_aa_database_development_practitioner.png,"Associate in Arts Degree, Database Development Practitioner",De Anza College,08/23/2024,,"database,sql",4.0,summa cum laude,True,degree,137,,"The Database Development Practitioner Certificate of Achievement includes database management system fundamentals, SQL, PL/SQL, large scale data processing and big data and analytics. Students become proficient in organizing essential information and abstract relationships into a database. They also learn to update, maintain and repair databases. Database skills are applied by software engineers, business analysts, database architects, database administrators, database designers and reporting analysts.
+
+
+[PDF](images/all_qualifications/pdf/da_database_practicioner.pdf){:target=""_blank""} |
+[External link](https://deanza.elumenapp.com/catalog/2024-2025/program/database-development-practitioner-fall-2024){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### CS 3A  •  OBJECT-ORIENTED PROGRAMMING METHODOLOGIES IN PYTHON  •  4.5 Units
@@ -830,6 +835,11 @@ Student Learning Outcomes
 * A successful student will be able to use object-oriented programming techniques to design and implement a clear, well-structured Python program. Specifically, the student will use and design classes and objects in his or her programs.
 
 
+[PDF](images/all_qualifications/pdf/fh_cs3a.pdf){:target=""_blank""} |
+[External link](https://catalog.foothill.edu/course-outlines/C-S-3A/){:target=""_blank""} |
+[Return to overview](#overview)
+
+
 ### CS 3B  •  INTERMEDIATE SOFTWARE DESIGN IN PYTHON  •  4.5 Units
 
 Systematic treatment of intermediate concepts in computer science through the study of Python object-oriented programming (OOP). Coding topics include Python sequences, user-defined classes and interfaces, modules, packages, collection classes, threads, lambda expressions, list comprehensions, regular expressions and multi-dimensional arrays. Concept topics include OOP project design, recursion, inheritance, polymorphism, functional programming, linked-lists, FIFOs, LIFOs, event-driven parsing, exceptions, and guarded code.
@@ -839,6 +849,10 @@ Student Learning Outcomes
 * A successful student will be able to use the Python environment to define the basic abstract data types (stacks, queues, lists) and iterators of those types to effectively manipulate the data in his or her program.
 
 * A successful student will be able to write and debug Python programs which make use of inheritance, i.e., the ""is a"" relationship, common to all OOP languages. Specifically, the student will define base and derived classes and use common techniques such as method chaining in his or her programs.
+
+[PDF](images/all_qualifications/pdf/fh_cs3b.pdf){:target=""_blank""} |
+[External link](https://catalog.foothill.edu/course-outlines/C-S-3B/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### CS 3C  •  ADVANCED DATA STRUCTURES & ALGORITHMS IN PYTHON  •  4.5 Units
@@ -851,6 +865,10 @@ Student Learning Outcomes
 
 * The successful student will be able to analyze the time complexity of a variety of algorithms and data structure access techniques and choose the best algorithm and/or data structure for the project at hand.
 
+[PDF](images/all_qualifications/pdf/fh_cs3c.pdf){:target=""_blank""} |
+[External link](https://catalog.foothill.edu/course-outlines/C-S-3C/){:target=""_blank""} |
+[Return to overview](#overview)
+
 
 ### CS 31A  •  INTRODUCTION TO DATABASE MANAGEMENT SYSTEMS  •  4.5 Units
 
@@ -861,6 +879,10 @@ Student Learning Outcomes
 * Create a conceptual database design
 
 * Use Structured Query Language to perform queries on a database
+
+[PDF](images/all_qualifications/pdf/fh_cs31a.pdf){:target=""_blank""} |
+[External link](https://catalog.foothill.edu/course-outlines/C-S-31A/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### CIS 44F  •  Introduction to Big Data and Analytics  •  4 Units
@@ -873,6 +895,10 @@ Student Learning Outcomes
 
 * Perform data analysis using a large-scale database systems given a set of user requirements.
 
+[PDF](images/all_qualifications/pdf/da_cis44f.pdf){:target=""_blank""} |
+[External link](https://www.deanza.edu/catalog/courses/outline.html?cid=cisd044f){:target=""_blank""} |
+[Return to overview](#overview)
+
 
 ### CIS 64B  •  Introduction to SQL  •  4.5 Units
 
@@ -884,6 +910,9 @@ Student Learning Outcomes
 
 * Create algorithms, code, document, debug, and test introductory level SQL programs.
 
+[PDF](images/all_qualifications/pdf/da_cis64b.pdf){:target=""_blank""} |
+[External link](https://www.deanza.edu/catalog/courses/outline.html?cid=cisd064b){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### CIS 64C  •  Introduction to PL/SQL  •  4.5 Units
@@ -896,6 +925,10 @@ Student Learning Outcomes
 
 * Create algorithms, code, document, debug, and test introductory level PL/SQL programs.
 
+[PDF](images/all_qualifications/pdf/da_cis64c.pdf){:target=""_blank""} |
+[External link](https://www.deanza.edu/catalog/courses/outline.html?cid=cisd064c){:target=""_blank""} |
+[Return to overview](#overview)
+
 
 ### CIS 9  •  Introduction to Data Science  •  4.5 Units
 
@@ -907,8 +940,12 @@ Student Learning Outcomes
 
 * Gather data and choose a model to train and tune the machine learning tool and interpret the result.
 
+[PDF](images/all_qualifications/pdf/da_cis9.pdf){:target=""_blank""} |
+[External link](https://www.deanza.edu/catalog/courses/outline.html?cid=cisd009){:target=""_blank""} |
+[Return to overview](#overview)
 
-### CIS 44H  •  R Programming  •  4.5
+
+### CIS 44H  •  R Programming  •  4.5 Units
 
 This course is an introduction to the R programming language and its utility in big data analytics. Topics covered include data objects, data cleansing, merging and sorting, statistical analysis of data, data graphics, and visualization, and working with R-Studio.
 
@@ -917,6 +954,10 @@ Student Learning Outcomes
 * Design, implement and debug R programs to process data from various sources for data analysis.
 
 * Use R-graphics to display and visualize data.
+
+[PDF](images/all_qualifications/pdf/da_cis44h.pdf){:target=""_blank""} |
+[External link](https://www.deanza.edu/catalog/courses/outline.html?cid=cisd044h){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### CIS 18A  •  Introduction to Unix/Linux  •  4.5 Units
@@ -927,14 +968,22 @@ Student Learning Outcomes
 
 * Use the Unix/Linux Operating System utilities and shell features for basic file manipulation, networking, and communication.
 
+[PDF](images/all_qualifications/pdf/da_cis18a.pdf){:target=""_blank""} |
+[External link](https://www.deanza.edu/catalog/courses/outline.html?cid=cisd018a){:target=""_blank""} |
+[Return to overview](#overview)
 
-### CIS 18B  •  Advanced UNIX/LINUX  •  4.5
+
+### CIS 18B  •  Advanced UNIX/LINUX  •  4.5 Units
 
 Expanded coverage of regular expressions and grep. Advanced topics in Unix/Linux include egrep, find, sed, awk, file archiving, compression, and conversion, version control, makefile, basic shell scripts and installation of a Linux distribution.
 
 tudent Learning Outcomes
 
 * Use the Unix/Linux Operating System utilities, shell features, and regular expressions for advanced text file manipulation.
+
+[PDF](images/all_qualifications/pdf/da_cis18b.pdf){:target=""_blank""} |
+[External link](https://www.deanza.edu/catalog/courses/outline.html?cid=cisd018b){:target=""_blank""} |
+[Return to overview](#overview)
 
 "
 ca_software_development_in_python.pdf,ca_software_development_in_python.png,Software Development in Python,Foothill College,06/25/2021,,python,,,True,course,138,https://catalog.foothill.edu/degrees-certificates/computer-science/#text,"### Certificate of Achievement in Software Development in Python  •  Units: 27

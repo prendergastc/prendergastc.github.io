@@ -236,12 +236,15 @@ Draws conclusions, identifies limitation of this study, and suggests areas for f
         </script>
         <script>
             $(document).ready( function () {
-                $('.my-data-table').DataTable();
+                $('.my-data-table').dataTable({
+                    /* Disable initial sort */
+                    "aaSorting": []
+                });
             } );
         </script>
         <script>
-            jQuery(document).ready(function () {
-                jQuery('a.gallery').colorbox({slideshow:true});
+            $(document).ready(function () {
+                $('a.gallery').colorbox({slideshow:true});
             });
         </script>
 

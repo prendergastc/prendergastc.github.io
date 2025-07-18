@@ -1886,12 +1886,15 @@ This course introduces basic layer property settings you can manage to provide a
         </script>
         <script>
             $(document).ready( function () {
-                $('.my-data-table').DataTable();
+                $('.my-data-table').dataTable({
+                    /* Disable initial sort */
+                    "aaSorting": []
+                });
             } );
         </script>
         <script>
-            jQuery(document).ready(function () {
-                jQuery('a.gallery').colorbox({slideshow:true});
+            $(document).ready(function () {
+                $('a.gallery').colorbox({slideshow:true});
             });
         </script>
 

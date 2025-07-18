@@ -1876,12 +1876,15 @@ Text(value='20241203_SovereignLimitsDB_Q4_2024_Apple/GIS/SovereignLimitsDB_Q4_20
         </script>
         <script>
             $(document).ready( function () {
-                $('.my-data-table').DataTable();
+                $('.my-data-table').dataTable({
+                    /* Disable initial sort */
+                    "aaSorting": []
+                });
             } );
         </script>
         <script>
-            jQuery(document).ready(function () {
-                jQuery('a.gallery').colorbox({slideshow:true});
+            $(document).ready(function () {
+                $('a.gallery').colorbox({slideshow:true});
             });
         </script>
 

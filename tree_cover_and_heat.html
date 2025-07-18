@@ -241,12 +241,15 @@ and suggests areas for further study.</p>
         </script>
         <script>
             $(document).ready( function () {
-                $('.my-data-table').DataTable();
+                $('.my-data-table').dataTable({
+                    /* Disable initial sort */
+                    "aaSorting": []
+                });
             } );
         </script>
         <script>
-            jQuery(document).ready(function () {
-                jQuery('a.gallery').colorbox({slideshow:true});
+            $(document).ready(function () {
+                $('a.gallery').colorbox({slideshow:true});
             });
         </script>
 
