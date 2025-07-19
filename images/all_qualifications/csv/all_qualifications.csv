@@ -816,7 +816,12 @@ What You Will Learn:
 * Performing Spatial Analysis  •  Discover tools for performing simple spatial analysis and creating maps.
 * Hands-on Practice  •  Step-by-step exercises to help you build confidence with the software.
 "
-da_aa_database_development_practitioner.pdf,da_aa_database_development_practitioner.png,"Associate in Arts Degree, Database Development Practitioner",De Anza College,08/23/2024,,"database,sql",4.0,summa cum laude,True,degree,137,https://www.deanza.edu/_resources/php/degrees/degree-preview-1.php?deg=49,"The Database Development Practitioner Certificate of Achievement includes database management system fundamentals, SQL, PL/SQL, large scale data processing and big data and analytics. Students become proficient in organizing essential information and abstract relationships into a database. They also learn to update, maintain and repair databases. Database skills are applied by software engineers, business analysts, database architects, database administrators, database designers and reporting analysts.
+da_aa_database_development_practitioner.pdf,da_aa_database_development_practitioner.png,"Associate in Arts Degree, Database Development Practitioner",De Anza College,08/23/2024,,"database,sql",4.0,summa cum laude,True,degree,137,"","The Database Development Practitioner A.A. prepares students for a position in the database field to work as a data analyst, business analyst, database project coordinator or database engineer. It includes database management system fundamentals, SQL, PL/SQL, large scale data processing and big data and analytics. Students become proficient in organizing essential information and abstract relationships into a database. They also learn to update, maintain and repair databases. Database skills are applied by software engineers, business analysts, database architects, database administrators, database designers and reporting analysts.
+
+
+[PDF](images/all_qualifications/pdf/da_aa_database_development_practitioner.pdf){:target=""_blank""} |
+[External link](https://deanza.elumenapp.com/catalog/2024-2025/program/database-development-practitioner-fall-2024){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### CS 3A  •  OBJECT-ORIENTED PROGRAMMING METHODOLOGIES IN PYTHON  •  4.5 Units
@@ -981,7 +986,7 @@ tudent Learning Outcomes
 [Return to overview](#overview)
 
 "
-ca_software_development_in_python.pdf,ca_software_development_in_python.png,"Software Development in Python, Certificate of Achievement",Foothill College,06/25/2021,,python,,,True,course,138,https://catalog.foothill.edu/degrees-certificates/computer-science/#text,"### Certificate of Achievement in Software Development in Python  •  Units: 27
+ca_software_development_in_python.pdf,ca_software_development_in_python.png,"Software Development in Python, Certificate of Achievement",Foothill College,06/25/2021,,python,,,True,course,138,"","Certificate of Achievement in Software Development in Python  •  27 Units
 
 The Software Development in Python Certificate of Achievement program equips students with proficiency in Python programming and software development methodologies. It benefits professionals in data research, AI, web design, and other software development fields. Students can earn the certificate while pursuing higher computer science degrees or as a standalone credential. Graduates can pursue careers in various computer and software engineering roles, including web development, software development, data science, and computer systems management.
 
@@ -996,6 +1001,10 @@ Program Outline
 * Students can earn this certificate as they work toward higher computer science degrees, which include Associate degrees designed for computer science with the intention of transfer.
 
 
+[External link](https://catalog.foothill.edu/degrees-certificates/computer-science/){:target=""_blank""} |
+[Return to overview](#overview)
+
+
 ### CS 3A  •  OBJECT-ORIENTED PROGRAMMING METHODOLOGIES IN PYTHON  •  4.5 Units
 
 Systematic introduction to fundamental concepts of computer science through the study of the Python programming language. Coding topics include control structures, functions, classes, string processing, lists, tuples, dictionaries, working with files, and elementary graphics. Concept topics include algorithms, data abstraction, problem solving strategies, code style, documentation, debugging techniques and testing.
@@ -1005,6 +1014,11 @@ Student Learning Outcomes
 * A successful student will be able to write and debug Python programs which make use of the fundamental control structures and function-building techniques common to all programming languages. Specifically, the student will use data types, input, output, iterative, conditional, and functional components of the language in his or her programs.
 
 * A successful student will be able to use object-oriented programming techniques to design and implement a clear, well-structured Python program. Specifically, the student will use and design classes and objects in his or her programs.
+
+
+[PDF](images/all_qualifications/pdf/fh_cs3a.pdf){:target=""_blank""} |
+[External link](https://catalog.foothill.edu/course-outlines/C-S-3A/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### CS 3B  •  INTERMEDIATE SOFTWARE DESIGN IN PYTHON  •  4.5 Units
@@ -1017,6 +1031,10 @@ Student Learning Outcomes
 
 * A successful student will be able to write and debug Python programs which make use of inheritance, i.e., the ""is a"" relationship, common to all OOP languages. Specifically, the student will define base and derived classes and use common techniques such as method chaining in his or her programs.
 
+[PDF](images/all_qualifications/pdf/fh_cs3b.pdf){:target=""_blank""} |
+[External link](https://catalog.foothill.edu/course-outlines/C-S-3B/){:target=""_blank""} |
+[Return to overview](#overview)
+
 
 ### CS 3C  •  ADVANCED DATA STRUCTURES & ALGORITHMS IN PYTHON  •  4.5 Units
 
@@ -1027,6 +1045,10 @@ Student Learning Outcomes
 * The successful student will be able to write and incorporate balanced trees, hash tables, directed graphs and priority queues in his or her software.
 
 * The successful student will be able to analyze the time complexity of a variety of algorithms and data structure access techniques and choose the best algorithm and/or data structure for the project at hand.
+
+[PDF](images/all_qualifications/pdf/fh_cs3c.pdf){:target=""_blank""} |
+[External link](https://catalog.foothill.edu/course-outlines/C-S-3C/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### CS 22A  •  JAVASCRIPT FOR PROGRAMMERS  •  4.5 Units
@@ -1040,6 +1062,11 @@ Student Learning Outcomes
 * Write modifiable JavaScript programs that modify the DOM, respond to user events and make requests to the server.
 
 
+[PDF](images/all_qualifications/pdf/fh_cs22a.pdf){:target=""_blank""} |
+[External link](https://catalog.foothill.edu/course-outlines/C-S-22A/){:target=""_blank""} |
+[Return to overview](#overview)
+
+
 ### CS 31A  •  INTRODUCTION TO DATABASE MANAGEMENT SYSTEMS  •  4.5 Units
 
 Introduction to database design and use of database management systems for applications. Topics include database architecture, comparison to file-based systems, historical data models, conceptual model; integrity constraints and triggers; functional dependencies and normal forms; relational model, algebra, database processing and Structured Query Language (SQL), database access from Applications-Embedded SQL, JDBC, Cursors, Dynamic SQL, Stored Procedures. Emerging trends will be studied, such as NoSQL databases, internet and databases, and Online Analytical Processing (OLAP). A team project that builds a database application for a real-world scenario is an important element of the course.
@@ -1049,6 +1076,10 @@ Student Learning Outcomes
 * Create a conceptual database design
 
 * Use Structured Query Language to perform queries on a database
+
+[PDF](images/all_qualifications/pdf/fh_cs31a.pdf){:target=""_blank""} |
+[External link](https://catalog.foothill.edu/course-outlines/C-S-31A/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### MATH 10  •  ELEMENTARY STATISTICS  •  5 Units
@@ -1062,8 +1093,14 @@ Student Learning Outcomes
 * Students will develop conceptual understanding of descriptive and inferential statistics. They will demonstrate and communicate this understanding in a variety of ways, such as: reasoning with definitions and theorems, connecting concepts, and connecting multiple representations, as appropriate.
 
 * Students will demonstrate the ability to compute descriptive statistics, calculate confidence intervals, and carry out tests of hypotheses.
+
+
+[PDF](images/all_qualifications/pdf/fh_math10.pdf){:target=""_blank""} |
+[External link](https://catalog.foothill.edu/course-outlines/MATH-10/){:target=""_blank""} |
+[Return to overview](#overview)
+
 "
-ca_advanced_software_development.pdf,ca_advanced_software_development.png,"Advanced Software Development, Certificate of Achievement",Foothill College,06/25/2021,,python,,,True,course,139,https://catalog.foothill.edu/degrees-certificates/computer-science/#text,"### Certificate of Achievement in Advanced Software Development Units: 27
+ca_advanced_software_development.pdf,ca_advanced_software_development.png,"Advanced Software Development, Certificate of Achievement",Foothill College,06/25/2021,,python,,,True,course,139,"","Certificate of Achievement in Advanced Software Development  •  27 Units
 
 The Certificate of Achievement in Advanced Software Development teaches skills needed by the software engineering industry. It can be completed in one of the major mainstream languages of instruction (Java, C++ or Python). Besides learning intermediate skills relating to syntax, control structures and simple data structures, the program teaches students advanced data structures including hash tables, trees and graphs, and introduces algorithms intended to solve complex problems using such data structures. The courses required for this certificate can lead to a higher degree in computer science including an Associate’s degree for transfer in computer science.
 
@@ -1076,6 +1113,10 @@ Program Learning Outcomes
 * Students will be able to demonstrate techniques for creating modular reusable code.
 
 
+[External link](https://catalog.foothill.edu/degrees-certificates/computer-science/){:target=""_blank""} |
+[Return to overview](#overview)
+
+
 ### CS 3A  •  OBJECT-ORIENTED PROGRAMMING METHODOLOGIES IN PYTHON  •  4.5 Units
 
 Systematic introduction to fundamental concepts of computer science through the study of the Python programming language. Coding topics include control structures, functions, classes, string processing, lists, tuples, dictionaries, working with files, and elementary graphics. Concept topics include algorithms, data abstraction, problem solving strategies, code style, documentation, debugging techniques and testing.
@@ -1085,6 +1126,11 @@ Student Learning Outcomes
 * A successful student will be able to write and debug Python programs which make use of the fundamental control structures and function-building techniques common to all programming languages. Specifically, the student will use data types, input, output, iterative, conditional, and functional components of the language in his or her programs.
 
 * A successful student will be able to use object-oriented programming techniques to design and implement a clear, well-structured Python program. Specifically, the student will use and design classes and objects in his or her programs.
+
+
+[PDF](images/all_qualifications/pdf/fh_cs3a.pdf){:target=""_blank""} |
+[External link](https://catalog.foothill.edu/course-outlines/C-S-3A/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### CS 3B  •  INTERMEDIATE SOFTWARE DESIGN IN PYTHON  •  4.5 Units
@@ -1097,6 +1143,10 @@ Student Learning Outcomes
 
 * A successful student will be able to write and debug Python programs which make use of inheritance, i.e., the ""is a"" relationship, common to all OOP languages. Specifically, the student will define base and derived classes and use common techniques such as method chaining in his or her programs.
 
+[PDF](images/all_qualifications/pdf/fh_cs3b.pdf){:target=""_blank""} |
+[External link](https://catalog.foothill.edu/course-outlines/C-S-3B/){:target=""_blank""} |
+[Return to overview](#overview)
+
 
 ### CS 3C  •  ADVANCED DATA STRUCTURES & ALGORITHMS IN PYTHON  •  4.5 Units
 
@@ -1107,6 +1157,10 @@ Student Learning Outcomes
 * The successful student will be able to write and incorporate balanced trees, hash tables, directed graphs and priority queues in his or her software.
 
 * The successful student will be able to analyze the time complexity of a variety of algorithms and data structure access techniques and choose the best algorithm and/or data structure for the project at hand.
+
+[PDF](images/all_qualifications/pdf/fh_cs3c.pdf){:target=""_blank""} |
+[External link](https://catalog.foothill.edu/course-outlines/C-S-3C/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### CS 22A  •  JAVASCRIPT FOR PROGRAMMERS  •  4.5 Units
@@ -1120,6 +1174,11 @@ Student Learning Outcomes
 * Write modifiable JavaScript programs that modify the DOM, respond to user events and make requests to the server.
 
 
+[PDF](images/all_qualifications/pdf/fh_cs22a.pdf){:target=""_blank""} |
+[External link](https://catalog.foothill.edu/course-outlines/C-S-22A/){:target=""_blank""} |
+[Return to overview](#overview)
+
+
 ### CS 31A  •  INTRODUCTION TO DATABASE MANAGEMENT SYSTEMS  •  4.5 Units
 
 Introduction to database design and use of database management systems for applications. Topics include database architecture, comparison to file-based systems, historical data models, conceptual model; integrity constraints and triggers; functional dependencies and normal forms; relational model, algebra, database processing and Structured Query Language (SQL), database access from Applications-Embedded SQL, JDBC, Cursors, Dynamic SQL, Stored Procedures. Emerging trends will be studied, such as NoSQL databases, internet and databases, and Online Analytical Processing (OLAP). A team project that builds a database application for a real-world scenario is an important element of the course.
@@ -1129,6 +1188,10 @@ Student Learning Outcomes
 * Create a conceptual database design
 
 * Use Structured Query Language to perform queries on a database
+
+[PDF](images/all_qualifications/pdf/fh_cs31a.pdf){:target=""_blank""} |
+[External link](https://catalog.foothill.edu/course-outlines/C-S-31A/){:target=""_blank""} |
+[Return to overview](#overview)
 
 
 ### MATH 10  •  ELEMENTARY STATISTICS  •  5 Units
@@ -1142,6 +1205,12 @@ Student Learning Outcomes
 * Students will develop conceptual understanding of descriptive and inferential statistics. They will demonstrate and communicate this understanding in a variety of ways, such as: reasoning with definitions and theorems, connecting concepts, and connecting multiple representations, as appropriate.
 
 * Students will demonstrate the ability to compute descriptive statistics, calculate confidence intervals, and carry out tests of hypotheses.
+
+
+[PDF](images/all_qualifications/pdf/fh_math10.pdf){:target=""_blank""} |
+[External link](https://catalog.foothill.edu/course-outlines/MATH-10/){:target=""_blank""} |
+[Return to overview](#overview)
+
 "
 postgresql_for_everybody.pdf,postgresql_for_everybody.png,PostgreSQL for Everybody Specialization,University of Michigan,08/17/2022,https://www.coursera.org/account/accomplishments/specialization/U9KKPLB8YEC3,"database,postgres,sql",,,True,certificate,140,https://www.coursera.org/specializations/postgresql-for-everybody,"Across these four courses, you’ll learn how to use the PostgreSQL database and explore topics ranging from database design to database architecture and deployment. You’ll also compare and contrast SQL and NoSQL approaches to database design. The skills in this course will be useful to learners doing data mining or application development.
 
