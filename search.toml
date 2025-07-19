@@ -4,11 +4,6 @@ html_selector = "main"
 base_directory = "output"
 
 [[input.files]]
-path = "pages/search.html"
-url = "/pages/search.html"
-title = "Search"
-
-[[input.files]]
 path = "database_skills.html"
 url = "/database_skills.html"
 title = "Database Skills"

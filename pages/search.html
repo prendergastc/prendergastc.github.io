@@ -5,7 +5,7 @@
         <meta charset="utf-8"/>
         <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
         <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-        <link href="../theme/css/elegant.prod.9e9d5ce754.css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="../theme/css/elegant.prod.tanimislam.css" media="screen" rel="stylesheet" type="text/css"/>
         <link href="../theme/css/custom.css" media="screen" rel="stylesheet" type="text/css"/>
         <link href="//fonts.googleapis.com" rel="dns-prefetch"/>
         <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
@@ -53,7 +53,7 @@
                                 <li><a href="../categories.html">Categories</a></li>
                                 <li><a href="../tags.html">Tags</a></li>
                                 <li><a href="../archives.html">Archives</a></li>
-                                <li><form action="../search.html" class="navbar-search" onsubmit="return validateForm(this.elements['q'].value);"> <input class="search-query" id="tipue_search_input" name="q" placeholder="Search" type="text"/></form></li>
+                                <li><input class="search-query" data-stork="sitesearch" name="q" placeholder="Search" type="text"/><div data-stork="sitesearch-output"></div></li>
                             </ul>
                         </div>
                     </div>
@@ -73,13 +73,13 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
-            <div class="stork-wrapper">
+            <main><div class="stork-wrapper">
 <div>
 <span>Search: </span>
 <span><input class="stork-input" data-stork="sitesearch"/></span>
 </div>
 <div class="stork-output" data-stork="sitesearch-output"></div>
-</div>
+</div></main>
             
 
 
@@ -170,9 +170,8 @@
         Powered by: <a href="http://getpelican.com/" rel="nofollow noopener noreferrer" target="_blank" title="Pelican Home Page">Pelican</a>
         Theme: <a href="https://elegant.oncrashreboot.com/" rel="nofollow noopener noreferrer" target="_blank" title="Theme Elegant Home Page">Elegant</a>
     </div>
-</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+</footer>            <script crossorigin="anonymous" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-        <script src="../theme/js/elegant.prod.9e9d5ce754.js"></script>
         <script>
             function validateForm(query)
             {
@@ -183,9 +182,6 @@
         <script src="../theme/js/load-colorbox.js"></script>
         <script src="https://files.stork-search.net/releases/v1.5.0/stork.js"></script>
         <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
-        <script>
-            stork.register("sitesearch", "../search-index.st");
-        </script>
         <script>
             $(document).ready( function () {
                 $('.my-data-table').dataTable({
@@ -198,6 +194,9 @@
             $(document).ready(function () {
                 $('a.gallery').colorbox({slideshow:true});
             });
+        </script>
+        <script>
+            stork.register("sitesearch", "../search-index.st");
         </script>
 
     <script>
