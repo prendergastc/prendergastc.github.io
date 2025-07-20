@@ -204,6 +204,11 @@ url = "/lyell_glacier.html"
 title = "Lyell Glacier, Yosemite National Park"
 
 [[input.files]]
+path = "city_engine.html"
+url = "/city_engine.html"
+title = "Analysis of a Proposed Development using ArcGIS CityEngine"
+
+[[input.files]]
 path = "ai_implications_for_spatial_science.html"
 url = "/ai_implications_for_spatial_science.html"
 title = "The Emergence of AI Engineering and its Implications for Spatial Science"
