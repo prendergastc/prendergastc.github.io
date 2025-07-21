@@ -4,36 +4,6 @@ html_selector = "main"
 base_directory = "output"
 
 [[input.files]]
-path = "database_skills.html"
-url = "/database_skills.html"
-title = "Database Skills"
-
-[[input.files]]
-path = "datascience_skills.html"
-url = "/datascience_skills.html"
-title = "Data Science Skills"
-
-[[input.files]]
-path = "gis_skills.html"
-url = "/gis_skills.html"
-title = "GIS Skills"
-
-[[input.files]]
-path = "machine_learning_skills.html"
-url = "/machine_learning_skills.html"
-title = "Machine Learning Skills"
-
-[[input.files]]
-path = "python_skills.html"
-url = "/python_skills.html"
-title = "Python Scripting and Programming Skills"
-
-[[input.files]]
-path = "transcripts.html"
-url = "/transcripts.html"
-title = "Academic Transcripts"
-
-[[input.files]]
 path = "urban_green_spaces.html"
 url = "/urban_green_spaces.html"
 title = "Urban Green Spaces in San Francisco and San Jose, California"
@@ -82,6 +52,11 @@ title = "Portland Economic Vulnerability"
 path = "puget_sound_traffic_violations.html"
 url = "/puget_sound_traffic_violations.html"
 title = "Puget Sound Traffic Violations"
+
+[[input.files]]
+path = "flood_control.html"
+url = "/flood_control.html"
+title = "Case Study: Riverside County Flood Control and Water Conservation District"
 
 [[input.files]]
 path = "mountain_lion_modelbuilder.html"
@@ -292,6 +267,36 @@ title = "Target Market Analysis"
 path = "hawaii_app.html"
 url = "/hawaii_app.html"
 title = "Volcanic hazards, Island of Hawaii"
+
+[[input.files]]
+path = "database_skills.html"
+url = "/database_skills.html"
+title = "Database Skills"
+
+[[input.files]]
+path = "datascience_skills.html"
+url = "/datascience_skills.html"
+title = "Data Science Skills"
+
+[[input.files]]
+path = "gis_skills.html"
+url = "/gis_skills.html"
+title = "GIS Skills"
+
+[[input.files]]
+path = "machine_learning_skills.html"
+url = "/machine_learning_skills.html"
+title = "Machine Learning Skills"
+
+[[input.files]]
+path = "python_skills.html"
+url = "/python_skills.html"
+title = "Python Scripting and Programming Skills"
+
+[[input.files]]
+path = "transcripts.html"
+url = "/transcripts.html"
+title = "Academic Transcripts"
 
 [output]
 debug = true
