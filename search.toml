@@ -69,9 +69,24 @@ url = "/tree_cover_and_heat.html"
 title = "The Impact of Tree Cover on the Urban Heat Island Effect"
 
 [[input.files]]
+path = "r_arcgis_bridge.html"
+url = "/r_arcgis_bridge.html"
+title = "R-ArcGIS Bridge"
+
+[[input.files]]
+path = "data_visualization.html"
+url = "/data_visualization.html"
+title = "Data Visualization in ArcGIS Pro"
+
+[[input.files]]
 path = "north_dakota_housing.html"
 url = "/north_dakota_housing.html"
 title = "The impact of the housing shortage on oil workers"
+
+[[input.files]]
+path = "spatial_analysis.html"
+url = "/spatial_analysis.html"
+title = "Spatial Analysis"
 
 [[input.files]]
 path = "calero_geodatabase_design.html"
