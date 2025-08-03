@@ -92,38 +92,40 @@ isolating mountain lion populations.</p>
 <p>Construct wildlife corridors that minimize stress and danger for mountain lions while maximizing connectivity across 
 fragmented habitats.</p>
 <h3 id="methodology">Methodology</h3>
-<p>Key Input Layers (Criteria):</p>
+<p>This analysis uses the following key input layers (criteria):</p>
 <ul>
 <li>
-<p>Terrain Ruggedness – High ruggedness = Low cost</p>
+<p><strong>Terrain Ruggedness</strong> – high ruggedness = how cost</p>
 </li>
 <li>
-<p>Land Cover – Dense vegetation = Low cost; Urban/Water = High cost</p>
+<p><strong>Land Cover</strong> – dense vegetation = low cost; urban/water = high cost</p>
 </li>
 <li>
-<p>Protected Areas – Highly protected = Low cost</p>
+<p><strong>Protected Areas</strong> – highly protected = low cost</p>
 </li>
 <li>
-<p>Distance from Roads – Further from roads = Low cost</p>
+<p><strong>Distance from Roads</strong> – further from roads = low cost</p>
 </li>
 </ul>
 <p>Each raster was reclassified or rescaled to a common 1–10 cost scale and combined using the Weighted Sum tool to produce a Combined Cost Surface.</p>
 <h3 id="tools-used">Tools Used</h3>
+<p>This analysis uses the following ArcGIS geoprocessing tools:</p>
 <ul>
 <li>
-<p>Focal Statistics (for Ruggedness)</p>
+<p><strong>Focal Statistics</strong> (for ruggedness)</p>
 </li>
 <li>
-<p>Reclassify / Rescale by Function</p>
+<p><strong>Reclassify</strong> / <strong>Rescale by Function</strong></p>
 </li>
 <li>
-<p>Weighted Sum</p>
+<p><strong>Weighted Sum</strong></p>
 </li>
 <li>
-<p>Optimal Region Connections (to create the least-cost network)</p>
+<p><strong>Optimal Region Connections</strong> (to create the least-cost network)</p>
 </li>
 </ul>
 <h3 id="key-outputs">Key Outputs</h3>
+<p>This analysis generates the following key outputs:</p>
 <h4 id="least-cost-paths">Least-Cost Paths</h4>
 <ul>
 <li>
@@ -143,7 +145,7 @@ fragmented habitats.</p>
 </li>
 </ul>
 <h4 id="corridor-maps">Corridor Maps</h4>
-<p>Each of the following layers was visualized and mapped:</p>
+<p>Each of the following layers was mapped and visualized:</p>
 <ul>
 <li>
 <p>Core Habitat Areas</p>
@@ -171,7 +173,7 @@ fragmented habitats.</p>
 </li>
 </ul>
 <h1 id="study-area">Study Area</h1>
-<p>The Study Area map shows the area of interest for this analysis represented here as a black rectangle. The study area is
+<p>This map shows the area of interest for this analysis represented here as a black rectangle. The study area is
 located within the greater Los Angeles area and covers several communities, including San Fernando Valley, Burbank, 
 and Santa Clara, as well as several mountain ranges which span the area.  </p>
 <p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_study_area_300.png" title="Study Area"><img alt="Study Area" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_study_area_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_study_area_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_study_area_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_study_area_300.png 1600w"/></a></p>
@@ -185,16 +187,16 @@ They are set in spacious, mountainous natural areas and contain significant moun
 location, which was established by the National Park Service and is located just outside of Pico Canyon Park, doesn't 
 represent a significant core area, but it serves as an important geographic gateway for linking the other three 
 geographically disconnected habitat patches to each other.</p>
-<p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_core_mountain_lion_habitat_300.png" title="Core Mountain Lion Habitat"><img alt="Combined Cost Surface" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_core_mountain_lion_habitat_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_core_mountain_lion_habitat_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_core_mountain_lion_habitat_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_core_mountain_lion_habitat_300.png 1600w"/></a></p>
+<p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_core_mountain_lion_habitat_300.png" title="Core Mountain Lion Habitat"><img alt="Core Mountain Lion Habitat" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_core_mountain_lion_habitat_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_core_mountain_lion_habitat_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_core_mountain_lion_habitat_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_core_mountain_lion_habitat_300.png 1600w"/></a></p>
 <p><a href="./images/mountain_lion_modelbuilder/pdf/lay_core_mountain_lion_habitat_300.pdf" target="_blank">PDF</a></p>
 <h1 id="elevation">Elevation</h1>
-<p>The elevation map represents the elevation above sea level. You can see mountainous elevated areas in white and light 
+<p>This map depicts the elevation above sea level. You can see mountainous elevated areas in white and light 
 gray, mid-elevation areas in red and orange, and flatter low-lying valleys in light green and light blue. This layer 
-will be processes to derive a new layer which represents the ruggedness.</p>
+is processes to derive a new layer which represents the ruggedness.</p>
 <p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_elevation_300.png" title="Elevation"><img alt="Elevation" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_elevation_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_elevation_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_elevation_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_elevation_300.png 1600w"/></a></p>
 <p><a href="./images/mountain_lion_modelbuilder/pdf/lay_elevation_300.pdf" target="_blank">PDF</a></p>
 <h1 id="ruggedness">Ruggedness</h1>
-<p>For this analysis, ruggedness will be defined by large changes in elevation. In the map below, green areas are more 
+<p>For this analysis, ruggedness is defined by large changes in elevation. In the map below, green areas are more 
 rugged and red areas are less rugged. High, rocky mountain peaks tend to be more rugged, and the low-lying valleys 
 tend to be flatter and smoother. Greater ruggedness signifies a lower cost for the mountain lions, in terms of stress 
 and danger.</p>
@@ -209,7 +211,7 @@ transformed into lower cost values. On this map, low cost values appear in green
 <h1 id="landcover">Landcover</h1>
 <p>This map represents different land cover types, such as evergreen forest or cultivated crops. Each of these land cover 
 types is shown in a different color: the red colors are developed urban areas, while the green colors correspond to 
-forests or grasslands. The brown colors are shrubland or herbaceous areas.</p>
+forests or grasslands. The brown colors are scrubland or herbaceous areas.</p>
 <p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_land_cover_300.png" title="Landcover"><img alt="Landcover Cost" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_land_cover_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_land_cover_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_land_cover_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_land_cover_300.png 1600w"/></a></p>
 <p><a href="./images/mountain_lion_modelbuilder/pdf/lay_land_cover_300.pdf" target="_blank">PDF</a></p>
 <h2 id="landcover-cost-surface">Landcover Cost Surface</h2>
@@ -217,14 +219,13 @@ forests or grasslands. The brown colors are shrubland or herbaceous areas.</p>
 dense vegetation represent less stress and danger for mountain lions, so they are transformed into the lower cost 
 values. Mountain lions feel the most safe in forest and shrub land cover types, although they can also make use of 
 agricultural or open areas. Developed lands are not safe and receive a high cost value. Water-covered areas are assigned
-the highest cost value, since they are inhospitable for mountain lions.</p>
-<p>The lower cost land cover types are mostly located in the mountain ranges with a lot of forest and shrubland. The higher
-cost land cover types tend to be located in the flatter low-lying valleys where most of the human development has taken 
-place. </p>
+the highest cost value, since they are inhospitable for mountain lions. The lower cost land cover types are mostly 
+located in the mountain ranges with a lot of forest and scrubland. The higher cost land cover types tend to be located 
+in the flatter low-lying valleys where most of the human development has taken place. </p>
 <p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_land_cover_cost_300.png" title="Land Cover Cost Surface"><img alt="Landcover Cost" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_land_cover_cost_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_land_cover_cost_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_land_cover_cost_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_land_cover_cost_300.png 1600w"/></a></p>
 <p><a href="./images/mountain_lion_modelbuilder/pdf/lay_land_cover_cost_300.pdf" target="_blank">PDF</a></p>
 <h2 id="protected-status">Protected Status</h2>
-<p>This raster map shows the level of protection for land within the study area. This information was detiaved from the 
+<p>This raster map shows the level of protection for land within the study area. This information was derived from the 
 Protected Areas Database of the United States (PAD-US). Highly protected are shown in dark green; areas which are not 
 protected in light green. Areas without a color on the map are not tracked in PAD-US, and usually correspond to urban, 
 agriculture, or other forms of privately exploited areas and usually are the least favorable to mountain lions.</p>
@@ -233,105 +234,76 @@ agriculture, or other forms of privately exploited areas and usually are the lea
 <h2 id="protected-status-cost-surface">Protected Status Cost Surface</h2>
 <p>The protected status cost surface is a categorical raster layer derived from the protected status layer. Areas that are
 the most protected represent less stress and danger for mountain lions, so they are transformed into the lower cost 
-values. </p>
-<p>The lowest cost areas located in the mountain ranges are shown in dark green and light green. Areas which are not 
+values. The lowest cost areas located in the mountain ranges are shown in dark green and light green. Areas which are not 
 protected are shown in orange or red. These areas are more stressful for mountain lions.</p>
 <p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_protected_status_cost_300.png" title="Protected Status Cost Surface"><img alt="Protected Status Cost" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_protected_status_cost_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_protected_status_cost_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_protected_status_cost_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_protected_status_cost_300.png 1600w"/></a></p>
 <p><a href="./images/mountain_lion_modelbuilder/pdf/lay_protected_status_cost_300.pdf" target="_blank">PDF</a></p>
 <h2 id="roads">Roads</h2>
-<p>The Roads map represents each road as a line. It includes all roads ranging from small roads to major highways. </p>
-<p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_roads_300.png" title="Roads"><img alt="Elevation" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_roads_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_roads_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_roads_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_roads_300.png 1600w"/></a></p>
+<p>The Roads map represents each road as a red line. It includes all roads ranging from small roads to major highways. </p>
+<p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_roads_300.png" title="Roads"><img alt="Roads" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_roads_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_roads_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_roads_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_roads_300.png 1600w"/></a></p>
 <p><a href="./images/mountain_lion_modelbuilder/pdf/lay_roads_300.pdf" target="_blank">PDF</a></p>
 <h2 id="distance-to-roads">Distance to Roads</h2>
-<p>This roads layer is processed to derive a raster representing the distance from any cell to the nearest roads. The model
-then assigns the lowest cost to the highest distance-to-road cell values.</p>
-<p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_distance_to_roads_300.png" title="Distance to Roads"><img alt="Elevation" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_distance_to_roads_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_distance_to_roads_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_distance_to_roads_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_distance_to_roads_300.png 1600w"/></a></p>
+<p>The model processes the roads layer to derive a raster representing the distance from any cell to the nearest roads. It 
+assigns the lowest cost to the cells with the highest distance-to-road values. In this map areas near roads are shown in
+red and areas far from roads are shown in green.</p>
+<p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_distance_to_roads_300.png" title="Distance to Roads"><img alt="Distance to Roads" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_distance_to_roads_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_distance_to_roads_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_distance_to_roads_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_distance_to_roads_300.png 1600w"/></a></p>
 <p><a href="./images/mountain_lion_modelbuilder/pdf/lay_distance_to_roads_300.pdf">PDF</a></p>
 <h2 id="distance-to-roads-cost-surface">Distance to Roads Cost Surface</h2>
-<p>The model transform the distance to roads layer to the common cost scale. Since this is a continuous raster, the Rescale
-By Function tool is used. Areas that are farther from roads represent less stress and danger for mountain lions, so they
-should be transformed into lower cost values.</p>
-<p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_distance_to_roads_cost_300.png" title="Distance to Roads Cost Surface"><img alt="Elevation" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_distance_to_roads_cost_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_distance_to_roads_cost_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_distance_to_roads_cost_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_distance_to_roads_cost_300.png 1600w"/></a></p>
+<p>The model transform the distance to roads layer to the common cost scale using the <strong>Rescale by Function</strong> tool. Areas that 
+are farther from roads represent less stress and danger for mountain lions, so they should be transformed into lower 
+cost values. In this map low cost areas are shown in green and high cost areas are shown in red.</p>
+<p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_distance_to_roads_cost_300.png" title="Distance to Roads Cost Surface"><img alt="Distance to Roads Cost" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_distance_to_roads_cost_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_distance_to_roads_cost_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_distance_to_roads_cost_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_distance_to_roads_cost_300.png 1600w"/></a></p>
 <p><a href="./images/mountain_lion_modelbuilder/pdf/lay_distance_to_roads_cost_300.pdf" target="_blank">PDF</a></p>
 <h2 id="combined-cost-surface">Combined Cost Surface</h2>
-<p>After the model converts the four criteria data layers to the same 1 to 10 cost scale, it combines the individual cost 
-layers into a single cost surface using the Weighted Sum tool. The Weighted Sum tool adds the values in the four cost 
-layers, with certain weights given to each layer. The weights allow some layers to play a heavier role than others 
-(making certain features more costly) in the creation of the combined cost surface. For each cell, the tool multiplies 
-the values for each input raster by the given weight and then adds the four values together to create a new value 
-representing the total cost.</p>
-<p>This combined cost surface layer simulates how the mountain lions will experience the landscape as they move through it. 
-The green areas have the lowest cost in terms of stress and danger, while the red areas have the highest cost, and the 
-beige areas have a medium cost. Looking at the map, it can be seen that almost all low and medium cost areas are located
-in mountainous regions. The core mountain lion habitats are all located in areas that are low cost (dark green or light 
-green). This makes sense, since mountain lions would naturally want to live in low stress and low danger areas.</p>
-<p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_cost_surface_300.png" title="Combined Cost Surface"><img alt="Combined Cost Surface" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_cost_surface_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_cost_surface_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_cost_surface_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_cost_surface_300.png 1600w"/></a></p>
+<p>The model combines the individual cost layers into a single cost surface using the <strong>Weighted Sum</strong> tool. The combined cost 
+surface layer simulates how the mountain lions will experience the landscape as they move through it. In this map green 
+areas represent the lowest cost in terms of stress and danger, while the red areas represent the highest cost, and the 
+beige areas represent a medium cost. The map illustrates that almost all low and medium cost areas are located in 
+mountainous regions. </p>
+<p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_cost_surface_300.png" title="Combined Cost Surface"><img alt="Combined Cost" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_cost_surface_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_cost_surface_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_cost_surface_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_cost_surface_300.png 1600w"/></a></p>
 <p><a href="./images/mountain_lion_modelbuilder/pdf/lay_cost_surface_300.pdf" target="_blank">PDF</a></p>
 <h2 id="mountain-lion-paths">Mountain Lion Paths</h2>
-<p>The mountain lion paths layer represents the optimal network of paths to connect the four habitat patches with the least
-cost. These paths were created by The Optimal Region Connections geoprocessing tool which generates an optimum network
-of least-cost paths between regions. The tool uses two inputs: the cost surface and the core mountain lion habitats. 
-This network represents the most efficient way of connecting the four core habitat patches, and it suggests the optimal 
-locations for creating mountain lion corridors.</p>
+<p>The model uses the <strong>Optimal Region Connections</strong> tool to generate a network of paths which connect the four habitat patches
+with the least cost. The tool uses two inputs: the combined cost surface and the core mountain lion habitats. This 
+network represents the most efficient way of connecting the four core habitat patches, and suggests optimal locations 
+for creating mountain lion corridors. The optimal paths are show in yellow in this map.</p>
 <p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_mountain_lion_paths_300.png" title="Mountain Lion Paths"><img alt="Mountain Lion Paths" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_mountain_lion_paths_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_mountain_lion_paths_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_mountain_lion_paths_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_mountain_lion_paths_300.png 1600w"/></a></p>
 <p><a href="./images/mountain_lion_modelbuilder/pdf/lay_mountain_lion_paths_300.pdf" target="_blank">PDF</a></p>
 <h2 id="mountain-lion-paths-including-neighbors">Mountain Lion Paths including Neighbors</h2>
-<p>This layer contains the same paths as the previous layer, but it offers additional paths that connect each habitat patch
-to its lowest cost neighbors. These extra routes are not necessary, but they provide supplementary options. This is a 
-secondary optional output identifying all paths from each habitat patch to each of its closest (or lowest cost) 
-neighbors. The paths to lowest cost neighbors can possibly provide alternative paths to reach specific patches.</p>
+<p>This map contains the same paths as the previous map, but it offers additional paths that connect each habitat patch
+to its lowest cost neighbors. These extra routes are not necessary, but they may provide additional options. The 
+additional paths to lowest cost neighbors can possibly provide alternative routes to reach specific patches.</p>
 <p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_mountain_lion_paths_neighbors_300.png" title="Mountain Lion Paths including Neighbors"><img alt="Mountain Lion Paths including Neighbors" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_mountain_lion_paths_neighbors_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_mountain_lion_paths_neighbors_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_mountain_lion_paths_neighbors_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_mountain_lion_paths_neighbors_300.png 1600w"/></a></p>
 <p><a href="./images/mountain_lion_modelbuilder/pdf/lay_mountain_lion_paths_neighbors_300.pdf" target="_blank">PDF</a></p>
 <h2 id="proposed-wildlife-corridors">Proposed Wildlife Corridors</h2>
-<p>Overall, these paths look like good options for developing wild corridors to connect the core mountain lion habitats.
-Even though the paths are as low cost as possible, as expected, there is no way to avoid locations near roads in this 
-study area.
-The paths are almost only through low-cost land cover. From this criteria's standpoint, the paths show great promise for
-high quality mountain lion corridors.
-The optimum paths do their best to go through protected areas, but much of the valleys and some of the mountainous 
-regions are unprotected, and the paths can't avoid going through them.</p>
+<p>The optimal paths indicate good routes for developing wildlife corridors to connect the core mountain lion habitats. 
+Even though the paths are as low cost as possible, there is no way to avoid locations near roads in this study area. The
+paths are almost only through low-cost land cover. The optimum paths do their best to go through protected areas, but 
+much of the valleys and some of the mountainous regions are unprotected, and the paths can't avoid going through these 
+areas. In this map the proposed wildlife corridors are shown in green.</p>
 <p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_wildlife_corridors_300.png" title="Proposed Wildlife Corridors"><img alt="Proposed Wildlife Corridors" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_wildlife_corridors_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_wildlife_corridors_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_wildlife_corridors_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_wildlife_corridors_300.png 1600w"/></a></p>
 <p><a href="./images/mountain_lion_modelbuilder/pdf/lay_wildlife_corridors_300.pdf" target="_blank">PDF</a></p>
 <h2 id="highways">Highways</h2>
-<p>On the map, the highways displayed as thick orange lines. There are four locations where a proposed path crosses a 
-highway.</p>
-<p>This number of intersections between paths and highways is not surprising, as the Los Angeles
-area is known for its extensive highway system. Examining the map, it's clearly not possible for
-the paths to avoid crossing these highways, even if considering taking longer detours. Therefore,
-the construction of overpasses should be considered at these four intersections.</p>
+<p>Mountain lions could cross smaller roads with a relatively low level of casualty, whereas they would be in tremendous 
+danger whenever attempting to cross a highway. When a wildlife corridor can't avoid crossing a highway, a 
+well-established approach is to build a wildlife overpass to go over it. On this map, highways are displayed as thick orange
+lines. There are four locations where a proposed route crosses a highway. The Los Angeles area is known for its extensive
+highway system, so this number of crossings between proposed wildlife corridors and highways is not surprising. 
+Examining the map, it clearly would not be possible for the proposed corridors to avoid crossing these highways, even if longer 
+detours were considered. Therefore, the construction of overpasses is recommended at these four intersections.</p>
 <p><a class="mybox" href="images/mountain_lion_modelbuilder/png/lay_highways_300.png" title="Highways"><img alt="Proposed Wildlife Corridors" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_highways_300.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/lay_highways_300.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/lay_highways_300.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/lay_highways_300.png 1600w"/></a></p>
 <p><a href="./images/mountain_lion_modelbuilder/pdf/lay_highways_300.pdf" target="_blank">PDF</a></p>
 <h2 id="potential-wildlife-crossings">Potential Wildlife Crossings</h2>
-<p>Another type of actions needed to implement the wildlife corridors would be to help the mountain lions
-pass through the more dangerous areas along the way, such as highways. You will now investigate your
-data to find out more.
-While in an ideal world the wildlife corridors would not cross any roads, you saw that this is impossible
-in the study area, due to the high level of development that already took place. However, it can be
-useful to distinguish between di"erent types of roads. Mountain lions could cross smaller roads with a
-relatively low level of casualty, whereas they would be in tremendous danger whenever attempting to
-cross a highway. When a wildlife corridor can't avoid crossing a highway, a well-established approach
-is to build a wildlife overpass to go over it, as shown in the following example image.</p>
-<p>You will identify where the proposed paths cross highways in your study area. First, you'll derive a new
-layer from the Roads layer displaying only highways. You'll do that with a definition query. First, you'll
-create a copy of the Roads layer.</p>
-<p>You can see that the path needs to cross not only Route 126 (or Henry Mayo Dr.), but also a
-railroad from the Southern Pacific company. A single overpass could probably go over both at the
-same time, since they are very close to each other. A bit further south, there is also the Santa
-Clara River that would need to be reviewed, to see if it's passable by mountain lions. If it isn't,
-some type of passage would also need to be arranged there.</p>
-<p>Undoubtedly, implementing wildlife corridors in the study area present challenges, as it is already quite
-developed. However, you now have a concrete and well-informed plan to propose to the local
-government and other relevant institutions. The analysis method and the model you created, while
-simplified for clarity, is an excellent starting point for those seeking to carry out similar analyses in
-their own regions of the world. You can continue to edit the tool parameters in your model to fine-tune
-the results. What if you changed the weights for the Weighted Sum tool? What if you added a fifth
-criterion to the cost surface? With a documented and editable workflow, you can test theories and make
-adjustments as needed to perfect your analysis. You might also be able to enhance your analysis by
-adding supplementary data on local conservation e"orts, land ownership, and agriculture.</p>
-<p><a class="mybox" href="images/mountain_lion_modelbuilder/png/10-potential_wildlife_crossing.png" title="Potential Wildlife Crossing"><img alt="Proposed Wildlife Corridors" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/10-potential_wildlife_crossing.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/10-potential_wildlife_crossing.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/10-potential_wildlife_crossing.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/10-potential_wildlife_crossing.png 1600w"/></a></p>
+<p>One example of a proposed crossing is where the route for the wildlife corridor would cross Route 126 and also the Southern Pacific railroad in the same area. 
+A single overpass could probably go over both at the same time, since they are very close to each other. Further south, 
+the Santa Clara River would also need to be reviewed, to see if it's passable by mountain lions. If it isn't, some type 
+of passage would also need to be arranged there. The image below shows the region in the vicinity of the location where 
+the proposed corridor crosses Route 126.</p>
+<p><a class="mybox" href="images/mountain_lion_modelbuilder/png/10-potential_wildlife_crossing.png" title="Potential Wildlife Crossing"><img alt="Potential Wildlife Crossings" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/10-potential_wildlife_crossing.png" srcset="images/mountain_lion_modelbuilder/png/derivatives/large-photo/600w/10-potential_wildlife_crossing.png 600w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/800w/10-potential_wildlife_crossing.png 800w, images/mountain_lion_modelbuilder/png/derivatives/large-photo/1600w/10-potential_wildlife_crossing.png 1600w"/></a></p>
 <p><a href="./images/mountain_lion_modelbuilder/pdf/10-potential_wildlife_crossing.pdf" target="_blank">PDF</a></p>
 <h2 id="modelbuilder-workflow">ModelBuilder Workflow</h2>
-<p>A ModelBuilder diagram was created to automate the entire analysis. This makes it easy to:</p>
+<p>A ModelBuilder model was created to automate the entire analysis. This model is illustrated in the diagram below. This 
+model makes it easy to:</p>
 <ul>
 <li>
 <p>Adjust weights and parameters</p>
