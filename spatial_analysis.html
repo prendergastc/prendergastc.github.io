@@ -21,17 +21,17 @@
 
 <meta content="Spatial Analysis, Essay, " name="keywords">
 
-<meta content="Spatial Analysis " property="og:title">
+<meta content="Spatial Analysis of Access to Women’s Healthcare Post-Roe v. Wade " property="og:title">
 <meta content="./spatial_analysis.html" property="og:url"/>
-<meta content="" property="og:description"/>
+<meta content="This spatial analysis examines how the Supreme Court decision overturning Roe v. Wade affects access to women’s healthcare across the U.S. It focuses on increased travel times to clinics and higher demand at remaining service locations. Using Feature to Point and Mean Center tools, population-weighted centroids were created for census tracts, and multivariate clustering identified areas with the highest cumulative burden. The results show that impacts are unevenly distributed, disproportionately affecting already disadvantaged communities, with Texas residents facing some of the greatest challenges. Overall, the analysis highlights how national policy changes translate into significant local-level consequences." property="og:description"/>
 <meta content="portfolio" property="og:site_name"/>
 <meta content="Christopher Prendergast" property="og:article:author"/>
 <meta content="2023-11-17T00:00:00-08:00" property="og:article:published_time"/>
 <meta content="2025-06-07T00:00:00-07:00" property="og:article:modified_time"/>
-<meta content="Spatial Analysis " name="twitter:title"/>
-<meta content="" name="twitter:description"/>
+<meta content="Spatial Analysis of Access to Women’s Healthcare Post-Roe v. Wade " name="twitter:title"/>
+<meta content="This spatial analysis examines how the Supreme Court decision overturning Roe v. Wade affects access to women’s healthcare across the U.S. It focuses on increased travel times to clinics and higher demand at remaining service locations. Using Feature to Point and Mean Center tools, population-weighted centroids were created for census tracts, and multivariate clustering identified areas with the highest cumulative burden. The results show that impacts are unevenly distributed, disproportionately affecting already disadvantaged communities, with Texas residents facing some of the greatest challenges. Overall, the analysis highlights how national policy changes translate into significant local-level consequences." name="twitter:description"/>
 
-        <title>Spatial Analysis  · portfolio
+        <title>Spatial Analysis of Access to Women’s Healthcare Post-Roe v. Wade  · portfolio
 </title>
 
 
@@ -71,7 +71,7 @@
     <header class="page-header span10 offset2">
         <h1>
             <a href="./spatial_analysis.html">
-                Spatial Analysis
+                Spatial Analysis of Access to Women’s Healthcare Post-Roe v. Wade
             </a>
         </h1>
     </header>
@@ -80,13 +80,34 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <main><p>The overall goal of the presentation is to demonstrate one example of a more complex real-life spatial analysis workflow from start to finish. The goal of the specific analysis chosen for this demonstration is to understand how the Supreme Court decision which overturned Roe v. Wade impacts access to women’s healthcare across the country. This analysis illustrates how decisions made at the national and global levels can have varied impacts on a local scale. In this case, the specific impact analyzed is the loss of access to women’s healthcare, specifically the increases in travel times to access these services. It also examines the potential increase in demand at the remaining women’s clinics. Finally, this analysis examines the spatial distribution of the cumulative burden created by these changes. </p>
-<h1 id="feature-to-point-vs-mean-center-tools">Feature to Point vs Mean Center Tools</h1>
-<p>The feature to point and mean center tools are used to create representative points for area features such as census tracts. Each tool has pros and cons. On one hand, the feature to point tool is simple to use, quick to run, and easy to understand. However, the centroids it creates for areas such as census tracts may not be representative of where the population actually live. This is especially true for larger, less densely populated, rural census tracts. On the other hand, the mean center tool uses a population weighted calculation to give a more representative location for where the bulk of the population is located in each census tract. This calculation is based on the more granular population data available at the census block level from the Living Atlas. One downside of the mean center tool is that for large datasets it can take a considerable amount of time to run.</p>
-<h1 id="multivariate-clustering">Multivariate Clustering</h1>
-<p>In this analysis the multivariate clustering tool was used to uncover spatial patterns in clusters of census tracts which share similar scores on a multivariate index representing the cumulative burden of several factors. Under the hood the multivariate clustering tool uses the k-means clustering method.</p>
-<h1 id="conclusion">Conclusion</h1>
-<p>My main take away from the video was that the two women presenters care deeply about this issue which will have a profound impact on access to women’s health care across the nation. The analysis illustrates that the main impact will be increased travel time for women and increased demand at the remaining location which continue to provide women’s healthcare services. The spatial analysis highlights that these impacts will not be distributed evenly across space. Moreover, the analysis shows that the cumulative burden will fall disproportionately on communities that are already disadvantaged and marginalized. The map presented illustrates that residents of Texas will be especially heavily impacted.</p></main>
+            <main><p>The overall goal of this presentation is to demonstrate a complex, real-world spatial analysis workflow from start to 
+finish. The specific analysis focuses on assessing how the Supreme Court decision overturning <em>Roe v. Wade</em> affects 
+access to women’s healthcare across the United States. This case study highlights how decisions made at national and 
+global levels can produce varied impacts at local scales. In this analysis, the primary focus is the loss of access to 
+women’s healthcare, measured in terms of increased travel times to available services. Additionally, it examines the 
+potential surge in demand at the remaining clinics providing these services and explores the spatial distribution of 
+the cumulative burden resulting from these changes.</p>
+<h2 id="feature-to-point-vs-mean-center-tools">Feature to Point vs. Mean Center Tools</h2>
+<p>To represent area features, such as census tracts, representative points were generated using the Feature to Point and 
+Mean Center tools. Each tool has distinct advantages and limitations:  </p>
+<ul>
+<li><strong>Feature to Point</strong>: Straightforward, fast, and easy to interpret. However, the centroids it produces may not 
+accurately reflect where the population actually resides, especially in large, sparsely populated rural tracts.  </li>
+<li><strong>Mean Center</strong>: Calculates a population-weighted center based on more granular census block data from the Living 
+Atlas, producing a more representative location for the bulk of the population. The trade-off is that processing large 
+datasets with the Mean Center tool can require significant computation time.  </li>
+</ul>
+<h2 id="multivariate-clustering">Multivariate Clustering</h2>
+<p>Multivariate clustering was applied to identify spatial patterns among census tracts with similar scores on an index 
+representing the cumulative burden of multiple factors. This tool employs the k-means clustering method to reveal 
+clusters where residents are disproportionately affected, highlighting areas with heightened vulnerability.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The analysis underscores the profound impact of the Supreme Court decision on access to women’s healthcare. Key findings
+indicate that the primary consequences are increased travel times for women and heightened demand at the remaining 
+clinics. These impacts are spatially uneven, disproportionately affecting communities that are already disadvantaged or 
+marginalized. Notably, the analysis highlights that residents of Texas are likely to face some of the heaviest burdens. 
+Overall, the workflow demonstrates the power of spatial analysis to quantify and visualize the local-level consequences 
+of high-level policy decisions, providing actionable insights for policymakers and stakeholders.</p></main>
 
 
              
