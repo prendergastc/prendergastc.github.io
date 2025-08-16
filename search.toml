@@ -24,6 +24,11 @@ url = "/kenya_elephants.html"
 title = "Analysis of Suitable Elephant Habitat, Narok and Kajiado Districts, Kenya"
 
 [[input.files]]
+path = "california_population.html"
+url = "/california_population.html"
+title = "California Population Growth 2000 to 2010"
+
+[[input.files]]
 path = "santa_cruz_public_works.html"
 url = "/santa_cruz_public_works.html"
 title = "Public Works Department Assets, City of Santa Cruz"

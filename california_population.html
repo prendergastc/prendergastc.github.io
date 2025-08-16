@@ -19,19 +19,19 @@
         <meta content="article" property="og:type">
         <meta content="summary" name="twitter:card"/>
 
-<meta content="ArcGIS Pro, Cartography, Spatial Analysis, Spatial Analysis, " name="keywords">
+<meta content="ArcGIS Pro, Cartography, Spatial Analysis, Cartography, " name="keywords">
 
-<meta content="Bird Observations, Narok and Kajiado Districts, Kenya " property="og:title">
-<meta content="./kenya_birds.html" property="og:url"/>
-<meta content="Bird observations in the Narok and Kajiado districts, Kenya" property="og:description"/>
+<meta content="California Population Growth 2000 to 2010 " property="og:title">
+<meta content="./california_population.html" property="og:url"/>
+<meta content="California Population Map (2000–2010): Shows county-level population growth (green) and decline (purple). Darker shades indicate larger changes. Uses the California (Teale) Albers projection, optimized for accurate area representation." property="og:description"/>
 <meta content="portfolio" property="og:site_name"/>
 <meta content="Christopher Prendergast" property="og:article:author"/>
-<meta content="2024-12-13T00:00:00-08:00" property="og:article:published_time"/>
+<meta content="2024-12-09T00:00:00-08:00" property="og:article:published_time"/>
 <meta content="2025-06-07T00:00:00-07:00" property="og:article:modified_time"/>
-<meta content="Bird Observations, Narok and Kajiado Districts, Kenya " name="twitter:title"/>
-<meta content="Bird observations in the Narok and Kajiado districts, Kenya" name="twitter:description"/>
+<meta content="California Population Growth 2000 to 2010 " name="twitter:title"/>
+<meta content="California Population Map (2000–2010): Shows county-level population growth (green) and decline (purple). Darker shades indicate larger changes. Uses the California (Teale) Albers projection, optimized for accurate area representation." name="twitter:description"/>
 
-        <title>Bird Observations, Narok and Kajiado Districts, Kenya  · portfolio
+        <title>California Population Growth 2000 to 2010  · portfolio
 </title>
 
 
@@ -70,8 +70,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="./kenya_birds.html">
-                Bird Observations, Narok and Kajiado Districts, Kenya
+            <a href="./california_population.html">
+                California Population Growth 2000 to 2010
             </a>
         </h1>
     </header>
@@ -80,118 +80,15 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <main><p><img alt="Thumb" class="image-process-thumb" src="images/kenya_birds/png/derivatives/thumb/bird_observations.png"/></p>
-<h1 id="bird-observation-map">Bird Observation Map</h1>
-<p>The Bird Observation Map visualizes the spatial distribution of recorded bird sightings within the Narok and Kajiado 
-Districts of Kenya. It combines point-based observation data with geographic context layers to help identify patterns in
-bird presence, habitat use, and potential environmental influences on distribution.</p>
-<p>At the core of the map is the <strong>Bird Observations</strong> point layer, where each location represents a recorded sighting. 
-Attributes linked to each point include species name, observation date, and additional notes. The map’s 
-focus is on spatial location rather than species-specific details. The point symbols allow for quick visual 
-identification of areas with higher observation density, indicating potential hotspots of avian activity.</p>
-<p>Supporting layers—such as protected areas, and major roads provide environmental and human-impact context for 
-the observations. Protected areas offer a reference for assessing whether observations are concentrated within 
-conservation zones or extend into unprotected lands. Roads serve as orientation features and may also indicate 
-accessibility for birdwatchers, which can influence observation patterns.</p>
-<p>By combining species observation data with spatial context, the Bird Observation Map serves as both a research and 
-management tool, helping identify priority areas for further monitoring, conservation action, or habitat restoration. 
-It also provides a baseline visual record that can be compared with future surveys to track changes in bird distribution
-over time.</p>
-<p><a class="mybox" href="images/kenya_birds/png/bird_observations.png" title="Bird Observation Map"><img alt="Bird Observation Map" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/kenya_birds/png/derivatives/large-photo/800w/bird_observations.png" srcset="images/kenya_birds/png/derivatives/large-photo/600w/bird_observations.png 600w, images/kenya_birds/png/derivatives/large-photo/800w/bird_observations.png 800w, images/kenya_birds/png/derivatives/large-photo/1600w/bird_observations.png 1600w"/></a></p>
-<p><a href="./images/kenya_birds/pdf/bird_observations.pdf">PDF file</a></p>
-<h1 id="data-layers-and-sources">Data Layers and Sources</h1>
-<p>The Bird Observation Map draws on both primary field data and reference GIS datasets to provide spatial and 
-environmental context. </p>
-<h3 id="table-data-layers-and-sources"><strong>Table: Data Layers and Sources</strong></h3>
-<table class="my-data-table">
-<thead>
-<tr>
-<th><strong>Data Layer</strong></th>
-<th><strong>Source</strong></th>
-<th><strong>Purpose in Map</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Bird Observations</strong></td>
-<td>Field survey data (GPS-recorded sightings, local wildlife monitoring projects).</td>
-<td>Core dataset showing the location of each recorded bird sighting.</td>
-</tr>
-<tr>
-<td><strong>Protected Areas</strong></td>
-<td>Kenya Wildlife Service, UNEP-WCMC’s World Database on Protected Areas (WDPA).</td>
-<td>Shows whether observations occur inside or outside conservation zones.</td>
-</tr>
-<tr>
-<td><strong>Roads</strong></td>
-<td>World Food Programme roads dataset (<strong>Roads_WFP</strong>).</td>
-<td>Adds reference features and accessibility context for observation points.</td>
-</tr>
-<tr>
-<td><strong>Study Area Boundary</strong></td>
-<td><strong>Narok_Kajiado</strong> administrative boundary layer from project data.</td>
-<td>Defines the extent of analysis and ensures observations are mapped within the target region.</td>
-</tr>
-</tbody>
-</table>
-<h1 id="workflow">Workflow</h1>
-<p>The process to create the Bird Observation Map began by adding the <strong>Narok_Kajiado</strong> boundary layer to define the study 
-area. The <strong>Bird Observations</strong> dataset was then imported, ensuring its coordinates aligned with the project’s spatial 
-reference. Two cotextual layers, <strong>Roads_WFP</strong>, and <strong>Protected Areas</strong>, were added to provide environmental and 
-human-impact context. Bird observation points were symbolized for clear visibility, while supporting layers were styled 
-with contrasting colors and patterns to maintain focus on the sightings. The map extent was adjusted to display all 
-observation points within the study area. The layout was finalized in ArcGIS Pro by adding a title, legend, scale bar, 
-north arrow, and data source information, after which the map was exported in a shareable format for use in reporting 
-and analysis.</p>
-<p>The creation of the Bird Observation Map used a series of basic geoprocessing and cartographic tools in ArcGIS Pro to 
-prepare, display, and enhance the spatial data.</p>
-<h3 id="table-tools-used-in-creating-the-map"><strong>Table: Tools Used in Creating the map</strong></h3>
-<table class="my-data-table">
-<thead>
-<tr>
-<th><strong>Tool Name</strong></th>
-<th><strong>Function</strong></th>
-<th><strong>Purpose in Map Creation</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Add Data</strong></td>
-<td>Imports spatial and tabular datasets into the ArcGIS Pro project.</td>
-<td>Loads the bird observations, study area boundary, and contextual layers.</td>
-</tr>
-<tr>
-<td><strong>Project</strong></td>
-<td>Converts datasets to a common coordinate system.</td>
-<td>Ensures all layers align spatially within the map.</td>
-</tr>
-<tr>
-<td><strong>Symbology</strong></td>
-<td>Customizes feature appearance (color, size, style).</td>
-<td>Highlights bird observation points and differentiates supporting layers.</td>
-</tr>
-<tr>
-<td><strong>Labeling</strong></td>
-<td>Adds text labels to map features.</td>
-<td>Identifies major towns, protected areas, and other reference features.</td>
-</tr>
-<tr>
-<td><strong>Select Layer By Location</strong></td>
-<td>Selects features based on spatial relationships.</td>
-<td>Confirms that bird observations fall within the Narok_Kajiado study area boundary.</td>
-</tr>
-<tr>
-<td><strong>Spatial Join</strong></td>
-<td>Transfers attributes from one layer to another based on spatial location.</td>
-<td>Associates each bird sighting with its corresponding land use type and protection status.</td>
-</tr>
-<tr>
-<td><strong>Layout View</strong></td>
-<td>Assembles and finalizes the cartographic composition.</td>
-<td>Adds map title, legend, scale bar, north arrow, and source information before export.</td>
-</tr>
-</tbody>
-</table></main>
+            <main><p><img alt="Thumb" class="image-process-thumb" src="images/california_population/png/derivatives/thumb/california_population.png"/></p>
+<p>The California Population Map (2000–2010) illustrates the rate of population growth or decline for California counties between 2000 
+and 2010. Areas shaded in green indicate population growth, while areas in purple indicate population decline. Darker 
+shades correspond to larger changes, whereas lighter shades represent smaller changes.</p>
+<p>The map is projected using the California (Teale) Albers projection, a state-specific adaptation of the Albers Conical 
+Equal Area projection developed by the former California Teale Data Center GIS Solutions Group. This projection is 
+optimized for accurate area calculations within California.</p>
+<p><a class="mybox" href="images/california_population/png/california_population.png" title="California Population Map (2000–2010)"><img alt="California Population Map (2000–2010)" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/california_population/png/derivatives/large-photo/800w/california_population.png" srcset="images/california_population/png/derivatives/large-photo/600w/california_population.png 600w, images/california_population/png/derivatives/large-photo/800w/california_population.png 800w, images/california_population/png/derivatives/large-photo/1600w/california_population.png 1600w"/></a></p>
+<p><a href="./images/california_population/pdf/califonia_population.pdf">PDF file</a></p></main>
 
 
              
@@ -210,12 +107,12 @@ prepare, display, and enhance the spatial data.</p>
         </div>
         <section class="span2" id="article-sidebar">
             <h4>Published</h4>
-            <time datetime="2024-12-13T00:00:00-08:00" itemprop="dateCreated">Fri 13 December 2024</time>
+            <time datetime="2024-12-09T00:00:00-08:00" itemprop="dateCreated">Mon 09 December 2024</time>
 <h4>Last Updated</h4>
 <time datetime="2025-06-07T00:00:00-07:00">Sat 07 June 2025</time>
 
             <h4>Category</h4>
-            <a class="category-link" href="./categories.html#spatial-analysis-ref">Spatial Analysis</a>
+            <a class="category-link" href="./categories.html#cartography-ref">Cartography</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="./tags.html#arcgis-pro-ref">ArcGIS Pro
