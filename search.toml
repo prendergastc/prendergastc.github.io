@@ -29,6 +29,26 @@ url = "/california_population.html"
 title = "California Population Growth 2000 to 2010"
 
 [[input.files]]
+path = "housing_availability.html"
+url = "/housing_availability.html"
+title = "Housing Availability in San Jose"
+
+[[input.files]]
+path = "portland_2d_3d.html"
+url = "/portland_2d_3d.html"
+title = "Portland 2D and 3D Experience"
+
+[[input.files]]
+path = "river_otter.html"
+url = "/river_otter.html"
+title = "River Otter Sightings"
+
+[[input.files]]
+path = "washington_dc.html"
+url = "/washington_dc.html"
+title = "Places to See in Washington D.C. Web Experience"
+
+[[input.files]]
 path = "santa_cruz_public_works.html"
 url = "/santa_cruz_public_works.html"
 title = "Public Works Department Assets, City of Santa Cruz"
