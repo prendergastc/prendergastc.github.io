@@ -44,6 +44,16 @@ url = "/river_otter.html"
 title = "River Otter Sightings"
 
 [[input.files]]
+path = "sacramento_dashboard.html"
+url = "/sacramento_dashboard.html"
+title = "Sacramento 911 Fire Calls Dashboard"
+
+[[input.files]]
+path = "harmony_headlands.html"
+url = "/harmony_headlands.html"
+title = "StoryMap: Harmony Headlands"
+
+[[input.files]]
 path = "washington_dc.html"
 url = "/washington_dc.html"
 title = "Places to See in Washington D.C. Web Experience"
