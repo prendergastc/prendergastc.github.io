@@ -179,6 +179,11 @@ url = "/mrosd.html"
 title = "Midpeninsula Regional Open Space District Map Series"
 
 [[input.files]]
+path = "storm_surge.html"
+url = "/storm_surge.html"
+title = "Map Hurricane Storm Surge, New York City"
+
+[[input.files]]
 path = "portland_schools.html"
 url = "/portland_schools.html"
 title = "Portland Schools"

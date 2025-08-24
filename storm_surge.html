@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <link href="./theme/css/elegant.prod.tanimislam.css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="./theme/css/custom.css" media="screen" rel="stylesheet" type="text/css"/>
+
+        <link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+        <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+        <link href="https://files.stork-search.net/basic.css" rel="stylesheet"/>
+        <link href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" rel="stylesheet"/>
+        <link href="./theme/css/colorbox.css" rel="stylesheet"/>
+
+
+        <meta content="Christopher Prendergast" name="author">
+
+        <meta content="article" property="og:type">
+        <meta content="summary" name="twitter:card"/>
+
+<meta content="ArcGIS Pro, Digital Elevation Map, GIST-016E, West Valley College, Raster Analysis, " name="keywords">
+
+<meta content="Map Hurricane Storm Surge, New York City " property="og:title">
+<meta content="./storm_surge.html" property="og:url"/>
+<meta content="Maps show how storm surges of different magnitudes could impact New York City. A base elevation map provides terrain context, while modeled 3-meter and 9-meter surge maps highlight areas at risk from moderate and extreme hurricanes. The Hurricane Sandy inundation map validates the 3-meter scenario with real-world data, and overlaying the 3- and 9-meter surges demonstrates how flooding risk increases dramatically with storm intensity." property="og:description"/>
+<meta content="portfolio" property="og:site_name"/>
+<meta content="Christopher Prendergast" property="og:article:author"/>
+<meta content="2022-11-06T00:00:00-07:00" property="og:article:published_time"/>
+<meta content="2025-06-07T00:00:00-07:00" property="og:article:modified_time"/>
+<meta content="Map Hurricane Storm Surge, New York City " name="twitter:title"/>
+<meta content="Maps show how storm surges of different magnitudes could impact New York City. A base elevation map provides terrain context, while modeled 3-meter and 9-meter surge maps highlight areas at risk from moderate and extreme hurricanes. The Hurricane Sandy inundation map validates the 3-meter scenario with real-world data, and overlaying the 3- and 9-meter surges demonstrates how flooding risk increases dramatically with storm intensity." name="twitter:description"/>
+
+        <title>Map Hurricane Storm Surge, New York City  · portfolio
+</title>
+
+
+
+    </meta></meta></meta></meta></head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="./"><span class="site-name">portfolio</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li>
+                                    <a href=".">Home</a>
+                                </li>
+                                <li><a href="./categories.html">Categories</a></li>
+                                <li><a href="./tags.html">Tags</a></li>
+                                <li><a href="./archives.html">Archives</a></li>
+                                <li><input class="search-query" data-stork="sitesearch" name="q" placeholder="Search" type="text"/><div data-stork="sitesearch-output"></div></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope="">
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="./storm_surge.html">
+                Map Hurricane Storm Surge, New York City
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <main><p><img alt="Thumb" class="image-process-thumb" src="images/storm_surge/png/derivatives/thumb/storm_surge_3.png"/></p>
+<p>This set of maps illustrates how elevation data can be used to model hurricane storm surges and their impacts on New 
+York City. The first map provides a base elevation layer derived from ArcGIS Living Atlas, showing the ground surface 
+heights across the city and forming the foundation for flood analysis. Building on this, a 3-meter storm surge map 
+highlights the low-lying coastal areas most at risk during a moderate hurricane, with flooded zones symbolized in light 
+pink. This scenario is then compared against the Hurricane Sandy inundation map from 2012, which shows the actual flood 
+extent recorded during the storm. The comparison reveals that Sandy’s surge slightly exceeded the 3-meter threshold, 
+underscoring the accuracy and limitations of the modeled scenario. To explore more extreme conditions, a 9-meter storm 
+surge map was also created, representing a severe event similar to the 1893 hurricane that nearly submerged Hog Island. 
+Displayed in orange, this map demonstrates how much more of New York City would be inundated under a higher surge level. 
+Together, these maps show the progression from potential flood modeling to historical validation, offering a clear 
+visualization of both current and future coastal vulnerabilities.</p>
+<h1 id="base-elevation-map">Base Elevation Map</h1>
+<p>The base elevation map was created using the global Terrain raster from ArcGIS Living Atlas, clipped to the extent of 
+New York City. Each pixel represents elevation in meters, allowing users to identify low-lying areas that are most 
+susceptible to flooding. This foundational map provides the geographic context needed to simulate potential storm surges
+and serves as the starting point for subsequent flood modeling.</p>
+<p><a class="mybox" href="images/storm_surge/png/storm_surge_1.png" title="Storm Surge 1"><img alt="Storm Surge 1" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/storm_surge/png/derivatives/large-photo/800w/storm_surge_1.png" srcset="images/storm_surge/png/derivatives/large-photo/600w/storm_surge_1.png 600w, images/storm_surge/png/derivatives/large-photo/800w/storm_surge_1.png 800w, images/storm_surge/png/derivatives/large-photo/1600w/storm_surge_1.png 1600w"/></a></p>
+<p><a href="./images/storm_surge/pdf/storm_surge_1.pdf">PDF file</a></p>
+<h1 id="3-meter-storm-surge-map">3-Meter Storm Surge Map</h1>
+<p>The 3-meter storm surge map models a moderate hurricane scenario by highlighting all areas of New York City at or below 
+three meters in elevation. These flooded areas are symbolized in light pink and overlaid with transparency on the 
+basemap, making it easy to see how a surge of this size would affect coastal neighborhoods. This map provides an 
+important perspective on the scale of risk from a surge similar to that of recent hurricanes.</p>
+<p><a class="mybox" href="images/storm_surge/png/storm_surge_2.png" title="Storm Surge 2"><img alt="Storm Surge 2" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/storm_surge/png/derivatives/large-photo/800w/storm_surge_2.png" srcset="images/storm_surge/png/derivatives/large-photo/600w/storm_surge_2.png 600w, images/storm_surge/png/derivatives/large-photo/800w/storm_surge_2.png 800w, images/storm_surge/png/derivatives/large-photo/1600w/storm_surge_2.png 1600w"/></a></p>
+<p><a href="./images/storm_surge/pdf/storm_surge_2.pdf">PDF file</a></p>
+<h1 id="hurricane-sandy-inundation-map-2012">Hurricane Sandy Inundation Map (2012)</h1>
+<p>The Hurricane Sandy inundation map is based on real flood data collected from the 2012 storm and made available through 
+the New York City Open Data portal. It shows the extent of actual inundation during Sandy, offering a direct comparison 
+to the modeled 3-meter surge scenario. While the two maps align closely, the Sandy layer illustrates that the surge in 
+some areas exceeded three meters, validating the model while also emphasizing the variability of real storm impacts.</p>
+<p><a class="mybox" href="images/storm_surge/png/storm_surge_3.png" title="Storm Surge 3"><img alt="Storm Surge 3" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/storm_surge/png/derivatives/large-photo/800w/storm_surge_3.png" srcset="images/storm_surge/png/derivatives/large-photo/600w/storm_surge_3.png 600w, images/storm_surge/png/derivatives/large-photo/800w/storm_surge_3.png 800w, images/storm_surge/png/derivatives/large-photo/1600w/storm_surge_3.png 1600w"/></a></p>
+<p><a href="./images/storm_surge/pdf/storm_surge_3.pdf">PDF file</a></p>
+<h1 id="9-meter-storm-surge-map">9-Meter Storm Surge Map</h1>
+<p>The 9-meter storm surge map simulates an extreme event similar to the 1893 hurricane that struck New York with a 30-foot
+surge. This scenario floods all areas below nine meters in elevation, represented in orange, and reveals the 
+catastrophic scale of inundation that could occur under severe conditions. When compared to the 3-meter surge, it 
+underscores how much additional land and infrastructure would be threatened by a truly historic hurricane.</p>
+<p><a class="mybox" href="images/storm_surge/png/storm_surge_4.png" title="Storm Surge 4"><img alt="Storm Surge 4" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/storm_surge/png/derivatives/large-photo/800w/storm_surge_4.png" srcset="images/storm_surge/png/derivatives/large-photo/600w/storm_surge_4.png 600w, images/storm_surge/png/derivatives/large-photo/800w/storm_surge_4.png 800w, images/storm_surge/png/derivatives/large-photo/1600w/storm_surge_4.png 1600w"/></a></p>
+<p><a href="./images/storm_surge/pdf/storm_surge_4.pdf">PDF file</a></p>
+<h1 id="overlay-of-3-meter-and-9-meter-storm-surge-maps">Overlay of 3-meter and 9-meter Storm Surge Maps</h1>
+<p>The overlay of the 3-meter and 9-meter storm surge maps creates a powerful visual comparison of moderate versus extreme 
+hurricane impacts on New York City. Using the swipe tool, the 3-meter surge layer (shown in pink) can be directly 
+compared against the 9-meter surge layer (shown in orange). Sliding between the two reveals how much additional land 
+becomes inundated as water levels rise from a moderate surge to a catastrophic one. While the 3-meter surge highlights 
+vulnerable coastal neighborhoods and low-lying areas along the shoreline, the 9-meter surge extends deep inland, 
+flooding large portions of the city that would otherwise seem secure. This side-by-side exploration emphasizes the 
+exponential increase in risk associated with higher surge events and allows users to grasp the scale of potential 
+devastation under different storm intensities.</p>
+<p><a class="mybox" href="images/storm_surge/png/storm_surge_5.png" title="Storm Surge 5"><img alt="Storm Surge 5" class="image-process-large-photo" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/storm_surge/png/derivatives/large-photo/800w/storm_surge_5.png" srcset="images/storm_surge/png/derivatives/large-photo/600w/storm_surge_5.png 600w, images/storm_surge/png/derivatives/large-photo/800w/storm_surge_5.png 800w, images/storm_surge/png/derivatives/large-photo/1600w/storm_surge_5.png 1600w"/></a></p>
+<p><a href="./images/storm_surge/pdf/storm_surge_5.pdf">PDF file</a></p>
+<h1 id="tools-used">Tools Used</h1>
+<table class="my-data-table">
+<thead>
+<tr>
+<th>Tool / Function</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ArcGIS Pro</td>
+<td>Main GIS platform used for mapping and analysis</td>
+</tr>
+<tr>
+<td>Catalog Pane</td>
+<td>To search and add the Terrain elevation raster from Living Atlas</td>
+</tr>
+<tr>
+<td>Export Raster</td>
+<td>To clip global elevation data to the New York City study area</td>
+</tr>
+<tr>
+<td>Remap (Raster Function)</td>
+<td>To reclassify elevation values and identify areas below surge thresholds</td>
+</tr>
+<tr>
+<td>Dynamic Range Adjustment (DRA)</td>
+<td>To enhance visualization of local elevation differences</td>
+</tr>
+<tr>
+<td>Symbology (Color &amp; Transparency)</td>
+<td>To style surge maps (pink for 3m, orange for 9m)</td>
+</tr>
+<tr>
+<td>Swipe Tool</td>
+<td>To compare modeled surge layers or with Hurricane Sandy inundation data</td>
+</tr>
+<tr>
+<td>Pop-up Tool</td>
+<td>To inspect pixel values (elevation) in the raster</td>
+</tr>
+</tbody>
+</table>
+<h1 id="data-sources">Data Sources</h1>
+<table class="my-data-table">
+<thead>
+<tr>
+<th>Data Source</th>
+<th>Description</th>
+<th>Provider / Access Point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Terrain Elevation Data (Terrain raster)</td>
+<td>Global elevation imagery used to model flood extents</td>
+<td>ArcGIS Living Atlas (Airbus, USGS, NASA, etc.)</td>
+</tr>
+<tr>
+<td>Hurricane Sandy Inundation Zone (2012)</td>
+<td>Actual flood extent from Hurricane Sandy in New York City</td>
+<td>NYC Open Data, Department of Small Business Services</td>
+</tr>
+<tr>
+<td>Basemap (Topographic)</td>
+<td>Background geographic context for visualization</td>
+<td>ArcGIS Online (Esri)</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://learn.arcgis.com/en/projects/map-hurricane-storm-surges/">Adapted from</a></p></main>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+        </div>
+        <section class="span2" id="article-sidebar">
+            <h4>Published</h4>
+            <time datetime="2022-11-06T00:00:00-07:00" itemprop="dateCreated">Sun 06 November 2022</time>
+<h4>Last Updated</h4>
+<time datetime="2025-06-07T00:00:00-07:00">Sat 07 June 2025</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#raster-analysis-ref">Raster Analysis</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="./tags.html#arcgis-pro-ref">ArcGIS Pro
+                    <span class="superscript">28</span>
+</a></li>
+                <li><a href="./tags.html#digital-elevation-map-ref">Digital Elevation Map
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="./tags.html#gist-016e-ref">GIST-016E
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="./tags.html#west-valley-college-ref">West Valley College
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" rel="nofollow noopener noreferrer" target="_blank" title="Pelican Home Page">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" rel="nofollow noopener noreferrer" target="_blank" title="Theme Elegant Home Page">Elegant</a>
+    </div>
+</footer>            <script crossorigin="anonymous" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+        <script src="./theme/js/jquery.colorbox.js"></script>
+        <script src="./theme/js/load-colorbox.js"></script>
+        <script src="https://files.stork-search.net/releases/v1.5.0/stork.js"></script>
+        <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+
+
+        <script>
+            $(document).ready( function () {
+                $('.my-data-table').dataTable({
+                    /* Disable initial sort */
+                    "aaSorting": []
+                });
+            } );
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('a.gallery').colorbox({slideshow:true});
+            });
+        </script>
+        <script>
+            stork.register("sitesearch", "./search-index.st");
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>
