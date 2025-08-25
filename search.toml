@@ -349,6 +349,11 @@ url = "/machine_learning_skills.html"
 title = "Machine Learning Skills"
 
 [[input.files]]
+path = "other_skills.html"
+url = "/other_skills.html"
+title = "Other Skills"
+
+[[input.files]]
 path = "python_skills.html"
 url = "/python_skills.html"
 title = "Python Scripting and Programming Skills"
