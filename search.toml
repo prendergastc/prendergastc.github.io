@@ -219,9 +219,9 @@ url = "/splihaus.html"
 title = "Spilhaus World Oceans Map"
 
 [[input.files]]
-path = "massachucetts_parks.html"
-url = "/massachucetts_parks.html"
-title = "Massachucetts Parks"
+path = "massachusetts_parks.html"
+url = "/massachusetts_parks.html"
+title = "Massachusetts Parks"
 
 [[input.files]]
 path = "landuse_app.html"
@@ -229,9 +229,9 @@ url = "/landuse_app.html"
 title = "Landuse change in Samut Songkhram, Thailand"
 
 [[input.files]]
-path = "san_bernadino_modelbuilder.html"
-url = "/san_bernadino_modelbuilder.html"
-title = "Location Analysis for New Carbonate Mine, San Bernadino National Forest"
+path = "san_bernardino_modelbuilder.html"
+url = "/san_bernardino_modelbuilder.html"
+title = "Location Analysis for New Carbonate Mine, San Bernardino National Forest"
 
 [[input.files]]
 path = "lyell_glacier.html"
