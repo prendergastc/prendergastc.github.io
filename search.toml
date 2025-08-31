@@ -1,5 +1,5 @@
 [input]
-url_prefix = "https://prendergastc.github.io/profile"
+url_prefix = "https://prendergastc.github.io"
 html_selector = "main"
 base_directory = "output"
 
