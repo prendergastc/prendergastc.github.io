@@ -9,6 +9,11 @@ url = "/pages/map_gallery.html"
 title = "Gallery"
 
 [[input.files]]
+path = "pages/qualifications.html"
+url = "/pages/qualifications.html"
+title = "Qualifications"
+
+[[input.files]]
 path = "urban_green_spaces.html"
 url = "/urban_green_spaces.html"
 title = "Urban Green Spaces in San Francisco and San Jose, California"
@@ -332,41 +337,6 @@ title = "Target Market Analysis"
 path = "hawaii_app.html"
 url = "/hawaii_app.html"
 title = "Volcanic hazards, Island of Hawaii"
-
-[[input.files]]
-path = "database_skills.html"
-url = "/database_skills.html"
-title = "Database Skills"
-
-[[input.files]]
-path = "datascience_skills.html"
-url = "/datascience_skills.html"
-title = "Data Science Skills"
-
-[[input.files]]
-path = "gis_skills.html"
-url = "/gis_skills.html"
-title = "GIS Skills"
-
-[[input.files]]
-path = "machine_learning_skills.html"
-url = "/machine_learning_skills.html"
-title = "Machine Learning Skills"
-
-[[input.files]]
-path = "other_skills.html"
-url = "/other_skills.html"
-title = "Other Skills"
-
-[[input.files]]
-path = "python_skills.html"
-url = "/python_skills.html"
-title = "Python Scripting and Programming Skills"
-
-[[input.files]]
-path = "transcripts.html"
-url = "/transcripts.html"
-title = "Academic Transcripts"
 
 [output]
 debug = true
