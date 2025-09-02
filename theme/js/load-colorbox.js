@@ -1,5 +1,5 @@
 $('#content').find('.mybox').colorbox({ 
-maxWidth:"96%",
-maxHeight:"96%",
+maxWidth:"97%",
+maxHeight:"97%",
 transition:"elastic",
-scrolling: true });
+scrolling:false });
