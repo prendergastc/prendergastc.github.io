@@ -224,8 +224,8 @@ url = "/santa_clara_valley_open_space.html"
 title = "Santa Clara Valley Open Space Story Maps"
 
 [[input.files]]
-path = "splihaus.html"
-url = "/splihaus.html"
+path = "spilhaus.html"
+url = "/spilhaus.html"
 title = "Spilhaus World Oceans Map"
 
 [[input.files]]
