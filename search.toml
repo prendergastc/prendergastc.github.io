@@ -29,8 +29,8 @@ url = "/kenya_birds.html"
 title = "Bird Observations, Narok and Kajiado Districts, Kenya"
 
 [[input.files]]
-path = "kenya_elephants.html"
-url = "/kenya_elephants.html"
+path = "kenya_elephant_habitat.html"
+url = "/kenya_elephant_habitat.html"
 title = "Analysis of Suitable Elephant Habitat, Narok and Kajiado Districts, Kenya"
 
 [[input.files]]
