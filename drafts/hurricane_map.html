@@ -235,7 +235,21 @@ GitHub Python Data Project: https://github.com/prendergastc/nhc-historical-geojs
         </script>
         <script>
             $(document).ready(function () {
-                $('a.gallery').colorbox({slideshow:true});
+                $('a.gallery').colorbox({fixed:true, slideshow:true});
+            });
+            $(document).bind('cbox_open', function() {
+                $('body').css({ overflow: 'hidden' });
+            }).bind('cbox_closed', function() {
+                $('body').css({ overflow: '' });
+            });
+            $(document).keydown(function(e) {
+                // Check if Colorbox is open
+                if ($.colorbox.isOpen) {
+                    // Disable arrow key scrolling
+                    if (e.key === "ArrowUp" || e.key === "ArrowDown" || e.key === "ArrowLeft" || e.key === "ArrowRight") {
+                        e.preventDefault();
+                    }
+                }
             });
         </script>
         <script>
