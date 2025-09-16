@@ -234,6 +234,11 @@ url = "/massachusetts_parks.html"
 title = "Massachusetts Parks"
 
 [[input.files]]
+path = "mrosd_50years.html"
+url = "/mrosd_50years.html"
+title = "Midpeninsula Regional Open Space District -- 50 Years of Land Acquisition and Preservation"
+
+[[input.files]]
 path = "landuse_app.html"
 url = "/landuse_app.html"
 title = "Landuse change in Samut Songkhram, Thailand"
